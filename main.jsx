@@ -207,6 +207,7 @@ function App() {
     () => localStorage.getItem("li-interest") || "all"
   );
   const [slide, setSlide] = useState(0);
+  const [trendingSlide, setTrendingSlide] = useState(0);
   const [selectedState, setSelectedState] = useState(null);
 
   const notify = x => {
@@ -559,6 +560,13 @@ function App() {
 
             </section>
 
+            <TrendingHeritage
+              stories={heritage}
+              slide={trendingSlide}
+              onSlideChange={setTrendingSlide}
+              onExplore={open}
+            />
+
             <section className="featured section">
 
               <div className="section-head">
@@ -755,25 +763,7 @@ function App() {
         )}
 
         {page === "risk" && (
-          <div className="page-wrap">
-
-            <div className="page-title">
-              <div className="eyebrow">
-                PRESERVATION
-              </div>
-
-              <h1>
-                Heritage at <i>Risk</i>
-              </h1>
-
-              <p>
-                Traditions survive when people practise, teach, document and support them.
-              </p>
-            </div>
-
-            <RiskPanel large />
-
-          </div>
+          <RiskPage onOpenMap={() => nav("map")} />
         )}
 
         {page === "community" && (
@@ -867,6 +857,101 @@ function App() {
   );
 }
 
+function TrendingHeritage({ stories, slide, onSlideChange, onExplore }) {
+  const total = stories.length;
+  const current = stories[slide % total] || stories[0];
+  const next = stories[(slide + 1) % total] || stories[0];
+
+  useEffect(() => {
+    if (total < 2) return;
+
+    const timer = setInterval(() => {
+      onSlideChange(value => (value + 1) % total);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [total, onSlideChange]);
+
+  const previous = () =>
+    onSlideChange(value => (value - 1 + total) % total);
+
+  const following = () =>
+    onSlideChange(value => (value + 1) % total);
+
+  return (
+    <section className="trending section" aria-label="Trending Across India">
+      <div className="trending-shell">
+        <div className="trending-head">
+          <div>
+            <div className="trending-kicker">✦ INDIA · CULTURE · HERITAGE</div>
+            <h2>🔥 Trending Across India</h2>
+            <p>Explore what’s capturing hearts — iconic heritage, living traditions and stories from across the country.</p>
+          </div>
+
+          <div className="trending-nav">
+            <button type="button" onClick={previous} aria-label="Previous trending story">←</button>
+            <button type="button" onClick={following} aria-label="Next trending story">→</button>
+            <span>{String((slide % total) + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
+          </div>
+        </div>
+
+        <div className="trending-stage">
+          <button
+            type="button"
+            className="trending-main"
+            onClick={() => onExplore(current)}
+            aria-label={`Explore ${current.title}`}
+          >
+            <div className="trending-image">
+              <img src={current.image} alt="" />
+              <span className="trending-image-tag">TRENDING NOW</span>
+            </div>
+
+            <div className="trending-copy">
+              <span>{current.type} · {current.place}</span>
+              <h3>{current.title}</h3>
+              <p>{current.desc}</p>
+              <strong>Explore Now <b>→</b></strong>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            className="trending-next"
+            onClick={following}
+            aria-label={`Next story: ${next.title}`}
+          >
+            <div className="trending-next-image">
+              <img src={next.image} alt="" />
+              <span>UP NEXT</span>
+            </div>
+            <div className="trending-next-copy">
+              <small>{next.place} · {next.type}</small>
+              <b>{next.title}</b>
+              <i>→</i>
+            </div>
+          </button>
+        </div>
+
+        <div className="trending-bottom">
+          <div className="trending-dots" aria-label="Trending story selector">
+            {stories.map((story, index) => (
+              <button
+                key={story.id}
+                type="button"
+                className={index === slide ? "active" : ""}
+                onClick={() => onSlideChange(index)}
+                aria-label={`Show ${story.title}`}
+              />
+            ))}
+          </div>
+          <span>Auto-playing · tap a story to explore</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function HeritageCard({ h, onClick }) {
   return (
     <button
@@ -901,6 +986,124 @@ function HeritageCard({ h, onClick }) {
       </div>
 
     </button>
+  );
+}
+
+function RiskPage({ onOpenMap }) {
+  const [featured, setFeatured] = useState(0);
+  const featuredItems = riskItems;
+  const current = featuredItems[featured % featuredItems.length];
+  const [name, desc, val, level] = current;
+
+  const riskImages = {
+    "Baul Music": IMG.baul,
+    "Kani Tribal Language": IMG.madhubani,
+    "Kavadi Attam": IMG.theyyam,
+    "Bamboo Craft": IMG.kalamkari
+  };
+
+  const next = () => setFeatured(i => (i + 1) % featuredItems.length);
+  const prev = () => setFeatured(i => (i - 1 + featuredItems.length) % featuredItems.length);
+
+  return (
+    <div className="risk-page">
+      <section className="risk-hero">
+        <div className="risk-hero-copy">
+          <div className="eyebrow">PRESERVATION · LIVING HERITAGE</div>
+          <h1>Heritage at <i>Risk</i></h1>
+          <p className="risk-lead">
+            Some traditions don’t disappear overnight. They fade when fewer people carry them.
+          </p>
+          <div className="risk-actions">
+            <button className="risk-primary" onClick={() => document.getElementById("risk-stories")?.scrollIntoView({ behavior: "smooth" })}>
+              Discover the stories →
+            </button>
+            <button className="risk-secondary" onClick={onOpenMap}>Explore India’s map ↗</button>
+          </div>
+          <div className="risk-stats">
+            <div><strong>{riskItems.length}</strong><span>stories currently tracked</span></div>
+            <div><strong>{riskItems.filter(x => x[3] === "High").length}</strong><span>high-risk traditions</span></div>
+            <div><strong>{riskItems.filter(x => x[3] === "Medium").length}</strong><span>medium-risk traditions</span></div>
+          </div>
+        </div>
+        <div className="risk-hero-art">
+          <img src={IMG.baul} alt="Baul music heritage" />
+          <div className="risk-hero-quote">“When a tradition is practised, it is alive.”<small>— Living India</small></div>
+          <div className="risk-hero-stamp">KEEP<br /><b>IT ALIVE</b></div>
+        </div>
+      </section>
+
+      <section className="risk-feature-grid">
+        <div className="risk-pulse-card">
+          <div className="risk-section-label">EXPLORE THE LANDSCAPE</div>
+          <h2>India’s Heritage <em>Pulse</em></h2>
+          <p>Move through the map and discover the places where living heritage is being documented.</p>
+          <div className="risk-legend">
+            <span><i className="high"></i> High risk</span>
+            <span><i className="medium"></i> Medium risk</span>
+            <span><i className="watch"></i> Being watched</span>
+          </div>
+          <button onClick={onOpenMap}>Explore full map →</button>
+        </div>
+        <div className="risk-map-shell">
+          <CulturalMap riskPulse />
+        </div>
+        <article className="risk-feature-card">
+          <div className="risk-feature-top">
+            <span className={"badge " + level.toLowerCase()}>{level} Risk</span>
+            <div className="risk-feature-nav">
+              <button onClick={prev} aria-label="Previous story">‹</button>
+              <button onClick={next} aria-label="Next story">›</button>
+            </div>
+          </div>
+          <img src={riskImages[name] || IMG.baul} alt={name} />
+          <div className="risk-feature-body">
+            <small>FEATURED · LIVING TRADITION</small>
+            <h2>{name}</h2>
+            <p>{desc}. This story deserves attention while the knowledge is still being carried forward.</p>
+            <div className="risk-score"><span><i style={{ width: val + "%" }}></i></span><b>{val}/100</b></div>
+            <button onClick={() => document.getElementById("risk-stories")?.scrollIntoView({ behavior: "smooth" })}>Explore this story →</button>
+          </div>
+        </article>
+      </section>
+
+      <section className="risk-stories" id="risk-stories">
+        <div className="risk-stories-head">
+          <div>
+            <div className="risk-section-label">STORIES THAT NEED A FUTURE</div>
+            <h2>What could fade <em>next?</em></h2>
+            <p>Explore the traditions in our current preservation watchlist.</p>
+          </div>
+          <span className="risk-count">01 — 0{riskItems.length}</span>
+        </div>
+        <div className="risk-story-grid">
+          {riskItems.map(([itemName, itemDesc, itemVal, itemLevel], index) => (
+            <button className="risk-story-card" key={itemName} onClick={() => setFeatured(index)}>
+              <div className="risk-story-image">
+                <img src={riskImages[itemName] || IMG.baul} alt={itemName} />
+                <span className={"badge " + itemLevel.toLowerCase()}>{itemLevel} Risk</span>
+              </div>
+              <div className="risk-story-body">
+                <small>{itemLevel === "High" ? "URGENT ATTENTION" : "NEEDS SUPPORT"}</small>
+                <h3>{itemName}</h3>
+                <p>{itemDesc}.</p>
+                <div className="risk-score"><span><i style={{ width: itemVal + "%" }}></i></span><b>{itemVal}/100</b></div>
+                <em>View story →</em>
+              </div>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="risk-cta">
+        <div>
+          <span>✦</span>
+          <h2>Be a part of the change.</h2>
+          <p>Learn. Share. Support. Help keep living heritage alive.</p>
+        </div>
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Learn · Share · Support →</button>
+      </section>
+    </div>
   );
 }
 
@@ -2075,7 +2278,7 @@ function stateFeatureKey(feature, index) {
   );
 }
 
-function CulturalMap({ full, onStateSelect }) {
+function CulturalMap({ full, onStateSelect, riskPulse = false }) {
   const [geojson, setGeojson] = useState(null);
   const [loadError, setLoadError] = useState("");
   const [zoom, setZoom] = useState(1);
@@ -2268,15 +2471,22 @@ function CulturalMap({ full, onStateSelect }) {
 
                 if (!path) return null;
 
+                const normalizedName = String(name || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+                let pulseLevel = "";
+                if (riskPulse) {
+                  if (normalizedName.includes("westbengal") || normalizedName.includes("kerala")) pulseLevel = "high";
+                  else if (normalizedName.includes("tamilnadu")) pulseLevel = "medium";
+                  else if (normalizedName.includes("assam") || normalizedName.includes("nagaland") || normalizedName.includes("manipur") || normalizedName.includes("mizoram") || normalizedName.includes("tripura") || normalizedName.includes("meghalaya") || normalizedName.includes("arunachal")) pulseLevel = "watch";
+                }
+
+                const pulseFill = pulseLevel === "high" ? "#b84d32" : pulseLevel === "medium" ? "#d59a2c" : pulseLevel === "watch" ? "#6f8870" : "#cfa86a";
+
                 return (
                   <path
                     key={stateFeatureKey(feature, index)}
                     d={path}
-                    className={
-                      hovered?.name === name
-                        ? "li-map-path is-hovered"
-                        : "li-map-path"
-                    }
+                    className={`li-map-path${pulseLevel ? ` risk-${pulseLevel}` : ""}${hovered?.name === name ? " is-hovered" : ""}`}
+                    style={riskPulse ? { fill: pulseFill, fillOpacity: pulseLevel ? 0.95 : 0.72 } : undefined}
                     onMouseEnter={e => {
                       setHovered({ name });
                       const rect = e.currentTarget
