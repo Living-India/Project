@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Meera Devi",
+      "role": "Practitioner",
+      "verified": true
+    },
+    {
+      "id": "u2",
+      "name": "Dr. Sen",
+      "role": "Verified Expert",
+      "verified": true
+    }
+  ],
+  "heritage": [
+    {
+      "id": "harappa",
+      "title": "Harappa",
+      "type": "Archaeology",
+      "icon": "\ud83c\udffa",
+      "place": "Punjab \u00b7 Indus Valley",
+      "desc": "Urban planning, drainage, craft workshops, seals and everyday life.",
+      "risk": 82,
+      "verified": true
+    },
+    {
+      "id": "madhubani",
+      "title": "Madhubani Painting",
+      "type": "Craft",
+      "icon": "\ud83d\udd8c\ufe0f",
+      "place": "Bihar",
+      "desc": "A living painting tradition carried through generations of artists.",
+      "risk": 46,
+      "verified": true
+    },
+    {
+      "id": "baul",
+      "title": "Baul Music",
+      "type": "Oral Heritage",
+      "icon": "\ud83c\udfb6",
+      "place": "West Bengal",
+      "desc": "Songs, philosophy and oral traditions carried by travelling musicians.",
+      "risk": 68,
+      "verified": true
+    },
+    {
+      "id": "kalamkari",
+      "title": "Kalamkari",
+      "type": "Textile",
+      "icon": "\ud83e\uddf5",
+      "place": "Andhra Pradesh",
+      "desc": "Hand-painted and block-printed textile traditions with mythological motifs.",
+      "risk": 39,
+      "verified": true
+    },
+    {
+      "id": "theyyam",
+      "title": "Theyyam",
+      "type": "Performance",
+      "icon": "\ud83d\udd25",
+      "place": "Kerala",
+      "desc": "Ritual performance combining dance, music, costume and community memory.",
+      "risk": 31,
+      "verified": true
+    },
+    {
+      "id": "pattachitra",
+      "title": "Pattachitra",
+      "type": "Craft",
+      "icon": "\ud83c\udfa8",
+      "place": "Odisha",
+      "desc": "Narrative cloth paintings rooted in regional storytelling.",
+      "risk": 52,
+      "verified": true
+    }
+  ],
+  "posts": [
+    {
+      "id": "p1",
+      "user": "u1",
+      "text": "In our village, the same Madhubani motif can have a different meaning depending on the occasion.",
+      "topic": "Madhubani Painting",
+      "createdAt": "2026-09-04T12:00:00Z"
+    },
+    {
+      "id": "p2",
+      "user": "u2",
+      "text": "Regional variations are important. A tradition should not be presented as one fixed, universal practice.",
+      "topic": "Heritage Research",
+      "createdAt": "2026-09-04T13:00:00Z"
+    }
+  ],
+  "comments": [],
+  "contributions": []
+}

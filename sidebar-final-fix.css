@@ -1,0 +1,158 @@
+/* Living India — final sidebar + responsive exhibit fix */
+
+/* SIDEBAR: force the drawer into its own top-level layer */
+.app > .sidebar{
+  position:fixed !important;
+  left:0 !important;
+  top:0 !important;
+  bottom:0 !important;
+  width:290px !important;
+  height:100dvh !important;
+  margin:0 !important;
+  padding:22px 14px 18px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  transform:translate3d(-110%,0,0) !important;
+  z-index:10000 !important;
+  pointer-events:none !important;
+  transition:transform .32s cubic-bezier(.2,.8,.2,1) !important;
+  overflow-y:auto !important;
+  -webkit-overflow-scrolling:touch !important;
+}
+.app.sidebar-is-open > .sidebar{
+  transform:translate3d(0,0,0) !important;
+  pointer-events:auto !important;
+}
+.app > .scrim{
+  position:fixed !important;
+  inset:0 !important;
+  width:100vw !important;
+  height:100dvh !important;
+  margin:0 !important;
+  background:rgba(10,24,23,.52) !important;
+  visibility:hidden !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+  z-index:9990 !important;
+  transition:opacity .25s ease,visibility .25s ease !important;
+}
+.app.sidebar-is-open > .scrim{
+  visibility:visible !important;
+  opacity:1 !important;
+  pointer-events:auto !important;
+}
+.topbar .burger{
+  position:relative !important;
+  z-index:10001 !important;
+  display:grid !important;
+  place-items:center !important;
+  cursor:pointer !important;
+  pointer-events:auto !important;
+  touch-action:manipulation !important;
+  -webkit-tap-highlight-color:transparent !important;
+}
+
+/* Make the drawer controls reliably clickable above decorative layers. */
+.app > .sidebar button,
+.app > .sidebar .side-links,
+.app > .sidebar .side-bottom,
+.app > .sidebar .sidebar-note{
+  position:relative !important;
+  z-index:2 !important;
+  pointer-events:auto !important;
+}
+
+/* LOGIN: anchors need the same museum navigation styling as sidebar buttons. */
+.app > .sidebar .side-bottom .li-login-link{
+  display:flex !important;
+  align-items:center !important;
+  gap:14px !important;
+  width:100% !important;
+  min-height:46px !important;
+  padding:11px 14px !important;
+  margin:0 !important;
+  border:1px solid transparent !important;
+  border-radius:8px !important;
+  background:transparent !important;
+  color:#fff2d6 !important;
+  text-decoration:none !important;
+  font-family:Georgia,serif !important;
+  font-size:18px !important;
+  line-height:1.2 !important;
+  font-weight:400 !important;
+  cursor:pointer !important;
+  -webkit-tap-highlight-color:transparent !important;
+  transition:background .2s ease,color .2s ease,border-color .2s ease !important;
+}
+.app > .sidebar .side-bottom .li-login-link .nav-icon{
+  color:#e0b85d !important;
+  width:22px !important;
+  min-width:22px !important;
+  text-align:center !important;
+  font-size:17px !important;
+}
+.app > .sidebar .side-bottom .li-login-link:hover,
+.app > .sidebar .side-bottom .li-login-link:focus-visible{
+  background:rgba(166,75,50,.22) !important;
+  border-color:rgba(184,138,59,.45) !important;
+  color:#fffaf0 !important;
+  outline:none !important;
+}
+.app > .sidebar .side-bottom .li-login-link:active{
+  background:rgba(166,75,50,.35) !important;
+}
+
+/* DESKTOP / TABLET: never allow inherited span rules to create giant cards. */
+.experience-grid{
+  display:grid !important;
+  width:min(1320px,100%) !important;
+  max-width:1320px !important;
+  margin:0 auto !important;
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  grid-template-rows:none !important;
+  gap:16px !important;
+}
+.experience-card,
+.experience-card:nth-child(n){
+  grid-column:auto !important;
+  grid-row:auto !important;
+  width:100% !important;
+  min-width:0 !important;
+  height:282px !important;
+  min-height:282px !important;
+}
+
+/* Quiet museum-style numbering — no oversized circles or extra labels. */
+.experience-card:before{
+  content:counter(wallitem,decimal-leading-zero) !important;
+  width:auto !important;
+  height:auto !important;
+  min-width:0 !important;
+  border:0 !important;
+  border-radius:3px !important;
+  background:rgba(23,63,61,.94) !important;
+  padding:6px 8px !important;
+  left:12px !important;
+  top:12px !important;
+  color:#fff2d6 !important;
+  font:700 10px/1 'DM Sans',sans-serif !important;
+  letter-spacing:.12em !important;
+  box-shadow:none !important;
+}
+.experience-card b:after{display:none !important;content:none !important}
+
+@media(max-width:1180px){
+  .experience-grid{grid-template-columns:repeat(4,minmax(0,1fr)) !important;gap:14px !important}
+  .experience-card,.experience-card:nth-child(n){height:270px !important;min-height:270px !important}
+}
+@media(max-width:900px){
+  .experience-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:12px !important}
+  .experience-card,.experience-card:nth-child(n){height:250px !important;min-height:250px !important}
+}
+@media(max-width:600px){
+  .app > .sidebar{width:290px !important}
+  .experience-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important}
+  .experience-card,.experience-card:nth-child(n){height:230px !important;min-height:230px !important}
+}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Living India — Sign in</title>
+</head>
+<body>
+<p style="font-family:Arial,sans-serif;text-align:center;padding:40px">Opening Living India account…</p>
+<script type="module">
+import {initializeApp} from 'firebase/app'
+import {getAuth,onAuthStateChanged} from 'firebase/auth'
+const config={apiKey:'AIzaSyCeuizWkJRvp2_iOxD4UOFL12Os2k0KybQ',authDomain:'living-india-7f73b.firebaseapp.com',projectId:'living-india-7f73b',storageBucket:'living-india-7f73b.firebasestorage.app',messagingSenderId:'439601825953',appId:'1:439601825953:web:cc38c29d819b86de03c8e0',measurementId:'G-N76WYJXS7K'}
+const auth=getAuth(initializeApp(config))
+let moved=false
+onAuthStateChanged(auth,user=>{if(moved)return;moved=true;location.replace(user?'./profile.html':'./auth3.html')})
+</script>
+</body>
+</html>

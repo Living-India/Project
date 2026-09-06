@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173c3b">
+<title>Living India — My Profile</title>
+<style>
+:root{--paper:#fffaf0;--teal:#173c3b;--rust:#a64b32;--gold:#b88a3b;--ink:#263b38;--muted:#70776f;--line:#d9c8a8}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(135deg,#ead9b8,#f8efdf 48%,#dfc99e);font-family:Georgia,serif;color:var(--ink);padding:24px}.wrap{width:min(1080px,100%);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.brand{color:var(--teal);font-size:24px;letter-spacing:3px}.brand b{color:var(--rust)}.back{border:1px solid var(--line);background:var(--paper);color:var(--teal);padding:10px 15px;cursor:pointer;font:700 12px Arial}.hero{background:var(--paper);border:1px solid var(--gold);box-shadow:0 20px 55px #173c3b20;overflow:hidden}.banner{height:180px;background:linear-gradient(135deg,var(--teal),#285b57 55%,var(--rust));position:relative}.banner:after{content:'✺  ✦  ✺  ✦  ✺';position:absolute;inset:auto 30px 24px;color:#e0b85d;font-size:28px;letter-spacing:18px;opacity:.8}.profile{display:grid;grid-template-columns:180px 1fr;gap:26px;padding:0 38px 38px}.avatar-wrap{position:relative;width:140px;margin-top:-70px;z-index:2}.avatar{width:140px;height:140px;border-radius:50%;border:7px solid var(--paper);background:var(--teal);color:#e0b85d;display:grid;place-items:center;font-size:54px;overflow:hidden;box-shadow:0 8px 24px #173c3b25}.avatar img{width:100%;height:100%;object-fit:cover;display:none}.avatar.has-photo img{display:block}.avatar.has-photo span{display:none}.photo-btn{display:block;width:100%;margin-top:10px;border:1px solid var(--gold);background:var(--paper);color:var(--teal);padding:9px 8px;border-radius:6px;cursor:pointer;font:700 11px Arial;letter-spacing:.3px;text-align:center}.photo-btn:hover{background:#f3e5ca}.photo-help{font:10px/1.35 Arial;color:var(--muted);text-align:center;margin-top:6px}.eyebrow{font:700 11px Arial;letter-spacing:2.5px;color:var(--rust);margin-top:28px}.name{font-size:42px;color:var(--teal);margin:8px 0 4px}.email{font:14px Arial;color:var(--muted)}.verified{display:inline-block;margin-top:12px;padding:7px 11px;background:#e9f3e8;color:#356b4e;font:700 11px Arial;letter-spacing:.5px}.grid{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}.card{background:#f7efdf;border:1px solid var(--line);padding:20px}.card .icon{font-size:25px;color:var(--rust)}.card h3{margin:8px 0 5px;color:var(--teal);font-size:19px}.card p{margin:0;color:var(--muted);font:13px/1.55 Arial}.actions{display:flex;gap:10px;margin-top:22px}.primary,.secondary{padding:13px 18px;cursor:pointer;font:700 12px Arial}.primary{border:1px solid var(--teal);background:var(--teal);color:#fffaf0}.secondary{border:1px solid var(--line);background:var(--paper);color:var(--teal)}.status{min-height:20px;margin-top:12px;font:12px Arial;color:var(--rust)}input[type=file]{display:none}@media(max-width:700px){body{padding:0}.top{padding:18px}.profile{grid-template-columns:1fr;padding:0 22px 28px}.avatar-wrap{margin-top:-70px}.name{font-size:34px}.grid{grid-template-columns:1fr}.banner{height:150px}.actions{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="brand">LIVING <b>INDIA</b></div><button class="back" id="home">← BACK TO LIVING INDIA</button></header>
+<main class="hero">
+<div class="banner"></div>
+<section class="profile">
+<div class="avatar-wrap">
+<div class="avatar" id="avatar"><img id="avatarImg" alt="Profile picture"><span>✦</span></div>
+<label class="photo-btn" for="photoInput">📷 Change profile picture</label>
+<input id="photoInput" type="file" accept="image/*">
+<div class="photo-help">JPG, PNG or WEBP · max 5 MB</div>
+</div>
+<div>
+<div class="eyebrow">MY JOURNEY</div>
+<h1 class="name" id="name">Loading…</h1>
+<div class="email" id="email"></div>
+<div class="verified" id="verified">Checking account…</div>
+<div class="actions"><button class="primary" id="home2">Explore →</button><button class="secondary" id="signout">Sign out</button></div>
+<div class="status" id="status"></div>
+</div>
+<div class="grid">
+<div class="card"><div class="icon">✦</div><h3>Living India Passport</h3><p id="stamps">0 stamps collected. Start exploring to build your cultural journey.</p></div>
+<div class="card"><div class="icon">◈</div><h3>Saved Discoveries</h3><p>Your favourite stories will live here as this feature grows.</p></div>
+<div class="card"><div class="icon">♧</div><h3>Community</h3><p>Share memories, local knowledge and stories with the Living India community.</p></div>
+</div>
+</section>
+</main>
+</div>
+<script type="module">
+import {initializeApp} from 'firebase/app'
+import {getAuth,onAuthStateChanged,signOut,reload} from 'firebase/auth'
+const firebaseConfig={apiKey:'AIzaSyCeuizWkJRvp2_iOxD4UOFL12Os2k0KybQ',authDomain:'living-india-7f73b.firebaseapp.com',projectId:'living-india-7f73b',storageBucket:'living-india-7f73b.firebasestorage.app',messagingSenderId:'439601825953',appId:'1:439601825953:web:cc38c29d819b86de03c8e0',measurementId:'G-N76WYJXS7K'}
+const auth=getAuth(initializeApp(firebaseConfig));
+const $=id=>document.getElementById(id);const home=new URL('./',location.href).href;const photoKey='li-profile-photo';
+$('home').onclick=$('home2').onclick=()=>location.href=home;
+function loadPhoto(){const photo=localStorage.getItem(photoKey);if(photo){$('avatarImg').src=photo;$('avatar').classList.add('has-photo')}}
+$('photoInput').onchange=()=>{const file=$('photoInput').files?.[0];if(!file)return;if(file.size>5*1024*1024){$('status').textContent='Photo must be smaller than 5 MB.';$('photoInput').value='';return}if(!file.type.startsWith('image/')){$('status').textContent='Please choose an image file.';$('photoInput').value='';return}const reader=new FileReader();reader.onload=()=>{try{localStorage.setItem(photoKey,reader.result);$('avatarImg').src=reader.result;$('avatar').classList.add('has-photo');$('status').textContent='Profile picture updated.'}catch{$('status').textContent='This image is too large to save. Try a smaller photo.'}};reader.readAsDataURL(file)};
+loadPhoto();
+onAuthStateChanged(auth,async user=>{
+ if(!user){location.replace('./auth3.html');return}
+ try{await reload(user)}catch{}
+ const display=user.displayName||user.email?.split('@')[0]||'Heritage Explorer';
+ $('name').textContent=display;$('email').textContent=user.email||'';
+ if(!$('avatar').classList.contains('has-photo'))$('avatar').querySelector('span').textContent=display.charAt(0).toUpperCase();
+ $('verified').textContent=user.emailVerified?'✓ EMAIL VERIFIED':'EMAIL NOT VERIFIED';
+ if(!user.emailVerified){$('verified').style.background='#f7e7df';$('verified').style.color='#a64b32'}
+ const stamps=Number(localStorage.getItem('li-passport-stamps')||0);$('stamps').textContent=stamps?`${stamps} heritage stamp${stamps===1?'':'s'} collected.`:'0 stamps collected. Start exploring to build your cultural journey.';
+})
+$('signout').onclick=async()=>{try{await signOut(auth);location.replace('./')}catch(e){$('status').textContent='Could not sign out. Please try again.'}}
+</script>
+</body>
+</html>

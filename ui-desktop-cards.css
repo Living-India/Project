@@ -1,0 +1,87 @@
+/* Living India — desktop/tablet card refinement */
+
+/* The wall should breathe on large screens: compact exhibit cards, not full-width banners. */
+.experiences{padding:30px 2.4% 38px!important;background:linear-gradient(180deg,#f8ecd7 0%,#f2dfbc 100%)!important}
+.experiences:before{margin-bottom:22px!important;font-size:11px!important;letter-spacing:.22em!important;color:#6f6049!important}
+.experience-grid{width:min(1320px,100%)!important;max-width:1320px!important;margin:0 auto!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;grid-template-rows:none!important;gap:16px!important;align-items:stretch!important}
+
+.experience-card,
+.experience-card:nth-child(n){
+  grid-column:auto!important;
+  grid-row:auto!important;
+  width:100%!important;
+  min-width:0!important;
+  height:282px!important;
+  min-height:282px!important;
+  padding:0!important;
+  border-radius:12px!important;
+  border:1px solid rgba(151,113,63,.62)!important;
+  background-color:#eee0c5!important;
+  background-size:100% 63%,cover!important;
+  background-position:center bottom,center!important;
+  background-repeat:no-repeat!important;
+  box-shadow:0 8px 18px rgba(68,48,29,.13),inset 0 0 0 1px rgba(255,250,236,.7)!important;
+  overflow:hidden!important;
+  transform:translateZ(0)!important;
+  transition:transform .22s ease,box-shadow .22s ease!important;
+}
+
+/* A clean two-part exhibit card: photograph above, museum label below. */
+.experience-card:after{content:""!important;position:absolute!important;left:0!important;right:0!important;bottom:0!important;top:37%!important;z-index:1!important;background:linear-gradient(180deg,rgba(248,236,215,.02),#f8ecd7 18%,#f5e5c8 100%)!important;opacity:1!important;pointer-events:none!important}
+.experience-card:hover{transform:translateY(-6px)!important;box-shadow:0 17px 30px rgba(68,48,29,.2),inset 0 0 0 2px rgba(255,250,236,.72)!important}
+.experience-card:hover:after{background:linear-gradient(180deg,rgba(248,236,215,.02),#fff0d6 18%,#f5e5c8 100%)!important}
+
+/* Remove the old large circles and replace them with quiet editorial numbering. */
+.experience-card:before{content:counter(wallitem,decimal-leading-zero)!important;left:13px!important;top:13px!important;width:auto!important;height:auto!important;border:0!important;border-radius:0!important;background:rgba(23,63,61,.92)!important;color:#fff3d8!important;padding:6px 8px!important;display:block!important;font:700 10px/1 'DM Sans',sans-serif!important;letter-spacing:.14em!important;z-index:8!important;box-shadow:none!important}
+
+.experience-icon{left:auto!important;right:13px!important;top:13px!important;width:30px!important;height:30px!important;background:rgba(247,236,215,.94)!important;color:#214c48!important;border:1px solid rgba(151,113,63,.55)!important;border-radius:50%!important;font-size:14px!important;z-index:8!important;box-shadow:0 2px 7px rgba(54,38,23,.12)!important}
+
+.experience-card>div{position:absolute!important;left:0!important;right:0!important;bottom:0!important;z-index:6!important;padding:15px 45px 16px 15px!important;background:transparent!important}
+.experience-card b{font-family:'Playfair Display',serif!important;font-size:19px!important;line-height:1.08!important;color:#213532!important;text-shadow:none!important;letter-spacing:-.01em!important}
+.experience-card b:after{display:none!important}
+.experience-card small{margin-top:6px!important;font-family:'Cormorant Garamond',serif!important;font-size:14px!important;line-height:1.15!important;color:#655744!important;text-shadow:none!important;max-width:210px!important}
+.experience-card i{right:12px!important;bottom:15px!important;width:31px!important;height:31px!important;background:#b65336!important;border:0!important;color:#fff4dc!important;font-size:17px!important;box-shadow:0 3px 8px rgba(70,39,24,.2)!important;z-index:8!important}
+.experience-card:hover i{background:#173f3d!important;transform:translateX(2px)!important}
+
+/* Give each feature its own visual identity while reusing the project's stable image set. */
+.experience-card:nth-child(1){background-image:linear-gradient(180deg,transparent 0 37%,#f8ecd7 37% 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/India_map_en.svg')!important;background-size:100% 100%,cover!important;background-position:center,center!important;background-color:#d9c39b!important}
+.experience-card:nth-child(2){background-image:linear-gradient(180deg,transparent 0 37%,#f8ecd7 37% 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Madhubani_painting.jpg')!important}
+.experience-card:nth-child(3){background-image:linear-gradient(180deg,transparent 0 37%,#f8ecd7 37% 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Harappa_Ruins_-_IV.jpg')!important}
+.experience-card:nth-child(4){background-image:linear-gradient(180deg,transparent 0 37%,#f8ecd7 37% 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Kalamkari_painting.jpg')!important}
+.experience-card:nth-child(5){background-image:linear-gradient(180deg,transparent 0 37%,#f8ecd7 37% 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Pattachitra_painting.jpg')!important}
+.experience-card:nth-child(6){background-image:linear-gradient(180deg,transparent 0 37%,#f8ecd7 37% 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/The_Theyyam.jpg')!important}
+.experience-card:nth-child(7){background-image:linear-gradient(180deg,transparent 0 37%,#f8ecd7 37% 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Baul_singer.jpg')!important}
+.experience-card:nth-child(8){background-image:linear-gradient(180deg,transparent 0 37%,#f8ecd7 37% 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Baul_singer.jpg')!important}
+.experience-card:nth-child(9){background-image:linear-gradient(180deg,transparent 0 37%,#f8ecd7 37% 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Harappa_Ruins_-_IV.jpg')!important}
+.experience-card:nth-child(10){background-image:linear-gradient(180deg,transparent 0 37%,#f8ecd7 37% 100%),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Pattachitra_painting.jpg')!important}
+
+/* Better exhibit copy without changing the React data model. */
+.experience-card:nth-child(1) b{font-size:18px!important}
+.experience-card:nth-child(1) small{font-size:13px!important}
+.experience-card:nth-child(2) small:after{content:''}
+.experience-card:nth-child(3) small{max-width:225px!important}
+.experience-card:nth-child(4) small{max-width:225px!important}
+.experience-card:nth-child(5) small{max-width:225px!important}
+
+@media(max-width:1180px){
+  .experience-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important}
+  .experience-card,.experience-card:nth-child(n){height:270px!important;min-height:270px!important}
+  .experience-card b{font-size:18px!important}
+}
+@media(max-width:850px){
+  .experience-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+  .experience-card,.experience-card:nth-child(n){height:250px!important;min-height:250px!important}
+  .experience-card small{font-size:13px!important}
+}
+@media(max-width:600px){
+  .experiences{padding:24px 12px 28px!important}
+  .experience-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .experience-card,.experience-card:nth-child(n){height:230px!important;min-height:230px!important;border-radius:10px!important}
+  .experience-card>div{padding:12px 38px 12px 12px!important}
+  .experience-card b{font-size:16px!important}
+  .experience-card small{font-size:11px!important;line-height:1.15!important}
+  .experience-card:before{left:10px!important;top:10px!important;font-size:9px!important;padding:5px 6px!important}
+  .experience-icon{right:10px!important;top:10px!important;width:27px!important;height:27px!important;font-size:12px!important}
+  .experience-card i{right:10px!important;bottom:10px!important;width:28px!important;height:28px!important;font-size:15px!important}
+}
+@media(prefers-reduced-motion:reduce){.experience-card{transition:none!important}}

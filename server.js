@@ -1,0 +1,15 @@
+import express from "express";import cors from "cors";import fs from "fs";import path from "path";import crypto from "crypto";import {fileURLToPath} from "url";
+const __dirname=path.dirname(fileURLToPath(import.meta.url)),DATA=path.join(__dirname,"data.json");const read=()=>JSON.parse(fs.readFileSync(DATA,"utf8"));const write=d=>fs.writeFileSync(DATA,JSON.stringify(d,null,2));
+const app=express();app.use(cors());app.use(express.json({limit:"10mb"}));
+app.get("/api/health",(q,s)=>s.json({ok:true,service:"Living India API",version:"2.0"}));
+app.get("/api/heritage",(q,s)=>{const d=read(),x=(q.query.q||"").toLowerCase();s.json(d.heritage.filter(h=>(h.title+" "+h.type+" "+h.place).toLowerCase().includes(x)))});
+app.get("/api/heritage/:id",(q,s)=>{const h=read().heritage.find(x=>x.id===q.params.id);h?s.json(h):s.status(404).json({error:"Heritage record not found"})});
+app.get("/api/posts",(q,s)=>{const d=read();s.json(d.posts.map(p=>({...p,user:d.users.find(u=>u.id===p.user)||{name:"Community",role:"Contributor"}})))});
+app.post("/api/posts",(q,s)=>{const {user="u1",text,topic}=q.body;if(!text||!topic)return s.status(400).json({error:"text and topic are required"});const d=read(),p={id:crypto.randomUUID(),user,text,topic,createdAt:new Date().toISOString()};d.posts.unshift(p);write(d);s.status(201).json(p)});
+app.get("/api/posts/:id/comments",(q,s)=>s.json(read().comments.filter(c=>c.postId===q.params.id)));
+app.post("/api/posts/:id/comments",(q,s)=>{const {user="u1",text}=q.body;if(!text)return s.status(400).json({error:"text is required"});const d=read(),c={id:crypto.randomUUID(),postId:q.params.id,user,text,createdAt:new Date().toISOString()};d.comments.push(c);write(d);s.status(201).json(c)});
+app.post("/api/contributions",(q,s)=>{const {user="u1",title,story,topic,sourceType}=q.body;if(!title||!story)return s.status(400).json({error:"title and story are required"});const d=read(),c={id:crypto.randomUUID(),user,title,story,topic:topic||"Uncategorized",sourceType:sourceType||"community",status:"pending_review",createdAt:new Date().toISOString()};d.contributions.unshift(c);write(d);s.status(201).json(c)});
+app.get("/api/contributions",(q,s)=>s.json(read().contributions));
+app.patch("/api/contributions/:id",(q,s)=>{const d=read(),c=d.contributions.find(x=>x.id===q.params.id);if(!c)return s.status(404).json({error:"Contribution not found"});if(q.body.status)c.status=q.body.status;if(q.body.reviewNote)c.reviewNote=q.body.reviewNote;write(d);s.json(c)});
+app.get("/api/users/:id",(q,s)=>{const u=read().users.find(x=>x.id===q.params.id);u?s.json(u):s.status(404).json({error:"User not found"})});
+app.listen(process.env.PORT||3001,()=>console.log("Living India API: http://localhost:"+(process.env.PORT||3001)));

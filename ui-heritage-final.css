@@ -1,0 +1,86 @@
+/* Living India — final heritage wall polish
+   Decorative layer only: preserves existing React behavior and content. */
+:root{
+  --li-paper:#f7ecd7;
+  --li-paper-deep:#ead6ad;
+  --li-teal:#173f3d;
+  --li-teal-2:#285c57;
+  --li-rust:#a54b31;
+  --li-gold:#c69b54;
+  --li-ink:#26312e;
+}
+
+body{overflow-x:hidden;background:#d9c39b!important}
+.content{position:relative;isolation:isolate;background:linear-gradient(180deg,#ead8b6 0%,#f6e8ce 22%,#f3e4c8 100%)!important}
+.content:before,.content:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1}
+.content:before{
+  opacity:.28;
+  background-image:
+    radial-gradient(circle at 12% 18%,rgba(23,63,61,.16) 0 1px,transparent 2px),
+    radial-gradient(circle at 78% 34%,rgba(165,75,49,.14) 0 1px,transparent 2px),
+    radial-gradient(circle at 32% 76%,rgba(198,155,84,.2) 0 1px,transparent 2px),
+    radial-gradient(circle at 90% 84%,rgba(23,63,61,.13) 0 1px,transparent 2px);
+  background-size:190px 170px,230px 210px,260px 240px,210px 190px;
+  animation:heritage-drift 28s linear infinite;
+}
+.content:after{
+  inset:-10%;opacity:.16;
+  background:
+    linear-gradient(115deg,transparent 42%,rgba(198,155,84,.55) 43%,transparent 44%),
+    linear-gradient(65deg,transparent 58%,rgba(23,63,61,.35) 59%,transparent 60%);
+  background-size:420px 420px,520px 520px;
+  animation:heritage-pan 36s ease-in-out infinite alternate;
+}
+@keyframes heritage-drift{to{background-position:190px 170px,-230px 210px,260px -240px,-210px -190px}}
+@keyframes heritage-pan{to{transform:translate3d(35px,-22px,0) scale(1.03)}}
+
+.experiences{position:relative!important;background:linear-gradient(180deg,rgba(246,232,206,.96),rgba(241,222,188,.9))!important;padding-top:34px!important}
+.experiences:before{content:"EXPLORE INDIA • TEN WAYS TO EXPERIENCE HERITAGE";display:block;margin:0 auto 20px;max-width:1200px;text-align:center;letter-spacing:.18em;font:600 11px/1 'DM Sans',sans-serif;color:#806a4b}
+.experience-grid{max-width:1260px!important;margin:0 auto!important;gap:16px!important}
+.experience-card{
+  height:300px!important;border-radius:14px!important;border:1px solid rgba(169,126,69,.78)!important;
+  box-shadow:0 10px 24px rgba(67,47,28,.14),inset 0 0 0 1px rgba(255,248,229,.65)!important;
+  transform:translateZ(0);background-color:#214b47!important;
+}
+.experience-card:after{background:linear-gradient(180deg,rgba(12,30,28,.02) 25%,rgba(10,27,26,.16) 46%,rgba(9,24,23,.94) 100%)!important;transition:opacity .25s ease,background .25s ease}
+.experience-card:hover:after{background:linear-gradient(180deg,rgba(12,30,28,.02) 10%,rgba(10,27,26,.05) 38%,rgba(9,24,23,.9) 100%)!important}
+.experience-card:hover{transform:translateY(-7px) scale(1.012)!important;box-shadow:0 18px 34px rgba(54,39,26,.22),inset 0 0 0 2px rgba(255,248,229,.72)!important}
+.experience-card:before{width:42px!important;height:42px!important;left:13px!important;top:13px!important;background:rgba(23,63,61,.96)!important;border-color:#e4c98f!important;font-size:19px!important}
+.experience-icon{top:66px!important;left:16px!important;background:rgba(165,75,49,.96)!important}
+.experience-card>div{padding:18px 52px 20px 17px!important}
+.experience-card b{font-size:23px!important;letter-spacing:-.01em!important}
+.experience-card small{font-size:15px!important;line-height:1.3!important;max-width:250px!important}
+.experience-card i{right:14px!important;bottom:15px!important;width:38px!important;height:38px!important;transition:transform .2s ease,background .2s ease!important}
+.experience-card:hover i{transform:rotate(-8deg) scale(1.08)!important;background:#c05a37!important}
+
+/* Make every card feel intentionally art-directed instead of repeating the same crop. */
+.experience-card:nth-child(1){background-image:linear-gradient(rgba(23,63,61,.08),rgba(23,63,61,.08)),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/India_map_en.svg')!important;background-size:70%,cover!important;background-repeat:no-repeat!important;background-position:center!important}
+.experience-card:nth-child(2){background-position:center 42%!important}
+.experience-card:nth-child(3){background-position:center 52%!important}
+.experience-card:nth-child(4){background-position:center 36%!important}
+.experience-card:nth-child(5){background-position:center 46%!important}
+.experience-card:nth-child(6){background-position:center 58%!important}
+.experience-card:nth-child(7){background-position:center 32%!important}
+.experience-card:nth-child(8){background-position:center 42%!important}
+.experience-card:nth-child(9){background-position:center 52%!important}
+.experience-card:nth-child(10){background-position:center 40%!important}
+
+/* Tiny editorial labels make the cards feel like exhibit panels. */
+.experience-card:nth-child(1) b:after{content:'MAP';}
+.experience-card:nth-child(2) b:after{content:'SEE';}
+.experience-card:nth-child(3) b:after{content:'TIME';}
+.experience-card:nth-child(4) b:after{content:'MAKE';}
+.experience-card:nth-child(5) b:after{content:'LINK';}
+.experience-card:nth-child(6) b:after{content:'DISCOVER';}
+.experience-card:nth-child(7) b:after{content:'PLAY';}
+.experience-card:nth-child(8) b:after{content:'HEAR';}
+.experience-card:nth-child(9) b:after{content:'COMPARE';}
+.experience-card:nth-child(10) b:after{content:'COLLECT';}
+.experience-card b:after{display:block;margin-top:7px;color:#e5c27f;font:700 8px/1 'DM Sans',sans-serif;letter-spacing:.2em}
+
+.split{background:transparent!important;max-width:1260px!important;margin:0 auto!important;padding-left:0!important;padding-right:0!important}
+.split .panel{box-shadow:0 8px 22px rgba(67,47,28,.11)!important;overflow:hidden!important}
+
+@media(max-width:1100px){.experience-grid{max-width:none!important}.experience-card{height:285px!important}}
+@media(max-width:700px){.experiences:before{font-size:9px}.experience-grid{gap:11px!important}.experience-card{height:245px!important}.experience-card b{font-size:18px!important}.experience-card small{font-size:12px!important}.experience-card>div{padding:14px 44px 14px 13px!important}.experience-icon{top:54px!important;left:13px!important}}
+@media(prefers-reduced-motion:reduce){.content:before,.content:after{animation:none!important}.experience-card{transition:none!important}}
