@@ -97,16 +97,16 @@ const riskItems = [
 ];
 
 const experienceOptions = [
-  ["image", "Interactive Explorer", "Tap into artworks, artefacts and visual stories."],
-  ["timeline", "Timeline", "Drag through the journey from roots to today."],
-  ["process", "How It’s Made", "Explore traditional processes step by step."],
+  ["image", "Interactive Explorer", "Explore places, objects, artworks and visual stories."],
+  ["timeline", "Timeline", "Journey from origins and turning points to life today."],
+  ["process", "How It’s Made", "See traditional materials, skills and processes step by step."],
   ["connections", "Culture Connections", "Follow links between food, art, rituals, places and people."],
-  ["surprise", "You Might Be Surprised", "Find small discoveries and interactive facts."],
-  ["quiz", "Quiz & Challenge", "Identify, answer and learn with lightweight challenges."],
+  ["community", "Stories from the Community", "Meet the people and memories that keep heritage alive."],
   ["audio", "Listen & Explore", "Hear music, instruments, languages and oral traditions."],
   ["beforeafter", "Before / After", "Compare heritage across time with a visual slider."],
-  ["community", "Stories from the Community", "Discover memories and traditions shared by people."],
-  ["passport", "Heritage Passport", "Collect stamps as you explore India."]
+  ["surprise", "You Might Be Surprised", "Uncover lesser-known facts, myths and hidden details."],
+  ["quiz", "Quiz & Challenge", "Test what you discovered with fun heritage challenges."],
+  ["passport", "Heritage Passport", "Collect stamps, track progress and earn badges as you explore India."]
 ];
 
 const experienceDetails = {
@@ -197,6 +197,11 @@ function App() {
   const [page, setPage] = useState("home");
   const [query, setQuery] = useState("");
   const [items, setItems] = useState(heritage);
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchLoading, setSearchLoading] = useState(false);
+  const searchTimerRef = useRef(null);
+  const searchAbortRef = useRef(null);
   const [selected, setSelected] = useState(null);
   const [modal, setModal] = useState(null);
   const [posts, setPosts] = useState([]);
@@ -209,6 +214,8 @@ function App() {
   const [slide, setSlide] = useState(0);
   const [trendingSlide, setTrendingSlide] = useState(0);
   const [selectedState, setSelectedState] = useState(null);
+  const [experienceHub, setExperienceHub] = useState(null);
+  const [activeExperience, setActiveExperience] = useState(null);
 
   const notify = x => {
     setToast(x);
@@ -260,32 +267,159 @@ function App() {
     return () => clearInterval(t);
   }, [stories]);
 
-  const search = async value => {
+  const search = value => {
     setQuery(value);
+    setSearchOpen(true);
 
-    if (!value) {
+    if (searchTimerRef.current) clearTimeout(searchTimerRef.current);
+    if (searchAbortRef.current) searchAbortRef.current.abort();
+
+    const term = value.trim().toLowerCase();
+    const searchCatalog = getHeritageSearchCatalog();
+
+    if (!term) {
+      setSearchLoading(false);
       setItems(heritage);
+      setSearchResults([]);
       return;
     }
 
-    try {
-      setItems(
-        await api("/heritage?q=" + encodeURIComponent(value))
-      );
-    } catch {
-      setItems(
-        heritage.filter(x =>
-          (x.title + x.type + x.place + x.desc)
-            .toLowerCase()
-            .includes(value.toLowerCase())
-        )
-      );
-    }
+    const localMatches = searchCatalog.filter(x =>
+      [x.title, x.type, x.place, x.desc, x.stateName, x.categoryLabel, x.category]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase()
+        .includes(term)
+    );
+
+    setSearchResults(localMatches.slice(0, 8));
+    setSearchLoading(true);
+
+    searchTimerRef.current = setTimeout(async () => {
+      const controller = new AbortController();
+      searchAbortRef.current = controller;
+
+      try {
+        // Wikipedia's public MediaWiki search gives the search bar the same
+        // broad knowledge-discovery behaviour users expect from a web search:
+        // traditions, dances, songs, festivals, foods, languages, places, etc.
+        const params = new URLSearchParams({
+          action: "query",
+          generator: "search",
+          gsrsearch: value.trim(),
+          gsrnamespace: "0",
+          gsrlimit: "8",
+          prop: "pageimages|pageterms|extracts",
+          piprop: "thumbnail",
+          pithumbsize: "520",
+          wbptterms: "description",
+          exintro: "1",
+          explaintext: "1",
+          exsentences: "2",
+          format: "json",
+          formatversion: "2",
+          origin: "*"
+        });
+
+        const response = await fetch(`https://en.wikipedia.org/w/api.php?${params}`, {
+          signal: controller.signal
+        });
+        if (!response.ok) throw new Error("Wikipedia search failed");
+        const data = await response.json();
+        const pages = Array.isArray(data?.query?.pages) ? data.query.pages : [];
+        const remote = pages.map(page => ({
+          id: `wiki-${page.pageid}`,
+          title: page.title,
+          type: page.terms?.description?.[0] || "Heritage & culture",
+          place: "Wikipedia",
+          period: "Reference article",
+          image: page.thumbnail?.source || "",
+          desc: page.extract || page.terms?.description?.[0] || "Explore this heritage subject.",
+          facts: page.terms?.description?.length ? page.terms.description : [],
+          wikiTitle: page.title,
+          wikiUrl: `https://en.wikipedia.org/wiki/${encodeURIComponent(page.title.replace(/ /g, "_"))}`,
+          sourceType: "wikipedia",
+          isExternalSearch: true
+        }));
+
+        const combined = [...localMatches, ...remote];
+        const merged = combined.filter((x, i, arr) =>
+          x && (x.id || x.title) && arr.findIndex(y =>
+            ((y.title || "").toLowerCase() === (x.title || "").toLowerCase())
+          ) === i
+        );
+
+        setSearchResults(merged.slice(0, 12));
+        setItems(merged.length ? merged : localMatches);
+      } catch (error) {
+        if (error?.name !== "AbortError") {
+          // Keep local results visible if the remote knowledge source is unavailable.
+          setSearchResults(localMatches.slice(0, 12));
+          setItems(localMatches.length ? localMatches : heritage);
+        }
+      } finally {
+        if (!controller.signal.aborted) setSearchLoading(false);
+      }
+    }, 260);
+  };
+
+  const closeSearch = () => {
+    setTimeout(() => setSearchOpen(false), 120);
   };
 
   const open = h => {
     setSelected(h);
     setSidebarOpen(false);
+  };
+
+  const openSearchResult = async result => {
+    setSearchOpen(false);
+    setQuery("");
+
+    // State/category entries are kept in the local heritage index for fast
+    // suggestions, but clicking them should still open the full knowledge
+    // result, with an article summary and photographs.
+    if (result?.isStateHeritage && result?.title) {
+      result = {
+        ...result,
+        sourceType: "wikipedia",
+        wikiTitle: result.title,
+        type: result.categoryLabel || result.type || "Heritage & culture"
+      };
+    }
+
+    if (result?.sourceType !== "wikipedia") {
+      open(result);
+      return;
+    }
+
+    // Open immediately, then enrich the card with the full article summary.
+    setSelected({ ...result, loading: true });
+    setSidebarOpen(false);
+
+    try {
+      const title = result.wikiTitle || result.title;
+      const response = await fetch(
+        `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, "_"))}`
+      );
+      if (!response.ok) throw new Error("Could not load article");
+      const data = await response.json();
+      setSelected({
+        ...result,
+        loading: false,
+        image: data.thumbnail?.source || result.image,
+        desc: data.extract || result.desc,
+        place: data.description || result.place,
+        wikiUrl: data.content_urls?.desktop?.page || result.wikiUrl,
+        facts: [
+          data.description,
+          data.extract ? "Wikipedia reference article" : null,
+          "Open the source article for the full reference"
+        ].filter(Boolean)
+      });
+    } catch {
+      setSelected({ ...result, loading: false });
+    }
   };
 
   const nav = p => {
@@ -303,6 +437,31 @@ function App() {
       id
     });
     setSidebarOpen(false);
+  };
+
+  const openExploreHub = h => {
+    setSelected(null);
+    setModal(null);
+    setExperienceHub(h || heritage[0]);
+    setActiveExperience(null);
+    setSidebarOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const openExperienceModule = id => {
+    setActiveExperience(id);
+    setExperienceHub(prev => {
+      if (!prev) return prev;
+      const key = `li-explore-${prev.id || prev.title}-${id}`;
+      localStorage.setItem(key, "1");
+      return { ...prev };
+    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const closeExploreHub = () => {
+    setActiveExperience(null);
+    setExperienceHub(null);
   };
 
   return (
@@ -425,16 +584,66 @@ function App() {
             LIVING <b>INDIA</b>
           </div>
 
-          <div className="search">
-            <span>⌕</span>
+          <div className="desktop-brand">
+            <span className="desktop-brand-mark">✺</span>
+            <span className="desktop-brand-copy"><strong>LIVING INDIA</strong><small>PEOPLE · PLACES · STORIES</small></span>
+          </div>
 
-            <input
-              value={query}
-              onChange={e => search(e.target.value)}
-              placeholder="Search a heritage, art form, place, or story..."
-            />
+          <nav className="desktop-nav" aria-label="Primary navigation">
+            <button className={page === "home" ? "active" : ""} type="button" onClick={() => nav("home")}>Home</button>
+            <button className={page === "map" ? "active" : ""} type="button" onClick={() => nav("map")}>Map</button>
+            <button className={page === "explore" ? "active" : ""} type="button" onClick={() => nav("explore")}>Stories</button>
+            <button className={page === "risk" ? "active" : ""} type="button" onClick={() => nav("risk")}>Heritage at Risk</button>
+            <button type="button" onClick={() => setModal("contribute")}>Contribute</button>
+            <button className={page === "about" ? "active" : ""} type="button" onClick={() => nav("about")}>About</button>
+          </nav>
 
-            <kbd>⌘ K</kbd>
+          <div className="search-wrap">
+            <div className="search">
+              <span>⌕</span>
+
+              <input
+                value={query}
+                onFocus={() => setSearchOpen(true)}
+                onBlur={closeSearch}
+                onChange={e => search(e.target.value)}
+                placeholder="Search a heritage, art form, place, or story..."
+                aria-label="Search heritage"
+              />
+
+              <kbd>⌘ K</kbd>
+            </div>
+
+            {searchOpen && (query.trim() || searchResults.length || !query.trim()) && (
+              <div className="li-search-dropdown" role="listbox">
+                <div className="li-search-head">
+                  <span>{query.trim() ? "LIVE RESULTS" : "RECOMMENDED"}</span>
+                  <small>{query.trim() ? (searchLoading ? "Searching India + world knowledge…" : `${searchResults.length} results`) : "Explore heritage from across India"}</small>
+                </div>
+                {(query.trim() ? searchResults : getHeritageSearchCatalog().slice(0, 6)).length ? (query.trim() ? searchResults : getHeritageSearchCatalog().slice(0, 6)).map((result, i) => (
+                  <button
+                    key={result.id || result.title || i}
+                    type="button"
+                    className="li-search-result"
+                    onMouseDown={e => e.preventDefault()}
+                    onClick={() => openSearchResult(result)}
+                  >
+                    {result.image ? (
+                      <img className="li-search-result-thumb" src={result.image} alt="" />
+                    ) : (
+                      <span className="li-search-result-icon">{result.type === "Dance" ? "◌" : result.type === "Craft" ? "◇" : result.type === "Architecture" ? "♜" : "✦"}</span>
+                    )}
+                    <span className="li-search-result-copy">
+                      <strong>{result.title}</strong>
+                      <small>{[result.type, result.place].filter(Boolean).join(" · ") || "Living India heritage"}</small>
+                    </span>
+                    <span className="li-search-arrow">→</span>
+                  </button>
+                )) : (
+                  <div className="li-search-empty">No matching heritage story yet.<br /><span>Try a place, art form, craft, dance or tradition.</span></div>
+                )}
+              </div>
+            )}
           </div>
 
           <div className="top-actions">
@@ -464,6 +673,19 @@ function App() {
             <section className="hero">
 
               <div className="hero-art">
+
+                <div className="hero-collage hero-collage-left">
+                  <img src={IMG.pattachitra} alt="Indian heritage artwork" />
+                </div>
+                <div className="hero-collage hero-collage-center">
+                  <img src={IMG.harappa} alt="Ancient Indian heritage site" />
+                </div>
+                <div className="hero-collage hero-collage-right">
+                  <img src={IMG.theyyam} alt="Living Indian ritual tradition" />
+                </div>
+                <div className="hero-paper-map">
+                  <span>PEOPLE</span><span>PLACES</span><span>CULTURES</span><span>STORIES</span>
+                </div>
 
                 <div className="sun"></div>
                 <div className="mountains"></div>
@@ -825,19 +1047,34 @@ function App() {
 
       </main>
 
+      {experienceHub && (
+        <ExploreHub
+          h={experienceHub}
+          activeId={activeExperience}
+          onSelect={openExperienceModule}
+          onBack={closeExploreHub}
+        />
+      )}
+
       {selectedState && (
         <HeritageCategoryModal
           state={selectedState}
           onClose={() => setSelectedState(null)}
         />
       )}
-      {selected && (
+      {selected && (selected.sourceType === "wikipedia" ? (
+        <WikipediaDetail
+          h={selected}
+          close={() => setSelected(null)}
+          onContinue={openExploreHub}
+        />
+      ) : (
         <Detail
           h={selected}
           close={() => setSelected(null)}
           onContribute={() => setModal("contribute")}
         />
-      )}
+      ))}
 
       {modal && (
         <Modal
@@ -1501,6 +1738,46 @@ const STATE_HERITAGE_STORIES = {
   }
 };
 
+
+// Build the search index from every state/category in the heritage map, not just the
+// six legacy records in data.json. This keeps the global search useful across India.
+function getHeritageSearchCatalog() {
+  const categoryLabels = {
+    art: "Art", craft: "Craft", music: "Music", dance: "Dance / Performance",
+    festival: "Festival", food: "Food", architecture: "Architecture",
+    language: "Language", ritual: "Ritual / Tradition", history: "Historical Heritage"
+  };
+
+  const generated = [];
+  for (const [stateName, categories] of Object.entries(STATE_HIGHLIGHTS)) {
+    for (const [category, entries] of Object.entries(categories || {})) {
+      for (const [title, description] of entries || []) {
+        generated.push({
+          id: `search-${stateName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${category}-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+          title,
+          type: categoryLabels[category] || category,
+          category,
+          categoryLabel: categoryLabels[category] || category,
+          place: stateName,
+          stateName,
+          desc: description,
+          risk: null,
+          verified: true,
+          isStateHeritage: true
+        });
+      }
+    }
+  }
+
+  const legacy = heritage.map(x => ({ ...x, isStateHeritage: false }));
+  const seen = new Set();
+  return [...legacy, ...generated].filter(x => {
+    const key = `${(x.title || '').toLowerCase()}|${(x.place || '').toLowerCase()}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
 
 // State-wise key heritage highlights. These are intentionally compact: the story
 // detail view can be expanded with more photographs and community submissions later.
@@ -2846,6 +3123,199 @@ function HeritageStoryDetail({ story, stateName, category, onBack }) {
           <div className="li-photo-viewer-help">Click outside or press Esc to close · ← → to browse</div>
         </div>
       )}
+    </div>
+  );
+}
+
+function ExploreHub({ h, activeId, onSelect, onBack }) {
+  const groups = [
+    { label: "DISCOVER", note: "Uncover its roots, people and places", ids: ["image", "timeline", "process", "connections", "community"] },
+    { label: "GO DEEPER", note: "Look closer, listen and compare", ids: ["audio", "beforeafter", "surprise"] },
+    { label: "TEST YOURSELF", note: "Play, learn and earn your stamp", ids: ["quiz", "passport"] }
+  ];
+  const optionMap = Object.fromEntries(experienceOptions.map(x => [x[0], x]));
+  const imageMap = {
+    image: IMG.harappa,
+    timeline: IMG.pattachitra,
+    process: IMG.theyyam,
+    connections: IMG.kalamkari,
+    community: IMG.baul,
+    audio: IMG.baul,
+    beforeafter: IMG.theyyam,
+    surprise: IMG.pattachitra,
+    quiz: IMG.harappa,
+    passport: IMG.pattachitra
+  };
+  const iconMap = { image: "⌖", timeline: "◷", process: "✦", connections: "⌘", community: "♧", audio: "♪", beforeafter: "↔", surprise: "✧", quiz: "?", passport: "◇" };
+  const isDone = id => !!localStorage.getItem(`li-explore-${h.id || h.title}-${id}`);
+  const explored = experienceOptions.filter(x => isDone(x[0])).length;
+  const progress = Math.round((explored / experienceOptions.length) * 100);
+
+  if (activeId) {
+    const [id, label, desc] = optionMap[activeId] || [];
+    const contextual = {
+      image: ["See it differently", "Explore the places, objects, symbols and visual details connected to this heritage.", "Look for", "People · Places · Objects · Symbols"],
+      timeline: ["Trace the journey", "Follow this tradition from its roots through regional change, revival and life today.", "Journey", "Origins · Turning points · Modern day"],
+      process: ["Behind the tradition", "Break the practice into its materials, preparation, people, technique and final expression.", "Discover", "Materials · Skills · Process · Makers"],
+      connections: ["Find the cultural threads", "See how this heritage sits inside a larger network of regions, communities, arts, food, ritual and history.", "Connected to", "Regions · People · Arts · Traditions"],
+      community: ["Voices keep it alive", "Discover the people and communities whose memories, skills and everyday practice keep this heritage living.", "Meet", "Practitioners · Families · Communities · Stories"],
+      audio: ["Hear the living culture", "Explore rhythm, instruments, language, songs and oral traditions associated with this heritage.", "Listen for", "Rhythm · Instruments · Voice · Language"],
+      beforeafter: ["Then & now", "Compare how the form, setting, tools, clothing, performance or public life has changed across time.", "Compare", "Past · Transition · Present · Continuity"],
+      surprise: ["Look closer", "Small details often reveal the most memorable stories. Discover lesser-known facts and cultural connections.", "You might discover", "Origins · Myths · Hidden details · Surprises"],
+      quiz: ["Can you remember it?", "Test what you discovered through short, heritage-specific questions and challenges.", "Challenge", "Recall · Identify · Connect · Score"],
+      passport: ["Your Heritage Passport", "Every meaningful exploration can become a stamp. Build a personal collection as you travel across India’s living heritage.", "Your progress", `${explored}/10 experiences explored`]
+    }[activeId] || [label, desc, "Explore", "Living India"];
+
+    if (activeId === "passport") {
+      const badges = [
+        ["🧭", "First Explorer", explored >= 1, "Explore your first path."],
+        ["📚", "Heritage Scholar", explored >= 5, "Explore five learning paths."],
+        ["🌏", "India Explorer", explored >= 8, "Go deeper across the journey."],
+        ["🏆", "Living India Champion", explored >= 10, "Complete the full exploration set."]
+      ];
+      return (
+        <div className="li-explore-page">
+          <div className="li-explore-module li-passport-page">
+            <button className="li-explore-back" onClick={() => onSelect(null)}>← Back to {h.title}</button>
+            <section className="li-passport-hero">
+              <div><span className="li-module-kicker">LIVING INDIA · YOUR COLLECTION</span><h1>Heritage Passport</h1><h2>{h.title}</h2><p>Turn curiosity into a journey. Every experience you explore leaves a stamp, and every milestone unlocks a badge.</p></div>
+              <div className="li-passport-book"><div className="li-passport-emblem">✺</div><strong>INDIA</strong><span>HERITAGE<br/>PASSPORT</span><small>{explored}/10 explored</small></div>
+            </section>
+            <section className="li-stamp-section"><div className="li-module-heading"><span>YOUR STAMPS</span><h2>{explored}/10 experiences explored</h2><p>Complete an experience to collect its stamp.</p></div><div className="li-stamp-grid">{experienceOptions.map(([id,label]) => { const done=isDone(id); return <div className={`li-stamp ${done?"earned":"locked"}`} key={id}><div>{done?"✦":"○"}</div><strong>{label}</strong><small>{done?"STAMP EARNED":"Not explored yet"}</small></div>; })}</div></section>
+            <section className="li-badge-section"><div className="li-module-heading"><span>BADGES</span><h2>Milestones worth keeping</h2></div><div className="li-badge-grid">{badges.map(([icon,name,earned,text])=><div className={`li-badge ${earned?"earned":"locked"}`} key={name}><span>{icon}</span><div><strong>{name}</strong><p>{text}</p></div><b>{earned?"✓":"LOCKED"}</b></div>)}</div></section>
+            <div className="li-module-actions"><button onClick={() => onSelect(null)}>← Back to all experiences</button><button className="primary" onClick={onBack}>Finish exploring →</button></div>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="li-explore-page">
+        <div className="li-explore-module" style={{"--module-image": `url("${imageMap[activeId] || h.image || ""}")`}}>
+          <button className="li-explore-back" onClick={() => onSelect(null)}>← Back to {h.title}</button>
+          <div className="li-module-hero">
+            <div className="li-module-copy">
+              <span className="li-module-kicker">LIVING INDIA · {label}</span>
+              <h1>{contextual[0]}</h1>
+              <h2>{h.title}</h2>
+              <p>{contextual[1]}</p>
+              <div className="li-module-pills"><span>{contextual[2]}</span><b>{contextual[3]}</b></div>
+            </div>
+            <div className="li-module-art"><img src={imageMap[activeId] || h.image} alt="" /></div>
+          </div>
+          <div className="li-module-body">
+            <div className="li-module-heading"><span>YOUR PATH</span><h2>{label}</h2><p>{desc}</p></div>
+            <div className="li-module-panels">
+              <article><span>01</span><h3>Start with the story</h3><p>{h.desc || "Begin with the cultural context and discover why this heritage matters."}</p></article>
+              <article><span>02</span><h3>Explore the details</h3><p>{(h.facts || []).slice(0, 4).join(" · ") || contextual[3]}</p></article>
+              <article><span>03</span><h3>Take it further</h3><p>Follow the connections, people, places and living practices that make {h.title} more than a historical record.</p></article>
+            </div>
+            <div className="li-module-actions"><button onClick={() => onSelect(null)}>← Back to all experiences</button><button className="primary" onClick={() => onSelect(activeId === "passport" ? "passport" : "passport")}>View Passport →</button></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="li-explore-page">
+      <div className="li-explore-hub">
+        <div className="li-explore-top"><button className="li-explore-back" onClick={onBack}>← Back to results</button><span>10 WAYS TO DISCOVER</span></div>
+        <section className="li-explore-hero">
+          <div className="li-explore-hero-copy">
+            <span className="li-module-kicker">EXPLORE THE LIVING LEGACY OF</span>
+            <h1>{h.title}</h1>
+            <p>{h.desc || "A living thread of India's cultural memory, carried through people, place and practice."}</p>
+            <div className="li-explore-location">⌖ {h.place || "India"} <i>•</i> {h.type || "Living heritage"}</div>
+          </div>
+          <div className="li-explore-hero-image"><img src={h.image || IMG.pattachitra} alt="" /></div>
+          <aside><strong>Your journey<br/>starts here</strong><p>Choose a path and dive deeper into the history, people, music, craft and stories behind {h.title}.</p><span>Explore →</span></aside>
+        </section>
+
+        <div className="li-explore-title"><span>✦ {h.title}</span><h2>10 Ways to Explore</h2><p>Choose a path and dive deeper into its world.</p></div>
+        {groups.map(group => (
+          <section className="li-explore-group" key={group.label}>
+            <div className="li-explore-group-head"><div><h3>{group.label}</h3><p>{group.note}</p></div><span>{group.ids.length} paths</span></div>
+            <div className="li-experience-grid">
+              {group.ids.map((id, idx) => {
+                const [_, label, desc] = optionMap[id];
+                const done = isDone(id);
+                return <button className={`li-experience-tile ${done ? "is-done" : ""}`} key={id} onClick={() => onSelect(id)} style={{"--tile-image": `url("${imageMap[id] || ""}")`}}>
+                  <div className="li-tile-photo"></div><span className="li-tile-number">{String(experienceOptions.findIndex(x => x[0] === id) + 1).padStart(2, "0")}</span><span className="li-tile-icon">{iconMap[id]}</span>{done && <span className="li-tile-done">✓ Explored</span>}<div className="li-tile-copy"><h4>{label}</h4><p>{desc}</p></div><span className="li-tile-arrow">→</span>
+                </button>;
+              })}
+            </div>
+          </section>
+        ))}
+        <section className="li-passport-strip"><div><span>🪪 HERITAGE PASSPORT</span><h2>Your journey becomes your collection.</h2><p>Explore each path, complete challenges and collect stamps as you discover India.</p></div><div className="li-passport-progress"><strong>{explored}/10</strong><small>experiences explored</small><div><i style={{width:`${progress}%`}}></i></div></div><button onClick={() => onSelect("passport")}>Open Passport →</button></section>
+        <footer className="li-explore-footer">Explore&nbsp; · &nbsp;Learn&nbsp; · &nbsp;Preserve&nbsp; · &nbsp;Celebrate <b>A More Vibrant India</b></footer>
+      </div>
+    </div>
+  );
+}
+
+function WikipediaDetail({ h, close, onContinue }) {
+  const [images, setImages] = useState(() => h.image ? [h.image] : []);
+  const [loadingImages, setLoadingImages] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    const title = h.wikiTitle || h.title;
+    const query = `${title} India heritage`;
+    const url = `https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=${encodeURIComponent(query)}&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url&iiurlwidth=1000&format=json&origin=*`;
+
+    fetch(url)
+      .then(r => r.ok ? r.json() : Promise.reject(new Error("image search failed")))
+      .then(data => {
+        if (cancelled) return;
+        const found = Object.values(data?.query?.pages || {})
+          .map(page => page?.imageinfo?.[0]?.thumburl || page?.imageinfo?.[0]?.url)
+          .filter(Boolean);
+        setImages([...new Set([h.image, ...found].filter(Boolean))].slice(0, 6));
+      })
+      .catch(() => { if (!cancelled) setImages(h.image ? [h.image] : []); })
+      .finally(() => { if (!cancelled) setLoadingImages(false); });
+
+    return () => { cancelled = true; };
+  }, [h.title, h.wikiTitle, h.image]);
+
+  return (
+    <div className="li-wiki-overlay" onClick={close}>
+      <div className="li-wiki-modal" onClick={e => e.stopPropagation()}>
+        <button className="li-wiki-close" onClick={close} aria-label="Close">×</button>
+        <div className="li-wiki-media">
+          {images[0] ? <img src={images[0]} alt={h.title} /> : <div className="li-wiki-noimage">✦</div>}
+          <div className="li-wiki-media-label">KNOWLEDGE DISCOVERY · WIKIPEDIA</div>
+        </div>
+        <div className="li-wiki-body">
+          <div className="li-wiki-eyebrow">SEARCH RESULT · {h.type || "HERITAGE & CULTURE"}</div>
+          <h1>{h.title}</h1>
+          <p className="li-wiki-lead">{h.loading ? "Loading the full heritage summary…" : h.desc}</p>
+
+          <div className="li-wiki-meta">
+            <span>▸ {h.place || "India"}</span>
+            <span>▸ {h.period || "Living heritage"}</span>
+          </div>
+
+          {loadingImages && <div className="li-wiki-loading">Finding related photographs…</div>}
+          {!loadingImages && images.length > 1 && (
+            <div className="li-wiki-gallery">
+              {images.slice(0, 5).map((src, i) => (
+                <img key={src + i} src={src} alt={`${h.title} reference ${i + 1}`} />
+              ))}
+            </div>
+          )}
+
+          <div className="li-wiki-facts">
+            {(h.facts || []).slice(0, 4).map((fact, i) => <div key={fact + i}>✦ {fact}</div>)}
+          </div>
+
+          <div className="li-wiki-actions">
+            {h.wikiUrl && <a className="li-wiki-source" href={h.wikiUrl} target="_blank" rel="noreferrer">Source article ↗</a>}
+            <button onClick={() => onContinue ? onContinue(h) : close()}>Continue exploring</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
