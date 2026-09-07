@@ -42,3 +42,19 @@
 .hero-side:before{content:'✺';font-size:22px;color:#a14b30;margin-bottom:10px;align-self:center}
 @media(max-width:1200px){.hero{grid-template-columns:1fr}.hero-art{inset:0}.hero-copy{padding-left:55px}.hero-side{display:none}.hero-collage-center{left:48%}.hero-collage-right{right:3%}.hero-paper-map{left:57%}}
 @media(max-width:800px){.hero{min-height:650px}.hero-art{inset:0}.hero-collage-left{left:18%;top:35px;width:170px;height:230px}.hero-collage-center{left:38%;top:70px;width:260px;height:240px}.hero-collage-right{right:-35px;top:25px;width:170px;height:290px}.hero-paper-map{left:50%;top:55px;transform:translateX(-50%);opacity:.65}.hero-copy{padding:30px 24px 42px}.hero-copy:before{font-size:8px}.hero-copy h1{font-size:55px}}
+
+/* Living India cinematic video background — hero content/layout stays unchanged */
+.hero-art{background:#4c3b2d!important;isolation:isolate}
+.hero-video-bg{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;z-index:0!important;display:block!important;filter:saturate(.72) sepia(.16) contrast(.92)!important;transform:scale(1.01)!important}
+.hero-art:after{z-index:4!important;background:linear-gradient(90deg,rgba(244,228,194,.96) 0%,rgba(244,228,194,.78) 28%,rgba(45,38,29,.14) 58%,rgba(22,25,22,.38) 100%)!important}
+.hero-art:before{z-index:5!important}
+.hero-art .heritage-motion-bg{z-index:3!important;pointer-events:none!important}
+.hero-art .sun,.hero-art .mountains,.hero-art .temple,.hero-art .hero-map,.hero-art .map-lines{display:none!important}
+@media(max-width:800px){.hero-video-bg{filter:saturate(.65) sepia(.18) brightness(.82)!important}.hero-art:after{background:linear-gradient(180deg,rgba(34,30,25,.08),rgba(24,28,26,.72) 72%,rgba(24,28,26,.9) 100%)!important}}
+
+/* India-wide cultural festival/dance video carousel — background only. */
+.festival-video-stack{position:absolute;inset:0;z-index:0;overflow:hidden;background:#4c3b2d}
+.festival-video-layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;opacity:1;transition:opacity .9s ease;filter:saturate(.72) sepia(.14) contrast(.94) brightness(.80);transform:scale(1.02);will-change:transform}
+.festival-video-layer.is-active{opacity:1}
+@media(max-width:800px){.festival-video-layer{filter:saturate(.66) sepia(.16) brightness(.72)}}
+@media(prefers-reduced-motion:reduce){.festival-video-layer{transition:none!important}}

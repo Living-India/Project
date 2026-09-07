@@ -1,9 +1,52 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
+import { onAuthStateChanged } from "firebase/auth";
+import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
+import { auth, db } from "./firebase-client";
 import "./style.css";
 import "./ui-overrides.css";
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:3001/api";
+const FESTIVAL_VIDEO_PLAYLIST = [
+  { name: "Durga Puja · West Bengal", src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/A_video_of_Devi_Boron_ritual_during_Durga_puja_2025_in_Kolkata.webm", type: "video/webm" },
+  { name: "Rajasthani Folk Dance · Rajasthan", src: "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8a/Folk_dance_of_Rajasthan%2C_India.webm/Folk_dance_of_Rajasthan%2C_India.webm.1080p.vp9.webm", type: "video/webm" },
+  { name: "Onam · Kerala", src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Onam_celebration_in_a_college_in_kerala%2C_2026.webm", type: "video/webm" },
+  { name: "Bihu · Assam", src: "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e2/Bihu_dancers_from_Dhakuakhana_Assam.webm/Bihu_dancers_from_Dhakuakhana_Assam.webm.720p.vp9.webm", type: "video/webm" },
+  { name: "Kathakali · Kerala", src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kathakali-Full_Video.webm", type: "video/webm" },
+  { name: "Garba · Gujarat", src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Garba_dance_during_Navaratri_festival_in_Mehsana_Gujarat_India.ogv", type: "video/ogg" },
+  { name: "Chhau · India", src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chhau_dancers_performing_a_Mahabharata_scene_at_Khajuraho_Dance_Festival_2026.webm", type: "video/webm" }
+];
+
+function FestivalVideoBackground(){
+  const [index,setIndex]=useState(0);
+  const item=FESTIVAL_VIDEO_PLAYLIST[index];
+  const advance=()=>setIndex((i)=>(i+1)%FESTIVAL_VIDEO_PLAYLIST.length);
+  const start=(e)=>{
+    const video=e.currentTarget;
+    video.muted=true;
+    const p=video.play();
+    if(p?.catch) p.catch(()=>{});
+  };
+  return (
+    <div className="festival-video-stack" aria-hidden="true">
+      <video
+        key={`${index}-${item.src}`}
+        className="festival-video-layer is-active"
+        autoPlay
+        muted
+        playsInline
+        preload="auto"
+        onLoadedData={start}
+        onCanPlay={start}
+        onEnded={advance}
+        onError={advance}
+      >
+        <source src={item.src} type={item.type}/>
+      </video>
+    </div>
+  );
+}
+
 
 const IMG = {
   harappa: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Harappa_Ruins_-_IV.jpg",
@@ -216,10 +259,72 @@ function App() {
   const [selectedState, setSelectedState] = useState(null);
   const [experienceHub, setExperienceHub] = useState(null);
   const [activeExperience, setActiveExperience] = useState(null);
+  const [authUser, setAuthUser] = useState(null);
+  const [passportData, setPassportData] = useState({});
 
   const notify = x => {
     setToast(x);
     setTimeout(() => setToast(""), 2500);
+  };
+
+  useEffect(() => {
+    let cancelled = false;
+    const unsubscribe = onAuthStateChanged(auth, async user => {
+      if (cancelled) return;
+      setAuthUser(user || null);
+      if (!user) {
+        setPassportData({});
+        return;
+      }
+      try {
+        const ref = doc(db, "users", user.uid, "passport", "progress");
+        const snap = await getDoc(ref);
+        if (!cancelled && snap.exists()) setPassportData(snap.data() || {});
+        else if (!cancelled) setPassportData({});
+      } catch (error) {
+        console.error("[Living India Passport] Could not load account progress", error);
+        if (!cancelled) setPassportData({});
+      }
+    });
+    return () => { cancelled = true; unsubscribe(); };
+  }, []);
+
+  const savePassportProgress = async (nextData) => {
+    if (!authUser) {
+      notify("Sign in to save your Heritage Passport to your account.");
+      return;
+    }
+    setPassportData(nextData);
+    try {
+      await setDoc(doc(db, "users", authUser.uid, "passport", "progress"), {
+        ...nextData,
+        email: authUser.email || "",
+        updatedAt: serverTimestamp()
+      }, { merge: true });
+    } catch (error) {
+      console.error("[Living India Passport] Save failed", error);
+      notify("Could not save Passport right now. Please try again.");
+    }
+  };
+
+  const markExperienceComplete = (heritageId, experienceId) => {
+    if (!authUser) {
+      notify("Sign in to keep your Passport progress on every device.");
+      return;
+    }
+    const key = heritageId || "unknown";
+    const current = Array.isArray(passportData?.exploredByHeritage?.[key])
+      ? passportData.exploredByHeritage[key]
+      : [];
+    if (current.includes(experienceId)) return;
+    const next = {
+      ...passportData,
+      exploredByHeritage: {
+        ...(passportData.exploredByHeritage || {}),
+        [key]: [...current, experienceId]
+      }
+    };
+    savePassportProgress(next);
   };
 
   useEffect(() => {
@@ -450,13 +555,11 @@ function App() {
 
   const openExperienceModule = id => {
     setActiveExperience(id);
-    setExperienceHub(prev => {
-      if (!prev) return prev;
-      const key = `li-explore-${prev.id || prev.title}-${id}`;
-      localStorage.setItem(key, "1");
-      return { ...prev };
-    });
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const completeExperience = id => {
+    if (experienceHub) markExperienceComplete(experienceHub.id || experienceHub.title, id);
   };
 
   const closeExploreHub = () => {
@@ -528,14 +631,6 @@ function App() {
             onClick={() => nav("risk")}
           >
             <Icon>△</Icon>At Risk
-          </button>
-
-          <button
-            onClick={() => open(
-              heritage.find(x => x.id === "harappa")
-            )}
-          >
-            <Icon>♜</Icon>Harappa
           </button>
 
         </div>
@@ -674,17 +769,26 @@ function App() {
 
               <div className="hero-art">
 
-                <div className="hero-collage hero-collage-left">
-                  <img src={IMG.pattachitra} alt="Indian heritage artwork" />
-                </div>
-                <div className="hero-collage hero-collage-center">
-                  <img src={IMG.harappa} alt="Ancient Indian heritage site" />
-                </div>
-                <div className="hero-collage hero-collage-right">
-                  <img src={IMG.theyyam} alt="Living Indian ritual tradition" />
-                </div>
-                <div className="hero-paper-map">
-                  <span>PEOPLE</span><span>PLACES</span><span>CULTURES</span><span>STORIES</span>
+                <FestivalVideoBackground />
+
+                <div className="heritage-motion-bg" aria-hidden="true">
+                  <span className="motion-sun-glow"></span>
+                  <span className="motion-mandala motion-mandala-a">✺</span>
+                  <span className="motion-mandala motion-mandala-b">✺</span>
+                  <span className="motion-bird motion-bird-a">⌁</span>
+                  <span className="motion-bird motion-bird-b">⌁</span>
+                  <span className="motion-bird motion-bird-c">⌁</span>
+                  <span className="motion-leaf motion-leaf-1">◆</span>
+                  <span className="motion-leaf motion-leaf-2">◆</span>
+                  <span className="motion-leaf motion-leaf-3">◆</span>
+                  <span className="motion-leaf motion-leaf-4">◆</span>
+                  <span className="motion-leaf motion-leaf-5">◆</span>
+                  <span className="motion-leaf motion-leaf-6">◆</span>
+                  <span className="motion-dust motion-dust-1"></span>
+                  <span className="motion-dust motion-dust-2"></span>
+                  <span className="motion-dust motion-dust-3"></span>
+                  <span className="motion-dust motion-dust-4"></span>
+                  <span className="motion-dust motion-dust-5"></span>
                 </div>
 
                 <div className="sun"></div>
@@ -1052,7 +1156,11 @@ function App() {
           h={experienceHub}
           activeId={activeExperience}
           onSelect={openExperienceModule}
+          onComplete={completeExperience}
           onBack={closeExploreHub}
+          passportData={passportData}
+          authUser={authUser}
+          onLogin={() => { window.location.href = "./auth3.html"; }}
         />
       )}
 
@@ -1073,6 +1181,7 @@ function App() {
           h={selected}
           close={() => setSelected(null)}
           onContribute={() => setModal("contribute")}
+          onContinue={openExploreHub}
         />
       ))}
 
@@ -3127,27 +3236,26 @@ function HeritageStoryDetail({ story, stateName, category, onBack }) {
   );
 }
 
-function ExploreHub({ h, activeId, onSelect, onBack }) {
+function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, authUser, onLogin }) {
   const groups = [
     { label: "DISCOVER", note: "Uncover its roots, people and places", ids: ["image", "timeline", "process", "connections", "community"] },
     { label: "GO DEEPER", note: "Look closer, listen and compare", ids: ["audio", "beforeafter", "surprise"] },
     { label: "TEST YOURSELF", note: "Play, learn and earn your stamp", ids: ["quiz", "passport"] }
   ];
   const optionMap = Object.fromEntries(experienceOptions.map(x => [x[0], x]));
-  const imageMap = {
-    image: IMG.harappa,
-    timeline: IMG.pattachitra,
-    process: IMG.theyyam,
-    connections: IMG.kalamkari,
-    community: IMG.baul,
-    audio: IMG.baul,
-    beforeafter: IMG.theyyam,
-    surprise: IMG.pattachitra,
-    quiz: IMG.harappa,
-    passport: IMG.pattachitra
-  };
+  // Keep every Explore path visually tied to the heritage the user selected.
+  // This is especially important for search recommendations such as Kalamkari,
+  // Madhubani and Baul Music: Continue exploring should never switch to a
+  // different heritage's stock image.
+  const imageMap = Object.fromEntries(
+    experienceOptions.map(([id]) => [id, h.image || IMG.pattachitra])
+  );
   const iconMap = { image: "⌖", timeline: "◷", process: "✦", connections: "⌘", community: "♧", audio: "♪", beforeafter: "↔", surprise: "✧", quiz: "?", passport: "◇" };
-  const isDone = id => !!localStorage.getItem(`li-explore-${h.id || h.title}-${id}`);
+  const heritageKey = h.id || h.title;
+  const accountExplored = Array.isArray(passportData?.exploredByHeritage?.[heritageKey])
+    ? passportData.exploredByHeritage[heritageKey]
+    : [];
+  const isDone = id => accountExplored.includes(id);
   const explored = experienceOptions.filter(x => isDone(x[0])).length;
   const progress = Math.round((explored / experienceOptions.length) * 100);
 
@@ -3178,7 +3286,7 @@ function ExploreHub({ h, activeId, onSelect, onBack }) {
           <div className="li-explore-module li-passport-page">
             <button className="li-explore-back" onClick={() => onSelect(null)}>← Back to {h.title}</button>
             <section className="li-passport-hero">
-              <div><span className="li-module-kicker">LIVING INDIA · YOUR COLLECTION</span><h1>Heritage Passport</h1><h2>{h.title}</h2><p>Turn curiosity into a journey. Every experience you explore leaves a stamp, and every milestone unlocks a badge.</p></div>
+              <div><span className="li-module-kicker">LIVING INDIA · YOUR COLLECTION</span><h1>Heritage Passport</h1><h2>{h.title}</h2><p>Turn curiosity into a journey. Every experience you explore leaves a stamp, and every milestone unlocks a badge.</p>{authUser ? <div className="li-passport-account">✓ Saved to your account · {authUser.email}</div> : <button className="li-passport-login" onClick={onLogin}>Sign in to save your Passport →</button>}</div>
               <div className="li-passport-book"><div className="li-passport-emblem">✺</div><strong>INDIA</strong><span>HERITAGE<br/>PASSPORT</span><small>{explored}/10 explored</small></div>
             </section>
             <section className="li-stamp-section"><div className="li-module-heading"><span>YOUR STAMPS</span><h2>{explored}/10 experiences explored</h2><p>Complete an experience to collect its stamp.</p></div><div className="li-stamp-grid">{experienceOptions.map(([id,label]) => { const done=isDone(id); return <div className={`li-stamp ${done?"earned":"locked"}`} key={id}><div>{done?"✦":"○"}</div><strong>{label}</strong><small>{done?"STAMP EARNED":"Not explored yet"}</small></div>; })}</div></section>
@@ -3210,7 +3318,7 @@ function ExploreHub({ h, activeId, onSelect, onBack }) {
               <article><span>02</span><h3>Explore the details</h3><p>{(h.facts || []).slice(0, 4).join(" · ") || contextual[3]}</p></article>
               <article><span>03</span><h3>Take it further</h3><p>Follow the connections, people, places and living practices that make {h.title} more than a historical record.</p></article>
             </div>
-            <div className="li-module-actions"><button onClick={() => onSelect(null)}>← Back to all experiences</button><button className="primary" onClick={() => onSelect(activeId === "passport" ? "passport" : "passport")}>View Passport →</button></div>
+            <div className="li-module-actions"><button onClick={() => onSelect(null)}>← Back to all experiences</button><button className="primary" onClick={() => { onComplete(activeId); onSelect("passport"); }}>Complete & collect stamp →</button></div>
           </div>
         </div>
       </div>
@@ -3320,7 +3428,7 @@ function WikipediaDetail({ h, close, onContinue }) {
   );
 }
 
-function Detail({ h, close, onContribute }) {
+function Detail({ h, close, onContribute, onContinue }) {
 
   return (
     <div
@@ -3390,7 +3498,7 @@ function Detail({ h, close, onContribute }) {
 
             <button
               className="outline"
-              onClick={close}
+              onClick={() => onContinue ? onContinue(h) : close()}
             >
               Continue exploring
             </button>

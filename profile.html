@@ -41,8 +41,11 @@
 <script type="module">
 import {initializeApp} from 'firebase/app'
 import {getAuth,onAuthStateChanged,signOut,reload} from 'firebase/auth'
+import {getFirestore,doc,getDoc} from 'firebase/firestore'
 const firebaseConfig={apiKey:'AIzaSyCeuizWkJRvp2_iOxD4UOFL12Os2k0KybQ',authDomain:'living-india-7f73b.firebaseapp.com',projectId:'living-india-7f73b',storageBucket:'living-india-7f73b.firebasestorage.app',messagingSenderId:'439601825953',appId:'1:439601825953:web:cc38c29d819b86de03c8e0',measurementId:'G-N76WYJXS7K'}
-const auth=getAuth(initializeApp(firebaseConfig));
+const app=initializeApp(firebaseConfig);
+const auth=getAuth(app);
+const db=getFirestore(app);
 const $=id=>document.getElementById(id);const home=new URL('./',location.href).href;const photoKey='li-profile-photo';
 $('home').onclick=$('home2').onclick=()=>location.href=home;
 function loadPhoto(){const photo=localStorage.getItem(photoKey);if(photo){$('avatarImg').src=photo;$('avatar').classList.add('has-photo')}}
@@ -56,7 +59,15 @@ onAuthStateChanged(auth,async user=>{
  if(!$('avatar').classList.contains('has-photo'))$('avatar').querySelector('span').textContent=display.charAt(0).toUpperCase();
  $('verified').textContent=user.emailVerified?'✓ EMAIL VERIFIED':'EMAIL NOT VERIFIED';
  if(!user.emailVerified){$('verified').style.background='#f7e7df';$('verified').style.color='#a64b32'}
- const stamps=Number(localStorage.getItem('li-passport-stamps')||0);$('stamps').textContent=stamps?`${stamps} heritage stamp${stamps===1?'':'s'} collected.`:'0 stamps collected. Start exploring to build your cultural journey.';
+ try {
+  const snap=await getDoc(doc(db,'users',user.uid,'passport','progress'));
+  const data=snap.exists()?snap.data():{};
+  const byHeritage=data.exploredByHeritage||{};
+  const stamps=Object.values(byHeritage).reduce((total,list)=>total+(Array.isArray(list)?list.length:0),0);
+  $('stamps').textContent=stamps?`${stamps} heritage stamp${stamps===1?'':'s'} collected across your journey.`:'0 stamps collected. Start exploring to build your cultural journey.';
+ } catch {
+  $('stamps').textContent='Your Passport is ready. Explore heritage to collect stamps.';
+ }
 })
 $('signout').onclick=async()=>{try{await signOut(auth);location.replace('./')}catch(e){$('status').textContent='Could not sign out. Please try again.'}}
 </script>

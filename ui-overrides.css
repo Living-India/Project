@@ -726,3 +726,114 @@
 .li-badge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:22px}.li-badge{display:flex;align-items:center;gap:12px;padding:17px;border:1px solid rgba(143,101,55,.48);border-radius:13px;background:#f8ecd7}.li-badge>span{font-size:27px}.li-badge div{flex:1}.li-badge strong{display:block;color:#29403b;font:700 16px/1.05 'Playfair Display',serif}.li-badge p{margin:5px 0 0;color:#75604a;font:400 12px/1.2 'Cormorant Garamond',serif}.li-badge>b{font:800 8px/1 'DM Sans',sans-serif;color:#907a60;letter-spacing:.08em}.li-badge.earned{border-color:rgba(49,95,70,.45);box-shadow:0 0 0 2px rgba(49,95,70,.08)}.li-badge.earned>b{color:#315f46}.li-badge.locked{opacity:.56}
 @media(max-width:900px){.li-passport-hero{grid-template-columns:1fr}.li-passport-book{max-width:320px;width:100%;justify-self:center}.li-stamp-grid{grid-template-columns:repeat(3,1fr)}.li-badge-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.li-passport-hero{padding:30px 22px}.li-passport-hero h1{font-size:45px}.li-passport-hero p{font-size:17px}.li-stamp-grid{grid-template-columns:repeat(2,1fr)}.li-badge-grid{grid-template-columns:1fr}.li-stamp{min-height:120px;padding:12px}.li-stamp strong{font-size:14px}}
+
+/* Account-backed Heritage Passport */
+.li-passport-account{margin-top:18px;padding:10px 13px;display:inline-block;border:1px solid rgba(215,163,103,.45);border-radius:999px;color:#e6d7c1;font:700 10px/1.2 'DM Sans',sans-serif;letter-spacing:.03em;background:rgba(255,255,255,.06)}
+.li-passport-login{margin-top:18px;border:1px solid #d7a367;border-radius:999px;padding:11px 15px;background:#fff1d8;color:#173e3b;font:700 11px/1 'DM Sans',sans-serif;cursor:pointer}
+.li-passport-login:hover{background:#f8dfbd}
+
+
+/* =========================================================
+   Living India — subtle heritage motion layer
+   Background-only animation: no layout/content interaction.
+   ========================================================= */
+@media (min-width: 701px){
+  .hero-art .heritage-motion-bg{
+    position:absolute;
+    inset:0;
+    z-index:7;
+    overflow:hidden;
+    pointer-events:none;
+  }
+  .heritage-motion-bg span{position:absolute;display:block;pointer-events:none}
+
+  .motion-sun-glow{
+    width:260px;height:260px;left:40%;top:5%;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,224,145,.34) 0,rgba(255,214,124,.14) 34%,transparent 70%);
+    animation:li-sun-breathe 7s ease-in-out infinite alternate;
+  }
+  .motion-mandala{
+    width:180px;height:180px;border-radius:50%;
+    display:grid!important;place-items:center;
+    font-size:155px;line-height:1;color:rgba(177,117,51,.10);
+    font-family:Georgia,serif;
+    animation:li-mandala-drift 18s linear infinite;
+  }
+  .motion-mandala-a{left:27%;top:-48px}
+  .motion-mandala-b{left:35%;bottom:-78px;font-size:135px;animation-duration:23s;animation-direction:reverse}
+
+  .motion-bird{
+    color:rgba(47,43,34,.34);font-size:42px;line-height:1;
+    transform:rotate(-8deg);filter:blur(.15px);
+    animation:li-bird-fly 15s linear infinite;
+  }
+  .motion-bird-a{left:-8%;top:15%;animation-delay:-2s}
+  .motion-bird-b{left:20%;top:9%;font-size:29px;animation-duration:19s;animation-delay:-10s}
+  .motion-bird-c{left:48%;top:16%;font-size:24px;animation-duration:22s;animation-delay:-15s}
+
+  .motion-leaf{
+    color:rgba(175,76,42,.58);font-size:20px;line-height:1;
+    filter:blur(.2px);text-shadow:0 2px 5px rgba(64,40,25,.16);
+    animation:li-leaf-fall 9s ease-in-out infinite;
+  }
+  .motion-leaf-1{left:6%;top:-5%;animation-delay:-1s;animation-duration:10s}
+  .motion-leaf-2{left:31%;top:-8%;font-size:14px;animation-delay:-5s;animation-duration:12s}
+  .motion-leaf-3{left:57%;top:-7%;font-size:17px;animation-delay:-7s;animation-duration:11s}
+  .motion-leaf-4{left:73%;top:7%;font-size:13px;animation-delay:-3s;animation-duration:13s}
+  .motion-leaf-5{left:84%;top:-9%;font-size:18px;animation-delay:-9s;animation-duration:12s}
+  .motion-leaf-6{left:42%;top:46%;font-size:12px;animation-delay:-6s;animation-duration:14s}
+
+  .motion-dust{
+    width:5px;height:5px;border-radius:50%;
+    background:rgba(255,228,165,.55);box-shadow:0 0 9px rgba(255,216,129,.45);
+    animation:li-dust-float 6s ease-in-out infinite alternate;
+  }
+  .motion-dust-1{left:49%;top:30%;animation-delay:-1s}
+  .motion-dust-2{left:61%;top:58%;animation-delay:-4s;animation-duration:8s}
+  .motion-dust-3{left:71%;top:38%;animation-delay:-2s;animation-duration:7s}
+  .motion-dust-4{left:38%;top:67%;animation-delay:-5s;animation-duration:9s}
+  .motion-dust-5{left:90%;top:52%;animation-delay:-3s;animation-duration:7s}
+
+  @keyframes li-sun-breathe{
+    from{transform:scale(.94);opacity:.62}
+    to{transform:scale(1.08);opacity:.9}
+  }
+  @keyframes li-mandala-drift{
+    from{transform:rotate(0deg) translate3d(0,0,0);opacity:.55}
+    50%{transform:rotate(180deg) translate3d(14px,8px,0);opacity:.9}
+    to{transform:rotate(360deg) translate3d(0,0,0);opacity:.55}
+  }
+  @keyframes li-bird-fly{
+    0%{transform:translate3d(-8vw,12px,0) scale(.72) rotate(-8deg);opacity:0}
+    12%{opacity:.7}
+    50%{transform:translate3d(35vw,-8px,0) scale(1) rotate(2deg);opacity:.5}
+    88%{opacity:.7}
+    100%{transform:translate3d(90vw,18px,0) scale(.72) rotate(-6deg);opacity:0}
+  }
+  @keyframes li-leaf-fall{
+    0%{transform:translate3d(0,-18px,0) rotate(0deg);opacity:0}
+    12%{opacity:.8}
+    50%{transform:translate3d(55px,230px,0) rotate(170deg);opacity:.72}
+    100%{transform:translate3d(-35px,540px,0) rotate(360deg);opacity:0}
+  }
+  @keyframes li-dust-float{
+    from{transform:translate3d(0,0,0) scale(.65);opacity:.18}
+    to{transform:translate3d(20px,-18px,0) scale(1.25);opacity:.8}
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .heritage-motion-bg *{animation:none!important}
+}
+
+/* Final cinematic background: use real moving heritage footage, not image slideshows. */
+.hero-art{background:#4c3b2d!important;}
+.hero-video-bg{z-index:0!important;display:block!important;object-fit:cover!important;object-position:center!important;filter:saturate(.78) sepia(.10) contrast(.95) brightness(.82)!important;}
+.hero-art:after{z-index:4!important;background:linear-gradient(90deg,rgba(244,228,194,.94) 0%,rgba(244,228,194,.76) 27%,rgba(45,38,29,.12) 57%,rgba(22,25,22,.42) 100%)!important;}
+.hero-art .heritage-motion-bg{display:none!important;}
+.hero-art .sun,.hero-art .mountains,.hero-art .temple,.hero-art .hero-map,.hero-art .map-lines,.hero-art .compass{display:none!important;}
+@media(max-width:800px){.hero-video-bg{filter:saturate(.72) sepia(.12) brightness(.72)!important}.hero-art:after{background:linear-gradient(180deg,rgba(34,30,25,.10),rgba(24,28,26,.70) 72%,rgba(24,28,26,.90) 100%)!important}}
+
+/* v15: cultural video playlist replaces the single Ganges background; layout remains unchanged. */
+.hero-art .hero-video-bg{display:none!important}
+.hero-art .festival-video-stack{z-index:0!important}
