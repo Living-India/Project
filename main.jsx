@@ -1,7 +1,10 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { onAuthStateChanged } from "firebase/auth";
-import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
+import {
+  doc, getDoc, setDoc, serverTimestamp,
+  collection, onSnapshot, addDoc, updateDoc, arrayUnion, arrayRemove
+} from "firebase/firestore";
 import { auth, db } from "./firebase-client";
 import "./style.css";
 import "./ui-overrides.css";
@@ -326,6 +329,27 @@ function App() {
     };
     savePassportProgress(next);
   };
+
+  useEffect(() => {
+    // Community stories, likes and comments are account/cloud-backed in Firestore.
+    // This listener intentionally lives alongside the existing data loader so the
+    // rest of the site keeps its current API behaviour.
+    const unsubscribe = onSnapshot(
+      collection(db, "communityPosts"),
+      snapshot => {
+        const cloudPosts = snapshot.docs
+          .map(d => ({ id: d.id, ...d.data() }))
+          .sort((a, b) => {
+            const ta = a.createdAt?.toMillis ? a.createdAt.toMillis() : 0;
+            const tb = b.createdAt?.toMillis ? b.createdAt.toMillis() : 0;
+            return tb - ta;
+          });
+        setPosts(cloudPosts);
+      },
+      error => console.error("[Living India Community] Load failed", error)
+    );
+    return () => unsubscribe();
+  }, []);
 
   useEffect(() => {
     api("/health")
@@ -1093,31 +1117,12 @@ function App() {
         )}
 
         {page === "community" && (
-          <div className="page-wrap">
-
-            <div className="page-title">
-
-              <div className="eyebrow">
-                FROM THE COMMUNITY
-              </div>
-
-              <h1>
-                Stories from <i>the people</i>
-              </h1>
-
-              <p>
-                Living heritage is not just history. It is what people still do, teach and remember.
-              </p>
-
-            </div>
-
-            <Community
-              posts={posts}
-              large
-              onClick={() => { }}
-            />
-
-          </div>
+          <CommunityPage
+            posts={posts}
+            authUser={authUser}
+            onShare={() => setModal("contribute")}
+            notify={notify}
+          />
         )}
 
         {page === "map" && (
@@ -1190,6 +1195,36 @@ function App() {
           type={modal}
           close={() => setModal(null)}
           notify={notify}
+          authUser={authUser}
+          onStorySubmitted={async data => {
+            if (!authUser) {
+              notify("Please sign in to share your story.");
+              return false;
+            }
+            try {
+              await addDoc(collection(db, "communityPosts"), {
+                title: data.title,
+                topic: data.topic,
+                state: data.state,
+                category: data.category,
+                story: data.story,
+                image: data.image || "",
+                author: authUser.displayName || authUser.email?.split("@")[0] || "Heritage Explorer",
+                authorEmail: authUser.email || "",
+                authorId: authUser.uid,
+                likes: 0,
+                likedBy: [],
+                createdAt: serverTimestamp(),
+                status: "approved"
+              });
+              notify("Your story is now part of the Community ✓");
+              return true;
+            } catch (error) {
+              console.error("[Living India Community] Story save failed", error);
+              notify("Could not save your story. Please try again.");
+              return false;
+            }
+          }}
         />
       )}
 
@@ -1510,6 +1545,238 @@ function RiskPanel({ onClick, large }) {
         )
       )}
 
+    </div>
+  );
+}
+
+
+const INDIA_STATES = [
+  "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh",
+  "Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand","Karnataka",
+  "Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram",
+  "Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu",
+  "Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal",
+  "Delhi","Jammu & Kashmir","Ladakh"
+];
+
+async function compressCommunityImage(file) {
+  try {
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    const loaded = new Promise((resolve, reject) => {
+      img.onload = resolve;
+      img.onerror = reject;
+    });
+    img.src = url;
+    await loaded;
+    const max = 1100;
+    const scale = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.max(1, Math.round(img.naturalWidth * scale));
+    canvas.height = Math.max(1, Math.round(img.naturalHeight * scale));
+    canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+    URL.revokeObjectURL(url);
+    return canvas.toDataURL("image/jpeg", 0.72);
+  } catch {
+    return "";
+  }
+}
+
+function CommunityPage({ posts, authUser, onShare, notify }) {
+  const categories = ["All Stories","Festivals","Folk Dance","Food","Crafts","Music","Rituals","Languages","Memories","Other"];
+  const [category, setCategory] = useState("All Stories");
+  const [sort, setSort] = useState("Latest");
+  const [activePost, setActivePost] = useState(null);
+  const [comment, setComment] = useState("");
+  const [commentItems, setCommentItems] = useState([]);
+
+  const demoPosts = [
+    {
+      id:"demo-durga", title:"A Memory of Durga Puja in Our Para", topic:"Kolkata, West Bengal",
+      state:"West Bengal", category:"Festivals",
+      story:"Every year during Durga Puja, our whole neighbourhood turns into a family. From the first smell of shiuli flowers in the morning to the dhaak in the evenings, it is a feeling you can’t put into words…",
+      author:"Ananya Sen", likes:124, likedBy:[], image:IMG.theyyam
+    },
+    {
+      id:"demo-ghoomar", title:"Ghoomar: The Pride of My Roots", topic:"Jodhpur, Rajasthan",
+      state:"Rajasthan", category:"Folk Dance",
+      story:"I learnt Ghoomar from my grandmother. For us, it’s not just a dance, it’s a way of expressing joy, strength and togetherness.",
+      author:"Ritika Sharma", likes:96, likedBy:[], image:IMG.madhubani
+    },
+    {
+      id:"demo-onam", title:"Onam Sadhya — A Feast of Togetherness", topic:"Thrissur, Kerala",
+      state:"Kerala", category:"Food",
+      story:"Onam is love, onam is nostalgia, and onam is the taste of home. No matter where we go, the sadhya always brings our family together.",
+      author:"Arjun Nair", likes:210, likedBy:[], image:IMG.kalamkari
+    }
+  ];
+
+  const all = posts.length ? posts : demoPosts;
+  const filtered = all.filter(p => category === "All Stories" || p.category === category);
+  const ordered = [...filtered].sort((a,b) => {
+    if (sort === "Popular") return (b.likes || 0) - (a.likes || 0);
+    const ta = a.createdAt?.toMillis ? a.createdAt.toMillis() : 0;
+    const tb = b.createdAt?.toMillis ? b.createdAt.toMillis() : 0;
+    return tb - ta;
+  });
+
+  useEffect(() => {
+    if (!activePost?.id || String(activePost.id).startsWith("demo-")) {
+      setCommentItems([]);
+      return;
+    }
+    const unsub = onSnapshot(
+      collection(db, "communityPosts", activePost.id, "comments"),
+      snap => {
+        const rows = snap.docs.map(d => ({id:d.id, ...d.data()}))
+          .sort((a,b) => (b.createdAt?.toMillis?.() || 0) - (a.createdAt?.toMillis?.() || 0));
+        setCommentItems(rows);
+      },
+      () => setCommentItems([])
+    );
+    return () => unsub();
+  }, [activePost?.id]);
+
+  const toggleLike = async post => {
+    if (!authUser) {
+      notify("Sign in to like a community story.");
+      return;
+    }
+    if (String(post.id).startsWith("demo-")) {
+      notify("Sign in and share a story to start interacting with Community.");
+      return;
+    }
+    const ref = doc(db, "communityPosts", post.id);
+    const already = Array.isArray(post.likedBy) && post.likedBy.includes(authUser.uid);
+    try {
+      await updateDoc(ref, already
+        ? { likes: Math.max(0, Number(post.likes || 0) - 1), likedBy: arrayRemove(authUser.uid) }
+        : { likes: Number(post.likes || 0) + 1, likedBy: arrayUnion(authUser.uid) }
+      );
+    } catch {
+      notify("Could not update the like. Please try again.");
+    }
+  };
+
+  const addComment = async e => {
+    e.preventDefault();
+    if (!authUser) {
+      notify("Sign in to comment on a story.");
+      return;
+    }
+    if (!activePost || String(activePost.id).startsWith("demo-") || !comment.trim()) return;
+    try {
+      await addDoc(collection(db, "communityPosts", activePost.id, "comments"), {
+        text: comment.trim(),
+        author: authUser.displayName || authUser.email?.split("@")[0] || "Heritage Explorer",
+        authorId: authUser.uid,
+        createdAt: serverTimestamp()
+      });
+      setComment("");
+    } catch {
+      notify("Could not post your comment.");
+    }
+  };
+
+  const timeAgo = p => {
+    const ms = p.createdAt?.toMillis ? Date.now() - p.createdAt.toMillis() : 0;
+    if (!ms) return "Community story";
+    const mins = Math.max(1, Math.floor(ms/60000));
+    if (mins < 60) return `${mins}m ago`;
+    const hrs = Math.floor(mins/60);
+    if (hrs < 24) return `${hrs}h ago`;
+    return `${Math.floor(hrs/24)}d ago`;
+  };
+
+  const top = [...all].sort((a,b)=>(b.likes||0)-(a.likes||0)).slice(0,3);
+
+  return (
+    <div className="li-community-page">
+      <section className="li-community-hero">
+        <div className="li-community-hero-copy">
+          <div className="eyebrow">PEOPLE · CULTURE · CONNECTION</div>
+          <h1>A Community<br/>That Keeps <i>India Alive</i></h1>
+          <p>Share memories, traditions, recipes, festivals, and stories from your part of India. Because heritage lives in people like you.</p>
+          <div className="li-community-hero-actions">
+            <button className="primary" onClick={onShare}>✧ &nbsp;Share Your Story ＋</button>
+            <div className="li-community-steps"><span>✎<small>Write</small></span><span>▣<small>Add Photos</small></span><span>♧<small>Share with India</small></span><span>♡<small>Inspire Others</small></span></div>
+          </div>
+        </div>
+        <div className="li-community-hero-art">
+          <img src={IMG.theyyam} alt="" />
+          <div className="li-community-quote">“Different lands,<br/>Same people,<br/><b>One living story.</b>”</div>
+        </div>
+      </section>
+
+      <div className="li-community-filters">
+        {categories.map(x => <button key={x} className={category===x ? "active":""} onClick={()=>setCategory(x)}>{x}</button>)}
+        <select value={sort} onChange={e=>setSort(e.target.value)}><option>Latest</option><option>Popular</option></select>
+      </div>
+
+      <div className="li-community-layout">
+        <aside className="li-community-side">
+          <div className="li-community-note">“Heritage is not just in monuments, but in memories, in people, in everyday life.”<small>— Living India</small></div>
+          <div className="li-community-trending">
+            <h3>Trending Now 🔥</h3>
+            {top.map((p,i)=><button key={p.id} onClick={()=>setActivePost(p)}><b>{i+1}</b><img src={p.image || IMG.madhubani} alt=""/><span>{p.title}<small>{p.likes||0} likes</small></span></button>)}
+          </div>
+        </aside>
+
+        <section className="li-community-feed">
+          {ordered.map(p => {
+            const liked = authUser && Array.isArray(p.likedBy) && p.likedBy.includes(authUser.uid);
+            return <article className="li-story-card" key={p.id} onClick={()=>setActivePost(p)}>
+              <div className="li-story-image"><img src={p.image || IMG.madhubani} alt=""/><span>{p.category || "Memories"}</span></div>
+              <div className="li-story-body">
+                <small className="li-story-place">⌖ {p.topic || p.state || "India"}</small>
+                <h2>{p.title || "Untitled story"}</h2>
+                <p>{p.story || p.text}</p>
+                <div className="li-story-author"><span className="li-avatar">{(p.author||p.user||"H").slice(0,1).toUpperCase()}</span><span><b>{p.author||p.user||"Heritage Explorer"}</b><small>{timeAgo(p)}</small></span></div>
+                <div className="li-story-actions" onClick={e=>e.stopPropagation()}>
+                  <button className={liked ? "liked":""} onClick={()=>toggleLike(p)}>♥ <span>{p.likes||0}</span></button>
+                  <button onClick={()=>setActivePost(p)}>◯ <span>Comment</span></button>
+                  <button onClick={()=>notify("Save is coming soon.")}>♡</button>
+                </div>
+              </div>
+            </article>
+          })}
+        </section>
+
+        <aside className="li-community-right">
+          <div className="li-community-corner">
+            <div className="li-india-map-mini">INDIA<br/><span>✦</span></div>
+            <div><h3>Stories from<br/>Every Corner</h3><p>Explore real people, real stories, a living India.</p></div>
+          </div>
+          <div className="li-community-inspire"><h3>Your story can<br/>inspire someone.</h3><p>Share a tradition, a memory, a recipe, a place or a moment that makes India special.</p><button onClick={onShare}>Share Your Story ＋</button></div>
+          <div className="li-community-mantra">People<br/><i>Make</i><br/><b>Heritage</b></div>
+        </aside>
+      </div>
+
+      {activePost && (
+        <div className="li-community-detail-overlay" onClick={()=>setActivePost(null)}>
+          <div className="li-community-detail" onClick={e=>e.stopPropagation()}>
+            <button className="li-community-close" onClick={()=>setActivePost(null)}>×</button>
+            <div className="li-detail-image"><img src={activePost.image || IMG.madhubani} alt=""/></div>
+            <div className="li-detail-content">
+              <div className="eyebrow">{activePost.category || "MEMORY"} · {activePost.state || "INDIA"}</div>
+              <h2>{activePost.title}</h2>
+              <small>By <b>{activePost.author || activePost.user || "Heritage Explorer"}</b> · {activePost.topic || activePost.state || "India"}</small>
+              <p>{activePost.story || activePost.text}</p>
+              <div className="li-detail-like">♥ {activePost.likes || 0} likes</div>
+              {!String(activePost.id).startsWith("demo-") && (
+                <>
+                  <h3>Comments</h3>
+                  <div className="li-comments">{commentItems.map(c=><div key={c.id}><b>{c.author}</b><p>{c.text}</p></div>)}</div>
+                  <form className="li-comment-form" onSubmit={addComment}>
+                    <input value={comment} onChange={e=>setComment(e.target.value)} placeholder={authUser ? "Write a comment..." : "Sign in to comment"} />
+                    <button type="submit">Post</button>
+                  </form>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -3513,7 +3780,7 @@ function Detail({ h, close, onContribute, onContinue }) {
   );
 }
 
-function Modal({ type, close, notify }) {
+function Modal({ type, close, notify, authUser, onStorySubmitted }) {
 
   const contribute = type === "contribute";
   const experience =
@@ -3618,38 +3885,82 @@ function Modal({ type, close, notify }) {
           Your memory, craft, recipe, song or local tradition can become part of India's digital heritage.
         </p>
 
+        {!authUser && (
+          <div className="li-community-login-note">
+            Sign in first so your story is linked to your Living India profile.
+            <a href="./login.html">Sign in →</a>
+          </div>
+        )}
+
         <form
-          onSubmit={e => {
+          onSubmit={async e => {
             e.preventDefault();
-            close();
-            notify("Story submitted for review ✓");
+            if (!authUser) {
+              notify("Please sign in before sharing a story.");
+              return;
+            }
+            const form = e.currentTarget;
+            const fd = new FormData(form);
+            const file = fd.get("image");
+            let image = "";
+
+            if (file && file.size) {
+              if (!file.type.startsWith("image/")) {
+                notify("Please choose an image file.");
+                return;
+              }
+              if (file.size > 6 * 1024 * 1024) {
+                notify("Please keep the image under 6 MB.");
+                return;
+              }
+              image = await compressCommunityImage(file);
+              if (!image) {
+                notify("That image could not be processed.");
+                return;
+              }
+            }
+
+            const saved = await onStorySubmitted({
+              title: String(fd.get("title") || "").trim(),
+              topic: String(fd.get("topic") || "").trim(),
+              state: String(fd.get("state") || "").trim(),
+              category: String(fd.get("category") || "Memories"),
+              story: String(fd.get("story") || "").trim(),
+              image
+            });
+            if (saved) {
+              form.reset();
+              close();
+            }
           }}
         >
-
-          <input
-            name="title"
-            required
-            placeholder="Story title"
-          />
-
-          <input
-            name="topic"
-            placeholder="Place or tradition"
-          />
-
-          <textarea
-            name="story"
-            required
-            placeholder="Tell us the story..."
-          />
-
-          <button
-            className="primary"
-            type="submit"
-          >
-            Submit for review →
+          <div className="li-community-form-grid">
+            <input name="title" required placeholder="Story title" />
+            <input name="topic" placeholder="Place or tradition" />
+            <select name="state" defaultValue="">
+              <option value="">State / region</option>
+              {INDIA_STATES.map(state => <option key={state} value={state}>{state}</option>)}
+            </select>
+            <select name="category" defaultValue="Memories">
+              <option>Memories</option>
+              <option>Festivals</option>
+              <option>Folk Dance</option>
+              <option>Food</option>
+              <option>Crafts</option>
+              <option>Music</option>
+              <option>Rituals</option>
+              <option>Languages</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <textarea name="story" required placeholder="Tell us the story..." />
+          <label className="li-community-upload">
+            <span>📷 Add a photo <small>optional · JPG/PNG/WebP</small></span>
+            <input name="image" type="file" accept="image/*" />
+          </label>
+          <button className="primary" type="submit">
+            Share with the Community →
           </button>
-
         </form>
 
       </div>
