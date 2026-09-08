@@ -1,10 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { onAuthStateChanged } from "firebase/auth";
-import {
-  doc, getDoc, setDoc, serverTimestamp,
-  collection, onSnapshot, addDoc, updateDoc, arrayUnion, arrayRemove
-} from "firebase/firestore";
+import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
 import { auth, db } from "./firebase-client";
 import "./style.css";
 import "./ui-overrides.css";
@@ -154,6 +151,128 @@ const experienceOptions = [
   ["quiz", "Quiz & Challenge", "Test what you discovered with fun heritage challenges."],
   ["passport", "Heritage Passport", "Collect stamps, track progress and earn badges as you explore India."]
 ];
+
+
+const EXPLORE_MEDIA = {
+  image: { image: null, alt: "Selected heritage" },
+  timeline: { image: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ruins_of_harappan_city.jpg", alt: "Archaeological ruins in South Asia" },
+  process: { image: "https://commons.wikimedia.org/wiki/Special:Redirect/file/KALAMKARI_HAND_PAINTED_CLOTH_SRIKALAHASTI_AP_-_panoramio.jpg", alt: "Kalamkari hand-painted textile" },
+  connections: { image: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Indian_folk_dance.jpg", alt: "Indian folk dance" },
+  community: { image: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Baul_singer.jpg", alt: "Baul singer at a local fair" },
+  audio: { image: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Baul_playing_music.jpg", alt: "Baul musicians performing" },
+  beforeafter: { image: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ruins_of_harappan_city.jpg", alt: "Heritage site" },
+  surprise: { image: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Madhubani_art.jpg", alt: "Madhubani art" },
+  quiz: { image: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Indian_Festival_%282%29_20.jpg", alt: "Indian festival" }
+};
+
+const EXPLORE_AUDIO = "https://commons.wikimedia.org/wiki/Special:Redirect/file/Theyyam_Meelam.ogg";
+
+// Verified heritage notes. Dates are only used where a reliable source gives a date;
+// where the history cannot be pinned to one year, the UI explicitly says so.
+const VERIFIED_HERITAGE = {
+  madhubani: {
+    timeline: [
+      ["Centuries-old", "Mithila roots", "Madhubani/Mithila painting was traditionally made by women on freshly plastered mud walls and floors for ritual occasions such as weddings and births."],
+      ["1960s", "Paper & fabric", "During the drought years of the 1960s, the practice shifted strongly toward paper and fabric; support from the National Handicrafts Board helped artists reach wider audiences."],
+      ["Late 20th c.", "Wider recognition", "Artists including Sita Devi and Ganga Devi helped popularize the painting beyond Mithila and into national and international art markets."],
+      ["Today", "Living craft", "Artists continue to work on paper, cloth and canvas, using both traditional and contemporary materials while retaining recognizable Mithila motifs and storytelling."],
+    ],
+    process: [["01", "Prepare", "Traditional walls were prepared with a smooth mud/plaster surface. Today, paper, cloth and canvas are also common supports."], ["02", "Draw", "Artists work with fingers, twigs, bamboo-wrapped tools, brushes or pens. Strong outlines and densely filled compositions are characteristic."], ["03", "Colour", "Traditional palettes use natural/mineral pigments; modern artists may also use commercial colours. The subject often combines nature, ritual and religious themes."]],
+    connections: [["01", "Ritual", "Mithila paintings are linked with life-cycle and festival occasions including weddings, births and religious celebrations."], ["02", "Place", "The art is rooted in the Mithila region of Bihar and Nepal, with Madhubani district becoming an important centre."], ["03", "People", "The tradition was historically transmitted through women in Mithila; today both women and men practice it professionally."]],
+    surprise: ["The name 'Madhubani' became widely used alongside 'Mithila painting' as the practice moved from village walls to paper and canvas.", "Traditional painting can use fingers, twigs, matchsticks and pens—not only brushes.", "Different visual styles include kachni line work, bharni colour filling and godhana-like tattoo patterns."],
+    quiz: {q:"Which change helped Madhubani painting reach wider markets in the 1960s?", options:["It moved from mud walls toward paper and fabric", "It stopped using colour", "It became a stone sculpture", "It moved entirely to temples"], correct:0},
+    audioTitle:"The soundscape around Mithila", audioNote:"Madhubani is primarily a visual art; this audio is a contextual Indian heritage recording, not a 'Madhubani song'.",
+    sources:["https://tourism.bihar.gov.in/en/experiences/art-and-craft/painting/madhubani-or-mithila-painting","https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Miscellaneous/Folk_Painting/Madhubani_Painting/Madhubani_Paintingwebpage.html"]
+  },
+  baul: {
+    timeline: [
+      ["15th century", "Early literary traces", "UNESCO notes that Baul devotional songs can be traced to the fifteenth century, when they first appeared in Bengali literature."],
+      ["19th–early 20th c.", "Peak influence", "The Baul movement reached a major period of influence in the nineteenth and early twentieth centuries, shaping Bengali cultural life and influencing Rabindranath Tagore."],
+      ["2008", "UNESCO inscription", "Baul songs were inscribed on UNESCO's Representative List of the Intangible Cultural Heritage of Humanity in 2008."],
+      ["Today", "Oral tradition", "Baul songs continue to be transmitted orally. Performers may travel from place to place and use instruments such as ektara, dotara and dubki."],
+    ],
+    process: [["01", "Learn", "Songs and philosophy are learned through oral transmission, with spiritual teachers guiding disciples."], ["02", "Perform", "Bauls sing and perform while accompanying themselves with instruments such as ektara, dotara and dubki."], ["03", "Adapt", "The language of Baul songs continues to be modernized, helping the tradition remain relevant to contemporary listeners."]],
+    connections: [["01", "Philosophy", "Baul practice emphasizes the human body as a place of spiritual realization and does not fit neatly into an organized religious system."], ["02", "Bengal", "Bauls are associated with rural Bangladesh and West Bengal, India, and their music has influenced Bengali culture."], ["03", "Music", "Baul song blends influences associated with Hindu bhakti traditions and Sufi musical traditions while remaining a distinct folk expression."]],
+    surprise: ["UNESCO traces Baul devotional songs in Bengali literature back to the fifteenth century.", "Bauls may be both settled near villages and travelling performers.", "Baul language is continually updated rather than preserved as a completely fixed text."],
+    quiz: {q:"Which instrument is especially associated with Baul performance?", options:["Ektara", "Veena only", "Shehnai only", "Santoor only"], correct:0},
+    audioTitle:"Baul song · contextual listening", audioNote:"The current player is a verified public-domain/CC heritage recording slot; the selected source can be changed to a Baul performance without changing the player UI.",
+    sources:["https://ich.unesco.org/en/RL/baul-songs-00107","https://ich.unesco.org/doc/src/00010-EN.pdf"]
+  },
+  kalamkari: {
+    timeline: [
+      ["Historical period", "Temple & textile tradition", "Kalamkari developed in Andhra Pradesh in distinct Srikalahasti and Machilipatnam/Pedana styles, with Mughal and Golconda patronage recorded in official craft documentation."],
+      ["15th century", "Early surviving reference", "The Government of Andhra Pradesh notes a Kalamkari wall hanger dated to the 15th century in the Victoria Museum, London."],
+      ["2008", "GI registration", "The Government of India's GI compendium records Machilipatnam Kalamkari with a certificate date of 10 July 2008."],
+      ["Today", "Two major styles", "Srikalahasti is known for freehand pen-drawn work, while Pedana/Machilipatnam is known for block printing using vegetable dyes."],
+    ],
+    process: [["01", "Prepare", "Cotton is washed and treated with materials such as myrobalan and mordants so dyes can bond to the fabric."], ["02", "Draw / print", "Srikalahasti uses a bamboo pen for freehand drawing; Machilipatnam uses carved wooden blocks for repeated patterns."], ["03", "Dye & finish", "Natural dye sources such as indigo, madder and pomegranate rind are used in traditional processes, followed by repeated washing and finishing."]],
+    connections: [["01", "Srikalahasti", "The pen-drawn style is associated with Chittoor district and traditionally depicts mythological narratives."], ["02", "Pedana", "The Machilipatnam/Pedana style is geographically centred in Krishna district and is known for block printing."], ["03", "Storytelling", "Srikalahasti Kalamkari has traditionally illustrated narratives from the Ramayana, Mahabharata and Puranic traditions."]],
+    surprise: ["The word Kalamkari is derived from Persian terms associated with pen and craftsmanship.", "Kalamkari is not one single technique: Srikalahasti and Machilipatnam use notably different drawing/printing methods.", "Traditional dyeing depends on mordants and repeated washing, so the finished colour is the result of a multi-stage process."],
+    quiz: {q:"Which Kalamkari style is especially associated with block printing in Pedana?", options:["Machilipatnam Kalamkari", "Srikalahasti only", "Madhubani", "Pattachitra"], correct:0},
+    audioTitle:"Workshop rhythm & textile culture", audioNote:"Kalamkari is a textile art rather than a music tradition; the player is provided as contextual heritage listening.",
+    sources:["https://krishna.ap.gov.in/one-district-one-product/","https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Textile/Other_Textiles_Based/Machilipatnam_Kalamkari/MachilipatnamKalamkariWebPage.html","https://handicrafts.nic.in/crafts/All_Crafts/Craft_Categories/Textile/Other_Textiles_Based/Srikalahasthi_Kalamkari/SrikalahasthiKalamkariWebPage.html"]
+  },
+  theyyam: {
+    timeline: [
+      ["Ancient roots", "Velan & early ritual traditions", "Kerala Tourism notes that Velan, a ritual specialist associated with traditions that developed into Theyyam, is referred to in Sangam literature. There is no single accepted founding year."],
+      ["~1,500-year development", "Kaliyattam to Theyyam", "Kerala Tourism describes the dance traditions of the Velan community as taking new forms and developing into the present-day cult of Theyyam over a period of about 1,500 years."],
+      ["20th century–present", "Documentation & continuity", "Theyyam remained rooted in family shrines, sacred groves and village life while also receiving growing attention as a major cultural heritage of North Malabar."],
+      ["Today", "Annual living ritual", "Theyyam is practiced mainly in Kannur and Kasaragod and has hundreds of forms. Kerala Tourism notes that the season varies by shrine, with many performances occurring between December and April and a broader season extending roughly October–May."],
+    ],
+    process: [["01", "Vrutham", "The performer follows a disciplined period of preparation that can include abstinence, fasting, prayer and meditation before the ritual."], ["02", "Make the kolam", "Intricate face painting, body painting, costume, ornaments and the mudi (headgear) transform the performer into the particular ritual form."], ["03", "Perform", "The performance combines dance, ritual, songs called thottam and percussion. Instruments mentioned by Kerala Tourism include drums, conches and the utukku."]],
+    connections: [["01", "People", "Performers come from several communities, with Malayan and Vannan among the principal traditional performer communities described by Kerala Tourism."], ["02", "Place", "Theyyam is deeply tied to North Malabar, especially Kannur and Kasaragod, and is performed in shrines, sacred groves and family settings."], ["03", "Sound", "Rhythm, thottam songs and percussion are not decoration—they are part of the ritual structure of the performance."]],
+    surprise: ["Theyyam is not simply a stage dance; it is a ritual in which the performer is treated as a manifestation of the deity during the performance.", "Kerala Tourism describes around 400 varieties/forms of Theyyam.", "The performer is known as the Kolam, while the elaborate headgear is called the mudi."],
+    quiz: {q:"Which term names the invocation songs that accompany Theyyam?", options:["Thottam", "Bharatanatyam", "Alapana only", "Ghazal"], correct:0},
+    audioTitle:"Theyyam Meelam · Kerala", audioNote:"1:01 field recording from Wikimedia Commons, recorded 22 May 2012 by Manojk; CC BY-SA 3.0. This is an actual Theyyam percussion recording, not generic classical music.",
+    sources:["https://www.keralatourism.org/artforms/theyyam-ritual/1/","https://www.keralatourism.org/bekal/theyyam-history.php","https://commons.wikimedia.org/wiki/File:Theyyam_Meelam.ogg"]
+  },
+  "durga-puja-in-kolkata": {
+    timeline: [
+      ["Early historical period", "Long historical development", "Durga worship in Bengal has a long historical development, but the sources consulted do not establish one definitive founding year for Durga Puja."],
+      ["1610", "Barisha family tradition", "The Sabarna Roy Choudhury family tradition at Barisha is associated with a Durga Puja dating to 1610. This is not the founding year of Durga Puja itself."],
+      ["18th century", "Aristocratic household Pujas", "Kolkata's aristocratic household Pujas became important centres of the festival. Shobhabazar Rajbari is commonly associated with 1757, although the precise historical evidence for that founding date is debated."],
+      ["1910", "Community 'Sarbajanin' phase", "The early twentieth century saw the growth of community-organised Durga Puja. The 1910 period is associated with the use of 'Sarbajanin' for community Puja and an important early community celebration."],
+      ["20th–21st century", "Public art and community culture", "Kolkata's Durga Puja developed into a major public cultural event combining worship with sculpture, temporary architecture, design, lighting, music, craft and community participation."],
+      ["2021", "UNESCO inscription", "Durga Puja in Kolkata was inscribed on UNESCO's Representative List of the Intangible Cultural Heritage of Humanity."],
+    ],
+    process: [["01", "Clay preparation", "Unfired clay is used to create the images of Durga and associated figures. UNESCO describes clay associated with the Ganga River as part of the tradition."], ["02", "Sculpting", "Artisans shape the clay into the Durga image and accompanying figures."], ["03", "Painting & Chokkhu Daan", "The clay image is painted; the ritual of painting the eyes, known as Chokkhu Daan, is an important symbolic moment in the preparation."], ["04", "Decoration", "The image is dressed and decorated with clothing, ornaments and other decorative elements."], ["05", "Pandal & installation", "Temporary pandals and large-scale installations provide the setting for public celebration and are an important artistic component of Kolkata's Durga Puja."], ["06", "Immersion", "At the end of the festival, the clay image is immersed in water."]],
+    connections: [["01", "People", "Families, Puja committees, priests, drummers, artists, sculptors and craftspeople collectively sustain the tradition."], ["02", "Place", "Kolkata's neighbourhoods, historic family houses, community pandals and artisan areas such as Kumartuli are important parts of the living tradition."], ["03", "Practice", "Worship, idol-making, pandal-making, music, artistic work, community participation and immersion connect religious practice with public cultural life."], ["04", "Kumartuli", "Kumartuli is a traditional potter/artisan locality in Kolkata particularly associated with clay idol-making."]],
+    surprise: ["Durga Puja in Kolkata was inscribed by UNESCO in 2021.", "The heritage includes much more than the idol: sculpture, temporary installations, pandals, music, art and collaborative design are important parts of the celebration.", "Artisans and craftspeople are recognised among the bearers and practitioners of the tradition.", "The clay idol has a symbolic journey from creation to final immersion in water.", "Kolkata's Durga Puja developed from important household traditions into a major community-centred public festival."],
+    quiz: {q:"In which year was Durga Puja in Kolkata inscribed on UNESCO's Representative List?", options:["2016", "2018", "2021", "2023"], correct:2},
+    audioTitle:"Dhaak · Durga Puja soundscape",
+    audioNote:"Dhaak, a traditional Bengali drum, is strongly associated with the soundscape of Durga Puja. Use a verified, legally reusable Durga Puja/dhaak recording for the final audio source.",
+    audioUrl:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Dhak.ogg",
+    sources:["https://ich.unesco.org/en/RL/durga-puja-in-kolkata-00703","https://ich.unesco.org/en/decisions/16.COM/8.B.15","https://ich.unesco.org/en/state/india-IN?info=elements-on-the-lists","https://indiaich-sna.in/durga-puja-in-kolkata","https://www.prod.incredibleindia.gov.in/content/incredible-india-v2/en/destinations/kolkata/sovabazar-rajbari.html","https://wbtourism.gov.in/Heritage%20Tourism/details?id=63d801b8e4bbd858c20633ba&template_id=1","https://censusindia.gov.in/nada/index.php/catalog/1350/download/4414/DH_2011_1912_PART_A_DCHB_HUGLI.pdf","https://aasan.wb.gov.in/SiteController/"]
+  },
+  pattachitra: {
+    timeline: [
+      ["~900 years", "Raghurajpur tradition", "Odisha Tourism describes the artisans of Raghurajpur as custodians of a roughly 900-year-old Pattachitra tradition."],
+      ["12th century", "Jagannath connection", "The Jagannath Temple at Puri dates to the 12th century. Odisha's official craft history describes Pattachitra as closely tied to the ornamentation and imagery of Jagannath."],
+      ["1940s", "Revival & new markets", "Odisha Tourism records a severe income crisis among Pattachitra artisans in the 1940s and credits Helena Zealy's exhibitions in America with helping revive demand and internationalize the art."],
+      ["Today", "Living craft village", "Raghurajpur remains a major Pattachitra centre, with family-based artisan practice and work on cloth, tussar, palm leaf, wood and other surfaces."],
+    ],
+    process: [["01", "Prepare the patta", "Cloth is treated with a mixture involving chalk/stone powder and tamarind-seed glue to create a smooth, strong painting surface."], ["02", "Draw & colour", "Artists traditionally complete borders first, then sketch directly with a brush and apply flat colours such as white, red, yellow and black."], ["03", "Finish", "Fine black lines complete the image; lacquer may be applied after completion to make the surface more durable and water resistant."]],
+    connections: [["01", "Jagannath", "Jagannath, Krishna Leela and other religious/mythological themes are important Pattachitra subjects."], ["02", "Raghurajpur", "The heritage craft village near Puri is a major centre where artist households continue the practice."], ["03", "Materials", "Traditional pigments can come from mineral, earth and vegetable sources; white, black, yellow and red have specific traditional preparations."]],
+    surprise: ["Pattachitra artists also work on tussar silk, palm leaf, wooden boxes, bowls, coconut shells and doors.", "The term combines 'patta' (cloth) and 'chitra' (painting).", "Raghurajpur is not just a shop district: Odisha Tourism describes artist households as a concentrated living craft community."],
+    quiz: {q:"Which material is used to help prepare the traditional Pattachitra cloth surface?", options:["Tamarind-seed glue", "Plastic resin only", "Cement", "Wax only"], correct:0},
+    audioTitle:"Odisha ritual soundscape", audioNote:"Pattachitra is a visual art; this player is contextual listening rather than a claim that the painting itself has a dedicated soundtrack.",
+    sources:["https://odisha.gov.in/en/odisha-tourism/patta-chitra","https://odishatourism.gov.in/content/tourism/en/discover/attractions/arts-crafts/raghurajpur.html","https://odishatourism.gov.in/content/tourism/en/discover/attractions/temples-monuments/jagannath-temple.html"]
+  },
+  harappa: {
+    timeline: [
+      ["c. 3300–2800 BCE", "Ravi phase", "Archaeological research at Harappa identifies an early settlement phase on the site during the Ravi/Hakra period."],
+      ["c. 2800–2600 BCE", "Kot Diji phase", "The settlement expanded; research describes growing organization, walled sectors and increasing urban characteristics."],
+      ["c. 2600–1900 BCE", "Harappan urban phase", "Harappa became a major urban centre within the wider Indus Civilization, with craft production, standardized systems and long-distance exchange."],
+      ["c. 1900–1300 BCE", "Localization / later phases", "After the integrated Harappan phase, settlement patterns contracted and changed during the Late Harappan periods."],
+    ],
+    process: [["01", "Plan", "The mature city used planned streets, mud-brick architecture and organized neighbourhoods."], ["02", "Make", "Craft specialists worked materials including copper, shell, stone, terracotta, faience and beads."], ["03", "Exchange", "Harappa participated in wide regional and long-distance networks that moved raw materials, finished goods and technologies."]],
+    connections: [["01", "River systems", "Harappa developed within a wider settlement network connected to the Ravi, Beas and Sutlej systems."], ["02", "Craft", "Specialized production included ceramics, shell working, bead making, metalworking and seal production."], ["03", "Trade", "Archaeological evidence connects the Indus world with distant regions, including Mesopotamia and the Gulf network."]],
+    surprise: ["The mature Harappan phase is generally dated to about 2600–1900 BCE.", "The Indus script remains undeciphered, so its exact language and meaning cannot be stated with certainty.", "Harappa's archaeology shows both major urban development and long-term continuity across several earlier and later phases."],
+    quiz: {q:"Which period is the mature Harappan phase at Harappa generally dated to?", options:["c. 2600–1900 BCE", "c. 500–200 BCE", "c. 1200–900 CE", "c. 1500–1700 CE"], correct:0},
+    audioTitle:"Archaeology field listening", audioNote:"Harappa is an archaeological heritage site rather than a living music tradition; this player is contextual audio only.",
+    sources:["https://www.harappa.com/content/timeline","https://www.harappa.com/content/recent-indus-discoveries-and-highlights-excavations-harappa-1998-2000","https://www.metmuseum.org/toah/ht/02/ssa.html"]
+  }
+};
 
 const experienceDetails = {
   image: [
@@ -310,7 +429,7 @@ function App() {
     }
   };
 
-  const markExperienceComplete = (heritageId, experienceId) => {
+  const markExperienceComplete = (heritageId, experienceId, heritageItem) => {
     if (!authUser) {
       notify("Sign in to keep your Passport progress on every device.");
       return;
@@ -320,36 +439,27 @@ function App() {
       ? passportData.exploredByHeritage[key]
       : [];
     if (current.includes(experienceId)) return;
+    const nextExperienceList = [...current, experienceId];
     const next = {
       ...passportData,
       exploredByHeritage: {
         ...(passportData.exploredByHeritage || {}),
-        [key]: [...current, experienceId]
+        [key]: nextExperienceList
       }
     };
+    const requiredIds = getRelevantExperienceIds(heritageItem || { id: heritageId });
+    const fullyExplored = requiredIds.length > 0 && requiredIds.every(id => nextExperienceList.includes(id));
+    if (fullyExplored) {
+      next.completedHeritage = {
+        ...(passportData.completedHeritage || {}),
+        [key]: {
+          heritageId: key,
+          completedAt: new Date().toISOString()
+        }
+      };
+    }
     savePassportProgress(next);
   };
-
-  useEffect(() => {
-    // Community stories, likes and comments are account/cloud-backed in Firestore.
-    // This listener intentionally lives alongside the existing data loader so the
-    // rest of the site keeps its current API behaviour.
-    const unsubscribe = onSnapshot(
-      collection(db, "communityPosts"),
-      snapshot => {
-        const cloudPosts = snapshot.docs
-          .map(d => ({ id: d.id, ...d.data() }))
-          .sort((a, b) => {
-            const ta = a.createdAt?.toMillis ? a.createdAt.toMillis() : 0;
-            const tb = b.createdAt?.toMillis ? b.createdAt.toMillis() : 0;
-            return tb - ta;
-          });
-        setPosts(cloudPosts);
-      },
-      error => console.error("[Living India Community] Load failed", error)
-    );
-    return () => unsubscribe();
-  }, []);
 
   useEffect(() => {
     api("/health")
@@ -583,7 +693,7 @@ function App() {
   };
 
   const completeExperience = id => {
-    if (experienceHub) markExperienceComplete(experienceHub.id || experienceHub.title, id);
+    if (experienceHub) markExperienceComplete(experienceHub.id || experienceHub.title, id, experienceHub);
   };
 
   const closeExploreHub = () => {
@@ -1117,12 +1227,31 @@ function App() {
         )}
 
         {page === "community" && (
-          <CommunityPage
-            posts={posts}
-            authUser={authUser}
-            onShare={() => setModal("contribute")}
-            notify={notify}
-          />
+          <div className="page-wrap">
+
+            <div className="page-title">
+
+              <div className="eyebrow">
+                FROM THE COMMUNITY
+              </div>
+
+              <h1>
+                Stories from <i>the people</i>
+              </h1>
+
+              <p>
+                Living heritage is not just history. It is what people still do, teach and remember.
+              </p>
+
+            </div>
+
+            <Community
+              posts={posts}
+              large
+              onClick={() => { }}
+            />
+
+          </div>
         )}
 
         {page === "map" && (
@@ -1164,6 +1293,7 @@ function App() {
           onComplete={completeExperience}
           onBack={closeExploreHub}
           passportData={passportData}
+          allHeritage={items}
           authUser={authUser}
           onLogin={() => { window.location.href = "./auth3.html"; }}
         />
@@ -1195,36 +1325,6 @@ function App() {
           type={modal}
           close={() => setModal(null)}
           notify={notify}
-          authUser={authUser}
-          onStorySubmitted={async data => {
-            if (!authUser) {
-              notify("Please sign in to share your story.");
-              return false;
-            }
-            try {
-              await addDoc(collection(db, "communityPosts"), {
-                title: data.title,
-                topic: data.topic,
-                state: data.state,
-                category: data.category,
-                story: data.story,
-                image: data.image || "",
-                author: authUser.displayName || authUser.email?.split("@")[0] || "Heritage Explorer",
-                authorEmail: authUser.email || "",
-                authorId: authUser.uid,
-                likes: 0,
-                likedBy: [],
-                createdAt: serverTimestamp(),
-                status: "approved"
-              });
-              notify("Your story is now part of the Community ✓");
-              return true;
-            } catch (error) {
-              console.error("[Living India Community] Story save failed", error);
-              notify("Could not save your story. Please try again.");
-              return false;
-            }
-          }}
         />
       )}
 
@@ -1545,238 +1645,6 @@ function RiskPanel({ onClick, large }) {
         )
       )}
 
-    </div>
-  );
-}
-
-
-const INDIA_STATES = [
-  "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh",
-  "Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand","Karnataka",
-  "Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram",
-  "Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu",
-  "Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal",
-  "Delhi","Jammu & Kashmir","Ladakh"
-];
-
-async function compressCommunityImage(file) {
-  try {
-    const url = URL.createObjectURL(file);
-    const img = new Image();
-    const loaded = new Promise((resolve, reject) => {
-      img.onload = resolve;
-      img.onerror = reject;
-    });
-    img.src = url;
-    await loaded;
-    const max = 1100;
-    const scale = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
-    const canvas = document.createElement("canvas");
-    canvas.width = Math.max(1, Math.round(img.naturalWidth * scale));
-    canvas.height = Math.max(1, Math.round(img.naturalHeight * scale));
-    canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
-    URL.revokeObjectURL(url);
-    return canvas.toDataURL("image/jpeg", 0.72);
-  } catch {
-    return "";
-  }
-}
-
-function CommunityPage({ posts, authUser, onShare, notify }) {
-  const categories = ["All Stories","Festivals","Folk Dance","Food","Crafts","Music","Rituals","Languages","Memories","Other"];
-  const [category, setCategory] = useState("All Stories");
-  const [sort, setSort] = useState("Latest");
-  const [activePost, setActivePost] = useState(null);
-  const [comment, setComment] = useState("");
-  const [commentItems, setCommentItems] = useState([]);
-
-  const demoPosts = [
-    {
-      id:"demo-durga", title:"A Memory of Durga Puja in Our Para", topic:"Kolkata, West Bengal",
-      state:"West Bengal", category:"Festivals",
-      story:"Every year during Durga Puja, our whole neighbourhood turns into a family. From the first smell of shiuli flowers in the morning to the dhaak in the evenings, it is a feeling you can’t put into words…",
-      author:"Ananya Sen", likes:124, likedBy:[], image:IMG.theyyam
-    },
-    {
-      id:"demo-ghoomar", title:"Ghoomar: The Pride of My Roots", topic:"Jodhpur, Rajasthan",
-      state:"Rajasthan", category:"Folk Dance",
-      story:"I learnt Ghoomar from my grandmother. For us, it’s not just a dance, it’s a way of expressing joy, strength and togetherness.",
-      author:"Ritika Sharma", likes:96, likedBy:[], image:IMG.madhubani
-    },
-    {
-      id:"demo-onam", title:"Onam Sadhya — A Feast of Togetherness", topic:"Thrissur, Kerala",
-      state:"Kerala", category:"Food",
-      story:"Onam is love, onam is nostalgia, and onam is the taste of home. No matter where we go, the sadhya always brings our family together.",
-      author:"Arjun Nair", likes:210, likedBy:[], image:IMG.kalamkari
-    }
-  ];
-
-  const all = posts.length ? posts : demoPosts;
-  const filtered = all.filter(p => category === "All Stories" || p.category === category);
-  const ordered = [...filtered].sort((a,b) => {
-    if (sort === "Popular") return (b.likes || 0) - (a.likes || 0);
-    const ta = a.createdAt?.toMillis ? a.createdAt.toMillis() : 0;
-    const tb = b.createdAt?.toMillis ? b.createdAt.toMillis() : 0;
-    return tb - ta;
-  });
-
-  useEffect(() => {
-    if (!activePost?.id || String(activePost.id).startsWith("demo-")) {
-      setCommentItems([]);
-      return;
-    }
-    const unsub = onSnapshot(
-      collection(db, "communityPosts", activePost.id, "comments"),
-      snap => {
-        const rows = snap.docs.map(d => ({id:d.id, ...d.data()}))
-          .sort((a,b) => (b.createdAt?.toMillis?.() || 0) - (a.createdAt?.toMillis?.() || 0));
-        setCommentItems(rows);
-      },
-      () => setCommentItems([])
-    );
-    return () => unsub();
-  }, [activePost?.id]);
-
-  const toggleLike = async post => {
-    if (!authUser) {
-      notify("Sign in to like a community story.");
-      return;
-    }
-    if (String(post.id).startsWith("demo-")) {
-      notify("Sign in and share a story to start interacting with Community.");
-      return;
-    }
-    const ref = doc(db, "communityPosts", post.id);
-    const already = Array.isArray(post.likedBy) && post.likedBy.includes(authUser.uid);
-    try {
-      await updateDoc(ref, already
-        ? { likes: Math.max(0, Number(post.likes || 0) - 1), likedBy: arrayRemove(authUser.uid) }
-        : { likes: Number(post.likes || 0) + 1, likedBy: arrayUnion(authUser.uid) }
-      );
-    } catch {
-      notify("Could not update the like. Please try again.");
-    }
-  };
-
-  const addComment = async e => {
-    e.preventDefault();
-    if (!authUser) {
-      notify("Sign in to comment on a story.");
-      return;
-    }
-    if (!activePost || String(activePost.id).startsWith("demo-") || !comment.trim()) return;
-    try {
-      await addDoc(collection(db, "communityPosts", activePost.id, "comments"), {
-        text: comment.trim(),
-        author: authUser.displayName || authUser.email?.split("@")[0] || "Heritage Explorer",
-        authorId: authUser.uid,
-        createdAt: serverTimestamp()
-      });
-      setComment("");
-    } catch {
-      notify("Could not post your comment.");
-    }
-  };
-
-  const timeAgo = p => {
-    const ms = p.createdAt?.toMillis ? Date.now() - p.createdAt.toMillis() : 0;
-    if (!ms) return "Community story";
-    const mins = Math.max(1, Math.floor(ms/60000));
-    if (mins < 60) return `${mins}m ago`;
-    const hrs = Math.floor(mins/60);
-    if (hrs < 24) return `${hrs}h ago`;
-    return `${Math.floor(hrs/24)}d ago`;
-  };
-
-  const top = [...all].sort((a,b)=>(b.likes||0)-(a.likes||0)).slice(0,3);
-
-  return (
-    <div className="li-community-page">
-      <section className="li-community-hero">
-        <div className="li-community-hero-copy">
-          <div className="eyebrow">PEOPLE · CULTURE · CONNECTION</div>
-          <h1>A Community<br/>That Keeps <i>India Alive</i></h1>
-          <p>Share memories, traditions, recipes, festivals, and stories from your part of India. Because heritage lives in people like you.</p>
-          <div className="li-community-hero-actions">
-            <button className="primary" onClick={onShare}>✧ &nbsp;Share Your Story ＋</button>
-            <div className="li-community-steps"><span>✎<small>Write</small></span><span>▣<small>Add Photos</small></span><span>♧<small>Share with India</small></span><span>♡<small>Inspire Others</small></span></div>
-          </div>
-        </div>
-        <div className="li-community-hero-art">
-          <img src={IMG.theyyam} alt="" />
-          <div className="li-community-quote">“Different lands,<br/>Same people,<br/><b>One living story.</b>”</div>
-        </div>
-      </section>
-
-      <div className="li-community-filters">
-        {categories.map(x => <button key={x} className={category===x ? "active":""} onClick={()=>setCategory(x)}>{x}</button>)}
-        <select value={sort} onChange={e=>setSort(e.target.value)}><option>Latest</option><option>Popular</option></select>
-      </div>
-
-      <div className="li-community-layout">
-        <aside className="li-community-side">
-          <div className="li-community-note">“Heritage is not just in monuments, but in memories, in people, in everyday life.”<small>— Living India</small></div>
-          <div className="li-community-trending">
-            <h3>Trending Now 🔥</h3>
-            {top.map((p,i)=><button key={p.id} onClick={()=>setActivePost(p)}><b>{i+1}</b><img src={p.image || IMG.madhubani} alt=""/><span>{p.title}<small>{p.likes||0} likes</small></span></button>)}
-          </div>
-        </aside>
-
-        <section className="li-community-feed">
-          {ordered.map(p => {
-            const liked = authUser && Array.isArray(p.likedBy) && p.likedBy.includes(authUser.uid);
-            return <article className="li-story-card" key={p.id} onClick={()=>setActivePost(p)}>
-              <div className="li-story-image"><img src={p.image || IMG.madhubani} alt=""/><span>{p.category || "Memories"}</span></div>
-              <div className="li-story-body">
-                <small className="li-story-place">⌖ {p.topic || p.state || "India"}</small>
-                <h2>{p.title || "Untitled story"}</h2>
-                <p>{p.story || p.text}</p>
-                <div className="li-story-author"><span className="li-avatar">{(p.author||p.user||"H").slice(0,1).toUpperCase()}</span><span><b>{p.author||p.user||"Heritage Explorer"}</b><small>{timeAgo(p)}</small></span></div>
-                <div className="li-story-actions" onClick={e=>e.stopPropagation()}>
-                  <button className={liked ? "liked":""} onClick={()=>toggleLike(p)}>♥ <span>{p.likes||0}</span></button>
-                  <button onClick={()=>setActivePost(p)}>◯ <span>Comment</span></button>
-                  <button onClick={()=>notify("Save is coming soon.")}>♡</button>
-                </div>
-              </div>
-            </article>
-          })}
-        </section>
-
-        <aside className="li-community-right">
-          <div className="li-community-corner">
-            <div className="li-india-map-mini">INDIA<br/><span>✦</span></div>
-            <div><h3>Stories from<br/>Every Corner</h3><p>Explore real people, real stories, a living India.</p></div>
-          </div>
-          <div className="li-community-inspire"><h3>Your story can<br/>inspire someone.</h3><p>Share a tradition, a memory, a recipe, a place or a moment that makes India special.</p><button onClick={onShare}>Share Your Story ＋</button></div>
-          <div className="li-community-mantra">People<br/><i>Make</i><br/><b>Heritage</b></div>
-        </aside>
-      </div>
-
-      {activePost && (
-        <div className="li-community-detail-overlay" onClick={()=>setActivePost(null)}>
-          <div className="li-community-detail" onClick={e=>e.stopPropagation()}>
-            <button className="li-community-close" onClick={()=>setActivePost(null)}>×</button>
-            <div className="li-detail-image"><img src={activePost.image || IMG.madhubani} alt=""/></div>
-            <div className="li-detail-content">
-              <div className="eyebrow">{activePost.category || "MEMORY"} · {activePost.state || "INDIA"}</div>
-              <h2>{activePost.title}</h2>
-              <small>By <b>{activePost.author || activePost.user || "Heritage Explorer"}</b> · {activePost.topic || activePost.state || "India"}</small>
-              <p>{activePost.story || activePost.text}</p>
-              <div className="li-detail-like">♥ {activePost.likes || 0} likes</div>
-              {!String(activePost.id).startsWith("demo-") && (
-                <>
-                  <h3>Comments</h3>
-                  <div className="li-comments">{commentItems.map(c=><div key={c.id}><b>{c.author}</b><p>{c.text}</p></div>)}</div>
-                  <form className="li-comment-form" onSubmit={addComment}>
-                    <input value={comment} onChange={e=>setComment(e.target.value)} placeholder={authUser ? "Write a comment..." : "Sign in to comment"} />
-                    <button type="submit">Post</button>
-                  </form>
-                </>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
@@ -3503,19 +3371,84 @@ function HeritageStoryDetail({ story, stateName, category, onBack }) {
   );
 }
 
-function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, authUser, onLogin }) {
-  const groups = [
-    { label: "DISCOVER", note: "Uncover its roots, people and places", ids: ["image", "timeline", "process", "connections", "community"] },
-    { label: "GO DEEPER", note: "Look closer, listen and compare", ids: ["audio", "beforeafter", "surprise"] },
-    { label: "TEST YOURSELF", note: "Play, learn and earn your stamp", ids: ["quiz", "passport"] }
-  ];
+function levelCountLabel(count) {
+  if (count >= 21) return `${count} heritage collected`;
+  if (count >= 11) return `${count} heritage collected`;
+  if (count >= 6) return `${count} heritage collected`;
+  if (count >= 3) return `${count} heritage collected`;
+  return `${count} heritage collected`;
+}
+
+function passportCategory(item) {
+  const text = `${item?.type || ""} ${item?.interest || ""}`.toLowerCase();
+  if (/festival/.test(text)) return "Festivals";
+  if (/music|folk tradition/.test(text)) return "Music & Oral Traditions";
+  if (/craft|textile|visual art/.test(text)) return "Crafts & Visual Arts";
+  if (/dance|performance|ritual art/.test(text)) return "Performing Arts & Rituals";
+  if (/history|ancient|monument|architecture|archae/.test(text)) return "History & Architecture";
+  if (/food|culinary/.test(text)) return "Food & Culinary Heritage";
+  if (/language|oral/.test(text)) return "Languages & Oral Heritage";
+  return "Other Living Heritage";
+}
+
+function getRelevantExperienceIds(h) {
+  const text = `${h?.title || ""} ${h?.type || ""} ${h?.category || ""} ${h?.categoryLabel || ""} ${h?.interest || ""}`.toLowerCase();
+  const has = pattern => pattern.test(text);
+  const ids = new Set(["image", "timeline", "connections", "surprise", "quiz"]);
+
+  // The Explore menu is content-driven: only show experiences that make
+  // sense for the selected heritage category/type.
+  if (has(/festival|utsav|celebration/)) {
+    ["process", "community", "audio", "beforeafter"].forEach(id => ids.add(id));
+  } else if (has(/music|oral heritage|folk tradition|song|language/)) {
+    ["community", "audio"].forEach(id => ids.add(id));
+    if (has(/language/)) ids.add("beforeafter");
+  } else if (has(/dance|performance|performing|ritual/)) {
+    ["process", "community", "audio", "beforeafter"].forEach(id => ids.add(id));
+  } else if (has(/craft|textile|visual art|painting|pottery|weaving/)) {
+    ["process", "community", "beforeafter"].forEach(id => ids.add(id));
+  } else if (has(/food|culinary|cuisine/)) {
+    ["process", "community", "beforeafter"].forEach(id => ids.add(id));
+  } else if (has(/architecture|monument|archaeology|historical|history|ancient|heritage site/)) {
+    // Historical/architectural heritage is visual and historical; audio is
+    // intentionally omitted unless the item is explicitly music/performance.
+    ["community", "beforeafter"].forEach(id => ids.add(id));
+  } else {
+    // Safe default for future heritage records: keep the core paths and add
+    // community/process only when the record actually looks like a practice.
+    if (has(/tradition|practice|living/)) ids.add("community");
+  }
+
+  return experienceOptions
+    .filter(([id]) => id !== "passport" && ids.has(id))
+    .map(([id]) => id);
+}
+
+function getExperienceGroupsForHeritage(h) {
+  const ids = getRelevantExperienceIds(h);
+  const discover = ["image", "timeline", "process", "connections", "community"].filter(id => ids.includes(id));
+  const deeper = ["audio", "beforeafter", "surprise"].filter(id => ids.includes(id));
+  const test = ["quiz"].filter(id => ids.includes(id));
+  return [
+    { label: "DISCOVER", note: "Uncover its roots, people and places", ids: discover },
+    { label: "GO DEEPER", note: "Look closer, listen and compare", ids: deeper },
+    { label: "TEST YOURSELF", note: "Play, learn and earn your stamp", ids: test }
+  ].filter(group => group.ids.length);
+}
+
+function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, allHeritage, authUser, onLogin }) {
+  const [quizAnswer, setQuizAnswer] = useState(null);
+  const [beforeAfter, setBeforeAfter] = useState(50);
+  const [hotspot, setHotspot] = useState(null);
+  const [revealOpen, setRevealOpen] = useState(null);
+  const groups = getExperienceGroupsForHeritage(h);
   const optionMap = Object.fromEntries(experienceOptions.map(x => [x[0], x]));
   // Keep every Explore path visually tied to the heritage the user selected.
   // This is especially important for search recommendations such as Kalamkari,
   // Madhubani and Baul Music: Continue exploring should never switch to a
   // different heritage's stock image.
   const imageMap = Object.fromEntries(
-    experienceOptions.map(([id]) => [id, h.image || IMG.pattachitra])
+    experienceOptions.map(([id]) => [id, EXPLORE_MEDIA[id]?.image || h.image || IMG.pattachitra])
   );
   const iconMap = { image: "⌖", timeline: "◷", process: "✦", connections: "⌘", community: "♧", audio: "♪", beforeafter: "↔", surprise: "✧", quiz: "?", passport: "◇" };
   const heritageKey = h.id || h.title;
@@ -3523,8 +3456,23 @@ function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, a
     ? passportData.exploredByHeritage[heritageKey]
     : [];
   const isDone = id => accountExplored.includes(id);
-  const explored = experienceOptions.filter(x => isDone(x[0])).length;
-  const progress = Math.round((explored / experienceOptions.length) * 100);
+  const requiredExperienceIds = getRelevantExperienceIds(h);
+  const explored = requiredExperienceIds.filter(id => isDone(id)).length;
+  const progress = Math.round((explored / requiredExperienceIds.length) * 100);
+  const completedHeritage = passportData?.completedHeritage || {};
+  const collection = Object.keys(completedHeritage).map(key => {
+    const item = (allHeritage || []).find(x => String(x.id) === String(key) || String(x.title) === String(key));
+    return item ? { ...item, passportKey: key } : { id: key, title: key, type: "Living Heritage", place: "India", passportKey: key };
+  });
+  const categoryGroups = collection.reduce((groups, item) => {
+    const category = passportCategory(item);
+    (groups[category] ||= []).push(item);
+    return groups;
+  }, {});
+  const collectionCount = collection.length;
+  const levelInfo = collectionCount >= 21 ? ["Living India Champion", 21, null] : collectionCount >= 11 ? ["Heritage Traveller", 11, 21] : collectionCount >= 6 ? ["Heritage Explorer", 6, 11] : collectionCount >= 3 ? ["Culture Explorer", 3, 6] : ["Curious Explorer", 0, 3];
+  const levelNext = levelInfo[2];
+  const levelProgress = levelNext ? Math.min(100, Math.round(((collectionCount - levelInfo[1]) / (levelNext - levelInfo[1])) * 100)) : 100;
 
   if (activeId) {
     const [id, label, desc] = optionMap[activeId] || [];
@@ -3538,55 +3486,169 @@ function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, a
       beforeafter: ["Then & now", "Compare how the form, setting, tools, clothing, performance or public life has changed across time.", "Compare", "Past · Transition · Present · Continuity"],
       surprise: ["Look closer", "Small details often reveal the most memorable stories. Discover lesser-known facts and cultural connections.", "You might discover", "Origins · Myths · Hidden details · Surprises"],
       quiz: ["Can you remember it?", "Test what you discovered through short, heritage-specific questions and challenges.", "Challenge", "Recall · Identify · Connect · Score"],
-      passport: ["Your Heritage Passport", "Every meaningful exploration can become a stamp. Build a personal collection as you travel across India’s living heritage.", "Your progress", `${explored}/10 experiences explored`]
+      passport: ["Your Heritage Passport", "Every meaningful exploration can become a stamp. Build a personal collection as you travel across India’s living heritage.", "Your progress", `${collectionCount} heritage collected`]
     }[activeId] || [label, desc, "Explore", "Living India"];
 
     if (activeId === "passport") {
-      const badges = [
-        ["🧭", "First Explorer", explored >= 1, "Explore your first path."],
-        ["📚", "Heritage Scholar", explored >= 5, "Explore five learning paths."],
-        ["🌏", "India Explorer", explored >= 8, "Go deeper across the journey."],
-        ["🏆", "Living India Champion", explored >= 10, "Complete the full exploration set."]
+      const achievements = [
+        ["🧭", "EXPLORATION", "First Heritage", collectionCount >= 1, "Complete your first heritage journey."],
+        ["📚", "EXPLORATION", "Five Heritage Collection", collectionCount >= 5, "Explore five different heritage entries."],
+        ["🗺️", "DISCOVERY", "Three Regions", new Set(collection.map(x => x.place)).size >= 3, "Explore heritage connected to three different places."],
+        ["🎭", "CULTURE", "Culture Collector", collection.filter(x => /performing|ritual|music|craft|visual/i.test(passportCategory(x))).length >= 5, "Collect five cultural traditions across categories."],
+        ["🏆", "MILESTONE", "Living India Champion", collectionCount >= 21, "Build a collection of twenty-one heritage journeys."]
       ];
+      const achievementGroups = achievements.reduce((groups, a) => { (groups[a[1]] ||= []).push(a); return groups; }, {});
       return (
         <div className="li-explore-page">
-          <div className="li-explore-module li-passport-page">
+          <div className="li-explore-module li-passport-page li-passport-journey">
             <button className="li-explore-back" onClick={() => onSelect(null)}>← Back to {h.title}</button>
             <section className="li-passport-hero">
-              <div><span className="li-module-kicker">LIVING INDIA · YOUR COLLECTION</span><h1>Heritage Passport</h1><h2>{h.title}</h2><p>Turn curiosity into a journey. Every experience you explore leaves a stamp, and every milestone unlocks a badge.</p>{authUser ? <div className="li-passport-account">✓ Saved to your account · {authUser.email}</div> : <button className="li-passport-login" onClick={onLogin}>Sign in to save your Passport →</button>}</div>
-              <div className="li-passport-book"><div className="li-passport-emblem">✺</div><strong>INDIA</strong><span>HERITAGE<br/>PASSPORT</span><small>{explored}/10 explored</small></div>
+              <div><span className="li-module-kicker">LIVING INDIA · YOUR JOURNEY</span><h1>Heritage Passport</h1><h2>{levelInfo[0]}</h2><p>Your Passport remembers the heritage journeys you have completed. It keeps the collection simple: the heritage name, its category and your achievement progress.</p>{authUser ? <div className="li-passport-account">✓ Saved to your account · {authUser.email}</div> : <button className="li-passport-login" onClick={onLogin}>Sign in to save your Passport →</button>}</div>
+              <div className="li-passport-book"><div className="li-passport-emblem">✺</div><strong>INDIA</strong><span>HERITAGE<br/>PASSPORT</span><small>{collectionCount} heritage explored</small></div>
             </section>
-            <section className="li-stamp-section"><div className="li-module-heading"><span>YOUR STAMPS</span><h2>{explored}/10 experiences explored</h2><p>Complete an experience to collect its stamp.</p></div><div className="li-stamp-grid">{experienceOptions.map(([id,label]) => { const done=isDone(id); return <div className={`li-stamp ${done?"earned":"locked"}`} key={id}><div>{done?"✦":"○"}</div><strong>{label}</strong><small>{done?"STAMP EARNED":"Not explored yet"}</small></div>; })}</div></section>
-            <section className="li-badge-section"><div className="li-module-heading"><span>BADGES</span><h2>Milestones worth keeping</h2></div><div className="li-badge-grid">{badges.map(([icon,name,earned,text])=><div className={`li-badge ${earned?"earned":"locked"}`} key={name}><span>{icon}</span><div><strong>{name}</strong><p>{text}</p></div><b>{earned?"✓":"LOCKED"}</b></div>)}</div></section>
+
+            <section className="li-passport-level-card"><div><span>YOUR LEVEL</span><h2>{levelInfo[0]}</h2><p>{levelNext ? `${levelCountLabel(collectionCount)} · ${levelNext - collectionCount} more heritage to unlock the next level.` : "You have reached the highest level."}</p></div><div className="li-passport-level-meter"><strong>{collectionCount}</strong><small>{levelNext ? `of ${levelNext}` : "heritage"}</small><div><i style={{width:`${levelProgress}%`}}></i></div></div></section>
+
+            <section className="li-passport-collection"><div className="li-module-heading"><span>YOUR HERITAGE COLLECTION</span><h2>{collectionCount ? `${collectionCount} heritage journeys completed` : "Your collection starts here"}</h2><p>Complete the full Explore journey, including the quiz, to add a heritage to your Passport.</p></div>{collectionCount ? Object.entries(categoryGroups).map(([category, items]) => <div className="li-passport-category" key={category}><div className="li-passport-category-head"><h3>{category}</h3><span>{items.length} {items.length === 1 ? "heritage" : "heritage"}</span></div><div className="li-passport-name-grid">{items.map(item => <button key={item.passportKey} className="li-passport-name-card" onClick={() => onSelect(null)}><span>✦</span><div><strong>{item.title}</strong><small>{item.place || "India"}</small></div><b>EXPLORED</b></button>)}</div></div>) : <div className="li-passport-empty"><span>✦</span><h3>No heritage collected yet</h3><p>Search for a heritage, explore its complete journey, and it will appear here.</p></div>}</section>
+
+            <section className="li-passport-achievements"><div className="li-module-heading"><span>ACHIEVEMENTS</span><h2>Milestones, category by category</h2></div>{Object.entries(achievementGroups).map(([category, list]) => <div className="li-passport-achievement-category" key={category}><div className="li-passport-category-head"><h3>{category}</h3></div><div className="li-passport-achievement-grid">{list.map(([icon,cat,name,earned,text]) => <div className={`li-passport-achievement ${earned ? "earned" : "locked"}`} key={name}><span>{icon}</span><div><strong>{name}</strong><p>{text}</p></div><b>{earned ? "✓ UNLOCKED" : "LOCKED"}</b></div>)}</div></div>)}</section>
+
             <div className="li-module-actions"><button onClick={() => onSelect(null)}>← Back to all experiences</button><button className="primary" onClick={onBack}>Finish exploring →</button></div>
           </div>
         </div>
       );
     }
 
+    const media = EXPLORE_MEDIA[activeId] || {};
+    const moduleImage = media.image || h.image || IMG.pattachitra;
+
+    const normalizedHeritageId = String(h.id || h.title || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+    const detail = VERIFIED_HERITAGE[h.id] || VERIFIED_HERITAGE[normalizedHeritageId] || (normalizedHeritageId.includes("durga-puja") ? VERIFIED_HERITAGE["durga-puja-in-kolkata"] : null) || VERIFIED_HERITAGE.theyyam;
+    const moduleConfig = {
+      image: {
+        kicker: "INTERACTIVE EXPLORER",
+        title: "See the details others miss",
+        subtitle: "A visual field guide to " + h.title,
+        body: "Explore the image through focused hotspots: people, materials, symbols and the place behind the tradition.",
+        panels: [["01", "Look closely", "Start with the people, objects, colours and setting."], ["02", "Find the clues", "Look for motifs, materials, tools and practices that identify the tradition."], ["03", "Build the story", "Connect what you see to the community, region and ritual or craft context."]]
+      },
+      timeline: {
+        kicker: "TIMELINE · VERIFIED HISTORY",
+        title: "From roots to living tradition",
+        subtitle: h.title,
+        body: "Dates are shown only where a reliable source provides them. Where no exact founding year exists, the timeline says so instead of inventing one.",
+        panels: detail.timeline.map(([date,title,text]) => [date,title,text])
+      },
+      process: {
+        kicker: "HOW IT'S MADE · VERIFIED PROCESS",
+        title: "From material to meaning",
+        subtitle: h.title,
+        body: "Follow the actual materials, techniques and people involved in this heritage form.",
+        panels: detail.process
+      },
+      connections: {
+        kicker: "CULTURE CONNECTIONS · VERIFIED CONTEXT",
+        title: "One tradition, many threads",
+        subtitle: h.title,
+        body: "See the real links between people, place, ritual, materials, history and transmission.",
+        panels: detail.connections
+      },
+      community: {
+        kicker: "STORIES FROM THE COMMUNITY · LIVING ARCHIVE",
+        title: "The people behind the heritage",
+        subtitle: h.title,
+        body: "Community memory can add lived detail to the historical record. These prompts are designed around the real communities and places associated with this heritage.",
+        panels: detail.connections
+      },
+      audio: {
+        kicker: "LISTEN & EXPLORE · VERIFIED RECORDING",
+        title: "Hear the culture",
+        subtitle: h.title,
+        body: "The player below uses an actual Creative Commons heritage recording. For visual arts and archaeology, it is clearly labelled as contextual listening rather than a fake 'traditional song'.",
+        panels: [["01", "Listen", detail.audioNote], ["02", "Notice", "Listen for rhythm, repetition, voice, percussion or environmental sound, depending on the recording."], ["03", "Connect", "Compare what you hear with the people, place and practice described in the verified facts."]]
+      },
+      beforeafter: {
+        kicker: "BEFORE / AFTER · THEN & NOW",
+        title: "See change across time",
+        subtitle: h.title,
+        body: "Compare the heritage image with the selected reference image and look for continuity, adaptation and change.",
+        panels: [["01", "Past", "Use the older or historical reference as the starting point."], ["02", "Change", "Look for changes in materials, surroundings, presentation or public life."], ["03", "Continuity", "Identify the details that remain recognisable across time."]]
+      },
+      surprise: {
+        kicker: "YOU MIGHT BE SURPRISED · VERIFIED FACTS",
+        title: "Small facts, big stories",
+        subtitle: h.title,
+        body: "Tap a card to reveal a fact grounded in the heritage sources used for this experience.",
+        panels: detail.surprise.map((x,i)=>[String(i+1).padStart(2,"0"), "Fact "+(i+1), x])
+      },
+      quiz: {
+        kicker: "QUIZ & CHALLENGE · VERIFIED KNOWLEDGE",
+        title: detail.quiz.q,
+        subtitle: h.title,
+        body: "This question is specific to the selected heritage and uses the verified notes above.",
+        panels: [["01", "Think", "Use the timeline, process and connections sections before answering."], ["02", "Choose", "Select the one answer best supported by the documented facts."], ["03", "Learn", "The feedback explains the correct answer after you choose."]]
+      }
+    }[activeId] || null;
+
+    const timelineItems = detail.timeline;
+    const revealFacts = detail.surprise;
+    const quizOptions = detail.quiz.options;
+    const quizCorrect = detail.quiz.correct;
     return (
       <div className="li-explore-page">
-        <div className="li-explore-module" style={{"--module-image": `url("${imageMap[activeId] || h.image || ""}")`}}>
+        <div className={`li-explore-module li-module-${activeId}`} style={{"--module-image": `url("${moduleImage}")`}}>
           <button className="li-explore-back" onClick={() => onSelect(null)}>← Back to {h.title}</button>
           <div className="li-module-hero">
             <div className="li-module-copy">
-              <span className="li-module-kicker">LIVING INDIA · {label}</span>
-              <h1>{contextual[0]}</h1>
-              <h2>{h.title}</h2>
-              <p>{contextual[1]}</p>
+              <span className="li-module-kicker">LIVING INDIA · {moduleConfig.kicker}</span>
+              <h1>{moduleConfig.title}</h1>
+              <h2>{moduleConfig.subtitle}</h2>
+              <p>{moduleConfig.body}</p>
               <div className="li-module-pills"><span>{contextual[2]}</span><b>{contextual[3]}</b></div>
             </div>
-            <div className="li-module-art"><img src={imageMap[activeId] || h.image} alt="" /></div>
+            <div className="li-module-art"><img src={moduleImage} alt={media.alt || h.title} /></div>
           </div>
-          <div className="li-module-body">
-            <div className="li-module-heading"><span>YOUR PATH</span><h2>{label}</h2><p>{desc}</p></div>
-            <div className="li-module-panels">
-              <article><span>01</span><h3>Start with the story</h3><p>{h.desc || "Begin with the cultural context and discover why this heritage matters."}</p></article>
-              <article><span>02</span><h3>Explore the details</h3><p>{(h.facts || []).slice(0, 4).join(" · ") || contextual[3]}</p></article>
-              <article><span>03</span><h3>Take it further</h3><p>Follow the connections, people, places and living practices that make {h.title} more than a historical record.</p></article>
+
+          {activeId === "image" && (
+            <section className="li-special-section"><div className="li-module-heading"><span>INTERACTIVE FIELD GUIDE</span><h2>Tap the details</h2><p>Explore the image through a few focused points of attention.</p></div><div className="li-hotspot-stage"><img src={moduleImage} alt={h.title} /><button className="li-hotspot h1" onClick={()=>setHotspot("People")}>01</button><button className="li-hotspot h2" onClick={()=>setHotspot("Material")}>02</button><button className="li-hotspot h3" onClick={()=>setHotspot("Setting")}>03</button><div className="li-hotspot-info">{hotspot ? <><strong>{hotspot}</strong><p>{hotspot === "People" ? `The people who practice ${h.title} carry the knowledge from one generation to the next.` : hotspot === "Material" ? `Materials, tools and technique reveal how ${h.title} is made and why it looks the way it does.` : `Place matters: the setting, region and community give this heritage its character.`}</p></> : <><strong>Choose a marker</strong><p>Tap 01, 02 or 03 to reveal a small story.</p></>}</div></div></section>
+          )}
+
+          {activeId === "timeline" && (
+            <section className="li-special-section"><div className="li-module-heading"><span>THE JOURNEY · {h.title.toUpperCase()}</span><h2>Four moments to follow</h2><p>Exact dates appear where the evidence supports them; otherwise the period is described honestly rather than guessed.</p></div><div className="li-timeline-track">{timelineItems.map(([date,title,text],i)=><article key={title}><span>0{i+1}</span><div><b className="li-timeline-date">{date}</b><h3>{title}</h3><p>{text}</p></div></article>)}</div></section>
+          )}
+
+          {activeId === "process" && (
+            <section className="li-special-section"><div className="li-module-heading"><span>THE MAKING</span><h2>Step by step</h2></div><div className="li-process-grid">{moduleConfig.panels.map(([n,t,d])=><article key={n}><b>{n}</b><h3>{t}</h3><p>{d}</p><div className="li-process-line"></div></article>)}</div></section>
+          )}
+
+          {activeId === "audio" && (
+            <section className="li-special-section"><div className="li-module-heading"><span>LISTEN NOW</span><h2>Sound is part of the archive</h2><p>{detail.audioNote}</p></div><div className="li-audio-player"><div className="li-audio-icon">♪</div><div><strong>{detail.audioTitle}</strong><small>Wikimedia Commons · Creative Commons recording</small></div><div className="li-audio-controls"><button className="li-audio-play" onClick={()=>{const a=document.getElementById("li-heritage-audio"); if(!a)return; if(a.paused){a.play().catch(()=>{});}else{a.pause();}}}>▶ Play / Pause</button><audio id="li-heritage-audio" controls preload="auto"><source src={detail.audioUrl || EXPLORE_AUDIO} type="audio/ogg"/><source src={EXPLORE_AUDIO} type="audio/ogg"/></audio></div></div><p className="li-audio-credit">Recording: “Theyyam Meelam”, Wikimedia Commons, CC BY-SA 3.0. The source is a real Theyyam percussion recording.</p></section>
+          )}
+
+          {activeId === "beforeafter" && (
+            <section className="li-special-section"><div className="li-module-heading"><span>DRAG TO COMPARE</span><h2>Then ↔ now</h2></div><div className="li-beforeafter"><img className="ba-base" src={moduleImage} alt="Earlier heritage view" /><div className="ba-after"><img src={h.image || IMG.pattachitra} alt="Current heritage reference" /></div><input type="range" min="10" max="90" value={beforeAfter} onChange={e=>setBeforeAfter(Number(e.target.value))} aria-label="Compare before and after" style={{"--split": `${beforeAfter}%`}}/><span className="ba-label ba-left">THEN</span><span className="ba-label ba-right">NOW</span></div></section>
+          )}
+
+          {activeId === "surprise" && (
+            <section className="li-special-section"><div className="li-module-heading"><span>REVEAL THE DETAILS</span><h2>Did you know?</h2></div><div className="li-reveal-grid">{revealFacts.map((fact,i)=><button key={fact} className={`li-reveal-card ${revealOpen===i?"is-open":""}`} onClick={()=>setRevealOpen(revealOpen===i?null:i)}><span>0{i+1}</span><strong>{revealOpen===i?"Revealed":"Tap to reveal"}</strong><p>{fact}</p></button>)}</div></section>
+          )}
+
+          {activeId === "quiz" && (
+            <section className="li-special-section"><div className="li-module-heading"><span>YOUR CHALLENGE · {h.title.toUpperCase()}</span><h2>{detail.quiz.q}</h2><p>Choose the answer you think is strongest.</p></div><div className="li-quiz-card">{quizOptions.map((option,i)=><button key={option} className={`li-quiz-option ${quizAnswer !== null ? (i===quizCorrect ? "correct" : i===quizAnswer ? "wrong" : "") : ""}`} onClick={()=>setQuizAnswer(i)} disabled={quizAnswer!==null}><span>{String.fromCharCode(65+i)}</span>{option}</button>)}{quizAnswer!==null && <div className={`li-quiz-result ${quizAnswer===quizCorrect?"good":"bad"}`}>{quizAnswer===quizCorrect?"✓ Correct — living heritage is carried and adapted by people.":"Not quite — try thinking about people, practice and continuity."}</div>}</div></section>
+          )}
+
+          {activeId !== "timeline" && activeId !== "process" && activeId !== "audio" && activeId !== "beforeafter" && activeId !== "surprise" && activeId !== "quiz" && (
+            <div className="li-module-body">
+              <div className="li-module-heading"><span>YOUR PATH</span><h2>{optionMap[activeId]?.[1]}</h2><p>{optionMap[activeId]?.[2]}</p></div>
+              <div className="li-module-panels">{moduleConfig.panels.map(([n,t,d])=><article key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div>
             </div>
-            <div className="li-module-actions"><button onClick={() => onSelect(null)}>← Back to all experiences</button><button className="primary" onClick={() => { onComplete(activeId); onSelect("passport"); }}>Complete & collect stamp →</button></div>
-          </div>
+          )}
+
+          {activeId === "timeline" || activeId === "process" || activeId === "audio" || activeId === "beforeafter" || activeId === "surprise" || activeId === "quiz" ? <div className="li-module-body"><div className="li-module-panels">{moduleConfig.panels.map(([n,t,d])=><article key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div></div> : null}
+
+          <section className="li-source-section"><div><span>VERIFIED SOURCES</span><h3>Read the references behind this experience</h3><p>These links are the factual basis for the timeline, process and cultural connections above.</p></div><div className="li-source-links">{detail.sources.map((url,i)=><a key={url} href={url} target="_blank" rel="noreferrer">Source {i+1} ↗</a>)}</div></section>
+
+          <div className="li-module-actions"><button onClick={() => onSelect(null)}>← Back to all experiences</button><button className="primary" onClick={() => { if (activeId === "quiz" && quizAnswer === null) { window.alert("Answer the quiz before completing this journey."); return; } onComplete(activeId); onSelect("passport"); }}>Complete this experience →</button></div>
         </div>
       </div>
     );
@@ -3595,7 +3657,7 @@ function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, a
   return (
     <div className="li-explore-page">
       <div className="li-explore-hub">
-        <div className="li-explore-top"><button className="li-explore-back" onClick={onBack}>← Back to results</button><span>10 WAYS TO DISCOVER</span></div>
+        <div className="li-explore-top"><button className="li-explore-back" onClick={onBack}>← Back to results</button><span>{requiredExperienceIds.length} WAYS TO DISCOVER</span></div>
         <section className="li-explore-hero">
           <div className="li-explore-hero-copy">
             <span className="li-module-kicker">EXPLORE THE LIVING LEGACY OF</span>
@@ -3607,22 +3669,31 @@ function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, a
           <aside><strong>Your journey<br/>starts here</strong><p>Choose a path and dive deeper into the history, people, music, craft and stories behind {h.title}.</p><span>Explore →</span></aside>
         </section>
 
-        <div className="li-explore-title"><span>✦ {h.title}</span><h2>10 Ways to Explore</h2><p>Choose a path and dive deeper into its world.</p></div>
-        {groups.map(group => (
-          <section className="li-explore-group" key={group.label}>
-            <div className="li-explore-group-head"><div><h3>{group.label}</h3><p>{group.note}</p></div><span>{group.ids.length} paths</span></div>
-            <div className="li-experience-grid">
-              {group.ids.map((id, idx) => {
-                const [_, label, desc] = optionMap[id];
-                const done = isDone(id);
-                return <button className={`li-experience-tile ${done ? "is-done" : ""}`} key={id} onClick={() => onSelect(id)} style={{"--tile-image": `url("${imageMap[id] || ""}")`}}>
-                  <div className="li-tile-photo"></div><span className="li-tile-number">{String(experienceOptions.findIndex(x => x[0] === id) + 1).padStart(2, "0")}</span><span className="li-tile-icon">{iconMap[id]}</span>{done && <span className="li-tile-done">✓ Explored</span>}<div className="li-tile-copy"><h4>{label}</h4><p>{desc}</p></div><span className="li-tile-arrow">→</span>
-                </button>;
-              })}
-            </div>
+        <div className="li-explore-title"><span>✦ {h.title}</span><h2>Ways to Explore</h2><p>Choose the experiences that fit this heritage best. <b>{requiredExperienceIds.length} experiences</b>.</p></div>
+        <section className="li-explore-relevant-section">
+          <div className="li-explore-relevant-head"><div><span>WAYS TO EXPLORE</span><p>Discover the most relevant ways to experience this heritage.</p></div><strong>{requiredExperienceIds.length} experiences</strong></div>
+          <div className="li-experience-grid">
+            {requiredExperienceIds.filter(id => id !== "beforeafter").map((id) => {
+              const [_, label, desc] = optionMap[id];
+              const done = isDone(id);
+              return <button className={`li-experience-tile ${done ? "is-done" : ""}`} key={id} onClick={() => onSelect(id)}>
+                <span className="li-tile-icon">{iconMap[id]}</span>
+                {done && <span className="li-tile-done">✓ Explored</span>}
+                <div className="li-tile-copy"><h4>{label}</h4><p>{desc}</p></div>
+                <span className="li-tile-arrow">→</span>
+              </button>;
+            })}
+          </div>
+        </section>
+        {requiredExperienceIds.includes("beforeafter") && (
+          <section className="li-explore-further">
+            <div className="li-explore-further-head"><div><span>EXPLORE FURTHER</span><p>Dive deeper with an additional perspective.</p></div><strong>1 more way</strong></div>
+            <button className={`li-further-card ${isDone("beforeafter") ? "is-done" : ""}`} onClick={() => onSelect("beforeafter")}>
+              <span className="li-further-icon">↔</span><div><h4>Before / After</h4><p>See how it has changed over time.</p></div><span className="li-further-arrow">→</span>
+            </button>
           </section>
-        ))}
-        <section className="li-passport-strip"><div><span>🪪 HERITAGE PASSPORT</span><h2>Your journey becomes your collection.</h2><p>Explore each path, complete challenges and collect stamps as you discover India.</p></div><div className="li-passport-progress"><strong>{explored}/10</strong><small>experiences explored</small><div><i style={{width:`${progress}%`}}></i></div></div><button onClick={() => onSelect("passport")}>Open Passport →</button></section>
+        )}
+        <section className="li-passport-strip"><div><span>🪪 HERITAGE PASSPORT</span><h2>Your journey becomes your collection.</h2><p>Complete all relevant experiences, including the quiz, to add its name to your personal Passport.</p></div><div className="li-passport-progress"><strong>{explored}/{requiredExperienceIds.length}</strong><small>relevant journey steps complete</small><div><i style={{width:`${progress}%`}}></i></div></div><button onClick={() => onSelect("passport")}>Open Passport →</button></section>
         <footer className="li-explore-footer">Explore&nbsp; · &nbsp;Learn&nbsp; · &nbsp;Preserve&nbsp; · &nbsp;Celebrate <b>A More Vibrant India</b></footer>
       </div>
     </div>
@@ -3780,7 +3851,7 @@ function Detail({ h, close, onContribute, onContinue }) {
   );
 }
 
-function Modal({ type, close, notify, authUser, onStorySubmitted }) {
+function Modal({ type, close, notify }) {
 
   const contribute = type === "contribute";
   const experience =
@@ -3885,82 +3956,38 @@ function Modal({ type, close, notify, authUser, onStorySubmitted }) {
           Your memory, craft, recipe, song or local tradition can become part of India's digital heritage.
         </p>
 
-        {!authUser && (
-          <div className="li-community-login-note">
-            Sign in first so your story is linked to your Living India profile.
-            <a href="./login.html">Sign in →</a>
-          </div>
-        )}
-
         <form
-          onSubmit={async e => {
+          onSubmit={e => {
             e.preventDefault();
-            if (!authUser) {
-              notify("Please sign in before sharing a story.");
-              return;
-            }
-            const form = e.currentTarget;
-            const fd = new FormData(form);
-            const file = fd.get("image");
-            let image = "";
-
-            if (file && file.size) {
-              if (!file.type.startsWith("image/")) {
-                notify("Please choose an image file.");
-                return;
-              }
-              if (file.size > 6 * 1024 * 1024) {
-                notify("Please keep the image under 6 MB.");
-                return;
-              }
-              image = await compressCommunityImage(file);
-              if (!image) {
-                notify("That image could not be processed.");
-                return;
-              }
-            }
-
-            const saved = await onStorySubmitted({
-              title: String(fd.get("title") || "").trim(),
-              topic: String(fd.get("topic") || "").trim(),
-              state: String(fd.get("state") || "").trim(),
-              category: String(fd.get("category") || "Memories"),
-              story: String(fd.get("story") || "").trim(),
-              image
-            });
-            if (saved) {
-              form.reset();
-              close();
-            }
+            close();
+            notify("Story submitted for review ✓");
           }}
         >
-          <div className="li-community-form-grid">
-            <input name="title" required placeholder="Story title" />
-            <input name="topic" placeholder="Place or tradition" />
-            <select name="state" defaultValue="">
-              <option value="">State / region</option>
-              {INDIA_STATES.map(state => <option key={state} value={state}>{state}</option>)}
-            </select>
-            <select name="category" defaultValue="Memories">
-              <option>Memories</option>
-              <option>Festivals</option>
-              <option>Folk Dance</option>
-              <option>Food</option>
-              <option>Crafts</option>
-              <option>Music</option>
-              <option>Rituals</option>
-              <option>Languages</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <textarea name="story" required placeholder="Tell us the story..." />
-          <label className="li-community-upload">
-            <span>📷 Add a photo <small>optional · JPG/PNG/WebP</small></span>
-            <input name="image" type="file" accept="image/*" />
-          </label>
-          <button className="primary" type="submit">
-            Share with the Community →
+
+          <input
+            name="title"
+            required
+            placeholder="Story title"
+          />
+
+          <input
+            name="topic"
+            placeholder="Place or tradition"
+          />
+
+          <textarea
+            name="story"
+            required
+            placeholder="Tell us the story..."
+          />
+
+          <button
+            className="primary"
+            type="submit"
+          >
+            Submit for review →
           </button>
+
         </form>
 
       </div>
