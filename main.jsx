@@ -326,6 +326,7 @@ function App() {
   const [activeExperience, setActiveExperience] = useState(null);
   const [authUser, setAuthUser] = useState(null);
   const [passportData, setPassportData] = useState({});
+  const [funFactBanks, setFunFactBanks] = useState(FUN_FACT_BANKS);
 
   const notify = x => {
     setToast(x);
@@ -391,6 +392,38 @@ function App() {
     };
     savePassportProgress(next);
   };
+
+  useEffect(() => {
+    const unsubscribeHeritage = onSnapshot(
+      collection(db, "heritageContent"),
+      snapshot => {
+        const cloud = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+        const hidden = new Set(cloud.filter(x => x.hidden).map(x => x.id));
+        const merged = heritage
+          .filter(h => !hidden.has(h.id))
+          .map(h => { const override = cloud.find(x => x.id === h.id); return override ? { ...h, ...override } : h; });
+        const extras = cloud.filter(x => !heritage.some(h => h.id === x.id) && !x.hidden);
+        setItems([...merged, ...extras]);
+      },
+      error => console.error("[Living India Admin Heritage] Load failed", error)
+    );
+    const unsubscribeFunFacts = onSnapshot(
+      collection(db, "funFacts"),
+      snapshot => {
+        const next = { guess:[...FUN_FACT_BANKS.guess], mystery:[...FUN_FACT_BANKS.mystery], puzzle:[...FUN_FACT_BANKS.puzzle] };
+        snapshot.docs.forEach(d => {
+          const x = { id:d.id, ...d.data() };
+          if (!next[x.activity]) return;
+          const idx = next[x.activity].findIndex(q => q.id === x.id);
+          if (idx >= 0) next[x.activity][idx] = { ...next[x.activity][idx], ...x };
+          else next[x.activity].push(x);
+        });
+        setFunFactBanks(next);
+      },
+      error => console.error("[Living India Admin Fun Facts] Load failed", error)
+    );
+    return () => { unsubscribeHeritage(); unsubscribeFunFacts(); };
+  }, []);
 
   useEffect(() => {
     // Community stories, likes and comments are account/cloud-backed in Firestore.
@@ -784,6 +817,12 @@ function App() {
             </a>
           )}
 
+          {authUser && ["sadik22319@gmail.com", "rockysencr7@gmail.com"].includes((authUser.email || "").toLowerCase()) && (
+            <a href="./admin.html" className="li-login-link" title="Open Admin Panel">
+              <Icon>⚙</Icon>Admin
+            </a>
+          )}
+
         </div>
 
         <div className="sidebar-note">
@@ -1164,6 +1203,7 @@ function App() {
             passportData={passportData}
             authUser={authUser}
             onReward={awardFunFact}
+            funFactBanks={funFactBanks}
             onLogin={() => { window.location.href = "./auth3.html"; }}
             onExplore={() => nav("explore")}
           />
@@ -3585,7 +3625,7 @@ function HeritageStoryDetail({ story, stateName, category, onBack }) {
   );
 }
 
-function FunFactsPage({ passportData, authUser, onReward, onLogin, onExplore }) {
+function FunFactsPage({ passportData, authUser, onReward, onLogin, onExplore, funFactBanks }) {
   const [category, setCategory] = useState("All");
   const [active, setActive] = useState(null);
   const [guess, setGuess] = useState("");
@@ -3604,7 +3644,7 @@ function FunFactsPage({ passportData, authUser, onReward, onLogin, onExplore }) 
   const level = [...levels].reverse().find(x => exploredCount >= x.min) || levels[0];
   const nextBadge = FUN_FACT_BADGES.find(b => points < b.need);
   const isCompleted = id => Boolean(completed[id]);
-  const getPool = (activity) => FUN_FACT_BANKS[activity] || [];
+  const getPool = (activity) => funFactBanks?.[activity] || [];
   const poolFor = (activity) => {
     const pool = getPool(activity);
     return category === "All" ? pool : pool.filter(q => q.category === category);
@@ -3614,7 +3654,7 @@ function FunFactsPage({ passportData, authUser, onReward, onLogin, onExplore }) 
     : null;
   const completedChallenges = Object.values(completed).filter(v => v && typeof v === "object" && ["guess","mystery","puzzle"].includes(v.activity));
   const completedByCategory = FUN_FACT_CATEGORIES.filter(c => c !== "All").map(c => ({ category:c, items:completedChallenges.filter(x => x.category === c) })).filter(x => x.items.length);
-  const totalChallenges = Object.values(FUN_FACT_BANKS).reduce((n, arr) => n + arr.length, 0);
+  const totalChallenges = Object.values(funFactBanks || {}).reduce((n, arr) => n + arr.length, 0);
   const completedCount = completedChallenges.length;
 
   const openActivity = id => {
