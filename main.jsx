@@ -142,6 +142,68 @@ const riskItems = [
   ["Bamboo Craft", "Lack of market support", 74, "Medium"]
 ];
 
+const FUN_FACT_ACTIVITIES = [
+  { id:"guess", icon:"🎲", kicker:"PLAY & LEARN", title:"Guess Before You Reveal", category:"All", desc:"Take a guess, test your instincts and uncover an amazing heritage fact.", points:10, image:IMG.harappa },
+  { id:"puzzle", icon:"▦", kicker:"CHALLENGE YOUR MIND", title:"Heritage Word Puzzle", category:"All", desc:"Solve a real row-and-column crossword and discover India’s heritage one clue at a time.", points:50, image:IMG.madhubani },
+  { id:"mystery", icon:"🕵", kicker:"CLUES TO CULTURE", title:"Heritage Mystery", category:"All", desc:"Read the clues, think carefully and guess the hidden heritage.", points:25, image:IMG.harappa },
+];
+const FUN_FACT_CATEGORIES = ["All", "History", "Monuments", "Festivals", "Arts & Crafts", "People", "Nature", "Hidden Gems"];
+const FUN_FACT_BADGES = [
+  { need:10, name:"Curiosity Starter", icon:"✦" },
+  { need:50, name:"Puzzle Seeker", icon:"◇" },
+  { need:100, name:"Culture Detective", icon:"⌕" },
+  { need:175, name:"Heritage Adventurer", icon:"✺" },
+  { need:300, name:"Living India Champion", icon:"🏆" }
+];
+
+// Fun Facts uses real question banks instead of one hard-coded question.
+// Every challenge has a stable ID and category, so completed challenges can
+// be saved to the user's Passport without ever being shown again.
+const FUN_FACT_BANKS = {
+  guess: [
+    { id:"guess-history-01", category:"History", heritage:"Harappa", prompt:"Which ancient city is known for carefully planned streets and advanced drainage?", options:["Harappa","Madhubani","Baul Music","Theyyam"], answer:"Harappa", reveal:"Harappa is remembered for its planned streets, drainage systems, craft activity and trade." },
+    { id:"guess-history-02", category:"History", heritage:"Nalanda", prompt:"Which ancient learning centre was located in present-day Bihar?", options:["Nalanda","Hampi","Konark","Sanchi"], answer:"Nalanda", reveal:"Nalanda was a major centre of learning in ancient India." },
+    { id:"guess-monuments-01", category:"Monuments", heritage:"Taj Mahal", prompt:"Which monument is famous for its white marble and symmetrical garden setting?", options:["Taj Mahal","Hawa Mahal","Gateway of India","Charminar"], answer:"Taj Mahal", reveal:"The Taj Mahal is celebrated for its white marble architecture and carefully planned composition." },
+    { id:"guess-monuments-02", category:"Monuments", heritage:"Hawa Mahal", prompt:"Which Jaipur landmark is famous for its many small windows?", options:["Hawa Mahal","Taj Mahal","Sanchi Stupa","Konark Temple"], answer:"Hawa Mahal", reveal:"Hawa Mahal in Jaipur is known for its distinctive honeycomb-like facade and numerous windows." },
+    { id:"guess-festivals-01", category:"Festivals", heritage:"Durga Puja", prompt:"Which festival is especially associated with elaborate Durga idols and pandals in Kolkata?", options:["Durga Puja","Onam","Bihu","Pongal"], answer:"Durga Puja", reveal:"Kolkata is renowned for its elaborate Durga Puja celebrations, pandals, processions and community participation." },
+    { id:"guess-festivals-02", category:"Festivals", heritage:"Onam", prompt:"Which festival is strongly associated with Kerala and the floral pookalam?", options:["Onam","Bihu","Durga Puja","Garba"], answer:"Onam", reveal:"Onam is a major Kerala festival known for traditions including pookalam, feasts and cultural performances." },
+    { id:"guess-artcraft-01", category:"Arts & Crafts", heritage:"Madhubani Painting", prompt:"Which painting tradition from Bihar is also known as Mithila painting?", options:["Madhubani Painting","Kalamkari","Pattachitra","Warli"], answer:"Madhubani Painting", reveal:"Madhubani, or Mithila, painting is a living visual-art tradition associated with Bihar." },
+    { id:"guess-artcraft-02", category:"Arts & Crafts", heritage:"Kalamkari", prompt:"Which textile tradition is associated with hand-painted and block-printed cloth?", options:["Kalamkari","Baul","Theyyam","Ghoomar"], answer:"Kalamkari", reveal:"Kalamkari combines hand drawing and block printing with traditional dyeing and storytelling." },
+    { id:"guess-people-01", category:"People", heritage:"Baul", prompt:"Which travelling performers are known for mystical songs and the ektara?", options:["Bauls","Chitrakaras","Puppeteers","Nautanki artists"], answer:"Bauls", reveal:"Bauls are itinerant singer-philosophers associated especially with Bengal and its oral musical tradition." },
+    { id:"guess-people-02", category:"People", heritage:"Chitrakara", prompt:"Which community is traditionally associated with Pattachitra painting in Odisha?", options:["Chitrakara","Baul","Bhandari","Bhotia"], answer:"Chitrakara", reveal:"Chitrakara artists are traditionally associated with Odisha’s Pattachitra painting tradition." },
+    { id:"guess-nature-01", category:"Nature", heritage:"Sacred Groves", prompt:"What are traditional community-protected patches of forest often called?", options:["Sacred groves","Stepwells","Polders","Mandapas"], answer:"Sacred groves", reveal:"Sacred groves are forest patches protected by communities through cultural and religious traditions." },
+    { id:"guess-hidden-01", category:"Hidden Gems", heritage:"Stepwells", prompt:"Which traditional water structures descend through flights of steps?", options:["Stepwells","Pavilions","Gopurams","Stupas"], answer:"Stepwells", reveal:"Stepwells combine water access with architecture and can form remarkable underground spaces." }
+  ],
+  mystery: [
+    { id:"mystery-history-01", category:"History", heritage:"Harappa", prompt:"Who am I?", clues:["I am an ancient urban centre.","I am linked with seals, craft and long-distance trade.","My planned streets and drainage are famous."], answer:"Harappa", reveal:"Harappa is one of the best-known urban centres of the Indus tradition." },
+    { id:"mystery-history-02", category:"History", heritage:"Nalanda", prompt:"Who am I?", clues:["I was a famous centre of learning.","I attracted scholars from different regions of Asia.","My ruins are in Bihar."], answer:"Nalanda", reveal:"Nalanda Mahavihara became one of the great centres of learning of the ancient world." },
+    { id:"mystery-monuments-01", category:"Monuments", heritage:"Taj Mahal", prompt:"Who am I?", clues:["I stand beside the Yamuna in Agra.","White marble is central to my appearance.","I am widely known as a monument of love."], answer:"Taj Mahal", reveal:"The Taj Mahal in Agra is a Mughal-era marble mausoleum commissioned by Shah Jahan." },
+    { id:"mystery-monuments-02", category:"Monuments", heritage:"Hawa Mahal", prompt:"Who am I?", clues:["I stand in Jaipur.","My facade has many small windows.","My name literally refers to air or wind."], answer:"Hawa Mahal", reveal:"Hawa Mahal is Jaipur’s iconic palace facade, designed with many openings for ventilation." },
+    { id:"mystery-festivals-01", category:"Festivals", heritage:"Durga Puja", prompt:"Who am I?", clues:["I bring neighbourhoods together around temporary pandals.","Artisans create elaborate idols for me.","I am one of Kolkata’s best-known cultural celebrations."], answer:"Durga Puja", reveal:"Durga Puja turns streets and neighbourhoods into shared spaces of art, ritual and celebration." },
+    { id:"mystery-festivals-02", category:"Festivals", heritage:"Onam", prompt:"Who am I?", clues:["I am a major festival of Kerala.","Floral designs can welcome the celebration.","A traditional feast is an important part of me."], answer:"Onam", reveal:"Onam is celebrated across Kerala with food, floral designs, performances and community traditions." },
+    { id:"mystery-artcraft-01", category:"Arts & Crafts", heritage:"Madhubani Painting", prompt:"Who am I?", clues:["My roots are in the Mithila region.","I use distinctive motifs and bold visual patterns.","I am also called by the name of my region."], answer:"Madhubani", reveal:"Madhubani, also called Mithila painting, is a major living art tradition from Bihar." },
+    { id:"mystery-artcraft-02", category:"Arts & Crafts", heritage:"Pattachitra", prompt:"Who am I?", clues:["I am a narrative painting tradition from Odisha.","My stories are painted on prepared cloth.","Chitrakara artists are associated with me."], answer:"Pattachitra", reveal:"Pattachitra is Odisha’s celebrated narrative cloth-painting tradition." },
+    { id:"mystery-people-01", category:"People", heritage:"Baul", prompt:"Who am I?", clues:["I travel and sing rather than staying in one court.","My songs explore spiritual and philosophical ideas.","The ektara is strongly associated with me."], answer:"Baul", reveal:"Baul singers carry an oral tradition of music and philosophy across Bengal." },
+    { id:"mystery-nature-01", category:"Nature", heritage:"Sacred Groves", prompt:"Who am I?", clues:["I am a patch of nature protected by tradition.","Community rules can help protect me.","I can preserve trees, plants and local biodiversity."], answer:"Sacred Grove", reveal:"Sacred groves are community-protected natural spaces shaped by cultural traditions." },
+    { id:"mystery-hidden-01", category:"Hidden Gems", heritage:"Stepwell", prompt:"Who am I?", clues:["People descend into me rather than climb up.","Water is central to my design.","Some of my spaces become architectural marvels below ground level."], answer:"Stepwell", reveal:"Stepwells were designed to reach and store water while creating dramatic stepped architectural spaces." }
+  ],
+  puzzle: [
+    { id:"puzzle-history-01", category:"History", heritage:"Harappa", entries:[{word:"HARAPPA",row:1,col:0,dir:"across",clue:"Ancient Indus city with planned streets"},{word:"ART",row:1,col:1,dir:"down",clue:"Creative work — a clue to Harappa’s craft traditions"}] },
+    { id:"puzzle-history-02", category:"History", heritage:"NALANDA", entries:[{word:"NALANDA",row:1,col:0,dir:"across",clue:"Ancient centre of learning in Bihar"},{word:"LEARNING",row:1,col:2,dir:"down",clue:"What Nalanda was famous for"}] },
+    { id:"puzzle-monuments-01", category:"Monuments", heritage:"TAJMAHAL", entries:[{word:"TAJMAHAL",row:1,col:0,dir:"across",clue:"Famous white-marble monument in Agra"},{word:"MINARET",row:1,col:3,dir:"down",clue:"Tall architectural tower often seen near mosques"}] },
+    { id:"puzzle-monuments-02", category:"Monuments", heritage:"HAWAMAHAL", entries:[{word:"HAWAMAHAL",row:1,col:0,dir:"across",clue:"Jaipur landmark with many small windows"},{word:"MUGHAL",row:1,col:4,dir:"down",clue:"Dynasty associated with the Taj Mahal"}] },
+    { id:"puzzle-festivals-01", category:"Festivals", heritage:"DURGAPUJA", entries:[{word:"DURGAPUJA",row:1,col:0,dir:"across",clue:"Major celebration of Durga in Bengal"},{word:"ART",row:1,col:4,dir:"down",clue:"A key part of elaborate festival decoration"}] },
+    { id:"puzzle-festivals-02", category:"Festivals", heritage:"ONAM", entries:[{word:"ONAM",row:1,col:0,dir:"across",clue:"Major festival of Kerala"},{word:"OFFERING",row:1,col:0,dir:"down",clue:"A ceremonial gift or presentation"}] },
+    { id:"puzzle-artcraft-01", category:"Arts & Crafts", heritage:"MADHUBANI", entries:[{word:"MADHUBANI",row:1,col:0,dir:"across",clue:"Mithila painting tradition from Bihar"},{word:"HUE",row:1,col:3,dir:"down",clue:"A shade or colour in a painting"}] },
+    { id:"puzzle-artcraft-02", category:"Arts & Crafts", heritage:"KALAMKARI", entries:[{word:"KALAMKARI",row:1,col:0,dir:"across",clue:"Hand-painted and block-printed textile tradition"},{word:"LINE",row:1,col:2,dir:"down",clue:"A basic mark used in drawing"}] },
+    { id:"puzzle-people-01", category:"People", heritage:"BAUL", entries:[{word:"BAUL",row:1,col:0,dir:"across",clue:"Travelling singer-philosopher tradition of Bengal"},{word:"BENGAL",row:1,col:0,dir:"down",clue:"Region strongly associated with Baul tradition"}] },
+    { id:"puzzle-nature-01", category:"Nature", heritage:"GROVE", entries:[{word:"GROVE",row:1,col:0,dir:"across",clue:"A small group of trees"},{word:"ROOT",row:1,col:1,dir:"down",clue:"Part of a plant that anchors it in the soil"}] },
+    { id:"puzzle-hidden-01", category:"Hidden Gems", heritage:"STEPWELL", entries:[{word:"STEPWELL",row:1,col:0,dir:"across",clue:"Water structure reached by descending steps"},{word:"STONE",row:1,col:4,dir:"down",clue:"Common building material in historic architecture"}] }
+  ]
+};
+
+const FUN_FACT_ACTIVITY_LABELS = { guess:"Guess Before You Reveal", puzzle:"Heritage Word Puzzle", mystery:"Heritage Mystery" };
+
 const experienceOptions = [
   ["image", "Interactive Explorer", "Explore places, objects, artworks and visual stories."],
   ["timeline", "Timeline", "Journey from origins and turning points to life today."],
@@ -551,6 +613,35 @@ function App() {
     }
   };
 
+  const awardFunFact = (challengeId, points, meta = {}) => {
+    if (!authUser) {
+      notify("Sign in to save Fun Facts rewards to your account.");
+      return false;
+    }
+    const current = passportData?.funFacts || {};
+    const completed = { ...(current.completed || {}) };
+    if (completed[challengeId]) return false;
+    const nextPoints = Number(current.points || 0) + Number(points || 0);
+    const completedEntry = {
+      activity: meta.activity || "funfact",
+      category: meta.category || "General",
+      title: meta.title || challengeId,
+      heritage: meta.heritage || "",
+      prompt: meta.prompt || "",
+      completedAt: new Date().toISOString()
+    };
+    const next = {
+      ...passportData,
+      funFacts: {
+        points: nextPoints,
+        completed: { ...completed, [challengeId]: completedEntry }
+      }
+    };
+    savePassportProgress(next);
+    notify(`+${points} Heritage Points earned!`);
+    return true;
+  };
+
   const nav = p => {
     setPage(p);
     setSidebarOpen(false);
@@ -628,6 +719,13 @@ function App() {
             onClick={() => nav("explore")}
           >
             <Icon>⌕</Icon>Explore
+          </button>
+
+          <button
+            className={page === "funfacts" ? "active" : ""}
+            onClick={() => nav("funfacts")}
+          >
+            <Icon>✦</Icon>Fun Facts
           </button>
 
           <button
@@ -712,6 +810,7 @@ function App() {
             <button className={page === "home" ? "active" : ""} type="button" onClick={() => nav("home")}>Home</button>
             <button className={page === "map" ? "active" : ""} type="button" onClick={() => nav("map")}>Map</button>
             <button className={page === "explore" ? "active" : ""} type="button" onClick={() => nav("explore")}>Stories</button>
+            <button className={page === "funfacts" ? "active" : ""} type="button" onClick={() => nav("funfacts")}>Fun Facts</button>
             <button className={page === "risk" ? "active" : ""} type="button" onClick={() => nav("risk")}>Heritage at Risk</button>
             <button type="button" onClick={() => setModal("contribute")}>Contribute</button>
             <button className={page === "about" ? "active" : ""} type="button" onClick={() => nav("about")}>About</button>
@@ -998,65 +1097,6 @@ function App() {
 
             </section>
 
-            <section className="experiences section">
-
-              <div className="section-head">
-
-                <div>
-                  <h2>
-                    ✦ Explore Heritage, Your Way
-                  </h2>
-                  <p>
-                    Go beyond reading — listen, discover, compare and play.
-                  </p>
-                </div>
-
-                <button
-                  onClick={() => showExperience("passport")}
-                >
-                  Open Passport →
-                </button>
-
-              </div>
-
-              <div className="experience-grid">
-
-                {experienceOptions.map(
-                  ([id, label, desc]) => (
-                    <button
-                      className="experience-card"
-                      key={id}
-                      onClick={() => showExperience(id)}
-                    >
-                      <span className="experience-icon">
-                        {({
-                          image: "▧",
-                          timeline: "◷",
-                          process: "✦",
-                          connections: "⌘",
-                          surprise: "!",
-                          quiz: "?",
-                          audio: "♪",
-                          beforeafter: "↔",
-                          community: "♧",
-                          passport: "◇"
-                        })[id]}
-                      </span>
-
-                      <div>
-                        <b>{label}</b>
-                        <small>{desc}</small>
-                      </div>
-
-                      <i>→</i>
-                    </button>
-                  )
-                )}
-
-              </div>
-
-            </section>
-
             <section className="map-feature section">
 
               <div className="section-head">
@@ -1109,6 +1149,16 @@ function App() {
           <Explore
             items={items}
             onOpen={open}
+          />
+        )}
+
+        {page === "funfacts" && (
+          <FunFactsPage
+            passportData={passportData}
+            authUser={authUser}
+            onReward={awardFunFact}
+            onLogin={() => { window.location.href = "./auth3.html"; }}
+            onExplore={() => nav("explore")}
           />
         )}
 
@@ -3501,6 +3551,129 @@ function HeritageStoryDetail({ story, stateName, category, onBack }) {
       )}
     </div>
   );
+}
+
+function FunFactsPage({ passportData, authUser, onReward, onLogin, onExplore }) {
+  const [category, setCategory] = useState("All");
+  const [active, setActive] = useState(null);
+  const [guess, setGuess] = useState("");
+  const [mystery, setMystery] = useState("");
+  const [puzzleAnswers, setPuzzleAnswers] = useState({});
+  const [challengePos, setChallengePos] = useState(0);
+  const [justCompleted, setJustCompleted] = useState(false);
+  const points = Number(passportData?.funFacts?.points || 0);
+  const completed = passportData?.funFacts?.completed || {};
+  const exploredCount = Object.keys(passportData?.exploredByHeritage || {}).filter(k => Array.isArray(passportData.exploredByHeritage[k]) && passportData.exploredByHeritage[k].length).length;
+  const levels = [
+    {name:"Curious Explorer", min:0, next:3}, {name:"Culture Explorer", min:3, next:6},
+    {name:"Heritage Explorer", min:6, next:11}, {name:"Heritage Traveller", min:11, next:21},
+    {name:"Living India Champion", min:21, next:null}
+  ];
+  const level = [...levels].reverse().find(x => exploredCount >= x.min) || levels[0];
+  const nextBadge = FUN_FACT_BADGES.find(b => points < b.need);
+  const isCompleted = id => Boolean(completed[id]);
+  const getPool = (activity) => FUN_FACT_BANKS[activity] || [];
+  const poolFor = (activity) => {
+    const pool = getPool(activity);
+    return category === "All" ? pool : pool.filter(q => q.category === category);
+  };
+  const currentChallenge = active === "guess" || active === "mystery" || active === "puzzle"
+    ? poolFor(active).find((q, i) => i >= challengePos && !isCompleted(q.id)) || poolFor(active).find(q => !isCompleted(q.id))
+    : null;
+  const completedChallenges = Object.values(completed).filter(v => v && typeof v === "object" && ["guess","mystery","puzzle"].includes(v.activity));
+  const completedByCategory = FUN_FACT_CATEGORIES.filter(c => c !== "All").map(c => ({ category:c, items:completedChallenges.filter(x => x.category === c) })).filter(x => x.items.length);
+  const totalChallenges = Object.values(FUN_FACT_BANKS).reduce((n, arr) => n + arr.length, 0);
+  const completedCount = completedChallenges.length;
+
+  const openActivity = id => {
+    setActive(id);
+    setGuess(""); setMystery(""); setPuzzleAnswers({}); setJustCompleted(false); setChallengePos(0);
+  };
+  const close = () => { setActive(null); setGuess(""); setMystery(""); setPuzzleAnswers({}); setChallengePos(0); setJustCompleted(false); };
+  const itemFor = id => FUN_FACT_ACTIVITIES.find(x => x.id === id);
+  const completeChallenge = (challenge, activity, points) => {
+    if (!challenge || isCompleted(challenge.id)) return;
+    const item = itemFor(activity);
+    const didReward = onReward(challenge.id, points, { activity, category:challenge.category, title:item?.title, heritage:challenge.heritage, prompt:challenge.prompt || challenge.entries?.map(e => e.clue).join(" · ") });
+    if (didReward) {
+      setJustCompleted(true);
+      const pool = poolFor(activity);
+      const nextIndex = pool.findIndex(q => q.id === challenge.id) + 1;
+      setTimeout(() => { setJustCompleted(false); setGuess(""); setMystery(""); setPuzzleAnswers({}); setChallengePos(nextIndex); }, 650);
+    }
+  };
+  const submitGuess = option => {
+    setGuess(option);
+    if (currentChallenge && option === currentChallenge.answer) completeChallenge(currentChallenge, "guess", 10);
+  };
+  const submitMystery = () => {
+    if (currentChallenge && mystery.trim().toLowerCase() === currentChallenge.answer.toLowerCase()) completeChallenge(currentChallenge, "mystery", 25);
+  };
+  const submitPuzzle = () => {
+    if (!currentChallenge) return;
+    const allCorrect = currentChallenge.entries.every((entry, i) => (puzzleAnswers[i] || "").trim().toUpperCase() === entry.word);
+    if (allCorrect) completeChallenge(currentChallenge, "puzzle", 50);
+  };
+  const puzzleGrid = challenge => {
+    if (!challenge) return { cells:[], size:0 };
+    const maxRow = Math.max(...challenge.entries.map(e => e.row + (e.dir === "down" ? e.word.length : 1)));
+    const maxCol = Math.max(...challenge.entries.map(e => e.col + (e.dir === "across" ? e.word.length : 1)));
+    const size = Math.max(maxRow, maxCol, 7);
+    const cells = Array.from({length:size}, () => Array(size).fill(null));
+    challenge.entries.forEach((entry, entryIndex) => [...entry.word].forEach((letter,i) => {
+      const r = entry.row + (entry.dir === "down" ? i : 0), c = entry.col + (entry.dir === "across" ? i : 0);
+      if (!cells[r][c]) cells[r][c] = { key:`${r}-${c}`, entries:[] };
+      cells[r][c].entries.push({ entryIndex, letterIndex:i });
+    }));
+    return {cells,size};
+  };
+  const filteredActivities = FUN_FACT_ACTIVITIES.filter(a => a.id !== "detail" && (category === "All" || a.category === "All" || a.category === category));
+
+  return <div className="li-funfacts-page">
+    <section className="li-funfacts-hero">
+      <div className="li-funfacts-hero-copy"><span className="li-funfacts-kicker">FUN FACTS</span><h1>Small Facts. <i>Big Stories.</i></h1><p>Discover the surprising, unknown and fascinating sides of India’s heritage.</p></div>
+      <div className="li-funfacts-hero-art"><img src={IMG.harappa} alt="Indian heritage"/><span>Curiosity<br/>connects us<br/>to our roots.</span></div>
+    </section>
+    <div className="li-funfacts-filter-row">
+      <div className="li-funfacts-filters">{FUN_FACT_CATEGORIES.map(c => <button key={c} className={category===c?"active":""} onClick={() => {setCategory(c);setChallengePos(0);}}>{c}</button>)}</div>
+      <div className="li-funfacts-note">Play. Learn. Explore.<br/><em>Stay curious.</em></div>
+    </div>
+    <section className="li-funfacts-grid">
+      {filteredActivities.map(item => <button className={`li-fun-card li-fun-${item.id}`} key={item.id} onClick={() => openActivity(item.id)}>
+        <div className="li-fun-card-art"><img src={item.image} alt=""/></div>
+        <div className="li-fun-card-content"><span className="li-fun-icon">{item.icon}</span><small>{item.kicker}</small><h2>{item.title}</h2><p>{item.desc}</p><b>{item.id === "quick" ? "Start Exploring →" : item.id === "puzzle" ? "Play Puzzle →" : item.id === "mystery" ? "Solve the Mystery →" : "Start Guessing →"}</b></div>
+      </button>)}
+      <button className="li-fun-card li-fun-library" onClick={() => setActive("library")}>
+        <div className="li-fun-card-content"><span className="li-fun-icon">▤</span><small>YOUR DISCOVERIES</small><h2>Completed Challenges</h2><p>Your solved questions and puzzles are saved category-wise. New challenges never repeat ones you have already completed.</p><div className="li-reward-score"><strong>{completedCount}</strong><span>of {totalChallenges} challenges completed</span></div><div className="li-library-cats">{completedByCategory.slice(0,4).map(x => <span key={x.category}>{x.category} · {x.items.length}</span>)}{!completedByCategory.length && <span>Start playing to build your collection.</span>}</div></div>
+      </button>
+      <button className="li-fun-card li-fun-rewards" onClick={() => setActive("rewards")}>
+        <div className="li-fun-card-content"><span className="li-fun-icon">🏆</span><small>PLAY. LEARN. EARN.</small><h2>Your Rewards</h2><p>Complete activities, earn Heritage Points and unlock curiosity badges — while your Passport Explorer Level grows with your heritage journey.</p><div className="li-reward-score"><strong>{points}</strong><span>Heritage Points</span></div><div className="li-reward-level"><span>Level {levels.indexOf(level)+1}</span><b>{level.name}</b></div><div className="li-reward-badges">{FUN_FACT_BADGES.slice(0,4).map(b => <span className={points>=b.need?"earned":""} key={b.name}>{b.icon}</span>)}</div></div>
+      </button>
+    </section>
+    <section className="li-funfacts-footer-banner"><div>“The more you know, the more you see.”</div><button onClick={onExplore}>Explore Heritage →</button></section>
+
+    {active && <div className="li-fun-modal-backdrop" onClick={close}><div className="li-fun-modal" onClick={e => e.stopPropagation()}><button className="li-fun-close" onClick={close}>×</button>
+      {active === "rewards" ? <>
+        <span className="li-funfacts-kicker">YOUR REWARDS</span><h2>Curiosity earns its rewards.</h2><p className="li-fun-modal-intro">Fun Facts points are saved in your Passport account. Your Explorer Level still comes from completed heritage journeys, so both parts of your profile stay connected without replacing each other.</p>
+        <div className="li-reward-big"><strong>{points}</strong><span>Heritage Points</span></div>
+        <div className="li-fun-level-panel"><b>Explorer Level {levels.indexOf(level)+1}</b><strong>{level.name}</strong><span>{level.next ? `${Math.max(0, level.next-exploredCount)} more heritage to level up` : "Maximum level reached"}</span></div>
+        <div className="li-fun-badge-list">{FUN_FACT_BADGES.map(b => <div className={points>=b.need?"earned":"locked"} key={b.name}><span>{b.icon}</span><b>{b.name}</b><small>{b.need} points</small></div>)}</div>
+      </> : active === "library" ? <>
+        <span className="li-funfacts-kicker">YOUR DISCOVERIES</span><h2>Completed Challenges</h2><p className="li-fun-modal-intro">Every completed question and crossword is kept here by category. Once a challenge is completed, it is removed from the active pool so it will not repeat.</p>
+        <div className="li-library-summary"><strong>{completedCount}</strong><span>completed of {totalChallenges}</span></div>
+        <div className="li-library-list">{completedByCategory.length ? completedByCategory.map(group => <div className="li-library-group" key={group.category}><h3>{group.category}</h3>{group.items.map((x,i)=><div className="li-library-item" key={i}><b>{x.title}</b><span>{x.heritage}</span><small>{x.prompt || "Completed challenge"}</small></div>)}</div>) : <div className="li-library-empty">No challenges completed yet. Pick a game and start discovering.</div>}</div>
+      </> : <>
+        {(() => { const item = itemFor(active); return <>
+          <span className="li-funfacts-kicker">{item?.kicker}</span><h2>{item?.title}</h2><p className="li-fun-modal-intro">{item?.desc}</p>
+          {(active === "guess" || active === "mystery" || active === "puzzle") && !currentChallenge ? <div className="li-game-box li-game-empty"><h3>You've completed every challenge in this category! 🎉</h3><p>Choose another category to discover a fresh set of questions and puzzles.</p></div> : null}
+          {active === "guess" && currentChallenge && <div className="li-game-box"><div className="li-challenge-meta"><span>{currentChallenge.category}</span><span>Challenge {challengePos + 1}</span></div><h3>{currentChallenge.prompt}</h3><div className="li-game-options">{currentChallenge.options.map(o => <button className={guess===o ? (o===currentChallenge.answer?"correct":"wrong") : ""} onClick={()=>submitGuess(o)} key={o}>{o}</button>)}</div>{guess && <div className="li-game-result">{guess===currentChallenge.answer ? <>✓ Correct! <span>{currentChallenge.reveal}</span></> : <>Not quite — try another answer.</>}</div>}{justCompleted && <div className="li-next-challenge">Next challenge loading…</div>}</div>}
+          {active === "puzzle" && currentChallenge && <div className="li-game-box"><div className="li-challenge-meta"><span>{currentChallenge.category}</span><span>Crossword {challengePos + 1}</span></div><div className="li-crossword"><div className="li-crossword-grid" style={{gridTemplateColumns:`repeat(${puzzleGrid(currentChallenge).size}, 34px)`}}>{puzzleGrid(currentChallenge).cells.flatMap((row,r)=>row.map((cell,c)=>{ const typed = cell ? cell.entries.map(x => (puzzleAnswers[x.entryIndex] || "")[x.letterIndex] || "").find(Boolean) || "" : ""; return <span key={`${r}-${c}`} className={cell?"open":"blocked"}>{typed}</span>}))}</div></div><h3>Fill the rows and columns</h3><div className="li-crossword-clues">{currentChallenge.entries.map((entry,i)=><label key={i}><b>{entry.dir === "across" ? "Across" : "Down"} {i+1}</b><span>{entry.clue}</span><input value={puzzleAnswers[i] || ""} maxLength={entry.word.length} onChange={e=>setPuzzleAnswers(v=>({...v,[i]:e.target.value.toUpperCase()}))} placeholder={`${entry.word.length} letters`}/></label>)}</div><button className="li-game-primary" onClick={submitPuzzle}>{"Check Crossword →"}</button>{justCompleted && <div className="li-next-challenge">Next crossword loading…</div>}</div>}
+          {active === "mystery" && currentChallenge && <div className="li-game-box"><div className="li-challenge-meta"><span>{currentChallenge.category}</span><span>Mystery {challengePos + 1}</span></div><h3>{currentChallenge.prompt}</h3><ol>{currentChallenge.clues.map(c=><li key={c}>{c}</li>)}</ol><input value={mystery} onChange={e=>setMystery(e.target.value)} placeholder="Who am I?"/><button className="li-game-primary" onClick={submitMystery}>Reveal Answer →</button>{mystery && <div className="li-game-result">{mystery.trim().toLowerCase()===currentChallenge.answer.toLowerCase() ? <>✓ Solved! <span>{currentChallenge.reveal}</span></> : <>Not quite — read the clues again.</>}</div>}{justCompleted && <div className="li-next-challenge">Next mystery loading…</div>}</div>}
+        </> })()}
+        {!authUser && active !== "rewards" && active !== "library" && <button className="li-fun-login" onClick={onLogin}>Sign in to save your reward →</button>}
+      </>}
+    </div></div>}
+  </div>;
 }
 
 function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, authUser, onLogin }) {
