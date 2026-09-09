@@ -759,17 +759,30 @@ function App() {
 
         <div className="side-bottom">
 
+          <button onClick={() => setModal("report")}>
+            <Icon>⚑</Icon>Report a Problem
+          </button>
+
           <button>
             <Icon>ⓘ</Icon>About
           </button>
 
-          {/* FIXED LOGIN */}
-          <a
-            href="./login.html"
-            className="li-login-link"
-          >
-            <Icon>♙</Icon>Login
-          </a>
+          {authUser ? (
+            <a
+              href="./profile.html"
+              className="li-login-link li-profile-link"
+              title="Open your profile"
+            >
+              <Icon>♙</Icon>{authUser.displayName || authUser.email?.split("@")[0] || "My Profile"}
+            </a>
+          ) : (
+            <a
+              href="./login.html"
+              className="li-login-link"
+            >
+              <Icon>♙</Icon>Login
+            </a>
+          )}
 
         </div>
 
@@ -809,7 +822,7 @@ function App() {
           <nav className="desktop-nav" aria-label="Primary navigation">
             <button className={page === "home" ? "active" : ""} type="button" onClick={() => nav("home")}>Home</button>
             <button className={page === "map" ? "active" : ""} type="button" onClick={() => nav("map")}>Map</button>
-            <button className={page === "explore" ? "active" : ""} type="button" onClick={() => nav("explore")}>Stories</button>
+            <button className={page === "community" ? "active" : ""} type="button" onClick={() => nav("community")}>Community</button>
             <button className={page === "funfacts" ? "active" : ""} type="button" onClick={() => nav("funfacts")}>Fun Facts</button>
             <button className={page === "risk" ? "active" : ""} type="button" onClick={() => nav("risk")}>Heritage at Risk</button>
             <button type="button" onClick={() => setModal("contribute")}>Contribute</button>
@@ -865,12 +878,6 @@ function App() {
           </div>
 
           <div className="top-actions">
-
-            <span className={online ? "live" : "demo"}>
-              ● {online ? "LIVE" : "DEMO"}
-            </span>
-
-            <button>♧</button>
 
             {/* FIXED AVATAR LOGIN */}
             <a
@@ -1246,6 +1253,31 @@ function App() {
           close={() => setModal(null)}
           notify={notify}
           authUser={authUser}
+          page={page}
+          onReportSubmitted={async data => {
+            if (!authUser) {
+              notify("Please sign in before sending a report.");
+              return false;
+            }
+            try {
+              await addDoc(collection(db, "userReports"), {
+                category: data.category,
+                description: data.description,
+                page: data.page || "unknown",
+                userId: authUser.uid,
+                userEmail: authUser.email || "",
+                userName: authUser.displayName || authUser.email?.split("@")[0] || "Heritage Explorer",
+                createdAt: serverTimestamp(),
+                status: "open"
+              });
+              notify("Report sent. Thank you for helping us improve Living India.");
+              return true;
+            } catch (error) {
+              console.error("[Living India Report] Save failed", error);
+              notify("Could not send the report right now. Please try again.");
+              return false;
+            }
+          }}
           onStorySubmitted={async data => {
             if (!authUser) {
               notify("Please sign in to share your story.");
@@ -3677,6 +3709,7 @@ function FunFactsPage({ passportData, authUser, onReward, onLogin, onExplore }) 
 }
 
 function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, authUser, onLogin }) {
+  const [showFullHeroDesc, setShowFullHeroDesc] = useState(false);
   const groups = [
     { label: "DISCOVER", note: "Uncover its roots, people and places", ids: ["image", "timeline", "process", "connections", "community"] },
     { label: "GO DEEPER", note: "Look closer, listen and compare", ids: ["audio", "beforeafter", "surprise"] },
@@ -3795,7 +3828,12 @@ function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, a
             <span className="li-module-kicker">EXPLORE THE LIVING LEGACY OF</span>
             <h1 className="li-hero-title">{String(h.title || "Heritage").trim().split(/\s+/).map((word, i, arr) => <span key={`${word}-${i}`} className={i === arr.length - 1 && arr.length > 1 ? "li-hero-title-accent" : ""}>{word}{i < arr.length - 1 ? " " : ""}</span>)}</h1>
             <div className="li-explore-location">⌖ {h.place || "India"} <i>•</i> {h.type || "Living heritage"}</div>
-            <p>{h.desc || "A living thread of India's cultural memory, carried through people, place and practice."}</p>
+            <div className={`li-explore-hero-description ${showFullHeroDesc ? "is-expanded" : ""}`}>
+              <p>{h.desc || "A living thread of India's cultural memory, carried through people, place and practice."}</p>
+              <button type="button" onClick={() => setShowFullHeroDesc(v => !v)} aria-expanded={showFullHeroDesc}>
+                {showFullHeroDesc ? "Show less ↑" : "Read more →"}
+              </button>
+            </div>
           </div>
           <div className="li-explore-compact-art"><img src={h.image || IMG.pattachitra} alt="" /></div>
           <aside><strong>A living story</strong><p>Choose the experiences that fit {h.title} best.</p><span>{relevantIds.length} ways →</span></aside>
@@ -3985,14 +4023,57 @@ function Detail({ h, close, onContribute, onContinue }) {
   );
 }
 
-function Modal({ type, close, notify, authUser, onStorySubmitted }) {
+function Modal({ type, close, notify, authUser, onStorySubmitted, onReportSubmitted, page }) {
 
   const contribute = type === "contribute";
+  const report = type === "report";
   const experience =
     type && type.type === "experience";
 
-  if (!contribute && !experience)
+  if (!contribute && !experience && !report)
     return null;
+
+  if (report) {
+    return (
+      <div className="modal-overlay" onClick={close}>
+        <div className="modal feature-modal" onClick={e => e.stopPropagation()}>
+          <button className="close" onClick={close}>×</button>
+          <div className="eyebrow">HELP US IMPROVE</div>
+          <h2>Report a Problem</h2>
+          <p>If something on Living India is not working properly, tell us what happened. Your report helps us improve the experience.</p>
+          {!authUser ? (
+            <div className="li-community-login-note">
+              Please sign in first so we can connect the report to your account.
+              <a href="./login.html">Sign in →</a>
+            </div>
+          ) : (
+            <form onSubmit={async e => {
+              e.preventDefault();
+              const fd = new FormData(e.currentTarget);
+              const category = String(fd.get("category") || "Other");
+              const description = String(fd.get("description") || "").trim();
+              if (!description) { notify("Please describe the problem."); return; }
+              if (description.length > 2000) { notify("Please keep the report under 2000 characters."); return; }
+              const ok = await onReportSubmitted?.({ category, description, page });
+              if (ok) { e.currentTarget.reset(); close(); }
+            }}>
+              <label>WHAT IS THE PROBLEM?</label>
+              <select name="category" defaultValue="Something is not working" style={{width:"100%",padding:"14px",border:"1px solid var(--line)",background:"#fffdf7",font:"14px Arial",color:"var(--ink)"}}>
+                <option>Something is not working</option>
+                <option>Wrong or missing information</option>
+                <option>Image or video problem</option>
+                <option>Login or profile problem</option>
+                <option>Other</option>
+              </select>
+              <label>DESCRIBE THE PROBLEM</label>
+              <textarea name="description" rows="6" maxLength="2000" required placeholder="Tell us what went wrong..."></textarea>
+              <button className="primary" type="submit">Send Report →</button>
+            </form>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   if (experience) {
 
