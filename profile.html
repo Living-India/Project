@@ -8,6 +8,8 @@
 <style>
 :root{--paper:#fffaf0;--teal:#173c3b;--rust:#a64b32;--gold:#b88a3b;--ink:#263b38;--muted:#70776f;--line:#d9c8a8}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(135deg,#ead9b8,#f8efdf 48%,#dfc99e);font-family:Georgia,serif;color:var(--ink);padding:24px}.wrap{width:min(1080px,100%);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.brand{color:var(--teal);font-size:24px;letter-spacing:3px}.brand b{color:var(--rust)}.back{border:1px solid var(--line);background:var(--paper);color:var(--teal);padding:10px 15px;cursor:pointer;font:700 12px Arial}.hero{background:var(--paper);border:1px solid var(--gold);box-shadow:0 20px 55px #173c3b20;overflow:hidden}.banner{height:180px;background:linear-gradient(135deg,var(--teal),#285b57 55%,var(--rust));position:relative}.banner:after{content:'✺  ✦  ✺  ✦  ✺';position:absolute;inset:auto 30px 24px;color:#e0b85d;font-size:28px;letter-spacing:18px;opacity:.8}.profile{display:grid;grid-template-columns:180px 1fr;gap:26px;padding:0 38px 38px}.avatar-wrap{position:relative;width:140px;margin-top:-70px;z-index:2}.avatar{width:140px;height:140px;border-radius:50%;border:7px solid var(--paper);background:var(--teal);color:#e0b85d;display:grid;place-items:center;font-size:54px;overflow:hidden;box-shadow:0 8px 24px #173c3b25}.avatar img{width:100%;height:100%;object-fit:cover;display:none}.avatar.has-photo img{display:block}.avatar.has-photo span{display:none}.photo-btn{display:block;width:100%;margin-top:10px;border:1px solid var(--gold);background:var(--paper);color:var(--teal);padding:9px 8px;border-radius:6px;cursor:pointer;font:700 11px Arial;letter-spacing:.3px;text-align:center}.photo-btn:hover{background:#f3e5ca}.photo-help{font:10px/1.35 Arial;color:var(--muted);text-align:center;margin-top:6px}.eyebrow{font:700 11px Arial;letter-spacing:2.5px;color:var(--rust);margin-top:28px}.name{font-size:42px;color:var(--teal);margin:8px 0 4px}.email{font:14px Arial;color:var(--muted)}.verified{display:inline-block;margin-top:12px;padding:7px 11px;background:#e9f3e8;color:#356b4e;font:700 11px Arial;letter-spacing:.5px}.grid{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}.card{background:#f7efdf;border:1px solid var(--line);padding:20px}.card .icon{font-size:25px;color:var(--rust)}.card h3{margin:8px 0 5px;color:var(--teal);font-size:19px}.card p{margin:0;color:var(--muted);font:13px/1.55 Arial}.actions{display:flex;gap:10px;margin-top:22px}.primary,.secondary{padding:13px 18px;cursor:pointer;font:700 12px Arial}.primary{border:1px solid var(--teal);background:var(--teal);color:#fffaf0}.secondary{border:1px solid var(--line);background:var(--paper);color:var(--teal)}.status{min-height:20px;margin-top:12px;font:12px Arial;color:var(--rust)}input[type=file]{display:none}@media(max-width:700px){body{padding:0}.top{padding:18px}.profile{grid-template-columns:1fr;padding:0 22px 28px}.avatar-wrap{margin-top:-70px}.name{font-size:34px}.grid{grid-template-columns:1fr}.banner{height:150px}.actions{flex-direction:column}}
+
+.card{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;position:relative}.card:hover{transform:translateY(-3px);box-shadow:0 10px 25px #173c3b18;border-color:#b88a3b}.card:focus-visible{outline:3px solid #b88a3b;outline-offset:3px}.card .mini{display:block;margin-top:9px;font:700 10px Arial;letter-spacing:1px;color:var(--rust);text-transform:uppercase}.modal-backdrop{position:fixed;inset:0;background:#173c3bcc;display:none;align-items:center;justify-content:center;padding:22px;z-index:20}.modal-backdrop.open{display:flex}.modal{width:min(760px,100%);max-height:90vh;overflow:auto;background:var(--paper);border:1px solid var(--gold);box-shadow:0 24px 70px #0005;padding:28px;position:relative}.modal-close{position:absolute;right:18px;top:16px;border:1px solid var(--line);background:#fffaf0;color:var(--teal);width:34px;height:34px;border-radius:50%;cursor:pointer;font:700 16px Arial}.modal-kicker{font:700 10px Arial;letter-spacing:2px;color:var(--rust);text-transform:uppercase}.modal h2{margin:6px 0 4px;color:var(--teal);font-size:30px}.modal-sub{color:var(--muted);font:13px/1.5 Arial}.level-box{margin:20px 0;padding:18px;background:#f3ead8;border:1px solid var(--line)}.level-row{display:flex;justify-content:space-between;gap:12px;align-items:end}.level-name{font-size:23px;color:var(--teal);font-weight:700}.level-count{font:700 12px Arial;color:var(--rust)}.progress{height:9px;background:#e2d8c5;border-radius:20px;overflow:hidden;margin-top:12px}.progress i{display:block;height:100%;background:var(--teal);border-radius:20px}.achievement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}.achievement{padding:13px;border:1px solid var(--line);background:#f8f1e3}.achievement b{display:block;color:var(--teal);font-size:14px}.achievement span{display:block;margin-top:4px;font:11px/1.4 Arial;color:var(--muted)}.achievement.locked{opacity:.52}.empty{margin-top:18px;padding:20px;border:1px dashed var(--line);color:var(--muted);font:13px/1.5 Arial;text-align:center}@media(max-width:700px){.achievement-grid{grid-template-columns:1fr}.modal{padding:22px}}
 </style>
 </head>
 <body>
@@ -31,13 +33,21 @@
 <div class="status" id="status"></div>
 </div>
 <div class="grid">
-<div class="card"><div class="icon">✦</div><h3>Living India Passport</h3><p id="stamps">0 stamps collected. Start exploring to build your cultural journey.</p></div>
-<div class="card"><div class="icon">◈</div><h3>Saved Discoveries</h3><p>Your favourite stories will live here as this feature grows.</p></div>
-<div class="card"><div class="icon">♧</div><h3>Community</h3><p>Share memories, local knowledge and stories with the Living India community.</p></div>
+<button class="card" id="passportCard" type="button"><div class="icon">✦</div><h3>Living India Passport</h3><p id="stamps">0 heritage explored. Start exploring to build your cultural journey.</p><span class="mini">Open Passport →</span></button>
+<button class="card" id="levelCard" type="button"><div class="icon">★</div><h3>Explorer Level &amp; Achievements</h3><p id="levelSummary">Curious Explorer · 0 heritage explored.</p><span class="mini">View level &amp; badges →</span></button>
+<button class="card" id="savedCard" type="button"><div class="icon">◇</div><h3>Saved Discoveries</h3><p id="savedSummary">Your favourite stories and discoveries will appear here.</p><span class="mini">View saved discoveries →</span></button>
 </div>
 </section>
 </main>
 </div>
+<div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+<div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+<div class="modal-kicker" id="modalKicker">MY JOURNEY</div>
+<h2 id="modalTitle">Living India Passport</h2>
+<div class="modal-sub" id="modalSub"></div>
+<div id="modalBody"></div>
+</div></div>
 <script type="module">
 import {initializeApp} from 'firebase/app'
 import {getAuth,onAuthStateChanged,signOut,reload} from 'firebase/auth'
@@ -52,6 +62,7 @@ function loadPhoto(){const photo=localStorage.getItem(photoKey);if(photo){$('ava
 $('photoInput').onchange=()=>{const file=$('photoInput').files?.[0];if(!file)return;if(file.size>5*1024*1024){$('status').textContent='Photo must be smaller than 5 MB.';$('photoInput').value='';return}if(!file.type.startsWith('image/')){$('status').textContent='Please choose an image file.';$('photoInput').value='';return}const reader=new FileReader();reader.onload=()=>{try{localStorage.setItem(photoKey,reader.result);$('avatarImg').src=reader.result;$('avatar').classList.add('has-photo');$('status').textContent='Profile picture updated.'}catch{$('status').textContent='This image is too large to save. Try a smaller photo.'}};reader.readAsDataURL(file)};
 loadPhoto();
 onAuthStateChanged(auth,async user=>{
+ currentUser=user;
  if(!user){location.replace('./auth3.html');return}
  try{await reload(user)}catch{}
  const display=user.displayName||user.email?.split('@')[0]||'Heritage Explorer';
@@ -62,13 +73,55 @@ onAuthStateChanged(auth,async user=>{
  try {
   const snap=await getDoc(doc(db,'users',user.uid,'passport','progress'));
   const data=snap.exists()?snap.data():{};
+  currentPassportData=data;
   const byHeritage=data.exploredByHeritage||{};
-  const stamps=Object.values(byHeritage).reduce((total,list)=>total+(Array.isArray(list)?list.length:0),0);
-  $('stamps').textContent=stamps?`${stamps} heritage stamp${stamps===1?'':'s'} collected across your journey.`:'0 stamps collected. Start exploring to build your cultural journey.';
+  const exploredHeritage=Object.keys(byHeritage).filter(k=>Array.isArray(byHeritage[k])&&byHeritage[k].length);
+  const uniqueCount=exploredHeritage.length;
+  const level=getLevel(uniqueCount);
+  $('stamps').textContent=uniqueCount?`${uniqueCount} heritage ${uniqueCount===1?'entry':'entries'} explored across your journey.`:'0 heritage explored. Start exploring to build your cultural journey.';
+  $('levelSummary').textContent=`${level.name} · ${uniqueCount} heritage ${uniqueCount===1?'explored':'explored'}.`;
+  $('savedSummary').textContent='Your favourite stories and discoveries will appear here.';
  } catch {
   $('stamps').textContent='Your Passport is ready. Explore heritage to collect stamps.';
  }
 })
+let currentPassportData={};
+let currentUser=null;
+const LEVELS=[
+ {name:'Curious Explorer',min:0,next:3},
+ {name:'Culture Explorer',min:3,next:6},
+ {name:'Heritage Explorer',min:6,next:11},
+ {name:'Heritage Traveller',min:11,next:21},
+ {name:'Living India Champion',min:21,next:null}
+];
+function getLevel(count){let level=LEVELS[0];for(const item of LEVELS){if(count>=item.min)level=item;else break}return level}
+function achievementList(count){return [
+ {title:'First Heritage',cat:'Exploration',need:1,desc:'Explore your first heritage.'},
+ {title:'Curious Collector',cat:'Exploration',need:3,desc:'Explore 3 different heritage entries.'},
+ {title:'Culture Explorer',cat:'Exploration',need:5,desc:'Explore 5 different heritage entries.'},
+ {title:'Heritage Explorer',cat:'Milestones',need:10,desc:'Explore 10 different heritage entries.'},
+ {title:'Heritage Traveller',cat:'Milestones',need:15,desc:'Explore 15 different heritage entries.'},
+ {title:'Living India Champion',cat:'Milestones',need:21,desc:'Explore 21 different heritage entries.'}
+]}
+function openModal(type){
+ const count=Object.keys(currentPassportData?.exploredByHeritage||{}).filter(k=>Array.isArray(currentPassportData.exploredByHeritage[k])&&currentPassportData.exploredByHeritage[k].length).length;
+ const level=getLevel(count);
+ $('modalBackdrop').classList.add('open');$('modalBackdrop').setAttribute('aria-hidden','false');
+ if(type==='passport'){
+  $('modalKicker').textContent='YOUR COLLECTION';$('modalTitle').textContent='Living India Passport';$('modalSub').textContent=`${count} heritage ${count===1?'entry':'entries'} explored across your journey.`;
+  $('modalBody').innerHTML=`<div class="empty">Your Passport collection is account-based and updates as you complete the relevant Explore experiences. Open a heritage from Explore to continue your journey.</div>`;
+ } else if(type==='level'){
+  const next=level.next;const pct=next?Math.min(100,Math.round(((count-level.min)/(next-level.min))*100)):100;
+  const achievements=achievementList(count);
+  $('modalKicker').textContent='LEVEL & ACHIEVEMENTS';$('modalTitle').textContent=level.name;$('modalSub').textContent=`${count} unique heritage ${count===1?'explored':'explored'} · ${next?`${next-count} more to the next level`:'Maximum level reached'}.`;
+  $('modalBody').innerHTML=`<div class="level-box"><div class="level-row"><div class="level-name">Level ${LEVELS.indexOf(level)+1}</div><div class="level-count">${count} heritage explored</div></div><div class="progress"><i style="width:${pct}%"></i></div></div><h3 style="margin:18px 0 6px;color:var(--teal)">Achievements</h3><div class="achievement-grid">${achievements.map(a=>`<div class="achievement ${count>=a.need?'':'locked'}"><b>${count>=a.need?'✓':'○'} ${a.title}</b><span>${a.cat} · ${a.desc}</span></div>`).join('')}</div>`;
+ } else {
+  $('modalKicker').textContent='YOUR SAVED ITEMS';$('modalTitle').textContent='Saved Discoveries';$('modalSub').textContent='Keep favourite heritage stories and discoveries together.';
+  $('modalBody').innerHTML=`<div class="empty">Saved Discoveries is ready as a dedicated space. There are no saved items yet.</div>`;
+ }
+}
+function closeModal(){$('modalBackdrop').classList.remove('open');$('modalBackdrop').setAttribute('aria-hidden','true')}
+$('passportCard').onclick=()=>openModal('passport');$('levelCard').onclick=()=>openModal('level');$('savedCard').onclick=()=>openModal('saved');$('modalClose').onclick=closeModal;$('modalBackdrop').onclick=e=>{if(e.target===$('modalBackdrop'))closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 $('signout').onclick=async()=>{try{await signOut(auth);location.replace('./')}catch(e){$('status').textContent='Could not sign out. Please try again.'}}
 </script>
 </body>

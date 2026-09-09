@@ -3592,38 +3592,70 @@ function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, a
     );
   }
 
+  const relevantByInterest = {
+    history: ["image", "timeline", "connections", "community", "beforeafter", "surprise", "quiz"],
+    architecture: ["image", "timeline", "connections", "community", "beforeafter", "surprise", "quiz"],
+    art: ["image", "timeline", "process", "connections", "community", "beforeafter", "surprise", "quiz"],
+    craft: ["image", "timeline", "process", "connections", "community", "beforeafter", "surprise", "quiz"],
+    music: ["image", "timeline", "connections", "community", "audio", "surprise", "quiz"],
+    performance: ["image", "timeline", "process", "connections", "community", "audio", "beforeafter", "surprise", "quiz"],
+    dance: ["image", "timeline", "process", "connections", "community", "audio", "beforeafter", "surprise", "quiz"],
+    festival: ["image", "timeline", "process", "connections", "community", "audio", "beforeafter", "surprise", "quiz"],
+    food: ["image", "timeline", "process", "connections", "community", "audio", "surprise", "quiz"],
+    language: ["image", "timeline", "connections", "community", "audio", "surprise", "quiz"],
+    ritual: ["image", "timeline", "process", "connections", "community", "audio", "beforeafter", "surprise", "quiz"]
+  };
+  const rawInterest = String(h.interest || h.type || "history").toLowerCase();
+  const interestKey = Object.keys(relevantByInterest).find(k => rawInterest.includes(k)) || "history";
+  const relevantIds = [...new Set(relevantByInterest[interestKey])].filter(id => optionMap[id]);
+  const furtherIds = relevantIds.includes("beforeafter") ? ["beforeafter"] : [];
+  const mainIds = relevantIds.filter(id => !furtherIds.includes(id));
+  const completedRelevant = relevantIds.filter(isDone).length;
+  const relevantProgress = relevantIds.length ? Math.round((completedRelevant / relevantIds.length) * 100) : 0;
+
   return (
-    <div className="li-explore-page">
-      <div className="li-explore-hub">
-        <div className="li-explore-top"><button className="li-explore-back" onClick={onBack}>← Back to results</button><span>10 WAYS TO DISCOVER</span></div>
-        <section className="li-explore-hero">
-          <div className="li-explore-hero-copy">
+    <div className="li-explore-page li-explore-compact-page">
+      <div className="li-explore-hub li-explore-compact-hub">
+        <div className="li-explore-top"><button className="li-explore-back" onClick={onBack}>← Back to results</button><span>{relevantIds.length} WAYS TO DISCOVER</span></div>
+        <section className="li-explore-compact-hero">
+          <div className="li-explore-compact-copy">
             <span className="li-module-kicker">EXPLORE THE LIVING LEGACY OF</span>
-            <h1>{h.title}</h1>
-            <p>{h.desc || "A living thread of India's cultural memory, carried through people, place and practice."}</p>
+            <h1 className="li-hero-title">{String(h.title || "Heritage").trim().split(/\s+/).map((word, i, arr) => <span key={`${word}-${i}`} className={i === arr.length - 1 && arr.length > 1 ? "li-hero-title-accent" : ""}>{word}{i < arr.length - 1 ? " " : ""}</span>)}</h1>
             <div className="li-explore-location">⌖ {h.place || "India"} <i>•</i> {h.type || "Living heritage"}</div>
+            <p>{h.desc || "A living thread of India's cultural memory, carried through people, place and practice."}</p>
           </div>
-          <div className="li-explore-hero-image"><img src={h.image || IMG.pattachitra} alt="" /></div>
-          <aside><strong>Your journey<br/>starts here</strong><p>Choose a path and dive deeper into the history, people, music, craft and stories behind {h.title}.</p><span>Explore →</span></aside>
+          <div className="li-explore-compact-art"><img src={h.image || IMG.pattachitra} alt="" /></div>
+          <aside><strong>A living story</strong><p>Choose the experiences that fit {h.title} best.</p><span>{relevantIds.length} ways →</span></aside>
         </section>
 
-        <div className="li-explore-title"><span>✦ {h.title}</span><h2>10 Ways to Explore</h2><p>Choose a path and dive deeper into its world.</p></div>
-        {groups.map(group => (
-          <section className="li-explore-group" key={group.label}>
-            <div className="li-explore-group-head"><div><h3>{group.label}</h3><p>{group.note}</p></div><span>{group.ids.length} paths</span></div>
-            <div className="li-experience-grid">
-              {group.ids.map((id, idx) => {
-                const [_, label, desc] = optionMap[id];
-                const done = isDone(id);
-                return <button className={`li-experience-tile ${done ? "is-done" : ""}`} key={id} onClick={() => onSelect(id)} style={{"--tile-image": `url("${imageMap[id] || ""}")`}}>
-                  <div className="li-tile-photo"></div><span className="li-tile-number">{String(experienceOptions.findIndex(x => x[0] === id) + 1).padStart(2, "0")}</span><span className="li-tile-icon">{iconMap[id]}</span>{done && <span className="li-tile-done">✓ Explored</span>}<div className="li-tile-copy"><h4>{label}</h4><p>{desc}</p></div><span className="li-tile-arrow">→</span>
-                </button>;
-              })}
-            </div>
-          </section>
-        ))}
-        <section className="li-passport-strip"><div><span>🪪 HERITAGE PASSPORT</span><h2>Your journey becomes your collection.</h2><p>Explore each path, complete challenges and collect stamps as you discover India.</p></div><div className="li-passport-progress"><strong>{explored}/10</strong><small>experiences explored</small><div><i style={{width:`${progress}%`}}></i></div></div><button onClick={() => onSelect("passport")}>Open Passport →</button></section>
-        <footer className="li-explore-footer">Explore&nbsp; · &nbsp;Learn&nbsp; · &nbsp;Preserve&nbsp; · &nbsp;Celebrate <b>A More Vibrant India</b></footer>
+        <section className="li-explore-ways-panel">
+          <div className="li-explore-ways-head">
+            <div><div className="li-ways-icon">✧</div><div><h2>Ways to Explore</h2><p>Choose the experiences that fit this heritage best.</p></div></div>
+            <strong>{relevantIds.length} experiences</strong>
+          </div>
+          <div className="li-compact-experience-grid">
+            {mainIds.map(id => {
+              const [_, label, desc] = optionMap[id];
+              const done = isDone(id);
+              return <button className={`li-compact-experience ${done ? "is-done" : ""}`} key={id} onClick={() => onSelect(id)}>
+                <span className={`li-compact-icon li-icon-${id}`}>{iconMap[id]}</span>
+                <div><h3>{label}</h3><p>{desc}</p></div>
+                {done && <small>✓ Explored</small>}
+                <b>›</b>
+              </button>;
+            })}
+          </div>
+        </section>
+
+        {furtherIds.length > 0 && <section className="li-explore-further-compact">
+          <div className="li-further-head"><span>◉</span><div><h2>Explore Further</h2><p>Dive deeper with an additional perspective.</p></div><strong>{furtherIds.length} more way</strong></div>
+          <div className="li-further-row">{furtherIds.map(id => { const [_,label,desc]=optionMap[id]; return <button key={id} onClick={()=>onSelect(id)}><span className="li-further-icon">↔</span><div><h3>{label}</h3><p>{desc}</p></div><b>›</b></button>; })}</div>
+        </section>}
+
+        <section className="li-compact-bottom-grid">
+          <div className="li-compact-progress"><div><span>▥</span><div><h2>Your Progress</h2><p>Complete the relevant experiences to add {h.title} to your Passport.</p></div></div><div className="li-progress-line"><i style={{width:`${relevantProgress}%`}}></i></div><strong>{completedRelevant} / {relevantIds.length} completed</strong><button onClick={() => onSelect("passport")}>Go to Passport →</button></div>
+          <div className="li-compact-note"><span>⌁</span><p>Only the most relevant ways are shown for this heritage, based on its unique story and content.</p><b>RELEVANT&nbsp; · &nbsp;FOCUSED&nbsp; · &nbsp;MEANINGFUL</b></div>
+        </section>
       </div>
     </div>
   );
