@@ -85,3 +85,31 @@
   .experience-card i{right:10px!important;bottom:10px!important;width:28px!important;height:28px!important;font-size:15px!important}
 }
 @media(prefers-reduced-motion:reduce){.experience-card{transition:none!important}}
+
+
+/* Final Before They Fade layout fix — keeps the approved panel wide and reveals Risk Overview */
+.split:has(.before-fade-panel){
+  grid-template-columns:1fr !important;
+}
+.split:has(.before-fade-panel) .before-fade-panel{
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.split:has(.before-fade-panel) .before-fade-body{
+  grid-template-columns:minmax(0,1fr) 330px !important;
+}
+.split:has(.before-fade-panel) .before-fade-art{
+  display:block !important;
+}
+@media(max-width:950px){
+  .split:has(.before-fade-panel) .before-fade-body{
+    grid-template-columns:1fr !important;
+  }
+  .split:has(.before-fade-panel) .before-fade-art{
+    display:block !important;
+    border-left:0 !important;
+    border-top:1px solid #d8c6a7 !important;
+    padding-left:0 !important;
+    padding-top:18px !important;
+  }
+}

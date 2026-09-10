@@ -9,6 +9,8 @@ import { auth, db } from "./firebase-client";
 import "./style.css";
 import "./ui-overrides.css";
 
+const ADMIN_EMAILS = ["sadik22319@gmail.com", "rockysencr7@gmail.com"];
+
 const API = import.meta.env.VITE_API_URL || "http://localhost:3001/api";
 const FESTIVAL_VIDEO_PLAYLIST = [
   { name: "Durga Puja · West Bengal", src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/A_video_of_Devi_Boron_ritual_during_Durga_puja_2025_in_Kolkata.webm", type: "video/webm" },
@@ -326,7 +328,6 @@ function App() {
   const [activeExperience, setActiveExperience] = useState(null);
   const [authUser, setAuthUser] = useState(null);
   const [passportData, setPassportData] = useState({});
-  const [funFactBanks, setFunFactBanks] = useState(FUN_FACT_BANKS);
 
   const notify = x => {
     setToast(x);
@@ -392,38 +393,6 @@ function App() {
     };
     savePassportProgress(next);
   };
-
-  useEffect(() => {
-    const unsubscribeHeritage = onSnapshot(
-      collection(db, "heritageContent"),
-      snapshot => {
-        const cloud = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
-        const hidden = new Set(cloud.filter(x => x.hidden).map(x => x.id));
-        const merged = heritage
-          .filter(h => !hidden.has(h.id))
-          .map(h => { const override = cloud.find(x => x.id === h.id); return override ? { ...h, ...override } : h; });
-        const extras = cloud.filter(x => !heritage.some(h => h.id === x.id) && !x.hidden);
-        setItems([...merged, ...extras]);
-      },
-      error => console.error("[Living India Admin Heritage] Load failed", error)
-    );
-    const unsubscribeFunFacts = onSnapshot(
-      collection(db, "funFacts"),
-      snapshot => {
-        const next = { guess:[...FUN_FACT_BANKS.guess], mystery:[...FUN_FACT_BANKS.mystery], puzzle:[...FUN_FACT_BANKS.puzzle] };
-        snapshot.docs.forEach(d => {
-          const x = { id:d.id, ...d.data() };
-          if (!next[x.activity]) return;
-          const idx = next[x.activity].findIndex(q => q.id === x.id);
-          if (idx >= 0) next[x.activity][idx] = { ...next[x.activity][idx], ...x };
-          else next[x.activity].push(x);
-        });
-        setFunFactBanks(next);
-      },
-      error => console.error("[Living India Admin Fun Facts] Load failed", error)
-    );
-    return () => { unsubscribeHeritage(); unsubscribeFunFacts(); };
-  }, []);
 
   useEffect(() => {
     // Community stories, likes and comments are account/cloud-backed in Firestore.
@@ -792,6 +761,16 @@ function App() {
 
         <div className="side-bottom">
 
+          {authUser?.email && ADMIN_EMAILS.includes(authUser.email.toLowerCase()) && (
+            <a
+              href="./admin.html"
+              className="li-login-link"
+              title="Open Admin Panel"
+            >
+              <Icon>⚙</Icon>Admin
+            </a>
+          )}
+
           <button onClick={() => setModal("report")}>
             <Icon>⚑</Icon>Report a Problem
           </button>
@@ -814,12 +793,6 @@ function App() {
               className="li-login-link"
             >
               <Icon>♙</Icon>Login
-            </a>
-          )}
-
-          {authUser && ["sadik22319@gmail.com", "rockysencr7@gmail.com"].includes((authUser.email || "").toLowerCase()) && (
-            <a href="./admin.html" className="li-login-link" title="Open Admin Panel">
-              <Icon>⚙</Icon>Admin
             </a>
           )}
 
@@ -1057,9 +1030,9 @@ function App() {
 
             <TrendingHeritage
               stories={heritage}
-              slide={trendingSlide}
-              onSlideChange={setTrendingSlide}
+              posts={posts}
               onExplore={open}
+              onCommunity={() => nav("community")}
             />
 
             <section className="featured section">
@@ -1174,11 +1147,6 @@ function App() {
                 onClick={() => nav("risk")}
               />
 
-              <Community
-                posts={posts}
-                onClick={() => nav("community")}
-              />
-
             </section>
 
             <footer>
@@ -1203,7 +1171,6 @@ function App() {
             passportData={passportData}
             authUser={authUser}
             onReward={awardFunFact}
-            funFactBanks={funFactBanks}
             onLogin={() => { window.location.href = "./auth3.html"; }}
             onExplore={() => nav("explore")}
           />
@@ -1360,95 +1327,154 @@ function App() {
   );
 }
 
-function TrendingHeritage({ stories, slide, onSlideChange, onExplore }) {
-  const total = stories.length;
-  const current = stories[slide % total] || stories[0];
-  const next = stories[(slide + 1) % total] || stories[0];
+function TrendingHeritage({ stories, posts, onExplore, onCommunity }) {
+  const fallbackStories = [
+    {
+      id: "demo-baul-story",
+      title: "Keeping Baul Alive",
+      topic: "Birbhum, West Bengal",
+      category: "Music",
+      story: "A journey through villages, songs and the people who keep the Baul tradition alive.",
+      author: "Ananya Sen",
+      likes: 328,
+      image: IMG.baul
+    },
+    {
+      id: "demo-theyyam-story",
+      title: "My First Theyyam Experience",
+      topic: "Kannur, Kerala",
+      category: "Performance",
+      story: "A deeply moving experience witnessing Theyyam and the people who carry it forward.",
+      author: "Rohan Mehta",
+      likes: 241,
+      image: IMG.theyyam
+    },
+    {
+      id: "demo-craft-story",
+      title: "Hands That Shape History",
+      topic: "Andhra Pradesh",
+      category: "Craft",
+      story: "Meeting the artisans who keep India's craft traditions alive in today's world.",
+      author: "Sara Khan",
+      likes: 189,
+      image: IMG.kalamkari
+    },
+    {
+      id: "demo-hampi-story",
+      title: "Lost in the Stones of Hampi",
+      topic: "Hampi, Karnataka",
+      category: "History",
+      story: "Exploring a place that still speaks through its stones, stories and ruins.",
+      author: "Arjun Rao",
+      likes: 276,
+      image: IMG.harappa
+    },
+    {
+      id: "demo-durga-story",
+      title: "More Than a Festival",
+      topic: "Kolkata, West Bengal",
+      category: "Festival",
+      story: "How Durga Puja brings people, culture and creativity together in Kolkata.",
+      author: "Ishita Das",
+      likes: 312,
+      image: IMG.theyyam
+    },
+    {
+      id: "demo-hills-story",
+      title: "Life in the Hills",
+      topic: "Nagaland",
+      category: "Living Tradition",
+      story: "Stories from a village where traditions remain part of everyday life.",
+      author: "Neha Thapa",
+      likes: 198,
+      image: IMG.pattachitra
+    }
+  ];
+
+  const realStories = (posts || [])
+    .filter(p => p && p.status !== "rejected")
+    .sort((a, b) => (Number(b.likes || 0) - Number(a.likes || 0)));
+
+  const source = realStories.length
+    ? [...realStories.slice(0, 6), ...fallbackStories].slice(0, 6)
+    : fallbackStories;
+
+  const total = source.length;
+  const [slide, setSlide] = useState(0);
+  const pageSize = Math.min(6, total);
+  const pageCount = Math.max(1, Math.ceil(total / pageSize));
+  const pageIndex = slide % pageCount;
+  const visible = source.slice(pageIndex * pageSize, pageIndex * pageSize + pageSize);
 
   useEffect(() => {
-    if (total < 2) return;
-
-    const timer = setInterval(() => {
-      onSlideChange(value => (value + 1) % total);
-    }, 5000);
-
+    if (pageCount < 2) return;
+    const timer = setInterval(() => setSlide(value => (value + 1) % pageCount), 6000);
     return () => clearInterval(timer);
-  }, [total, onSlideChange]);
+  }, [pageCount]);
 
-  const previous = () =>
-    onSlideChange(value => (value - 1 + total) % total);
-
-  const following = () =>
-    onSlideChange(value => (value + 1) % total);
+  const previous = () => setSlide(value => (value - 1 + pageCount) % pageCount);
+  const following = () => setSlide(value => (value + 1) % pageCount);
 
   return (
-    <section className="trending section" aria-label="Trending Across India">
-      <div className="trending-shell">
+    <section className="trending section" aria-label="Trending Stories">
+      <div className="trending-shell trending-stories-shell">
         <div className="trending-head">
           <div>
-            <div className="trending-kicker">✦ INDIA · CULTURE · HERITAGE</div>
-            <h2>🔥 Trending Across India</h2>
-            <p>Explore what’s capturing hearts — iconic heritage, living traditions and stories from across the country.</p>
+            <div className="trending-kicker">✦ INDIA · PEOPLE · STORIES</div>
+            <h2>📖 Trending <i>Stories</i></h2>
+            <p>Real people. Living traditions. Inspiring journeys from our Community across India.</p>
           </div>
 
-          <div className="trending-nav">
-            <button type="button" onClick={previous} aria-label="Previous trending story">←</button>
-            <button type="button" onClick={following} aria-label="Next trending story">→</button>
-            <span>{String((slide % total) + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
+          <div className="trending-actions">
+            <button type="button" className="trending-all" onClick={onCommunity}>
+              View All Stories →
+            </button>
+            <div className="trending-nav">
+              <button type="button" onClick={previous} aria-label="Previous community story">←</button>
+              <button type="button" onClick={following} aria-label="Next community story">→</button>
+              <span>{String(pageIndex + 1).padStart(2, "0")} / {String(pageCount).padStart(2, "0")}</span>
+            </div>
           </div>
         </div>
 
-        <div className="trending-stage">
-          <button
-            type="button"
-            className="trending-main"
-            onClick={() => onExplore(current)}
-            aria-label={`Explore ${current.title}`}
-          >
-            <div className="trending-image">
-              <img src={current.image} alt="" />
-              <span className="trending-image-tag">TRENDING NOW</span>
-            </div>
-
-            <div className="trending-copy">
-              <span>{current.type} · {current.place}</span>
-              <h3>{current.title}</h3>
-              <p>{current.desc}</p>
-              <strong>Explore Now <b>→</b></strong>
-            </div>
-          </button>
-
-          <button
-            type="button"
-            className="trending-next"
-            onClick={following}
-            aria-label={`Next story: ${next.title}`}
-          >
-            <div className="trending-next-image">
-              <img src={next.image} alt="" />
-              <span>UP NEXT</span>
-            </div>
-            <div className="trending-next-copy">
-              <small>{next.place} · {next.type}</small>
-              <b>{next.title}</b>
-              <i>→</i>
-            </div>
-          </button>
+        <div className="trending-story-grid">
+          {visible.map((story, index) => (
+            <button
+              type="button"
+              className="trending-story-card"
+              key={story.id || `${story.title}-${index}`}
+              onClick={onCommunity}
+              aria-label={`Read community story: ${story.title}`}
+            >
+              <div className="trending-story-image">
+                <img src={story.image || IMG.madhubani} alt="" />
+                <span>{story.category || story.topic || "COMMUNITY"}</span>
+              </div>
+              <div className="trending-story-copy">
+                <h3>{story.title}</h3>
+                <p>{story.story || story.desc || "A story shared by the Living India community."}</p>
+                <div className="trending-story-meta">
+                  <span>● {story.author || "Heritage Explorer"}</span>
+                  <b>♡ {Number(story.likes || 0)}</b>
+                </div>
+              </div>
+            </button>
+          ))}
         </div>
 
         <div className="trending-bottom">
           <div className="trending-dots" aria-label="Trending story selector">
-            {stories.map((story, index) => (
+            {Array.from({ length: pageCount }).map((_, index) => (
               <button
-                key={story.id}
+                key={index}
                 type="button"
-                className={index === slide ? "active" : ""}
-                onClick={() => onSlideChange(index)}
-                aria-label={`Show ${story.title}`}
+                className={index === pageIndex ? "active" : ""}
+                onClick={() => setSlide(index)}
+                aria-label={`Show story group ${index + 1}`}
               />
             ))}
           </div>
-          <span>Auto-playing · tap a story to explore</span>
+          <span>From the Community · stories worth discovering</span>
         </div>
       </div>
     </section>
@@ -1611,62 +1637,99 @@ function RiskPage({ onOpenMap }) {
 }
 
 function RiskPanel({ onClick, large }) {
+  const highCount = riskItems.filter(([, , , level]) => level === "High").length;
+  const mediumCount = riskItems.filter(([, , , level]) => level === "Medium").length;
+  const stableCount = riskItems.filter(([, , , level]) => level === "Stable").length;
+
   return (
-    <div
-      className={
-        large
-          ? "panel risk-panel large"
-          : "panel risk-panel"
-      }
-    >
-
-      <div className="panel-head">
-
-        <h2>⚠ Heritage at Risk</h2>
-
+    <div className={large ? "panel risk-panel large" : "panel risk-panel before-fade-panel"}>
+      <div className="before-fade-head">
+        <div className="before-fade-title-wrap">
+          <div className="before-fade-icon">♧</div>
+          <div>
+            <span className="before-fade-kicker">OUR SHARED RESPONSIBILITY</span>
+            <h2>Before They <i>Fade</i></h2>
+            <p>A quick overview of traditions and cultural treasures that need our attention.</p>
+          </div>
+        </div>
         {onClick && (
-          <button onClick={onClick}>
-            View All →
-          </button>
+          <button className="before-fade-view" onClick={onClick}>View All →</button>
         )}
-
       </div>
 
-      {riskItems.map(
-        ([name, desc, val, level]) => (
-          <button
-            className="risk-row"
-            key={name}
-            onClick={onClick}
-          >
+      <div className="before-fade-body">
+        <div className="before-fade-main">
+          <div className="before-fade-stats">
+            <div className="before-fade-stat high">
+              <strong>{String(highCount).padStart(2, "0")}</strong>
+              <b>High Risk</b>
+              <span>Needs urgent support</span>
+            </div>
+            <div className="before-fade-stat medium">
+              <strong>{String(mediumCount).padStart(2, "0")}</strong>
+              <b>Medium Risk</b>
+              <span>Needs more attention</span>
+            </div>
+            <div className="before-fade-stat stable">
+              <strong>{String(stableCount).padStart(2, "0")}</strong>
+              <b>Stable</b>
+              <span>Relatively safe</span>
+            </div>
+          </div>
 
-            <span
-              className={
-                "badge " + level.toLowerCase()
-              }
-            >
-              {level}
-            </span>
+          <div className="before-fade-list-head">
+            <h3>Traditions at Higher Risk</h3>
+            {onClick && <button onClick={onClick}>See all at-risk traditions →</button>}
+          </div>
 
-            <span className="risk-name">
-              <b>{name}</b>
-              <small>{desc}</small>
-            </span>
+          <div className="before-fade-list">
+            {riskItems.slice(0, 3).map(([name, desc, val, level]) => (
+              <button className="before-fade-row" key={name} onClick={onClick}>
+                <span className="before-fade-thumb" aria-hidden="true">✦</span>
+                <span className="before-fade-name"><b>{name}</b><small>{desc}</small></span>
+                <span className={"before-fade-badge " + level.toLowerCase()}>{level}</span>
+                <span className="before-fade-bar"><i style={{ width: val + "%" }}></i></span>
+                <em>{val}/100</em>
+                <span className="before-fade-arrow">→</span>
+              </button>
+            ))}
+          </div>
+        </div>
 
-            <span className="bar">
-              <i
-                style={{
-                  width: val + "%"
-                }}
-              ></i>
-            </span>
-
-            <em>{val}/100</em>
-
-          </button>
-        )
-      )}
-
+        <aside className="before-fade-art">
+          <div className="before-fade-graph">
+            <div className="before-fade-graph-head">
+              <div>
+                <b>Risk Overview</b>
+                <span>Distribution of traditions by risk status.</span>
+              </div>
+            </div>
+            <div className="before-fade-chart" aria-label="Risk overview chart">
+              <div className="before-fade-chart-grid"><i></i><i></i><i></i><i></i></div>
+              <div className="before-fade-bars">
+                <div className="before-fade-chart-item high">
+                  <strong>{highCount}</strong>
+                  <div className="before-fade-chart-bar"><i style={{ height: Math.max(10, highCount * 8) + "px" }}></i></div>
+                  <span>High Risk</span>
+                </div>
+                <div className="before-fade-chart-item medium">
+                  <strong>{mediumCount}</strong>
+                  <div className="before-fade-chart-bar"><i style={{ height: Math.max(10, mediumCount * 8) + "px" }}></i></div>
+                  <span>Medium Risk</span>
+                </div>
+                <div className="before-fade-chart-item stable">
+                  <strong>{stableCount}</strong>
+                  <div className="before-fade-chart-bar"><i style={{ height: Math.max(10, stableCount * 8) + "px" }}></i></div>
+                  <span>Stable</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="before-fade-quote">“What we preserve today,<br />lives on tomorrow.”<small>— For a living India</small></div>
+          <div className="before-fade-illustration">✺</div>
+          <div className="before-fade-ribbon">People. Culture.<br /><b>A tomorrow worth keeping.</b></div>
+        </aside>
+      </div>
     </div>
   );
 }
@@ -3625,7 +3688,7 @@ function HeritageStoryDetail({ story, stateName, category, onBack }) {
   );
 }
 
-function FunFactsPage({ passportData, authUser, onReward, onLogin, onExplore, funFactBanks }) {
+function FunFactsPage({ passportData, authUser, onReward, onLogin, onExplore }) {
   const [category, setCategory] = useState("All");
   const [active, setActive] = useState(null);
   const [guess, setGuess] = useState("");
@@ -3644,7 +3707,7 @@ function FunFactsPage({ passportData, authUser, onReward, onLogin, onExplore, fu
   const level = [...levels].reverse().find(x => exploredCount >= x.min) || levels[0];
   const nextBadge = FUN_FACT_BADGES.find(b => points < b.need);
   const isCompleted = id => Boolean(completed[id]);
-  const getPool = (activity) => funFactBanks?.[activity] || [];
+  const getPool = (activity) => FUN_FACT_BANKS[activity] || [];
   const poolFor = (activity) => {
     const pool = getPool(activity);
     return category === "All" ? pool : pool.filter(q => q.category === category);
@@ -3654,7 +3717,7 @@ function FunFactsPage({ passportData, authUser, onReward, onLogin, onExplore, fu
     : null;
   const completedChallenges = Object.values(completed).filter(v => v && typeof v === "object" && ["guess","mystery","puzzle"].includes(v.activity));
   const completedByCategory = FUN_FACT_CATEGORIES.filter(c => c !== "All").map(c => ({ category:c, items:completedChallenges.filter(x => x.category === c) })).filter(x => x.items.length);
-  const totalChallenges = Object.values(funFactBanks || {}).reduce((n, arr) => n + arr.length, 0);
+  const totalChallenges = Object.values(FUN_FACT_BANKS).reduce((n, arr) => n + arr.length, 0);
   const completedCount = completedChallenges.length;
 
   const openActivity = id => {
