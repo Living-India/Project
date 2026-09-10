@@ -957,12 +957,6 @@ function App() {
 
                 <div className="map-lines"></div>
 
-                <div className="quote-top">
-                  “Sanskriti na kabhi purani hoti hai,<br />
-                  na kabhi nai — woh hamesha jeevit rehti hai.”
-                  <small>— Anonymous</small>
-                </div>
-
                 <div className="compass">
                   N<br />
                   <span>✧</span><br />
@@ -1011,19 +1005,24 @@ function App() {
               </div>
 
               <div className="hero-side">
-                <span>EK</span>
-                <b>BHARAT</b>
-                <span>ANEK</span>
-                <b>KAHAANIYAN</b>
-
-                <div className="side-arrow">
-                  →
+                <div className="hero-side-quote">
+                  <span className="hero-side-mark">“</span>
+                  <p>“Sanskriti na kabhi purani hoti hai,<br />na kabhi nai — woh hamesha jeevit rehti hai.”</p>
+                  <small>— Anonymous</small>
                 </div>
-
-                <small>
-                  Different Stories<br />
-                  Same Soul
-                </small>
+                <div className="hero-side-divider"><span>✦</span></div>
+                <div className="hero-side-title">
+                  <span>EK</span>
+                  <b>BHARAT</b>
+                  <span>ANEK</span>
+                  <b>KAHAANIYAN</b>
+                </div>
+                <div className="hero-side-art" aria-hidden="true">♜  ♜  ♜</div>
+                <div className="hero-side-bottom">
+                  <span>Different Stories</span>
+                  <span>Same Soul</span>
+                  <b>→</b>
+                </div>
               </div>
 
             </section>

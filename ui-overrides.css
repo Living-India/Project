@@ -1150,3 +1150,61 @@
 @media(max-width:480px){
   .trending-story-grid{grid-template-columns:1fr}
 }
+
+/* Home hero right quote panel — refined desktop treatment only. */
+.hero-side{
+  position:absolute!important;
+  right:0!important;
+  top:0!important;
+  bottom:0!important;
+  width:188px!important;
+  height:100%!important;
+  z-index:20!important;
+  box-sizing:border-box!important;
+  padding:28px 17px 18px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  text-align:center!important;
+  color:#f6e5c5!important;
+  background:linear-gradient(180deg,#0d4842 0%,#123f3b 62%,#103934 100%)!important;
+  border-left:1px solid rgba(223,191,126,.55)!important;
+  overflow:hidden!important;
+  text-shadow:none!important;
+}
+.hero-side:before,
+.hero-side:after{
+  content:'✺'!important;
+  position:absolute!important;
+  color:#d5ad61!important;
+  opacity:.38!important;
+  font-size:56px!important;
+  line-height:1!important;
+  pointer-events:none!important;
+}
+.hero-side:before{right:-18px!important;top:-10px!important;transform:rotate(18deg)!important}
+.hero-side:after{left:-22px!important;bottom:-12px!important;font-size:48px!important;transform:rotate(-18deg)!important}
+.hero-side-quote{position:relative!important;z-index:2!important;width:100%!important}
+.hero-side-mark{display:block!important;text-align:left!important;color:#e7bd6c!important;font:700 48px/.6 Georgia,serif!important;height:25px!important}
+.hero-side-quote p{margin:6px 0 7px!important;color:#f7ead2!important;font:italic 14px/1.42 'Cormorant Garamond',Georgia,serif!important}
+.hero-side-quote small{display:block!important;margin:0!important;color:#e4cfa9!important;font:italic 10px/1.2 'Cormorant Garamond',Georgia,serif!important}
+.hero-side-divider{width:100%!important;margin:15px 0 12px!important;display:flex!important;align-items:center!important;gap:7px!important;color:#d7ae61!important}
+.hero-side-divider:before,.hero-side-divider:after{content:''!important;display:block!important;height:1px!important;flex:1!important;background:rgba(219,183,105,.58)!important}
+.hero-side-divider span{font-size:12px!important}
+.hero-side-title{position:relative!important;z-index:2!important;display:flex!important;flex-direction:column!important;align-items:center!important;color:#e9bd69!important;font-family:'Cormorant Garamond',Georgia,serif!important;line-height:.9!important}
+.hero-side-title span{font-size:14px!important;margin:0!important;color:#f0d6a2!important}
+.hero-side-title b{font-size:21px!important;font-weight:600!important;color:#e9bd69!important;margin:3px 0!important}
+.hero-side-art{position:relative!important;z-index:2!important;margin:17px -4px 0!important;width:calc(100% + 8px)!important;padding:12px 0 8px!important;border-top:1px solid rgba(221,183,105,.32)!important;color:rgba(231,199,137,.68)!important;font:18px/1 Georgia,serif!important;letter-spacing:3px!important;white-space:nowrap!important}
+.hero-side-bottom{position:relative!important;z-index:2!important;margin-top:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;gap:3px!important;color:#ead6b2!important;font:italic 12px/1.2 'Cormorant Garamond',Georgia,serif!important}
+.hero-side-bottom span{display:block!important;margin:0!important}
+.hero-side-bottom b{margin-top:7px!important;color:#d9ad5d!important;font:22px/1 Georgia,serif!important}
+
+@media(max-width:1100px){
+  .hero-side{width:170px!important;padding-left:14px!important;padding-right:14px!important}
+  .hero-side-quote p{font-size:12px!important}
+  .hero-side-title b{font-size:19px!important}
+}
+@media(max-width:720px){
+  .hero-side{display:none!important}
+}
