@@ -874,7 +874,7 @@
 .li-story-card{background:#fbf5e9;border:1px solid #eadcc4;border-radius:13px;overflow:hidden;box-shadow:0 7px 20px rgba(54,53,40,.06);cursor:pointer;transition:transform .2s,box-shadow .2s}
 .li-story-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(54,53,40,.12)}
 .li-story-image{height:185px;position:relative;overflow:hidden}
-.li-story-image img{width:100%;height:100%;object-fit:cover;display:block}
+.li-story-image img,.li-story-image video{width:100%;height:100%;object-fit:cover;display:block}
 .li-story-image span{position:absolute;right:10px;top:10px;background:#fff8eb;color:#6b3f2c;padding:7px 10px;border-radius:8px;font-size:11px;font-weight:700}
 .li-story-body{padding:14px 15px 13px}
 .li-story-place{color:#6b746e;font-size:11px}
@@ -1381,3 +1381,10 @@
 .li-topic-community .li-topic-single-panel{margin-bottom:0}
 .li-detail-image video{width:100%;height:100%;object-fit:cover;display:block}
 @media (max-width:760px){.li-topic-community-grid{grid-template-columns:1fr}.li-topic-community-head{align-items:flex-start;flex-direction:column}}
+
+/* Community story modal: keep the full form reachable on shorter screens. */
+.modal-overlay > .modal {
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  box-sizing: border-box;
+}

@@ -1291,7 +1291,7 @@ function App() {
           passportData={passportData}
           authUser={authUser}
           communityPosts={posts}
-          onShare={() => setModal("contribute")}
+          onShare={(heritageId) => setModal(heritageId ? { type: "contribute", heritageId } : "contribute")}
           onLogin={() => { window.location.href = "./auth3.html"; }}
         />
       )}
@@ -1985,7 +1985,7 @@ function CommunityPage({ posts, authUser, onShare, notify }) {
           <div className="li-community-note">“Heritage is not just in monuments, but in memories, in people, in everyday life.”<small>— Living India</small></div>
           <div className="li-community-trending">
             <h3>Trending Now 🔥</h3>
-            {top.map((p,i)=><button key={p.id} onClick={()=>setActivePost(p)}><b>{i+1}</b><img src={getCommunityPostImage(p) || IMG.harappa} alt=""/><span>{p.title}<small>{p.likes||0} likes</small></span></button>)}
+            {top.map((p,i)=><button key={p.id} onClick={()=>setActivePost(p)}><b>{i+1}</b>{p.image && <img src={p.image} alt=""/>}{p.video && !p.image && <span className="li-trending-video-icon">▶</span>}<span>{p.title}<small>{p.likes||0} likes</small></span></button>)}
           </div>
         </aside>
 
@@ -1993,7 +1993,7 @@ function CommunityPage({ posts, authUser, onShare, notify }) {
           {ordered.map(p => {
             const liked = authUser && Array.isArray(p.likedBy) && p.likedBy.includes(authUser.uid);
             return <article className="li-story-card" key={p.id} onClick={()=>setActivePost(p)}>
-              <div className="li-story-image"><img src={getCommunityPostImage(p) || IMG.harappa} alt=""/><span>{p.category || "Memories"}</span></div>
+              {(p.image || p.video) && <div className="li-story-image">{p.video ? <video controls preload="metadata" src={p.video} /> : <img src={p.image} alt=""/>}<span>{p.category || "Memories"}</span></div>}
               <div className="li-story-body">
                 <small className="li-story-place">⌖ {p.topic || p.state || "India"}</small>
                 <h2>{p.title || "Untitled story"}</h2>
@@ -2023,7 +2023,7 @@ function CommunityPage({ posts, authUser, onShare, notify }) {
         <div className="li-community-detail-overlay" onClick={()=>setActivePost(null)}>
           <div className="li-community-detail" onClick={e=>e.stopPropagation()}>
             <button className="li-community-close" onClick={()=>setActivePost(null)}>×</button>
-            <div className="li-detail-image">{activePost.video ? <video controls preload="metadata" src={activePost.video} /> : <img src={getCommunityPostImage(activePost) || IMG.harappa} alt=""/>}</div>
+            {(activePost.image || activePost.video) && <div className="li-detail-image">{activePost.video ? <video controls preload="metadata" src={activePost.video} /> : <img src={activePost.image} alt=""/>}</div>}
             <div className="li-detail-content">
               <div className="eyebrow">{activePost.category || "MEMORY"} · {activePost.state || "INDIA"}{activePost.heritageTitle ? ` · ${activePost.heritageTitle}` : ""}</div>
               <h2>{activePost.title}</h2>
@@ -4082,11 +4082,11 @@ function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, a
               return <div className="li-topic-community">
                 <div className="li-topic-single-panel"><span>COMMUNITY CONTEXT</span><h3>Who keeps {h.title} alive?</h3><p>{topicContent?.community || "No verified community-context note has been added for this entry yet."}</p></div>
                 <div className="li-topic-community-stories">
-                  <div className="li-topic-community-head"><div><span>REAL USER STORIES</span><h3>Stories shared about {h.title}</h3><p>Only stories tagged to this heritage are shown here.</p></div><button className="primary" onClick={onShare}>Share your {h.title} story →</button></div>
+                  <div className="li-topic-community-head"><div><span>REAL USER STORIES</span><h3>Stories shared about {h.title}</h3><p>Only stories tagged to this heritage are shown here.</p></div><button className="primary" onClick={() => onShare(h.id)}>Share your {h.title} story →</button></div>
                   {matchingStories.length ? <div className="li-topic-community-grid">{matchingStories.map(p => <article key={p.id} className="li-topic-community-card">
-                    <div className="li-topic-community-media">{p.video ? <video controls preload="metadata" src={p.video} /> : <img src={getCommunityPostImage(p) || h.image} alt=""/>}</div>
+                    {(p.image || p.video) && <div className="li-topic-community-media">{p.video ? <video controls preload="metadata" src={p.video} /> : <img src={p.image} alt=""/>}</div>}
                     <div className="li-topic-community-card-body"><span>{p.category || "Community"}</span><h4>{p.title || "Untitled story"}</h4><p>{p.story || p.text || ""}</p><small>By <b>{p.author || p.user || "Heritage Explorer"}</b>{p.topic ? ` · ${p.topic}` : ""}</small></div>
-                  </article>)}</div> : <div className="li-topic-empty"><strong>No community stories about {h.title} yet.</strong><p>Be the first to share a memory, experience or local story about this heritage.</p><button type="button" onClick={onShare}>＋ Share a story</button></div>}
+                  </article>)}</div> : <div className="li-topic-empty"><strong>No community stories about {h.title} yet.</strong><p>Be the first to share a memory, experience or local story about this heritage.</p><button type="button" onClick={() => onShare(h.id)}>＋ Share a story</button></div>}
                 </div>
               </div>;
             })()}
@@ -4344,10 +4344,11 @@ function Detail({ h, close, onContribute, onContinue }) {
 
 function Modal({ type, close, notify, authUser, onStorySubmitted, onReportSubmitted, page }) {
 
-  const contribute = type === "contribute";
+  const contribute = type === "contribute" || (type && type.type === "contribute");
   const report = type === "report";
   const experience =
     type && type.type === "experience";
+  const activeHeritageId = (type && type.type === "contribute" ? type.heritageId : "") || "";
 
   if (!contribute && !experience && !report)
     return null;
@@ -4547,12 +4548,8 @@ function Modal({ type, close, notify, authUser, onStorySubmitted, onReportSubmit
               }
             }
 
-            const selectedHeritageId = String(fd.get("heritageId") || "");
+            const selectedHeritageId = String(activeHeritageId || "");
             const selectedHeritage = EXPLORE_HERITAGE_ITEMS.find(h => h.id === selectedHeritageId);
-            if (!selectedHeritage) {
-              notify("Please choose the heritage your story is about.");
-              return;
-            }
 
             const saved = await onStorySubmitted({
               title: String(fd.get("title") || "").trim(),
@@ -4560,8 +4557,8 @@ function Modal({ type, close, notify, authUser, onStorySubmitted, onReportSubmit
               state: String(fd.get("state") || "").trim(),
               category: String(fd.get("category") || "Memories"),
               story: String(fd.get("story") || "").trim(),
-              heritageId: selectedHeritage.id,
-              heritageTitle: selectedHeritage.title,
+              heritageId: selectedHeritage?.id || "",
+              heritageTitle: selectedHeritage?.title || "",
               image,
               video
             });
@@ -4572,10 +4569,6 @@ function Modal({ type, close, notify, authUser, onStorySubmitted, onReportSubmit
           }}
         >
           <div className="li-community-form-grid">
-            <select name="heritageId" defaultValue="" required>
-              <option value="">Choose the heritage this story is about</option>
-              {EXPLORE_HERITAGE_ITEMS.map(item => <option key={item.id} value={item.id}>{item.title} · {item.place}</option>)}
-            </select>
             <input name="title" required placeholder="Story title" />
             <input name="topic" placeholder="Place or tradition" />
             <select name="state" defaultValue="">
