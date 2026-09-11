@@ -5,9 +5,11 @@ import {
   doc, getDoc, setDoc, serverTimestamp,
   collection, onSnapshot, addDoc, updateDoc, arrayUnion, arrayRemove
 } from "firebase/firestore";
-import { auth, db } from "./firebase-client";
+import { ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
+import { auth, db, storage } from "./firebase-client";
 import "./style.css";
 import "./ui-overrides.css";
+import { EXPERIENCE_CONTENT } from "./experience-content";
 
 const ADMIN_EMAILS = ["sadik22319@gmail.com", "rockysencr7@gmail.com"];
 
@@ -1288,6 +1290,8 @@ function App() {
           onBack={closeExploreHub}
           passportData={passportData}
           authUser={authUser}
+          communityPosts={posts}
+          onShare={() => setModal("contribute")}
           onLogin={() => { window.location.href = "./auth3.html"; }}
         />
       )}
@@ -1355,8 +1359,12 @@ function App() {
                 topic: data.topic,
                 state: data.state,
                 category: data.category,
+                heritageId: data.heritageId || "",
+                heritageTitle: data.heritageTitle || "",
                 story: data.story,
                 image: data.image || "",
+                video: data.video || "",
+                mediaType: data.video ? "video" : (data.image ? "image" : "none"),
                 author: authUser.displayName || authUser.email?.split("@")[0] || "Heritage Explorer",
                 authorEmail: authUser.email || "",
                 authorId: authUser.uid,
@@ -1826,6 +1834,21 @@ async function compressCommunityImage(file) {
   }
 }
 
+function getCommunityHeritage(post) {
+  if (!post) return null;
+  const key = String(post.heritageId || "").trim();
+  const title = String(post.heritageTitle || "").trim().toLowerCase();
+  const topic = String(post.topic || "").trim().toLowerCase();
+  return EXPLORE_HERITAGE_ITEMS.find(h => h.id === key)
+    || EXPLORE_HERITAGE_ITEMS.find(h => title && h.title.toLowerCase() === title)
+    || EXPLORE_HERITAGE_ITEMS.find(h => topic && h.title.toLowerCase() === topic)
+    || null;
+}
+
+function getCommunityPostImage(post) {
+  return post?.image || getCommunityHeritage(post)?.image || null;
+}
+
 function CommunityPage({ posts, authUser, onShare, notify }) {
   const categories = ["All Stories","Festivals","Folk Dance","Food","Crafts","Music","Rituals","Languages","Memories","Other"];
   const [category, setCategory] = useState("All Stories");
@@ -1839,7 +1862,7 @@ function CommunityPage({ posts, authUser, onShare, notify }) {
       id:"demo-durga", title:"A Memory of Durga Puja in Our Para", topic:"Kolkata, West Bengal",
       state:"West Bengal", category:"Festivals",
       story:"Every year during Durga Puja, our whole neighbourhood turns into a family. From the first smell of shiuli flowers in the morning to the dhaak in the evenings, it is a feeling you can’t put into words…",
-      author:"Ananya Sen", likes:124, likedBy:[], image:IMG.theyyam
+      author:"Ananya Sen", likes:124, likedBy:[], heritageId:"explore-durga-puja", heritageTitle:"Durga Puja in Kolkata", image:EXPLORE_HERITAGE_ITEMS.find(h=>h.id==="explore-durga-puja")?.image || IMG.theyyam
     },
     {
       id:"demo-ghoomar", title:"Ghoomar: The Pride of My Roots", topic:"Jodhpur, Rajasthan",
@@ -1962,7 +1985,7 @@ function CommunityPage({ posts, authUser, onShare, notify }) {
           <div className="li-community-note">“Heritage is not just in monuments, but in memories, in people, in everyday life.”<small>— Living India</small></div>
           <div className="li-community-trending">
             <h3>Trending Now 🔥</h3>
-            {top.map((p,i)=><button key={p.id} onClick={()=>setActivePost(p)}><b>{i+1}</b><img src={p.image || IMG.madhubani} alt=""/><span>{p.title}<small>{p.likes||0} likes</small></span></button>)}
+            {top.map((p,i)=><button key={p.id} onClick={()=>setActivePost(p)}><b>{i+1}</b><img src={getCommunityPostImage(p) || IMG.harappa} alt=""/><span>{p.title}<small>{p.likes||0} likes</small></span></button>)}
           </div>
         </aside>
 
@@ -1970,7 +1993,7 @@ function CommunityPage({ posts, authUser, onShare, notify }) {
           {ordered.map(p => {
             const liked = authUser && Array.isArray(p.likedBy) && p.likedBy.includes(authUser.uid);
             return <article className="li-story-card" key={p.id} onClick={()=>setActivePost(p)}>
-              <div className="li-story-image"><img src={p.image || IMG.madhubani} alt=""/><span>{p.category || "Memories"}</span></div>
+              <div className="li-story-image"><img src={getCommunityPostImage(p) || IMG.harappa} alt=""/><span>{p.category || "Memories"}</span></div>
               <div className="li-story-body">
                 <small className="li-story-place">⌖ {p.topic || p.state || "India"}</small>
                 <h2>{p.title || "Untitled story"}</h2>
@@ -2000,9 +2023,9 @@ function CommunityPage({ posts, authUser, onShare, notify }) {
         <div className="li-community-detail-overlay" onClick={()=>setActivePost(null)}>
           <div className="li-community-detail" onClick={e=>e.stopPropagation()}>
             <button className="li-community-close" onClick={()=>setActivePost(null)}>×</button>
-            <div className="li-detail-image"><img src={activePost.image || IMG.madhubani} alt=""/></div>
+            <div className="li-detail-image">{activePost.video ? <video controls preload="metadata" src={activePost.video} /> : <img src={getCommunityPostImage(activePost) || IMG.harappa} alt=""/>}</div>
             <div className="li-detail-content">
-              <div className="eyebrow">{activePost.category || "MEMORY"} · {activePost.state || "INDIA"}</div>
+              <div className="eyebrow">{activePost.category || "MEMORY"} · {activePost.state || "INDIA"}{activePost.heritageTitle ? ` · ${activePost.heritageTitle}` : ""}</div>
               <h2>{activePost.title}</h2>
               <small>By <b>{activePost.author || activePost.user || "Heritage Explorer"}</b> · {activePost.topic || activePost.state || "India"}</small>
               <p>{activePost.story || activePost.text}</p>
@@ -3886,8 +3909,51 @@ function FunFactsPage({ passportData, authUser, onReward, onLogin, onExplore }) 
   </div>;
 }
 
-function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, authUser, onLogin }) {
+
+function buildExperienceQuiz(h, content) {
+  const allItems = EXPLORE_HERITAGE_ITEMS || [];
+  const allFacts = allItems.flatMap(item => (item.facts || []).map(f => ({ answer:f, title:item.title })));
+  const allPlaces = allItems.map(item => item.place).filter(Boolean);
+  const allPeriods = allItems.map(item => item.period).filter(Boolean);
+  const allTypes = allItems.map(item => item.type).filter(Boolean);
+  const allTimelineTitles = Object.values(EXPERIENCE_CONTENT).flatMap(c => (c.timeline || []).map(x => x[1]));
+  const allProcessTitles = Object.values(EXPERIENCE_CONTENT).flatMap(c => (c.process || []).map(x => x[0]));
+  const allConnections = Object.values(EXPERIENCE_CONTENT).flatMap(c => (c.connections || []).map(x => x[0]));
+  const allSurprises = Object.values(EXPERIENCE_CONTENT).flatMap(c => c.surprises || []);
+  const pick = (correct, pool) => {
+    const values = [correct, ...pool].filter(Boolean).filter((x,i,a) => a.indexOf(x) === i);
+    return values.slice(0,4);
+  };
+  const timeline = content?.timeline || [];
+  const process = content?.process || [];
+  const connections = content?.connections || [];
+  const surprises = content?.surprises || [];
+  const factAnswers = (h.facts || []).slice(0,3);
+  const questions = [
+    { q:`Which place/region is associated with ${h.title}?`, answer:h.place, options:pick(h.place, allPlaces.filter(x => x !== h.place)) },
+    { q:`Which period best matches ${h.title} in this collection?`, answer:h.period, options:pick(h.period, allPeriods.filter(x => x !== h.period)) },
+    { q:`How is ${h.title} classified here?`, answer:h.type, options:pick(h.type, allTypes.filter(x => x !== h.type)) },
+    ...factAnswers.map((fact,i) => ({ q:`Which statement is documented about ${h.title}?`, answer:fact, options:pick(fact, allFacts.filter(x => x.answer !== fact).map(x => x.answer)) })),
+    { q:`Which milestone belongs to the story of ${h.title}?`, answer:timeline[1]?.[1] || timeline[0]?.[1] || "Documented milestone", options:pick(timeline[1]?.[1] || timeline[0]?.[1], allTimelineTitles) },
+    { q:`Which is a genuine part of the process associated with ${h.title}?`, answer:process[0]?.[0] || "Documented practice", options:pick(process[0]?.[0], allProcessTitles) },
+    { q:`Which cultural connection is documented for ${h.title}?`, answer:connections[0]?.[0] || "No verified direct connection listed", options:connections.length ? pick(connections[0][0], allConnections) : ["No verified direct connection listed","A fabricated connection is not shown","Source not available","Not documented"] },
+    { q:`Which detail is a verified point about ${h.title}?`, answer:surprises[0] || (h.facts || ["No extra verified detail available"])[0], options:pick(surprises[0] || (h.facts || ["No extra verified detail available"])[0], allSurprises) }
+  ];
+  // Guarantee exactly 10 questions even if a source entry has fewer facts.
+  while (questions.length < 10) {
+    const fallback = surprises[questions.length % Math.max(1,surprises.length)] || h.desc || "Verified heritage information";
+    questions.push({ q:`Which statement is supported by the curated information for ${h.title}?`, answer:fallback, options:pick(fallback, allSurprises) });
+  }
+  return questions.slice(0,10).map((item,i) => ({ ...item, id:`${h.id || h.title}-q${i+1}` }));
+}
+
+function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, authUser, communityPosts = [], onShare, onLogin }) {
   const [showFullHeroDesc, setShowFullHeroDesc] = useState(false);
+  const [quizAnswers, setQuizAnswers] = useState({});
+  const [quizSubmitted, setQuizSubmitted] = useState(false);
+  const topicContent = EXPERIENCE_CONTENT[h.id] || null;
+  const topicQuiz = buildExperienceQuiz(h, topicContent || {});
+  useEffect(() => { setQuizAnswers({}); setQuizSubmitted(false); }, [h.id, activeId]);
   const groups = [
     { label: "DISCOVER", note: "Uncover its roots, people and places", ids: ["image", "timeline", "process", "connections", "community"] },
     { label: "GO DEEPER", note: "Look closer, listen and compare", ids: ["audio", "beforeafter", "surprise"] },
@@ -3912,18 +3978,42 @@ function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, a
 
   if (activeId) {
     const [id, label, desc] = optionMap[activeId] || [];
-    const contextual = {
-      image: ["See it differently", "Explore the places, objects, symbols and visual details connected to this heritage.", "Look for", "People · Places · Objects · Symbols"],
-      timeline: ["Trace the journey", "Follow this tradition from its roots through regional change, revival and life today.", "Journey", "Origins · Turning points · Modern day"],
-      process: ["Behind the tradition", "Break the practice into its materials, preparation, people, technique and final expression.", "Discover", "Materials · Skills · Process · Makers"],
-      connections: ["Find the cultural threads", "See how this heritage sits inside a larger network of regions, communities, arts, food, ritual and history.", "Connected to", "Regions · People · Arts · Traditions"],
-      community: ["Voices keep it alive", "Discover the people and communities whose memories, skills and everyday practice keep this heritage living.", "Meet", "Practitioners · Families · Communities · Stories"],
-      audio: ["Hear the living culture", "Explore rhythm, instruments, language, songs and oral traditions associated with this heritage.", "Listen for", "Rhythm · Instruments · Voice · Language"],
-      beforeafter: ["Then & now", "Compare how the form, setting, tools, clothing, performance or public life has changed across time.", "Compare", "Past · Transition · Present · Continuity"],
-      surprise: ["Look closer", "Small details often reveal the most memorable stories. Discover lesser-known facts and cultural connections.", "You might discover", "Origins · Myths · Hidden details · Surprises"],
-      quiz: ["Can you remember it?", "Test what you discovered through short, heritage-specific questions and challenges.", "Challenge", "Recall · Identify · Connect · Score"],
-      passport: ["Your Heritage Passport", "Every meaningful exploration can become a stamp. Build a personal collection as you travel across India’s living heritage.", "Your progress", `${explored}/10 experiences explored`]
-    }[activeId] || [label, desc, "Explore", "Living India"];
+    const contentLabel = {
+      image: "See it differently",
+      timeline: "Trace the journey",
+      process: topicContent?.processLabel || "How it is made",
+      connections: "Find the cultural threads",
+      community: "Voices keep it alive",
+      audio: "Hear the living culture",
+      beforeafter: "Then & now",
+      surprise: "Look closer",
+      quiz: "Test what you learned",
+      passport: "Your Heritage Passport"
+    }[activeId] || label;
+    const contentIntro = {
+      image: "Use the selected heritage itself as the subject: look for its materials, symbols, people, setting and documented details.",
+      timeline: "Follow the dated and historically grounded milestones of this heritage.",
+      process: topicContent?.processLabel ? `Understand ${topicContent.processLabel.toLowerCase()} without mixing it with another tradition.` : "See the documented stages, materials or practice behind this heritage.",
+      connections: "See only cultural relationships that are documented for this heritage. No invented links are added.",
+      community: "Understand the communities, practitioners and institutions that keep this heritage alive, without fabricated quotations.",
+      audio: topicContent?.audio || "No verified audio source is embedded yet.",
+      beforeafter: "Compare the historical context with the present-day form, while keeping continuity and change separate.",
+      surprise: "Read lesser-known facts that are still grounded in the curated source material.",
+      quiz: "Ten questions are generated specifically from this heritage's curated facts, timeline, process and connections.",
+      passport: "Collect a stamp after completing the heritage-specific experiences."
+    }[activeId] || desc;
+    const contextualPill = {
+      image: "Visual details · Symbols · Context",
+      timeline: "Dates · Turning points · Present",
+      process: `${topicContent?.process?.length || 0} documented steps`,
+      connections: `${topicContent?.connections?.length || 0} documented connections`,
+      community: "Practitioners · Communities · Continuity",
+      audio: topicContent?.audio?.startsWith("No verified") ? "Verified audio not embedded" : "Verified audio",
+      beforeafter: topicContent?.beforeAfter ? "Past · Today · Continuity" : "Comparison not available",
+      surprise: `${topicContent?.surprises?.length || 0} verified details`,
+      quiz: "10 topic-specific questions",
+      passport: `${explored}/10 experiences explored`
+    }[activeId] || label;
 
     if (activeId === "passport") {
       const badges = [
@@ -3948,6 +4038,8 @@ function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, a
       );
     }
 
+    const selectedQuizScore = Object.values(quizAnswers).filter(Boolean).reduce((score, answer, index) => score + (answer === topicQuiz[index]?.answer ? 1 : 0), 0);
+    const submitTopicQuiz = () => setQuizSubmitted(true);
     return (
       <div className="li-explore-page">
         <div className="li-explore-module" style={{"--module-image": `url("${imageMap[activeId] || h.image || ""}")`}}>
@@ -3955,20 +4047,67 @@ function ExploreHub({ h, activeId, onSelect, onComplete, onBack, passportData, a
           <div className="li-module-hero">
             <div className="li-module-copy">
               <span className="li-module-kicker">LIVING INDIA · {label}</span>
-              <h1>{contextual[0]}</h1>
+              <h1>{contentLabel}</h1>
               <h2>{h.title}</h2>
-              <p>{contextual[1]}</p>
-              <div className="li-module-pills"><span>{contextual[2]}</span><b>{contextual[3]}</b></div>
+              <p>{contentIntro}</p>
+              <div className="li-module-pills"><span>{label}</span><b>{contextualPill}</b></div>
             </div>
             <div className="li-module-art"><img src={imageMap[activeId] || h.image} alt="" /></div>
           </div>
           <div className="li-module-body">
-            <div className="li-module-heading"><span>YOUR PATH</span><h2>{label}</h2><p>{desc}</p></div>
-            <div className="li-module-panels">
-              <article><span>01</span><h3>Start with the story</h3><p>{h.desc || "Begin with the cultural context and discover why this heritage matters."}</p></article>
-              <article><span>02</span><h3>Explore the details</h3><p>{(h.facts || []).slice(0, 4).join(" · ") || contextual[3]}</p></article>
-              <article><span>03</span><h3>Take it further</h3><p>Follow the connections, people, places and living practices that make {h.title} more than a historical record.</p></article>
-            </div>
+            <div className="li-module-heading"><span>HERITAGE-SPECIFIC EXPERIENCE</span><h2>{label}</h2><p>{contentIntro}</p></div>
+
+            {activeId === "image" && <div className="li-topic-detail-grid">
+              <article className="li-topic-feature"><span>01</span><h3>What to look for</h3><p>{h.desc}</p></article>
+              {(h.facts || []).slice(0,4).map((fact,i)=><article key={fact} className="li-topic-feature"><span>{String(i+2).padStart(2,"0")}</span><h3>Documented detail</h3><p>{fact}</p></article>)}
+            </div>}
+
+            {activeId === "timeline" && <div className="li-topic-timeline">
+              {(topicContent?.timeline || []).map(([date,title,text],i)=><article key={`${date}-${title}`}><div className="li-topic-time">{date}</div><div><span>{String(i+1).padStart(2,"0")}</span><h3>{title}</h3><p>{text}</p></div></article>)}
+              {!topicContent?.timeline?.length && <div className="li-topic-empty">No verified timeline has been added for this entry yet.</div>}
+            </div>}
+
+            {activeId === "process" && <div className="li-topic-process-grid">
+              {(topicContent?.process || []).map(([title,text],i)=><article key={title}><span>{String(i+1).padStart(2,"0")}</span><h3>{title}</h3><p>{text}</p></article>)}
+              {!topicContent?.process?.length && <div className="li-topic-empty">No verified making/process description has been added for this entry yet.</div>}
+            </div>}
+
+            {activeId === "connections" && <div className="li-topic-connections-grid">
+              {(topicContent?.connections || []).map(([title,text],i)=><article key={title}><span>⌘</span><div><h3>{title}</h3><p>{text}</p></div></article>)}
+              {!topicContent?.connections?.length && <div className="li-topic-empty"><strong>No verified direct cultural connections listed.</strong><p>Rather than invent a connection, Living India leaves this section empty until a reliable source is available.</p></div>}
+            </div>}
+
+            {activeId === "community" && (() => {
+              const matchingStories = communityPosts.filter(p => p.heritageId === h.id || String(p.heritageTitle || "").toLowerCase() === String(h.title || "").toLowerCase());
+              return <div className="li-topic-community">
+                <div className="li-topic-single-panel"><span>COMMUNITY CONTEXT</span><h3>Who keeps {h.title} alive?</h3><p>{topicContent?.community || "No verified community-context note has been added for this entry yet."}</p></div>
+                <div className="li-topic-community-stories">
+                  <div className="li-topic-community-head"><div><span>REAL USER STORIES</span><h3>Stories shared about {h.title}</h3><p>Only stories tagged to this heritage are shown here.</p></div><button className="primary" onClick={onShare}>Share your {h.title} story →</button></div>
+                  {matchingStories.length ? <div className="li-topic-community-grid">{matchingStories.map(p => <article key={p.id} className="li-topic-community-card">
+                    <div className="li-topic-community-media">{p.video ? <video controls preload="metadata" src={p.video} /> : <img src={getCommunityPostImage(p) || h.image} alt=""/>}</div>
+                    <div className="li-topic-community-card-body"><span>{p.category || "Community"}</span><h4>{p.title || "Untitled story"}</h4><p>{p.story || p.text || ""}</p><small>By <b>{p.author || p.user || "Heritage Explorer"}</b>{p.topic ? ` · ${p.topic}` : ""}</small></div>
+                  </article>)}</div> : <div className="li-topic-empty"><strong>No community stories about {h.title} yet.</strong><p>Be the first to share a memory, experience or local story about this heritage.</p><button type="button" onClick={onShare}>＋ Share a story</button></div>}
+                </div>
+              </div>;
+            })()}
+
+            {activeId === "audio" && <div className="li-topic-single-panel"><span>LISTEN & EXPLORE</span><h3>Verified audio status</h3><p>{topicContent?.audio || "No verified audio source is embedded yet."}</p><div className="li-topic-status">{topicContent?.audio?.startsWith("No verified") ? "AUDIO NOT EMBEDDED" : "VERIFIED AUDIO SOURCE"}</div></div>}
+
+            {activeId === "beforeafter" && <div className="li-topic-beforeafter">
+              {topicContent?.beforeAfter ? <><article><span>THEN</span><h3>{topicContent.beforeAfter[0]}</h3><p>{topicContent.beforeAfter[1]}</p></article><article><span>NOW</span><h3>{topicContent.beforeAfter[2]}</h3><p>{topicContent.beforeAfter[3]}</p></article><article><span>CONTINUITY</span><h3>{topicContent.beforeAfter[4]}</h3><p>{topicContent.beforeAfter[5]}</p></article></> : <div className="li-topic-empty">A reliable before/after comparison is not available for this heritage yet.</div>}
+            </div>}
+
+            {activeId === "surprise" && <div className="li-topic-surprises">
+              {(topicContent?.surprises || []).map((fact,i)=><article key={fact}><span>✧</span><div><small>FACT {i+1}</small><p>{fact}</p></div></article>)}
+              {!topicContent?.surprises?.length && <div className="li-topic-empty">No additional verified facts have been added yet.</div>}
+            </div>}
+
+            {activeId === "quiz" && <div className="li-topic-quiz">
+              <div className="li-topic-quiz-head"><div><span>10 QUESTIONS · {h.title.toUpperCase()}</span><h3>How well do you know this heritage?</h3></div><strong>{selectedQuizScore}/10</strong></div>
+              <div className="li-topic-quiz-list">{topicQuiz.map((item,i)=><article key={item.id}><div className="li-topic-quiz-q"><span>{i+1}</span><h4>{item.q}</h4></div><div className="li-topic-quiz-options">{item.options.map(option=>{const selected=quizAnswers[i]===option; const correct=quizSubmitted && option===item.answer; const wrong=quizSubmitted && selected && option!==item.answer; return <button key={option} className={`${selected?"selected ":""}${correct?"correct ":""}${wrong?"wrong":""}`} onClick={()=>!quizSubmitted && setQuizAnswers(v=>({...v,[i]:option}))}>{option}</button>;})}</div>{quizSubmitted && <p className="li-topic-quiz-result">{quizAnswers[i] === item.answer ? "✓ Correct" : `Correct answer: ${item.answer}`}</p>}</article>)}</div>
+              <div className="li-topic-quiz-actions"><button className="primary" onClick={submitTopicQuiz}>Check all 10 answers →</button>{quizSubmitted && <span>{selectedQuizScore === 10 ? "Perfect score — experience completed." : `${selectedQuizScore}/10 correct. Review the answers above.`}</span>}</div>
+            </div>}
+
             <div className="li-module-actions"><button onClick={() => onSelect(null)}>← Back to all experiences</button><button className="primary" onClick={() => { onComplete(activeId); onSelect("passport"); }}>Complete & collect stamp →</button></div>
           </div>
         </div>
@@ -4367,23 +4506,52 @@ function Modal({ type, close, notify, authUser, onStorySubmitted, onReportSubmit
             }
             const form = e.currentTarget;
             const fd = new FormData(form);
-            const file = fd.get("image");
+            const imageFile = fd.get("image");
+            const videoFile = fd.get("video");
             let image = "";
+            let video = "";
 
-            if (file && file.size) {
-              if (!file.type.startsWith("image/")) {
+            if (imageFile && imageFile.size) {
+              if (!imageFile.type.startsWith("image/")) {
                 notify("Please choose an image file.");
                 return;
               }
-              if (file.size > 6 * 1024 * 1024) {
+              if (imageFile.size > 6 * 1024 * 1024) {
                 notify("Please keep the image under 6 MB.");
                 return;
               }
-              image = await compressCommunityImage(file);
+              image = await compressCommunityImage(imageFile);
               if (!image) {
                 notify("That image could not be processed.");
                 return;
               }
+            }
+
+            if (videoFile && videoFile.size) {
+              if (!videoFile.type.startsWith("video/")) {
+                notify("Please choose a video file.");
+                return;
+              }
+              if (videoFile.size > 25 * 1024 * 1024) {
+                notify("Please keep the video under 25 MB.");
+                return;
+              }
+              try {
+                const path = `communityVideos/${authUser.uid}/${Date.now()}-${videoFile.name.replace(/[^a-zA-Z0-9._-]/g, "_")}`;
+                const uploaded = await uploadBytes(storageRef(storage, path), videoFile, { contentType: videoFile.type });
+                video = await getDownloadURL(uploaded.ref);
+              } catch (error) {
+                console.error("[Living India Community] Video upload failed", error);
+                notify("Video upload failed. Please try again.");
+                return;
+              }
+            }
+
+            const selectedHeritageId = String(fd.get("heritageId") || "");
+            const selectedHeritage = EXPLORE_HERITAGE_ITEMS.find(h => h.id === selectedHeritageId);
+            if (!selectedHeritage) {
+              notify("Please choose the heritage your story is about.");
+              return;
             }
 
             const saved = await onStorySubmitted({
@@ -4392,7 +4560,10 @@ function Modal({ type, close, notify, authUser, onStorySubmitted, onReportSubmit
               state: String(fd.get("state") || "").trim(),
               category: String(fd.get("category") || "Memories"),
               story: String(fd.get("story") || "").trim(),
-              image
+              heritageId: selectedHeritage.id,
+              heritageTitle: selectedHeritage.title,
+              image,
+              video
             });
             if (saved) {
               form.reset();
@@ -4401,6 +4572,10 @@ function Modal({ type, close, notify, authUser, onStorySubmitted, onReportSubmit
           }}
         >
           <div className="li-community-form-grid">
+            <select name="heritageId" defaultValue="" required>
+              <option value="">Choose the heritage this story is about</option>
+              {EXPLORE_HERITAGE_ITEMS.map(item => <option key={item.id} value={item.id}>{item.title} · {item.place}</option>)}
+            </select>
             <input name="title" required placeholder="Story title" />
             <input name="topic" placeholder="Place or tradition" />
             <select name="state" defaultValue="">
@@ -4423,6 +4598,10 @@ function Modal({ type, close, notify, authUser, onStorySubmitted, onReportSubmit
           <label className="li-community-upload">
             <span>📷 Add a photo <small>optional · JPG/PNG/WebP</small></span>
             <input name="image" type="file" accept="image/*" />
+          </label>
+          <label className="li-community-upload">
+            <span>🎥 Add a video <small>optional · MP4/WebM/MOV · max 25 MB</small></span>
+            <input name="video" type="file" accept="video/*" />
           </label>
           <button className="primary" type="submit">
             Share with the Community →
