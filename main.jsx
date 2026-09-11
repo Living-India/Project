@@ -1013,6 +1013,21 @@ function App() {
 
                 <div className="map-lines"></div>
 
+                <div className="quote-top">
+                  “Sanskriti na kabhi purani hoti hai,<br />
+                  na kabhi nai — woh hamesha jeevit rehti hai.”
+                  <small>— Anonymous</small>
+                   <br />
+                   “Ek <br/>
+                   Bharat
+                  <br />
+
+                  Anek  <br /> Kahaaniya.”
+                
+
+                
+                </div>
+
                 <div className="compass">
                   N<br />
                   <span>✧</span><br />
@@ -1060,27 +1075,7 @@ function App() {
 
               </div>
 
-              <div className="hero-side">
-                <div className="hero-side-quote">
-                  <span className="hero-side-mark">“</span>
-                  <p>“Sanskriti na kabhi purani hoti hai,<br />na kabhi nai — woh hamesha jeevit rehti hai.”</p>
-                  <small>— Anonymous</small>
-                </div>
-                <div className="hero-side-divider"><span>✦</span></div>
-                <div className="hero-side-title">
-                  <span>EK</span>
-                  <b>BHARAT</b>
-                  <span>ANEK</span>
-                  <b>KAHAANIYAN</b>
-                </div>
-                <div className="hero-side-art" aria-hidden="true">♜  ♜  ♜</div>
-                <div className="hero-side-bottom">
-                  <span>Different Stories</span>
-                  <span>Same Soul</span>
-                  <b>→</b>
-                </div>
-              </div>
-
+              
             </section>
 
             <TrendingHeritage
@@ -1212,6 +1207,10 @@ function App() {
             </footer>
 
           </>
+        )}
+
+        {page === "about" && (
+          <AboutPage onExplore={() => nav("explore")} />
         )}
 
         {page === "explore" && (
@@ -18601,6 +18600,123 @@ function Detail({ h, close, onContribute, onContinue }) {
 
       </div>
 
+    </div>
+  );
+}
+
+
+function AboutPage({ onExplore }) {
+  const exploreItems = [
+    ["🏛️", "Discover", "Historical Sites", "Learn about iconic and hidden gems"],
+    ["💃", "Celebrate", "Festivals & Traditions", "Experience the vibrant spirit of India"],
+    ["🎨", "Explore", "Arts & Crafts", "Dive into India's rich artistic heritage"],
+    ["🍲", "Taste", "Regional Cuisines", "Discover the flavours of every region"],
+    ["📖", "Build Your", "Heritage Passport", "Track your exploration journey"],
+    ["🎮", "Learn Through", "Fun", "Engage with interactive tools and activities"],
+    ["📷", "Enjoy Our", "Gallery", "A visual journey across India"]
+  ];
+
+  return (
+    <div className="li-about-page">
+      <section className="li-about-hero">
+        <div className="li-about-hero-overlay"></div>
+        <div className="li-about-hero-mandala">✺</div>
+        <div className="li-about-hero-copy">
+          <div className="li-about-kicker">ABOUT US</div>
+          <h1>India Lives in Its Stories</h1>
+          <p>Explore. Learn. Preserve. Together.</p>
+          <span className="li-about-rule"></span>
+        </div>
+        <div className="li-about-hero-quote">“Our Heritage<br/>Our Identity<br/>Our Shared Future”<small>Explore · Learn · Preserve</small></div>
+      </section>
+
+      <section className="li-about-story li-about-container">
+        <div className="li-about-story-copy">
+          <div className="li-about-eyebrow"><span></span> OUR STORY</div>
+          <h2>Bringing India’s Heritage<br/>to Everyone</h2>
+          <p>Living India is a digital platform dedicated to exploring, celebrating and preserving the rich cultural heritage of our incredible country. From historical monuments and festivals to traditional arts, crafts, dances, cuisines and more — we bring India’s diverse heritage together in one interactive space.</p>
+          <p>Our goal is to make India’s cultural treasures accessible, engaging and meaningful for everyone, especially the younger generation, through technology and storytelling.</p>
+          <button className="primary li-about-cta" onClick={onExplore}>Explore Our Platform <b>→</b></button>
+        </div>
+        <div className="li-about-story-image">
+          <img src={commonsImage("KONARK SUN Temple.jpg")} alt="Konark Sun Temple" />
+          <div className="li-about-image-caption">Different places · One incredible India <span>🇮🇳</span></div>
+        </div>
+        <div className="li-about-purpose">
+          <div className="li-about-eyebrow"><span></span> OUR PURPOSE</div>
+          <h2>A More Connected Tomorrow</h2>
+          <p>We believe that understanding and appreciating our heritage builds a stronger, more inclusive and culturally aware society. Through this platform, we aim to inspire curiosity, pride and responsible tourism, helping to safeguard India’s cultural treasures for generations to come.</p>
+          <div className="li-about-purpose-mark">◊<small>Culture<br/>Connects<br/>Us</small></div>
+          <div className="li-about-purpose-cards">
+            <div><i>●●</i><strong>One Incredible Country</strong><span>A platform for every Indian</span></div>
+            <div><i>♜</i><strong>Diverse Heritage</strong><span>Monuments, arts, festivals, cuisines & more</span></div>
+            <div><i>✦</i><strong>A Brighter Future</strong><span>Preserve today, for tomorrow</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="li-about-do">
+        <div className="li-about-container">
+          <div className="li-about-do-head">
+            <div><div className="li-about-eyebrow"><span></span> WHAT YOU CAN DO</div><h2>Explore India, Your Way</h2></div>
+            <p>Discover, learn and engage with India’s heritage through a variety of interactive experiences.</p>
+            <button onClick={onExplore}>Start Exploring&nbsp; →</button>
+          </div>
+          <div className="li-about-do-grid">
+            {exploreItems.map(([icon,a,b,c]) => <div className="li-about-do-item" key={a+b}><div className="li-about-icon">{icon}</div><strong>{a}<br/>{b}</strong><span>{c}</span></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="li-about-vision">
+        <div className="li-about-vision-image"><img src={commonsImage("Durgotsab.jpg")} alt="Durga Puja celebration" /></div>
+        <div className="li-about-vision-copy">
+          <div className="li-about-eyebrow"><span></span> OUR VISION</div>
+          <h2>Culture That Stays Alive</h2>
+          <p>Heritage is not only something we inherit from the past. It is something people continue to practise, celebrate, create and pass on. Living India is built to help those stories remain visible, discoverable and meaningful in the digital age.</p>
+          <blockquote>“Making India’s heritage accessible, engaging and alive for everyone.”</blockquote>
+        </div>
+      </section>
+
+      <footer className="li-about-footer">
+        <div className="li-about-footer-main li-about-container">
+          <div className="li-about-footer-brand">
+            <div className="li-about-footer-brandmark">♜</div>
+            <div>
+              <strong>Living India</strong>
+              <small>Explore | Learn | Preserve</small>
+            </div>
+            <p>A digital journey through India’s rich<br/>culture, history and traditions.</p>
+          </div>
+
+          <div className="li-about-footer-links">
+            <h3>Quick Links</h3>
+            <div className="li-about-footer-linkcols">
+              <div><button onClick={() => window.scrollTo({top:0,behavior:'smooth'})}>Home</button><button onClick={onExplore}>Explore</button><button onClick={() => window.scrollTo({top:0,behavior:'smooth'})}>Heritage Passport</button></div>
+              <div><button onClick={() => window.scrollTo({top:0,behavior:'smooth'})}>Gallery</button><button onClick={() => window.scrollTo({top:0,behavior:'smooth'})}>About</button><button onClick={() => window.scrollTo({top:0,behavior:'smooth'})}>Contact</button></div>
+            </div>
+          </div>
+
+          <div className="li-about-footer-contact">
+            <h3>Contact Us</h3>
+            <p><span>✉</span> livingindia.official@email.com</p>
+            <p><span>⌕</span> +91 98765 43210</p>
+            <p><span>●</span> India</p>
+          </div>
+
+          <div className="li-about-footer-social">
+            <h3>Follow Us</h3>
+            <div className="li-about-social-icons" aria-label="Social media">
+              <span>◎</span><span>▶</span><span>𝕏</span><span>in</span>
+            </div>
+            <p>Join our community and be part<br/>of the journey.</p>
+          </div>
+        </div>
+        <div className="li-about-footer-bottom">
+          <span>© 2025 Living India. All rights reserved.</span>
+          <span>Made with <b>♥</b> for a culturally connected India.</span>
+        </div>
+      </footer>
     </div>
   );
 }
