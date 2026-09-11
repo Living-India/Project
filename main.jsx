@@ -1013,12 +1013,6 @@ function App() {
 
                 <div className="map-lines"></div>
 
-                <div className="quote-top">
-                  “Sanskriti na kabhi purani hoti hai,<br />
-                  na kabhi nai — woh hamesha jeevit rehti hai.”
-                  <small>— Anonymous</small>
-                </div>
-
                 <div className="compass">
                   N<br />
                   <span>✧</span><br />
