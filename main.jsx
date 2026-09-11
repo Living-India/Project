@@ -10,6 +10,7 @@ import { auth, db, storage } from "./firebase-client";
 import "./style.css";
 import "./ui-overrides.css";
 import { EXPERIENCE_CONTENT } from "./experience-content";
+import { LOCAL_VOICES_BY_STATE } from "./local-voices-data.js";
 
 const ADMIN_EMAILS = ["sadik22319@gmail.com", "rockysencr7@gmail.com"];
 
@@ -1903,6 +1904,8 @@ function HiddenGemsPage({ authUser, notify }) {
   const [nominationOpen, setNominationOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [approved, setApproved] = useState([]);
+  const [storyItem, setStoryItem] = useState(null);
+  const photoInputRef = useRef(null);
   const [form, setForm] = useState({name:"",category:"Singer",state:"",district:"",story:"",photo:null});
   const categories = ["All", "Singer", "Dancer", "Artist", "Craftsperson", "Performer"];
 
@@ -1944,6 +1947,7 @@ function HiddenGemsPage({ authUser, notify }) {
       }
 
       setForm({name:"",category:"Singer",state:"",district:"",story:"",photo:null});
+      if (photoInputRef.current) photoInputRef.current.value = "";
       setNominationOpen(false);
       notify("Nomination sent to the review team ✓");
     } catch (error) {
@@ -1982,11 +1986,31 @@ function HiddenGemsPage({ authUser, notify }) {
             {!item.photoUrl && <span>{item.initials || String(item.name||"").split(/\s+/).map(x=>x[0]).slice(0,2).join("")}</span>}
             <small>{item.tag || "Community Approved"}</small>
           </div>
-          <div className="hidden-gem-card-body"><div className="hidden-gem-type">{item.category}</div><h3>{item.name}</h3><strong>{item.role || `${item.category} · Living Tradition`}</strong><p className="hidden-gem-place">⌖ {item.district ? `${item.district}, ${item.state}` : item.place}</p><p>{item.story}</p><button type="button" onClick={()=>notify(`${item.name}'s full profile can be expanded next.`)}>View Story <span>→</span></button></div>
+          <div className="hidden-gem-card-body"><div className="hidden-gem-type">{item.category}</div><h3>{item.name}</h3><strong>{item.role || `${item.category} · Living Tradition`}</strong><p className="hidden-gem-place">⌖ {item.district ? `${item.district}, ${item.state}` : item.place}</p><p>{item.story}</p><button type="button" onClick={()=>setStoryItem(item)}>View Story <span>→</span></button></div>
         </article>)}
       </section>
 
       <section className="hidden-gems-nomination-banner"><div><div className="eyebrow">KNOW SOMEONE SPECIAL?</div><h2>Help us find the next Hidden Gem.</h2><p>Nominate a local talent from your community. Our admin team reviews each submission before publishing it.</p></div><button onClick={()=>setNominationOpen(true)}>Nominate Someone →</button></section>
+
+      {storyItem && <div className="hg-modal-overlay" onMouseDown={()=>setStoryItem(null)}><div className="hg-story-modal" onMouseDown={e=>e.stopPropagation()}>
+        <button className="hg-modal-close" onClick={()=>setStoryItem(null)} aria-label="Close">×</button>
+        <div className="hg-story-layout">
+          <div className="hg-story-photo" style={storyItem.photoUrl ? {backgroundImage:`url("${storyItem.photoUrl}")`,backgroundSize:"cover",backgroundPosition:"center"} : undefined}>
+            {!storyItem.photoUrl && <span>{storyItem.initials || String(storyItem.name||"").split(/\s+/).map(x=>x[0]).slice(0,2).join("")}</span>}
+            <small>{storyItem.tag || "Community Approved"}</small>
+          </div>
+          <div className="hg-story-content">
+            <div className="eyebrow">{storyItem.category || "LOCAL TALENT"}</div>
+            <h2>{storyItem.name}</h2>
+            <strong>{storyItem.role || `${storyItem.category || "Cultural Practitioner"} · Living Tradition`}</strong>
+            <p className="hg-story-place">⌖ {storyItem.district ? `${storyItem.district}, ${storyItem.state}` : storyItem.place || storyItem.state}</p>
+            <div className="hg-story-divider"></div>
+            <h3>Their Story</h3>
+            <p>{storyItem.story || "A local cultural practitioner carrying a living tradition forward."}</p>
+            {storyItem.nominatorEmail && <p className="hg-story-meta">Community nomination · Reviewed and approved</p>}
+          </div>
+        </div>
+      </div></div>}
 
       {nominationOpen && <div className="hg-modal-overlay" onMouseDown={()=>!submitting&&setNominationOpen(false)}><div className="hg-modal" onMouseDown={e=>e.stopPropagation()}>
         <button className="hg-modal-close" onClick={()=>!submitting&&setNominationOpen(false)} aria-label="Close">×</button>
@@ -1997,8 +2021,7 @@ function HiddenGemsPage({ authUser, notify }) {
           <label>Category<select value={form.category} onChange={e=>updateForm("category",e.target.value)}>{categories.slice(1).map(x=><option key={x}>{x}</option>)}</select></label>
           <div className="hg-form-row"><label>State<select required value={form.state} onChange={e=>setForm(prev=>({...prev,state:e.target.value,district:""}))}><option value="">Select state</option>{INDIA_STATES.map(state=><option key={state} value={state}>{state}</option>)}</select></label><label>District<select required value={form.district} onChange={e=>updateForm("district",e.target.value)} disabled={!form.state}><option value="">{form.state?"Select district":"Select state first"}</option>{districts.map(d=><option key={d} value={d}>{d}</option>)}<option value="Other / Not listed">Other / Not listed</option></select></label></div>
           <label>What makes them special?<textarea required rows="4" value={form.story} onChange={e=>updateForm("story",e.target.value)} placeholder="Tell us about their art, tradition or contribution..." /></label>
-          <label className="hg-photo-upload"><span>📷 Artist / Craftsperson Photo <small>optional · JPG/PNG/WebP · max 8 MB</small></span><input type="file" accept="image/*" onChange={e=>updateForm("photo",e.target.files?.[0]||null)} /></label>
-          <div className="hg-cloud-note">☁️ Photo and nomination are stored in Firebase — nothing is saved to the website's local files.</div>
+          <label className="hg-photo-upload"><span>📷 Artist / Craftsperson Photo <small>optional · JPG/PNG/WebP · max 8 MB</small></span><input ref={photoInputRef} type="file" accept="image/*" onChange={e=>updateForm("photo",e.target.files?.[0]||null)} />{form.photo && <div className="hg-selected-file"><span title={form.photo.name}>✓ {form.photo.name}</span><button type="button" onClick={()=>{updateForm("photo",null); if(photoInputRef.current) photoInputRef.current.value="";}} aria-label="Remove selected photo">×</button></div>}</label>
           <button className="hidden-gems-submit" type="submit" disabled={submitting}>{submitting ? "Sending to Review…" : "Send for Review →"}</button>
         </form>
       </div></div>}
@@ -2390,7 +2413,8 @@ const HERITAGE_CATEGORIES = [
   { id: "architecture", label: "Architecture", icon: "🏛", tone: "rose" },
   { id: "language", label: "Language", icon: "अ", tone: "sky" },
   { id: "ritual", label: "Ritual / Tradition", icon: "🪔", tone: "sand" },
-  { id: "history", label: "Historical Heritage", icon: "◉", tone: "indigo" }
+  { id: "history", label: "Historical Heritage", icon: "◉", tone: "indigo" },
+  { id: "local", label: "Local People", icon: "✦", tone: "leaf" }
 ];
 
 
@@ -17892,6 +17916,36 @@ function CulturalMap({ full, onStateSelect, riskPulse = false }) {
   );
 }
 
+
+function LocalPeopleCategory({ stateName, people, onOpenStory }) {
+  const [filter, setFilter] = useState("All");
+  const filters = ["All", "Local Artist", "Local Singer", "Local Dancer", "Local Craftsman"];
+  const filtered = filter === "All" ? people : people.filter(p => p.role === filter);
+  return (
+    <div className="li-local-people">
+      <div className="li-local-intro">
+        <strong>People behind the tradition</strong>
+        <span>Verified local practitioners with documented roots. No unverified portraits or invented profiles are added.</span>
+      </div>
+      <div className="li-local-filters">
+        {filters.map(x => <button type="button" key={x} className={filter === x ? "active" : ""} onClick={() => setFilter(x)}>{x}</button>)}
+      </div>
+      {filtered.length ? (
+        <div className="li-local-grid">
+          {filtered.map((person, index) => (
+            <button type="button" className="li-local-card" key={`${person.name}-${person.art}`} onClick={() => onOpenStory({ ...person, title: person.name, short: `${person.art} · ${person.village}, ${person.district}`, description: person.story, place: `${person.village}, ${person.district}, ${person.state}`, theme: person.art, period: "Contemporary practitioner", medium: person.role, facts: [person.village, person.district, person.state, person.art], source: person.source, image: person.image || null })}>
+              <div className="li-local-avatar">{person.image ? <img src={person.image} alt={person.name} /> : <span>{person.name.split(/\s+/).map(x => x[0]).slice(0,2).join("")}</span>}</div>
+              <div className="li-local-copy"><span>{person.role}</span><h3>{person.name}</h3><p>{person.art}</p><small>⌖ {person.village} · {person.district} · {person.state}</small></div>
+              <b>→</b>
+            </button>
+          ))}
+        </div>
+      ) : <div className="li-empty-category"><div className="li-empty-icon">✦</div><h3>No verified {filter.toLowerCase()} profile yet</h3><p>We are deliberately leaving unverified people out rather than adding guessed details or photographs.</p></div>}
+      <div className="li-local-note">Source-backed profiles only · exact home addresses are intentionally not displayed.</div>
+    </div>
+  );
+}
+
 function HeritageCategoryModal({ state, onClose }) {
   const [view, setView] = useState("categories");
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -17914,11 +17968,11 @@ function HeritageCategoryModal({ state, onClose }) {
   const centeredY = 420 - (bounds.minY + height / 2) * scale;
 
   const stories = selectedCategory
-    ? getStateStories(state.name, selectedCategory.id)
+    ? (selectedCategory.id === "local" ? (LOCAL_VOICES_BY_STATE[state.name] || []) : getStateStories(state.name, selectedCategory.id))
     : [];
 
   const availableCategories = HERITAGE_CATEGORIES.filter(category =>
-    getStateStories(state.name, category.id).length > 0
+    category.id === "local" ? (LOCAL_VOICES_BY_STATE[state.name] || []).length > 0 : getStateStories(state.name, category.id).length > 0
   );
 
   const openCategory = category => {
@@ -17977,7 +18031,7 @@ function HeritageCategoryModal({ state, onClose }) {
                 <p className="li-category-subtitle">What kind of living heritage are you looking for?<br />Choose one path to explore.</p>
                 <div className="li-category-grid">
                   {HERITAGE_CATEGORIES.map(category => {
-                    const count = getStateStories(state.name, category.id).length;
+                    const count = category.id === "local" ? (LOCAL_VOICES_BY_STATE[state.name] || []).length : getStateStories(state.name, category.id).length;
                     return (
                       <button type="button" key={category.id} className={`li-category-card ${count ? "has-content" : "is-empty"}`} onClick={() => openCategory(category)}>
                         <span className="cat-icon">{category.icon}</span>
@@ -17998,7 +18052,9 @@ function HeritageCategoryModal({ state, onClose }) {
                 <div className="li-category-rule"><span>✦</span></div>
                 <p className="li-category-subtitle">Visual stories that help you see, understand and remember {state.name}'s living heritage.</p>
                 {stories.length ? (
-                  selectedCategory.id === 'dance' ? (
+                  selectedCategory.id === 'local' ? (
+                    <LocalPeopleCategory stateName={state.name} people={LOCAL_VOICES_BY_STATE[state.name] || []} onOpenStory={openStory} />
+                  ) : selectedCategory.id === 'dance' ? (
                     <div>
                       {['Classical','Folk'].map(danceType => {
                         const grouped = stories.filter(story => story.danceType === danceType);

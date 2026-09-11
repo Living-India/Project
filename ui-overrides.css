@@ -1465,3 +1465,25 @@
 @media (max-width:680px){.hidden-gems-hero{padding:34px 26px;min-height:470px}.hidden-gems-hero h1{font-size:45px}.hidden-gems-grid{grid-template-columns:1fr}.hidden-gems-nomination-banner{align-items:flex-start;flex-direction:column;padding:25px}.hidden-gems-stats{gap:18px;flex-wrap:wrap}.hg-form-row{grid-template-columns:1fr}.hg-modal{padding:27px 20px}}
 
 .hg-photo-upload{border:1px dashed #cfc7b8!important;border-radius:14px;padding:14px!important;background:#fffdf7}.hg-photo-upload input[type=file]{padding:9px!important;background:#f7f1e6!important}.hg-cloud-note{font-size:11px;line-height:1.5;color:#667064;background:#edf1e9;border:1px solid #d7dfd4;border-radius:10px;padding:10px 12px}
+
+/* Hidden Gems: selected photo removal + story modal */
+.hg-selected-file{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px;padding:9px 11px;border:1px solid rgba(67,88,70,.16);border-radius:11px;background:#f1f3e9;color:#405345;font-size:12px;font-weight:600}
+.hg-selected-file span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.hg-selected-file button{flex:0 0 auto;width:25px;height:25px;border:0;border-radius:50%;background:#214735;color:#fff8ea;font-size:18px;line-height:1;cursor:pointer;display:grid;place-items:center;padding:0}
+.hg-story-modal{position:relative;width:min(820px,100%);max-height:calc(100vh - 48px);overflow:auto;background:#fffaf1;border-radius:26px;padding:28px;box-shadow:0 30px 90px rgba(0,0,0,.28)}
+.hg-story-layout{display:grid;grid-template-columns:minmax(250px,.85fr) minmax(0,1.15fr);gap:28px;align-items:stretch}
+.hg-story-photo{min-height:390px;border-radius:20px;position:relative;display:grid;place-items:center;background:radial-gradient(circle at 50% 38%,#d8bd86 0 16%,transparent 17%),linear-gradient(145deg,#345c48,#1b3d30 65%,#9d7647);color:#f9e9c5;overflow:hidden}
+.hg-story-photo span{font:500 68px Georgia,serif;opacity:.92}
+.hg-story-photo small{position:absolute;left:16px;top:16px;padding:7px 10px;border-radius:999px;background:rgba(255,249,231,.92);color:#34513e;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.hg-story-content{padding:14px 8px 12px 0;display:flex;flex-direction:column;justify-content:center}
+.hg-story-content h2{margin:8px 0 5px;font:500 clamp(34px,5vw,50px)/1.02 Georgia,serif;color:#254531}
+.hg-story-content>strong{font-size:14px;color:#536052}
+.hg-story-place{margin:10px 0 0!important;color:#8a7151!important;font-size:13px!important}
+.hg-story-divider{height:1px;background:#ddd7c8;margin:24px 0 18px}
+.hg-story-content h3{margin:0 0 8px;font:500 24px Georgia,serif;color:#254531}
+.hg-story-content>p:not(.hg-story-place):not(.hg-story-meta){margin:0;color:#697064;line-height:1.75;font-size:15px}
+.hg-story-meta{margin-top:20px!important;color:#7a806f!important;font-size:11px!important;text-transform:uppercase;letter-spacing:.08em}
+@media (max-width:700px){.hg-story-layout{grid-template-columns:1fr}.hg-story-photo{min-height:260px}.hg-story-content{padding:0 4px 8px}}
+
+/* Hidden Gems inside the state map */
+.li-local-people{width:100%}.li-local-intro{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}.li-local-intro strong{font-family:Georgia,serif;font-size:21px;color:#214d3b}.li-local-intro span{font-size:13px;color:#765f4a;line-height:1.55}.li-local-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.li-local-filters button{border:1px solid rgba(91,67,43,.16);background:#fff9ee;border-radius:999px;padding:8px 12px;color:#5b4732;font-weight:700;cursor:pointer}.li-local-filters button.active{background:#1e4f3c;color:#fff}.li-local-grid{display:grid;gap:12px}.li-local-card{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:14px;text-align:left;border:1px solid rgba(91,67,43,.13);background:#fffaf1;border-radius:18px;padding:12px;cursor:pointer;color:#3f3022}.li-local-card:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(66,48,31,.08)}.li-local-avatar{width:70px;height:70px;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#1d4e3a,#cda25d);display:flex;align-items:center;justify-content:center;color:#fff4da;font:700 22px Georgia,serif}.li-local-avatar img{width:100%;height:100%;object-fit:cover}.li-local-copy{min-width:0}.li-local-copy>span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#a1661f;font-weight:800}.li-local-copy h3{font:700 19px Georgia,serif;margin:4px 0 2px;color:#214d3b}.li-local-copy p{margin:0 0 5px;font-size:13px;font-weight:700}.li-local-copy small{display:block;font-size:11px;color:#806a54;line-height:1.4}.li-local-card>b{font-size:22px;color:#a1661f}.li-local-note{font-size:11px;color:#89725a;margin-top:15px;padding-top:12px;border-top:1px solid rgba(91,67,43,.12)}
