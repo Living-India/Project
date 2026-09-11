@@ -2778,6 +2778,2454 @@ const HISTORICAL_HERITAGE_PLACES = {
   ],
 };
 
+
+const STATE_ARTS = {
+  "Andhra Pradesh": [
+    {
+      "title": "Kalamkari",
+      "place": "Srikalahasti & Machilipatnam",
+      "short": "Hand-painted and block-printed cotton textile art known for narrative motifs and natural-dye traditions.",
+      "description": "Hand-painted and block-printed cotton textile art known for narrative motifs and natural-dye traditions.",
+      "facts": [
+        "Srikalahasti is associated with hand-painted narrative work",
+        "Machilipatnam is known for block-printed Kalamkari",
+        "Themes include epics, deities, plants and decorative borders",
+        "Traditional processes use mordants and repeated dyeing"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Lepakshi Mural Painting",
+      "place": "Lepakshi, Anantapur district",
+      "short": "Vijayanagara-period temple paintings with rich colours, narrative scenes and ornamental detail.",
+      "description": "Vijayanagara-period temple paintings with rich colours, narrative scenes and ornamental detail.",
+      "facts": [
+        "Found in the Veerabhadra Temple complex",
+        "Associated with Vijayanagara-period art",
+        "Figures and decorative borders are major features",
+        "Painted ceilings preserve important historical imagery"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Tholu Bommalata",
+      "place": "Andhra Pradesh",
+      "short": "Traditional leather shadow-puppet art in which painted translucent figures are used for storytelling.",
+      "description": "Traditional leather shadow-puppet art in which painted translucent figures are used for storytelling.",
+      "facts": [
+        "Uses perforated and painted leather puppets",
+        "Figures are manipulated behind a lighted screen",
+        "Stories traditionally draw on epics and local performance traditions",
+        "Recognised as a major Andhra leather-puppet tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Leather Puppet Art",
+      "place": "Andhra Pradesh",
+      "short": "Decorative and performance-oriented leather figure making connected with shadow theatre.",
+      "description": "Decorative and performance-oriented leather figure making connected with shadow theatre.",
+      "facts": [
+        "Leather is cleaned, cut and perforated",
+        "Figures are painted with strong colours",
+        "Puppets are mounted on sticks for manipulation",
+        "Art is closely linked to storytelling performance"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kondapalli Painted Toys",
+      "place": "Kondapalli, NTR district",
+      "short": "Lightweight painted wooden figures depicting people, animals, occupations and village scenes.",
+      "description": "Lightweight painted wooden figures depicting people, animals, occupations and village scenes.",
+      "facts": [
+        "Made from locally used soft wood",
+        "Figures are carved in separate parts and joined",
+        "Traditional themes include village life and festival scenes",
+        "Painting gives the toys their distinctive visual character"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Arunachal Pradesh": [
+    {
+      "title": "Monpa Thangka Painting",
+      "place": "Tawang & West Kameng",
+      "short": "Buddhist devotional painting tradition using prescribed iconography, proportions and fine detail.",
+      "description": "Buddhist devotional painting tradition using prescribed iconography, proportions and fine detail.",
+      "facts": [
+        "Used in Himalayan Buddhist religious settings",
+        "Images follow established iconographic conventions",
+        "Mineral and organic pigments have traditionally been used",
+        "Painting can serve devotional and teaching purposes"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Monpa Wall Painting",
+      "place": "Tawang region",
+      "short": "Decorative Buddhist murals and painted architectural surfaces associated with monasteries and sacred spaces.",
+      "description": "Decorative Buddhist murals and painted architectural surfaces associated with monasteries and sacred spaces.",
+      "facts": [
+        "Seen in monastery interiors and religious spaces",
+        "Motifs include Buddhist figures and symbolic designs",
+        "Requires careful preparation of the wall surface",
+        "Part of the visual environment of Himalayan Buddhist practice"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Aji Lhamu Mask Art",
+      "place": "Arunachal Pradesh",
+      "short": "Colourful masks and visual objects used in the Monpa Aji Lhamu masked theatre tradition.",
+      "description": "Colourful masks and visual objects used in the Monpa Aji Lhamu masked theatre tradition.",
+      "facts": [
+        "Aji Lhamu is a traditional Monpa theatre form",
+        "Masks help represent characters in performance",
+        "Costume, masks and movement work together",
+        "Tradition combines storytelling with ritual and community performance"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Wood Carving",
+      "place": "Arunachal Pradesh",
+      "short": "Carved wood used for household objects, architectural decoration and ritual or community purposes.",
+      "description": "Carved wood used for household objects, architectural decoration and ritual or community purposes.",
+      "facts": [
+        "Wood is a widely used local material",
+        "Motifs vary among communities",
+        "Carving skills are transmitted within artisan traditions",
+        "Objects range from utility pieces to decorative work"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bamboo Decorative Art",
+      "place": "Arunachal Pradesh",
+      "short": "Bamboo is shaped into patterned and functional objects with strong regional visual traditions.",
+      "description": "Bamboo is shaped into patterned and functional objects with strong regional visual traditions.",
+      "facts": [
+        "Bamboo is locally abundant",
+        "Splitting, weaving and shaping are common techniques",
+        "Objects include baskets and household articles",
+        "Designs reflect local community practices"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Assam": [
+    {
+      "title": "Assamese Manuscript Painting",
+      "place": "Assam",
+      "short": "Illustrated manuscript art associated with Vaishnavite literary and religious culture.",
+      "description": "Illustrated manuscript art associated with Vaishnavite literary and religious culture.",
+      "facts": [
+        "Manuscripts were traditionally prepared on sanchi or other writing materials",
+        "Illustrations accompany religious and literary texts",
+        "Vaishnavite institutions helped preserve the tradition",
+        "Figures and borders use stylised forms and colour"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Majuli Manuscript Painting",
+      "place": "Majuli",
+      "short": "Visual decoration and illustration associated with the manuscript culture of Majuli satras.",
+      "description": "Visual decoration and illustration associated with the manuscript culture of Majuli satras.",
+      "facts": [
+        "Linked with Neo-Vaishnavite cultural institutions",
+        "Manuscripts preserve religious and literary texts",
+        "Illustrations can accompany narrative passages",
+        "Satras remain important custodians of the tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bhaona Mask Art",
+      "place": "Majuli",
+      "short": "Handmade masks used in Bhaona theatre, often representing mythological and animal characters.",
+      "description": "Handmade masks used in Bhaona theatre, often representing mythological and animal characters.",
+      "facts": [
+        "Masks are made for dramatic performance",
+        "They can be made from natural materials such as bamboo and cloth",
+        "Characters are linked to Vaishnavite theatre",
+        "Mask-making is closely associated with Majuli performance culture"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Assamese Folk Painting",
+      "place": "Assam",
+      "short": "Decorative painting traditions used in community, religious and festive contexts.",
+      "description": "Decorative painting traditions used in community, religious and festive contexts.",
+      "facts": [
+        "Motifs draw from nature, mythology and local life",
+        "Traditional materials include natural pigments and handmade surfaces",
+        "Visual styles vary by community and occasion",
+        "Painting remains part of Assam’s wider folk-art heritage"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Ganjifa Card Art",
+      "place": "Assam",
+      "short": "Painted playing-card traditions preserved in parts of Assam and linked with older Indian card-making practices.",
+      "description": "Painted playing-card traditions preserved in parts of Assam and linked with older Indian card-making practices.",
+      "facts": [
+        "Cards are individually painted",
+        "Themes can include figures and symbolic motifs",
+        "The craft combines illustration with card-making",
+        "It belongs to India’s wider Ganjifa tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Bihar": [
+    {
+      "title": "Madhubani / Mithila Painting",
+      "place": "Mithila region",
+      "short": "Highly patterned folk painting tradition depicting deities, nature, rituals and social themes.",
+      "description": "Highly patterned folk painting tradition depicting deities, nature, rituals and social themes.",
+      "facts": [
+        "Styles include Bharni, Kachni and Godna",
+        "Traditionally associated with wall and floor painting",
+        "Natural colours were historically important",
+        "Now widely practised on paper, cloth and other surfaces"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kohbar Painting",
+      "place": "Mithila region",
+      "short": "Wedding-related painting tradition featuring symbolic plants, animals, fertility imagery and geometric designs.",
+      "description": "Wedding-related painting tradition featuring symbolic plants, animals, fertility imagery and geometric designs.",
+      "facts": [
+        "Traditionally associated with marriage spaces",
+        "Lotus, bamboo and fish are common symbolic motifs",
+        "The imagery relates to fertility, prosperity and auspiciousness",
+        "Closely connected with Mithila domestic ritual art"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Manjusha Art",
+      "place": "Bhagalpur region",
+      "short": "Narrative painting tradition associated with the worship of Bishahari and the Bihula-Bishahari story.",
+      "description": "Narrative painting tradition associated with the worship of Bishahari and the Bihula-Bishahari story.",
+      "facts": [
+        "Associated with Bhagalpur",
+        "Traditional images use elongated forms and bold colours",
+        "Bishahari worship is central to the tradition",
+        "Paintings can appear on paper and other surfaces today"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Tikuli Art",
+      "place": "Patna region",
+      "short": "Decorative painting tradition using bold outlines and intricate motifs, historically linked with hand-painted tikuli ornaments.",
+      "description": "Decorative painting tradition using bold outlines and intricate motifs, historically linked with hand-painted tikuli ornaments.",
+      "facts": [
+        "Developed around Patna",
+        "Modern Tikuli art is painted on hard surfaces such as boards",
+        "Motifs include deities, women, festivals and decorative designs",
+        "The name relates to the traditional tikuli ornament"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Godna Painting",
+      "place": "Mithila & Bihar tribal communities",
+      "short": "Tattoo-inspired visual motifs adapted into painting and decorative art.",
+      "description": "Tattoo-inspired visual motifs adapted into painting and decorative art.",
+      "facts": [
+        "Patterns echo traditional tattoo designs",
+        "Geometric and symbolic motifs are common",
+        "The style is associated with marginalised and tribal artistic traditions",
+        "Modern artists use paper and cloth as well as walls"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Chhattisgarh": [
+    {
+      "title": "Godna Art",
+      "place": "Chhattisgarh",
+      "short": "Tattoo-inspired geometric and symbolic designs represented in paintings and other visual forms.",
+      "description": "Tattoo-inspired geometric and symbolic designs represented in paintings and other visual forms.",
+      "facts": [
+        "Motifs are linked with body-art traditions",
+        "Geometric repetition is common",
+        "Art can carry social and cultural symbolism",
+        "Practised within several tribal communities"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bastar Tribal Painting",
+      "place": "Bastar region",
+      "short": "Folk and tribal visual art drawing on local nature, community life, deities and ritual imagery.",
+      "description": "Folk and tribal visual art drawing on local nature, community life, deities and ritual imagery.",
+      "facts": [
+        "Themes are rooted in community life",
+        "Natural forms and local symbols are common",
+        "Visual traditions vary among Bastar communities",
+        "Painting is often connected with festivals and domestic spaces"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Pithora-inspired Painting",
+      "place": "Northern Chhattisgarh and neighbouring regions",
+      "short": "Ritual wall-painting style connected with Adivasi visual traditions in central India.",
+      "description": "Ritual wall-painting style connected with Adivasi visual traditions in central India.",
+      "facts": [
+        "Pithora traditions are strongest among Rathwa and related communities",
+        "Horse figures are a major visual motif",
+        "Paintings can be connected with ritual vows and ceremonies",
+        "Regional forms vary across central India"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bhil Visual Art",
+      "place": "Chhattisgarh border regions",
+      "short": "Decorative tribal imagery using repeated dots, lines, animals and nature motifs.",
+      "description": "Decorative tribal imagery using repeated dots, lines, animals and nature motifs.",
+      "facts": [
+        "Nature and animals are frequent subjects",
+        "Repeated dots can create texture and movement",
+        "Styles vary by community and artist",
+        "The work is part of wider central Indian tribal art traditions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bastar Wall Art",
+      "place": "Bastar",
+      "short": "Community wall decoration using geometric, floral and figurative motifs during domestic and festive occasions.",
+      "description": "Community wall decoration using geometric, floral and figurative motifs during domestic and festive occasions.",
+      "facts": [
+        "Walls provide an important traditional surface",
+        "Motifs are adapted to local materials and customs",
+        "Women and community artists play important roles in many traditions",
+        "Designs can mark festive or ritual occasions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Goa": [
+    {
+      "title": "Kaavi Art",
+      "place": "Goa",
+      "short": "Red-and-white laterite wall art made by incising designs into a lime-plaster surface.",
+      "description": "Red-and-white laterite wall art made by incising designs into a lime-plaster surface.",
+      "facts": [
+        "Strongly associated with Goa and parts of the Konkan",
+        "Uses a red laterite-derived background with white lime",
+        "Often decorates old homes and religious buildings",
+        "Geometric and floral patterns are common"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Goan Church Mural Art",
+      "place": "Old Goa and Goa",
+      "short": "Sacred wall and ceiling paintings shaped by local and European Christian visual traditions.",
+      "description": "Sacred wall and ceiling paintings shaped by local and European Christian visual traditions.",
+      "facts": [
+        "Found in historic churches and chapels",
+        "Themes are largely Christian and devotional",
+        "Local materials and artisans influenced the visual style",
+        "Forms part of Goa’s Indo-European artistic heritage"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Azulejo Tile Art",
+      "place": "Goa",
+      "short": "Decorative ceramic tile art used in architectural interiors and public or domestic spaces.",
+      "description": "Decorative ceramic tile art used in architectural interiors and public or domestic spaces.",
+      "facts": [
+        "Portuguese influence is prominent",
+        "Tiles may carry figurative or floral imagery",
+        "Used as architectural decoration rather than only as standalone paintings",
+        "Now a recognisable part of Goa’s visual heritage"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Goan Folk Painting",
+      "place": "Goa",
+      "short": "Local decorative painting traditions drawing on festivals, religious imagery and everyday coastal life.",
+      "description": "Local decorative painting traditions drawing on festivals, religious imagery and everyday coastal life.",
+      "facts": [
+        "Themes vary by community",
+        "Natural and commercial pigments are both used today",
+        "Decorative work appears on walls and objects",
+        "The tradition reflects Goa’s mixed cultural history"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Coconut Shell Art",
+      "place": "Goa",
+      "short": "Decorative objects and motifs made by shaping and polishing coconut shell.",
+      "description": "Decorative objects and motifs made by shaping and polishing coconut shell.",
+      "facts": [
+        "Uses an abundant coastal material",
+        "Shell is cleaned, cut and polished",
+        "Products include bowls and decorative objects",
+        "Represents a practical-to-artistic reuse tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Gujarat": [
+    {
+      "title": "Mata ni Pachedi",
+      "place": "Ahmedabad region",
+      "short": "Ritual textile painting depicting the Mother Goddess and sacred narratives.",
+      "description": "Ritual textile painting depicting the Mother Goddess and sacred narratives.",
+      "facts": [
+        "Made on cloth for shrine use",
+        "The Vaghari community is strongly associated with the tradition",
+        "Red and black are prominent colours",
+        "Narrative scenes centre on the goddess and her sacred world"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Pithora Painting",
+      "place": "Central/eastern Gujarat",
+      "short": "Ritual wall painting associated with Rathwa, Bhilala and related Adivasi communities.",
+      "description": "Ritual wall painting associated with Rathwa, Bhilala and related Adivasi communities.",
+      "facts": [
+        "Horses are a major motif",
+        "Paintings are connected with ritual vows and ceremonies",
+        "The work is traditionally created on prepared wall surfaces",
+        "It has a strong ceremonial rather than purely decorative role"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Rogan Art",
+      "place": "Kutch",
+      "short": "Textile painting made by manipulating thick castor-oil-based colour into fine raised designs.",
+      "description": "Textile painting made by manipulating thick castor-oil-based colour into fine raised designs.",
+      "facts": [
+        "Traditionally associated with Nirona in Kutch",
+        "Paint is prepared from castor oil and pigments",
+        "A metal stylus or pointed tool helps place the colour",
+        "Tree-of-life and symmetrical motifs are well known"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Ajrakh Block Printing",
+      "place": "Kutch",
+      "short": "Complex resist and block-print textile art using repeated carved blocks and layered dyeing.",
+      "description": "Complex resist and block-print textile art using repeated carved blocks and layered dyeing.",
+      "facts": [
+        "Kutch is a major Ajrakh centre",
+        "Natural dyes and mordants have a long history in the craft",
+        "Multiple blocks create repeated patterns",
+        "Indigo and madder-derived reds are characteristic colours"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bandhani Art",
+      "place": "Gujarat",
+      "short": "Tie-and-dye textile art made by tightly tying small sections of cloth before dyeing.",
+      "description": "Tie-and-dye textile art made by tightly tying small sections of cloth before dyeing.",
+      "facts": [
+        "Known for dotted patterns",
+        "Bhuj and Jamnagar are important centres",
+        "Multiple tying and dyeing stages can create complex patterns",
+        "Traditional garments include odhnis, sarees and turbans"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Patola Design Art",
+      "place": "Patan",
+      "short": "Highly intricate double-ikat textile design associated with Patan’s silk weaving tradition.",
+      "description": "Highly intricate double-ikat textile design associated with Patan’s silk weaving tradition.",
+      "facts": [
+        "Both warp and weft are resist-dyed before weaving",
+        "Precise alignment creates the final pattern",
+        "Traditional motifs include geometric and figurative forms",
+        "Patola is associated with Patan in north Gujarat"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Haryana": [
+    {
+      "title": "Phulkari Embroidery",
+      "place": "Haryana & Punjab-Haryana region",
+      "short": "Floral and geometric embroidery tradition shared across the wider Punjab-Haryana cultural region.",
+      "description": "Floral and geometric embroidery tradition shared across the wider Punjab-Haryana cultural region.",
+      "facts": [
+        "Uses coloured silk thread on cloth",
+        "Floral motifs are especially common",
+        "Traditionally used for shawls, dupattas and household textiles",
+        "Regional styles vary across north-western India"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Sanjhi Paper Art",
+      "place": "Haryana/Braj region",
+      "short": "Intricate paper-cut stencil art depicting sacred and floral compositions.",
+      "description": "Intricate paper-cut stencil art depicting sacred and floral compositions.",
+      "facts": [
+        "Made by cutting detailed paper stencils",
+        "Strongly associated with Krishna devotional imagery",
+        "Braj cultural areas span Haryana and neighbouring Uttar Pradesh",
+        "Designs can be used for ritual and decorative purposes"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Chowk Purna",
+      "place": "Haryana",
+      "short": "Decorative floor and threshold drawing tradition using simple geometric and auspicious motifs.",
+      "description": "Decorative floor and threshold drawing tradition using simple geometric and auspicious motifs.",
+      "facts": [
+        "Made on floors or entrances",
+        "Uses locally available powders or wet materials",
+        "Motifs can mark festivals and household ceremonies",
+        "Belongs to the wider North Indian floor-art tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Haryanvi Folk Wall Painting",
+      "place": "Haryana",
+      "short": "Traditional decorative painting associated with village homes, festivals and domestic spaces.",
+      "description": "Traditional decorative painting associated with village homes, festivals and domestic spaces.",
+      "facts": [
+        "Floral and geometric motifs are common",
+        "Walls and household surfaces provide the canvas",
+        "Designs can be seasonal or ceremonial",
+        "Practices vary between communities and regions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Decorative Pottery Painting",
+      "place": "Haryana",
+      "short": "Painted earthenware combining utility pottery with simple floral and geometric decoration.",
+      "description": "Painted earthenware combining utility pottery with simple floral and geometric decoration.",
+      "facts": [
+        "Pottery is shaped from local clay",
+        "Surfaces can be burnished or painted",
+        "Decorative motifs vary by artisan cluster",
+        "The tradition connects pottery with everyday visual culture"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Himachal Pradesh": [
+    {
+      "title": "Kangra Painting",
+      "place": "Kangra region",
+      "short": "Pahari miniature painting famous for lyrical landscapes, delicate figures and Krishna-Radha themes.",
+      "description": "Pahari miniature painting famous for lyrical landscapes, delicate figures and Krishna-Radha themes.",
+      "facts": [
+        "Flourished under Kangra rulers in the 18th century",
+        "Often depicts Krishna, Radha and poetic themes",
+        "Fine lines and soft colours are characteristic",
+        "Part of the wider Pahari miniature tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Guler Painting",
+      "place": "Guler",
+      "short": "Early Pahari miniature style known for naturalistic figures and refined drawing.",
+      "description": "Early Pahari miniature style known for naturalistic figures and refined drawing.",
+      "facts": [
+        "Associated with the Guler court",
+        "Influenced later Kangra painting",
+        "Naturalistic portraiture is a notable feature",
+        "Developed strongly in the 18th century"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Chamba Rumal",
+      "place": "Chamba",
+      "short": "Double-sided embroidered textile art with narrative and devotional scenes.",
+      "description": "Double-sided embroidered textile art with narrative and devotional scenes.",
+      "facts": [
+        "Uses fine embroidery on both sides of the cloth",
+        "Themes include Krishna, marriage scenes and epics",
+        "Associated with Chamba in Himachal Pradesh",
+        "The technique creates an almost painted appearance"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Chamba Miniature Painting",
+      "place": "Chamba",
+      "short": "Pahari miniature painting tradition depicting devotional, courtly and literary themes.",
+      "description": "Pahari miniature painting tradition depicting devotional, courtly and literary themes.",
+      "facts": [
+        "Part of the Pahari school of painting",
+        "Uses fine brushes and detailed line work",
+        "Religious and court subjects are common",
+        "Connected with historic Chamba patronage"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Thangka Painting",
+      "place": "Himachal Himalayan region",
+      "short": "Buddhist devotional painting tradition practised in Himalayan communities.",
+      "description": "Buddhist devotional painting tradition practised in Himalayan communities.",
+      "facts": [
+        "Used for teaching and meditation",
+        "Iconography follows established Buddhist conventions",
+        "Fine detail and controlled proportions are important",
+        "Related Himalayan traditions extend into neighbouring regions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Jharkhand": [
+    {
+      "title": "Sohrai Painting",
+      "place": "Hazaribagh region",
+      "short": "Earth-pigment wall painting traditionally made around the Sohrai harvest and cattle festival.",
+      "description": "Earth-pigment wall painting traditionally made around the Sohrai harvest and cattle festival.",
+      "facts": [
+        "Strongly associated with Hazaribagh villages",
+        "Animals, plants and fertility motifs are common",
+        "Walls are a traditional painting surface",
+        "Women artists have played a major role in preserving the tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Khovar Painting",
+      "place": "Hazaribagh region",
+      "short": "Wedding-associated wall painting tradition using geometric, plant and animal motifs.",
+      "description": "Wedding-associated wall painting tradition using geometric, plant and animal motifs.",
+      "facts": [
+        "Traditionally linked with marriage houses",
+        "Natural pigments and clay surfaces are important",
+        "Motifs can include bamboo, birds and fertility symbols",
+        "Often created by women artists"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Jadopatia Painting",
+      "place": "Jharkhand",
+      "short": "Narrative scroll painting tradition associated with the Santhal cultural region.",
+      "description": "Narrative scroll painting tradition associated with the Santhal cultural region.",
+      "facts": [
+        "Scrolls are used for storytelling",
+        "Images may depict myths, social life and the afterlife",
+        "Jadopatia artists are associated with the tradition",
+        "Painting and oral narration work together"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Paitkar Painting",
+      "place": "Amadubi, East Singhbhum",
+      "short": "Scroll-based narrative painting tradition of eastern Jharkhand.",
+      "description": "Scroll-based narrative painting tradition of eastern Jharkhand.",
+      "facts": [
+        "Amadubi is a recognised centre",
+        "Paintings can depict mythological and social narratives",
+        "Scrolls are traditionally shown with oral narration",
+        "Natural and handmade materials have been used historically"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Godna Tribal Art",
+      "place": "Jharkhand",
+      "short": "Tattoo-inspired motifs translated into painting and decorative surfaces.",
+      "description": "Tattoo-inspired motifs translated into painting and decorative surfaces.",
+      "facts": [
+        "Geometric patterns are common",
+        "Visual symbols can carry community meanings",
+        "The style is connected with tattoo traditions",
+        "Modern artists use paper and cloth as well as walls"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Karnataka": [
+    {
+      "title": "Mysore Painting",
+      "place": "Mysuru region",
+      "short": "Fine devotional painting tradition known for delicate line work, rich colours and gold leaf.",
+      "description": "Fine devotional painting tradition known for delicate line work, rich colours and gold leaf.",
+      "facts": [
+        "Flourished under Mysore court patronage",
+        "Gold leaf is used for ornamental highlights",
+        "Religious themes are common",
+        "Fine brushwork is central to the style"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Ganjifa Card Painting",
+      "place": "Mysuru region",
+      "short": "Hand-painted playing cards decorated with mythological, courtly or geometric imagery.",
+      "description": "Hand-painted playing cards decorated with mythological, courtly or geometric imagery.",
+      "facts": [
+        "Cards are individually painted",
+        "Mysore Ganjifa is a recognised regional tradition",
+        "Themes can include Hindu deities and courtly imagery",
+        "The tradition combines miniature painting with card making"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Chittara Art",
+      "place": "Malnad, Karnataka",
+      "short": "Decorative wall and floor art made with natural materials among communities of the Malnad region.",
+      "description": "Decorative wall and floor art made with natural materials among communities of the Malnad region.",
+      "facts": [
+        "Associated with the Deewaru community",
+        "Geometric patterns are prominent",
+        "Rice paste and natural pigments have been used traditionally",
+        "Art can decorate walls and floors during rituals and ceremonies"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kasuti Embroidery",
+      "place": "Northern Karnataka",
+      "short": "Fine counted-thread embroidery creating geometric, floral and figurative motifs.",
+      "description": "Fine counted-thread embroidery creating geometric, floral and figurative motifs.",
+      "facts": [
+        "Associated with Karnataka women’s textile traditions",
+        "Motifs include chariot, temple and floral forms",
+        "Stitches are worked carefully to preserve symmetry",
+        "Often seen on traditional garments and textiles"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kaavi Art",
+      "place": "Coastal Karnataka",
+      "short": "Red-and-white incised wall decoration using laterite pigment and lime plaster.",
+      "description": "Red-and-white incised wall decoration using laterite pigment and lime plaster.",
+      "facts": [
+        "Found in parts of the Konkan and coastal Karnataka",
+        "Geometric and floral patterns are common",
+        "Used on homes and religious buildings",
+        "Shares historical techniques with coastal Goa"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Kerala": [
+    {
+      "title": "Kerala Mural Painting",
+      "place": "Kerala",
+      "short": "Temple and palace mural tradition using stylised figures, rich colours and narrative compositions.",
+      "description": "Temple and palace mural tradition using stylised figures, rich colours and narrative compositions.",
+      "facts": [
+        "Major centres include historic temples and palaces",
+        "Themes are largely Hindu and mythological",
+        "Traditional pigments and prepared wall surfaces are used",
+        "Figures follow established Kerala mural conventions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kalamezhuthu",
+      "place": "Kerala",
+      "short": "Ritual floor drawing made from coloured powders to depict deities and sacred forms.",
+      "description": "Ritual floor drawing made from coloured powders to depict deities and sacred forms.",
+      "facts": [
+        "Created directly on the floor",
+        "Natural powders are traditionally used",
+        "Kali and other deities are common subjects",
+        "The image is often ritually erased after the ceremony"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Theyyam Face Art",
+      "place": "North Kerala",
+      "short": "Highly elaborate facial painting and body decoration forming part of Theyyam performance.",
+      "description": "Highly elaborate facial painting and body decoration forming part of Theyyam performance.",
+      "facts": [
+        "Face patterns vary by character",
+        "Natural and modern pigments may be used",
+        "Makeup works together with headdress and costume",
+        "It is part of a ritual performance rather than standalone painting"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kathakali Makeup Art",
+      "place": "Kerala",
+      "short": "Codified face painting and makeup that visually identifies Kathakali characters.",
+      "description": "Codified face painting and makeup that visually identifies Kathakali characters.",
+      "facts": [
+        "Colours communicate character types and qualities",
+        "Rice paste and natural pigments were traditionally important",
+        "The makeup is applied in stages before performance",
+        "It is integral to Kathakali’s visual storytelling"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kalaripayattu Weapon & Body Design",
+      "place": "Kerala",
+      "short": "Traditional visual decoration of performance spaces and costumes associated with Kerala martial culture.",
+      "description": "Traditional visual decoration of performance spaces and costumes associated with Kerala martial culture.",
+      "facts": [
+        "Linked with the presentation of martial traditions",
+        "Symbols and costume vary among schools",
+        "Visual design supports ceremonial performance",
+        "Part of Kerala’s wider martial-arts heritage"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Madhya Pradesh": [
+    {
+      "title": "Gond Painting",
+      "place": "Madhya Pradesh",
+      "short": "Contemporary tribal painting tradition using rhythmic lines, dots and nature-inspired imagery.",
+      "description": "Contemporary tribal painting tradition using rhythmic lines, dots and nature-inspired imagery.",
+      "facts": [
+        "Strongly associated with Gond artists",
+        "Animals, trees and birds are frequent subjects",
+        "Fine dots and patterned lines create texture",
+        "Modern Gond artists work on paper and canvas"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bhittichitra / Bhitti Art",
+      "place": "Madhya Pradesh",
+      "short": "Decorative wall painting traditions depicting local life, nature and religious themes.",
+      "description": "Decorative wall painting traditions depicting local life, nature and religious themes.",
+      "facts": [
+        "Walls provide a traditional canvas",
+        "Motifs vary by community",
+        "Natural earth pigments have been used historically",
+        "Art is linked with domestic and ceremonial spaces"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Pithora Painting",
+      "place": "Western Madhya Pradesh",
+      "short": "Ritual painting tradition associated with Bhil and Rathwa communities.",
+      "description": "Ritual painting tradition associated with Bhil and Rathwa communities.",
+      "facts": [
+        "Horses are central motifs",
+        "Paintings can mark vows and ceremonies",
+        "Traditionally made on prepared walls",
+        "The tradition is shared across parts of Gujarat and Madhya Pradesh"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Mandu Decorative Painting",
+      "place": "Malwa region",
+      "short": "Historic decorative painting and mural traditions connected with Malwa’s architectural heritage.",
+      "description": "Historic decorative painting and mural traditions connected with Malwa’s architectural heritage.",
+      "facts": [
+        "Malwa has a long courtly and religious art history",
+        "Architectural surfaces carry ornamental motifs",
+        "Local traditions combine folk and courtly influences",
+        "Visual heritage survives in monuments and museums"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bhil Painting",
+      "place": "Western Madhya Pradesh",
+      "short": "Tribal visual art using dots, animals, plants and scenes from community life.",
+      "description": "Tribal visual art using dots, animals, plants and scenes from community life.",
+      "facts": [
+        "Associated with Bhil artists",
+        "Dot patterns create texture and movement",
+        "Nature is a major source of imagery",
+        "Styles vary between artists and regions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Maharashtra": [
+    {
+      "title": "Warli Painting",
+      "place": "Palghar & Thane region",
+      "short": "Minimalist tribal painting built from geometric human, animal and nature forms.",
+      "description": "Minimalist tribal painting built from geometric human, animal and nature forms.",
+      "facts": [
+        "Associated with Warli communities",
+        "White rice-paste pigment is traditional",
+        "Circles, triangles and squares structure the figures",
+        "Themes include farming, dance, marriage and village life"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Paithani Design Art",
+      "place": "Paithan & Yeola",
+      "short": "Highly detailed silk textile art known for peacock motifs, borders and rich colour combinations.",
+      "description": "Highly detailed silk textile art known for peacock motifs, borders and rich colour combinations.",
+      "facts": [
+        "Associated with Paithan and Yeola",
+        "Peacock and floral motifs are characteristic",
+        "Design is created through handweaving rather than surface painting",
+        "The tradition has deep links with Maharashtra’s textile culture"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Chitrakathi Painting",
+      "place": "Sawantwadi & Konkan",
+      "short": "Narrative picture tradition using sequential painted images to accompany storytelling.",
+      "description": "Narrative picture tradition using sequential painted images to accompany storytelling.",
+      "facts": [
+        "Associated with the Konkan region",
+        "Pictures are shown as part of oral narratives",
+        "Themes include epics and local stories",
+        "Part of Maharashtra’s older itinerant storytelling traditions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Sawantwadi Ganjifa Art",
+      "place": "Sawantwadi",
+      "short": "Hand-painted playing cards with mythological and decorative imagery.",
+      "description": "Hand-painted playing cards with mythological and decorative imagery.",
+      "facts": [
+        "Sawantwadi is a major Ganjifa centre",
+        "Cards are painted individually",
+        "Themes include Dashavatara and other traditional subjects",
+        "The art combines miniature-style painting with card making"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kaavi Art",
+      "place": "Konkan Maharashtra",
+      "short": "Red-and-white incised wall decoration found in historic houses and religious structures.",
+      "description": "Red-and-white incised wall decoration found in historic houses and religious structures.",
+      "facts": [
+        "Uses red laterite pigment and white lime",
+        "Geometric and floral motifs are common",
+        "Found across parts of the Konkan",
+        "Shares techniques with coastal Goa and Karnataka"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Manipur": [
+    {
+      "title": "Thang-Ta Visual Art",
+      "place": "Manipur",
+      "short": "Decorative and ceremonial visual traditions associated with the Meitei martial art Thang-Ta.",
+      "description": "Decorative and ceremonial visual traditions associated with the Meitei martial art Thang-Ta.",
+      "facts": [
+        "Weapons and costume have distinctive visual forms",
+        "Training and performance have ceremonial dimensions",
+        "Tradition combines martial skill with movement and music",
+        "Visual elements vary by performance context"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Manipuri Pung Cholom Costume Art",
+      "place": "Manipur",
+      "short": "Colourful costume and visual presentation associated with Manipuri drum-dance performance.",
+      "description": "Colourful costume and visual presentation associated with Manipuri drum-dance performance.",
+      "facts": [
+        "Pung Cholom combines drumming and movement",
+        "Costumes are designed for dynamic performance",
+        "Visual presentation is closely linked with Vaishnavite culture",
+        "Performance traditions are maintained in temples and cultural institutions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Meitei Manuscript Illustration",
+      "place": "Manipur",
+      "short": "Illustrated manuscript traditions connected with Meitei literary and historical texts.",
+      "description": "Illustrated manuscript traditions connected with Meitei literary and historical texts.",
+      "facts": [
+        "Manuscripts preserve historical and religious knowledge",
+        "Illustration can accompany textual narratives",
+        "Traditional scripts and book forms are culturally important",
+        "The tradition is part of Meitei intellectual heritage"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Moirang Phee Pattern Art",
+      "place": "Manipur",
+      "short": "Decorative textile patterns created through traditional weaving associated with Moirang Phee.",
+      "description": "Decorative textile patterns created through traditional weaving associated with Moirang Phee.",
+      "facts": [
+        "Moirang Phee is a recognised Manipuri textile tradition",
+        "Geometric and floral patterns are common",
+        "Design is created during weaving",
+        "The textiles are used for traditional garments and ceremonial purposes"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Meghalaya": [
+    {
+      "title": "Khasi & Jaintia Textile Art",
+      "place": "Meghalaya",
+      "short": "Traditional woven textile designs reflecting local dress, identity and community aesthetics.",
+      "description": "Traditional woven textile designs reflecting local dress, identity and community aesthetics.",
+      "facts": [
+        "Weaving skills are transmitted within communities",
+        "Geometric and striped patterns are common",
+        "Textiles are used in ceremonial and everyday dress",
+        "Styles vary among Khasi, Jaintia and Garo communities"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Garo Textile Motif Art",
+      "place": "Garo Hills",
+      "short": "Decorative motifs woven into traditional Garo textiles and garments.",
+      "description": "Decorative motifs woven into traditional Garo textiles and garments.",
+      "facts": [
+        "Patterns are linked with community identity",
+        "Colour combinations vary by textile and occasion",
+        "Handweaving remains an important skill",
+        "Motifs appear in shawls, wraps and dress textiles"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bamboo Decorative Art",
+      "place": "Meghalaya",
+      "short": "Bamboo is shaped and woven into visually distinctive baskets, mats and household objects.",
+      "description": "Bamboo is shaped and woven into visually distinctive baskets, mats and household objects.",
+      "facts": [
+        "Bamboo is abundant in the region",
+        "Weaving techniques vary by community",
+        "Objects combine utility with decoration",
+        "Traditional patterns are often geometric"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Cane Pattern Art",
+      "place": "Meghalaya",
+      "short": "Cane weaving creates patterned furniture, baskets and domestic objects.",
+      "description": "Cane weaving creates patterned furniture, baskets and domestic objects.",
+      "facts": [
+        "Cane is processed and woven by hand",
+        "Fine openwork patterns are common",
+        "Craft is used in everyday life and interiors",
+        "Skills are passed through local artisan communities"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Traditional Wall Decoration",
+      "place": "Meghalaya",
+      "short": "Decorative painting and patterning used in homes, community spaces and festivals.",
+      "description": "Decorative painting and patterning used in homes, community spaces and festivals.",
+      "facts": [
+        "Motifs reflect local environment and cultural identity",
+        "Materials vary with community and setting",
+        "Decoration is often seasonal or ceremonial",
+        "Contemporary artists continue to adapt traditional motifs"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Mizoram": [
+    {
+      "title": "Mizo Textile Motif Art",
+      "place": "Mizoram",
+      "short": "Distinctive woven patterns used in traditional Mizo garments and ceremonial textiles.",
+      "description": "Distinctive woven patterns used in traditional Mizo garments and ceremonial textiles.",
+      "facts": [
+        "Patterns identify textile traditions and communities",
+        "Handweaving is important to traditional dress",
+        "Colours and motifs vary among garments",
+        "Textiles carry social and ceremonial meaning"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Puanchei Design Art",
+      "place": "Mizoram",
+      "short": "Decorative textile art associated with the puanchei, a ceremonial Mizo wrap.",
+      "description": "Decorative textile art associated with the puanchei, a ceremonial Mizo wrap.",
+      "facts": [
+        "Puanchei is an important traditional garment",
+        "Striped and geometric patterns are characteristic",
+        "Weaving and colour arrangement create the visual design",
+        "Often worn during important cultural occasions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bamboo Pattern Art",
+      "place": "Mizoram",
+      "short": "Bamboo weaving traditions producing baskets, mats and decorative forms with geometric patterns.",
+      "description": "Bamboo weaving traditions producing baskets, mats and decorative forms with geometric patterns.",
+      "facts": [
+        "Bamboo is widely available locally",
+        "Splitting and weaving are key techniques",
+        "Objects combine utility with visual pattern",
+        "Knowledge is transmitted through household and community practice"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Mizo Wood Carving",
+      "place": "Mizoram",
+      "short": "Carved wood used for household objects, architectural details and traditional decorative forms.",
+      "description": "Carved wood used for household objects, architectural details and traditional decorative forms.",
+      "facts": [
+        "Wood is shaped with hand tools",
+        "Motifs vary according to object and community",
+        "Traditional objects can have ceremonial significance",
+        "The craft reflects local material culture"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Nagaland": [
+    {
+      "title": "Naga Textile Motif Art",
+      "place": "Nagaland",
+      "short": "Bold woven patterns and colour combinations used in traditional Naga shawls and dress.",
+      "description": "Bold woven patterns and colour combinations used in traditional Naga shawls and dress.",
+      "facts": [
+        "Patterns can communicate community and social identity",
+        "Shawls are central to Naga textile culture",
+        "Motifs vary among Naga communities",
+        "Weaving remains an important traditional skill"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Naga Bead & Ornament Art",
+      "place": "Nagaland",
+      "short": "Decorative beadwork and traditional ornaments used in dress, ceremonies and identity display.",
+      "description": "Decorative beadwork and traditional ornaments used in dress, ceremonies and identity display.",
+      "facts": [
+        "Beads are combined with traditional garments",
+        "Colours and arrangements vary by community",
+        "Ornaments can indicate ceremonial or social context",
+        "Craft knowledge is passed through generations"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Naga Wood Carving",
+      "place": "Nagaland",
+      "short": "Decorative and architectural wood carving inspired by local motifs and traditional visual culture.",
+      "description": "Decorative and architectural wood carving inspired by local motifs and traditional visual culture.",
+      "facts": [
+        "Wood carving appears in traditional houses and objects",
+        "Animal and symbolic motifs are common",
+        "Carving is connected with community architecture",
+        "Styles vary among Naga groups"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Naga Folk Painting",
+      "place": "Nagaland",
+      "short": "Contemporary and traditional visual art inspired by Naga life, landscapes, symbols and community memory.",
+      "description": "Contemporary and traditional visual art inspired by Naga life, landscapes, symbols and community memory.",
+      "facts": [
+        "Artists often draw on textile and tattoo motifs",
+        "Nature and village life are frequent subjects",
+        "Modern painters adapt traditional visual vocabulary",
+        "The art contributes to contemporary Naga cultural expression"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Odisha": [
+    {
+      "title": "Pattachitra",
+      "place": "Puri & Raghurajpur",
+      "short": "Traditional narrative painting on prepared cloth, known for controlled lines and religious imagery.",
+      "description": "Traditional narrative painting on prepared cloth, known for controlled lines and religious imagery.",
+      "facts": [
+        "Chitrakara artists are associated with the tradition",
+        "Jagannath and Vaishnavite themes are important",
+        "Cloth is prepared with a chalk-and-gum coating",
+        "Borders and ornamental details are characteristic"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Palm Leaf Engraving",
+      "place": "Odisha",
+      "short": "Illustrated and engraved palm-leaf art used for narrative, literary and decorative purposes.",
+      "description": "Illustrated and engraved palm-leaf art used for narrative, literary and decorative purposes.",
+      "facts": [
+        "Palm leaves are dried and prepared before engraving",
+        "Lines are incised rather than simply painted",
+        "Black pigment can be rubbed into the engraved lines",
+        "Themes include mythology and literary stories"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Saura / Lanjia Saura Painting",
+      "place": "Southern Odisha",
+      "short": "Tribal wall and visual art using symbolic human, animal and ritual forms.",
+      "description": "Tribal wall and visual art using symbolic human, animal and ritual forms.",
+      "facts": [
+        "Associated with Lanjia Saura communities",
+        "Geometric human figures are characteristic",
+        "Art can have ritual and communicative roles",
+        "Modern versions are also made on paper and canvas"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Odisha Tala Pattachitra",
+      "place": "Odisha",
+      "short": "Palm-leaf and manuscript-style visual art combining fine line work with narrative imagery.",
+      "description": "Palm-leaf and manuscript-style visual art combining fine line work with narrative imagery.",
+      "facts": [
+        "Uses prepared palm leaves",
+        "Fine incised lines create detailed figures",
+        "Themes include mythology and stories",
+        "Closely related to Odisha’s manuscript culture"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Dashavatara Ganjifa",
+      "place": "Raghurajpur & Odisha",
+      "short": "Hand-painted playing cards decorated with the ten avatars of Vishnu and other traditional imagery.",
+      "description": "Hand-painted playing cards decorated with the ten avatars of Vishnu and other traditional imagery.",
+      "facts": [
+        "Cards are painted individually",
+        "Dashavatara themes are especially associated with Odisha forms",
+        "The tradition combines game objects with miniature-style art",
+        "Raghurajpur is a major craft centre"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Punjab": [
+    {
+      "title": "Phulkari",
+      "place": "Punjab",
+      "short": "Silk-thread embroidery creating bold floral and geometric patterns on cloth.",
+      "description": "Silk-thread embroidery creating bold floral and geometric patterns on cloth.",
+      "facts": [
+        "Traditionally worked on khaddar cloth",
+        "Brocade-like surface is created by counted stitches",
+        "Baugh and chope are well-known forms",
+        "Phulkari has strong ceremonial and domestic associations"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Punjabi Fresco & Haveli Painting",
+      "place": "Punjab",
+      "short": "Decorative wall painting tradition found historically in havelis and religious buildings.",
+      "description": "Decorative wall painting tradition found historically in havelis and religious buildings.",
+      "facts": [
+        "Floral and figurative motifs are common",
+        "Historic examples combine local and Persianate influences",
+        "Architectural surfaces are important canvases",
+        "Many surviving examples are preserved in heritage buildings"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Sanjhi Paper Art",
+      "place": "Punjab/Braj cultural overlap",
+      "short": "Intricate paper-cut devotional art centred on sacred and floral motifs.",
+      "description": "Intricate paper-cut devotional art centred on sacred and floral motifs.",
+      "facts": [
+        "Made by cutting fine paper stencils",
+        "Often linked with Krishna devotion",
+        "The art is used for decorative and ritual display",
+        "The tradition has strong North Indian connections"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Punjabi Folk Embroidery",
+      "place": "Punjab",
+      "short": "Decorative needlework used on garments and household textiles.",
+      "description": "Decorative needlework used on garments and household textiles.",
+      "facts": [
+        "Floral and geometric motifs are common",
+        "Embroidery can be used for ceremonial clothing",
+        "Techniques vary by regional and community tradition",
+        "It remains part of Punjab’s textile visual culture"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Rajasthan": [
+    {
+      "title": "Phad Painting",
+      "place": "Bhilwara & Shahpura region",
+      "short": "Large narrative scroll painting traditionally used by Bhopas to tell the stories of Pabuji and Devnarayan.",
+      "description": "Large narrative scroll painting traditionally used by Bhopas to tell the stories of Pabuji and Devnarayan.",
+      "facts": [
+        "Traditionally painted on cloth",
+        "Bhopas narrate the story with song and performance",
+        "Pabuji and Devnarayan are major subjects",
+        "Natural pigments were traditionally important"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Pichwai Painting",
+      "place": "Nathdwara",
+      "short": "Devotional cloth painting created as a backdrop for Shrinathji, a form of Krishna.",
+      "description": "Devotional cloth painting created as a backdrop for Shrinathji, a form of Krishna.",
+      "facts": [
+        "Originated in Nathdwara",
+        "Traditionally connected with Pushti Marg worship",
+        "Themes include Raslila, Annakuta and seasonal festivals",
+        "Fine detail, textile preparation and mineral pigments are characteristic"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Rajasthan Miniature Painting",
+      "place": "Rajasthan courts",
+      "short": "Highly detailed courtly and devotional painting traditions developed in several Rajput centres.",
+      "description": "Highly detailed courtly and devotional painting traditions developed in several Rajput centres.",
+      "facts": [
+        "Important schools include Mewar, Marwar, Bundi, Kota and Jaipur",
+        "Subjects include court life, hunting, battles and devotion",
+        "Fine brushes and detailed drawing are characteristic",
+        "Persian and Mughal influences shaped some court styles"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kishangarh Painting",
+      "place": "Kishangarh",
+      "short": "Miniature school famous for idealised figures, poetic landscapes and the celebrated Bani Thani type.",
+      "description": "Miniature school famous for idealised figures, poetic landscapes and the celebrated Bani Thani type.",
+      "facts": [
+        "Flourished under Kishangarh court patronage",
+        "Radha-Krishna themes are prominent",
+        "Elongated facial features are characteristic",
+        "Nihal Chand is closely associated with the style"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Mewar Painting",
+      "place": "Udaipur/Mewar",
+      "short": "Rajput miniature tradition depicting religious stories, court life and local landscapes.",
+      "description": "Rajput miniature tradition depicting religious stories, court life and local landscapes.",
+      "facts": [
+        "Associated with the Mewar court",
+        "Udaipur was an important centre",
+        "Ramayana, Krishna themes and court scenes occur frequently",
+        "Strong colours and detailed line work are characteristic"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Marwar Painting",
+      "place": "Jodhpur & Marwar",
+      "short": "Courtly miniature painting tradition depicting rulers, ceremonies, battles, hunting and religious themes.",
+      "description": "Courtly miniature painting tradition depicting rulers, ceremonies, battles, hunting and religious themes.",
+      "facts": [
+        "Jodhpur was a major centre",
+        "Marwar style developed through Rajput court patronage",
+        "Portraits and court scenes are common",
+        "Mughal influence appears in some later works"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Mandana Art",
+      "place": "Rajasthan",
+      "short": "Geometric and symbolic floor and wall painting tradition made during festivals and household rituals.",
+      "description": "Geometric and symbolic floor and wall painting tradition made during festivals and household rituals.",
+      "facts": [
+        "Traditionally made by women",
+        "White designs are often drawn over red or ochre surfaces",
+        "Motifs include animals, plants and geometric forms",
+        "Used during festivals and auspicious occasions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Rajasthani Folk Art",
+      "place": "Rajasthan",
+      "short": "A broad family of regional folk visual traditions expressed through walls, textiles, painted objects and ritual designs.",
+      "description": "A broad family of regional folk visual traditions expressed through walls, textiles, painted objects and ritual designs.",
+      "facts": [
+        "Styles vary by district and community",
+        "Folk themes include festivals, animals, deities and daily life",
+        "Natural earth pigments were traditionally common",
+        "Visual traditions are closely tied to domestic and ceremonial life"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Thewa Art",
+      "place": "Pratapgarh",
+      "short": "Intricate gold-on-glass art in which finely worked gold sheets are fused into coloured glass.",
+      "description": "Intricate gold-on-glass art in which finely worked gold sheets are fused into coloured glass.",
+      "facts": [
+        "Associated with Pratapgarh",
+        "Uses 23-carat gold in traditional work",
+        "Gold designs are placed on coloured glass",
+        "The technique is highly specialised and labour intensive"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Molela Terracotta Art",
+      "place": "Molela, Rajsamand",
+      "short": "Narrative terracotta plaques depicting deities, village life and folk themes.",
+      "description": "Narrative terracotta plaques depicting deities, village life and folk themes.",
+      "facts": [
+        "Molela is a major terracotta centre",
+        "Plaques are moulded and hand-finished",
+        "Ritual and devotional subjects are common",
+        "Traditional plaques are associated with shrine use and community practice"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Jaipur Blue Pottery Art",
+      "place": "Jaipur",
+      "short": "Glazed decorative art known for blue-and-white designs and a distinctive quartz-based body.",
+      "description": "Glazed decorative art known for blue-and-white designs and a distinctive quartz-based body.",
+      "facts": [
+        "Strongly associated with Jaipur",
+        "The body differs from ordinary clay pottery",
+        "Floral and geometric motifs are common",
+        "Objects are glazed and fired to create the finished surface"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kathputli Art",
+      "place": "Rajasthan",
+      "short": "Handmade string puppets combining painted figures, costume, carving and traditional storytelling.",
+      "description": "Handmade string puppets combining painted figures, costume, carving and traditional storytelling.",
+      "facts": [
+        "Jaipur and Nagaur regions are associated with puppetry traditions",
+        "Puppets are traditionally carved and dressed by specialist makers",
+        "Stories are performed with music and narration",
+        "Kathputli is an important Rajasthani folk-theatre form"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Gota Patti Art",
+      "place": "Rajasthan",
+      "short": "Appliqué decoration using narrow metallic ribbon pieces stitched onto textiles.",
+      "description": "Appliqué decoration using narrow metallic ribbon pieces stitched onto textiles.",
+      "facts": [
+        "Common in festive and bridal textiles",
+        "Gold or silver-coloured gota is cut and stitched into motifs",
+        "Floral and geometric patterns are common",
+        "Jaipur and surrounding areas are known for the tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bandhani Art",
+      "place": "Rajasthan",
+      "short": "Tie-and-dye textile art producing dotted and patterned surfaces through tightly tied cloth.",
+      "description": "Tie-and-dye textile art producing dotted and patterned surfaces through tightly tied cloth.",
+      "facts": [
+        "Major centres include Jaipur, Jodhpur and Sikar regions",
+        "Small tied points create characteristic patterns",
+        "Multiple dyeing stages can create multicolour designs",
+        "Used in odhnis, sarees, turbans and other garments"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bagru Block Printing",
+      "place": "Bagru, Jaipur district",
+      "short": "Hand block printing tradition using carved wooden blocks, resist or direct printing and natural-dye methods.",
+      "description": "Hand block printing tradition using carved wooden blocks, resist or direct printing and natural-dye methods.",
+      "facts": [
+        "Bagru is a major printing centre",
+        "Indigo, madder and other natural dyes have traditional importance",
+        "Dabu resist printing is associated with the region",
+        "Floral and geometric repeats are common"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Sanganeri Block Printing",
+      "place": "Sanganer, Jaipur",
+      "short": "Fine hand block printing known for delicate floral, botanical and figurative motifs.",
+      "description": "Fine hand block printing known for delicate floral, botanical and figurative motifs.",
+      "facts": [
+        "Associated with Sanganer near Jaipur",
+        "Carved wooden blocks are used repeatedly",
+        "Fine floral patterns are characteristic",
+        "Both natural and modern dyes are used today"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kundan Jewellery Art",
+      "place": "Jaipur",
+      "short": "Traditional jewellery setting technique in which gemstones are secured into finely prepared gold foil and lac foundations.",
+      "description": "Traditional jewellery setting technique in which gemstones are secured into finely prepared gold foil and lac foundations.",
+      "facts": [
+        "Jaipur is a major centre",
+        "Kundan setting uses highly skilled stone-setting work",
+        "Polki and enamel techniques may appear in related jewellery",
+        "The craft has strong courtly and bridal associations"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Meenakari Art",
+      "place": "Jaipur",
+      "short": "Enamelling technique in which coloured glass-like enamel is fused onto metal jewellery and objects.",
+      "description": "Enamelling technique in which coloured glass-like enamel is fused onto metal jewellery and objects.",
+      "facts": [
+        "Jaipur is a major Meenakari centre",
+        "Enamel colours are applied to prepared metal surfaces",
+        "Firing fixes the enamel to the metal",
+        "Often combined with Kundan jewellery techniques"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Sikkim": [
+    {
+      "title": "Thangka Painting",
+      "place": "Sikkim monasteries",
+      "short": "Buddhist devotional painting with prescribed iconography, proportions and symbolic colour use.",
+      "description": "Buddhist devotional painting with prescribed iconography, proportions and symbolic colour use.",
+      "facts": [
+        "Used in monasteries and Buddhist practice",
+        "Images follow established iconographic rules",
+        "Fine detail is essential",
+        "Tradition is shared across Himalayan Buddhist regions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Buddhist Monastery Mural Art",
+      "place": "Sikkim",
+      "short": "Colourful sacred murals decorating monastery interiors and ritual spaces.",
+      "description": "Colourful sacred murals decorating monastery interiors and ritual spaces.",
+      "facts": [
+        "Themes include Buddhist deities and narrative scenes",
+        "Murals form part of monastery architecture",
+        "Traditional pigments and detailed drawing are important",
+        "Visual art supports teaching and devotion"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Tibetan Buddhist Decorative Art",
+      "place": "Sikkim",
+      "short": "Decorative painting and pattern work associated with Himalayan Buddhist visual culture.",
+      "description": "Decorative painting and pattern work associated with Himalayan Buddhist visual culture.",
+      "facts": [
+        "Uses symbolic motifs such as lotus and clouds",
+        "Appears on ritual and architectural objects",
+        "Strongly connected with monastery culture",
+        "Styles reflect Tibetan Buddhist artistic conventions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Sikkim Textile Motif Art",
+      "place": "Sikkim",
+      "short": "Traditional woven patterns used in ceremonial and community clothing.",
+      "description": "Traditional woven patterns used in ceremonial and community clothing.",
+      "facts": [
+        "Textiles are important to several Sikkimese communities",
+        "Patterns and colours vary among communities",
+        "Handweaving preserves local design vocabulary",
+        "Ceremonial dress often carries distinctive motifs"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Tamil Nadu": [
+    {
+      "title": "Tanjore Painting",
+      "place": "Thanjavur",
+      "short": "Devotional painting known for rich colours, relief work and gold foil decoration.",
+      "description": "Devotional painting known for rich colours, relief work and gold foil decoration.",
+      "facts": [
+        "Originated in the Thanjavur region",
+        "Religious figures are common subjects",
+        "Gold foil and raised ornament create depth",
+        "The style developed under South Indian court and temple patronage"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kalamkari of Srikalahasti",
+      "place": "Tamil Nadu / Srikalahasti",
+      "short": "Hand-drawn and block-assisted textile painting using narrative motifs and traditional dyeing processes.",
+      "description": "Hand-drawn and block-assisted textile painting using narrative motifs and traditional dyeing processes.",
+      "facts": [
+        "Srikalahasti is a major Kalamkari centre",
+        "Themes include Hindu epics and temple imagery",
+        "Natural-dye methods have a long history",
+        "Hand drawing with a kalam is a key feature"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Chola Bronze Visual Art",
+      "place": "Tamil Nadu",
+      "short": "Sculptural art tradition famous for highly refined bronze images of Hindu deities.",
+      "description": "Sculptural art tradition famous for highly refined bronze images of Hindu deities.",
+      "facts": [
+        "Chola bronzes are especially famous for Nataraja images",
+        "Lost-wax casting is used",
+        "Icons follow established religious proportions",
+        "Bronze images were made for temple ritual and processions"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kolam Art",
+      "place": "Tamil Nadu",
+      "short": "Daily and festival floor drawings made with rice flour or other powders in geometric and floral patterns.",
+      "description": "Daily and festival floor drawings made with rice flour or other powders in geometric and floral patterns.",
+      "facts": [
+        "Common outside homes and public entrances",
+        "Women have traditionally maintained the practice",
+        "Designs can be highly symmetrical and mathematically structured",
+        "Festival kolams may be larger and more elaborate"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kanchipuram Textile Design",
+      "place": "Kanchipuram",
+      "short": "Rich silk textile art known for contrasting borders, temple motifs and woven patterns.",
+      "description": "Rich silk textile art known for contrasting borders, temple motifs and woven patterns.",
+      "facts": [
+        "Associated with Kanchipuram silk sarees",
+        "Motifs include checks, stripes, temples and natural forms",
+        "Borders and body are often woven in contrasting colours",
+        "The design is created through the weaving structure"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Telangana": [
+    {
+      "title": "Cheriyal Painting",
+      "place": "Cheriyal, Telangana",
+      "short": "Narrative scroll painting tradition using bold colours and stylised figures to tell stories.",
+      "description": "Narrative scroll painting tradition using bold colours and stylised figures to tell stories.",
+      "facts": [
+        "Traditionally used by travelling storytellers",
+        "Themes include epics, folklore and village life",
+        "Figures are painted in a distinctive simplified style",
+        "Cheriyal is the recognised centre of the tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Nirmal Painting",
+      "place": "Nirmal, Telangana",
+      "short": "Decorative painted art on wood and other surfaces, known for nature and mythological motifs.",
+      "description": "Decorative painted art on wood and other surfaces, known for nature and mythological motifs.",
+      "facts": [
+        "Associated with Nirmal town",
+        "Wooden surfaces are commonly used",
+        "Gold-like backgrounds and fine decorative work are characteristic",
+        "The tradition includes painted toys and furniture as well as panels"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Deccani Miniature Painting",
+      "place": "Hyderabad & Deccan",
+      "short": "Courtly miniature painting tradition associated with the Deccan Sultanates and Hyderabad.",
+      "description": "Courtly miniature painting tradition associated with the Deccan Sultanates and Hyderabad.",
+      "facts": [
+        "Developed in Deccan courts",
+        "Uses rich colour and decorative detail",
+        "Subjects include rulers, music, poetry and court life",
+        "Persianate and Indian influences interact in the style"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Dokra-inspired Decorative Art",
+      "place": "Telangana tribal regions",
+      "short": "Decorative metal imagery and figurines reflecting local tribal visual traditions.",
+      "description": "Decorative metal imagery and figurines reflecting local tribal visual traditions.",
+      "facts": [
+        "Uses traditional metalworking methods in some communities",
+        "Figures may depict animals, musicians and ritual themes",
+        "Visual vocabulary is linked with everyday and ceremonial life",
+        "Styles vary among artisan groups"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Telangana Folk Wall Art",
+      "place": "Telangana",
+      "short": "Decorative wall and floor painting traditions using geometric, floral and ritual motifs.",
+      "description": "Decorative wall and floor painting traditions using geometric, floral and ritual motifs.",
+      "facts": [
+        "Created in domestic and ceremonial settings",
+        "Local pigments and powders are traditional materials",
+        "Motifs vary by region and community",
+        "Festival decoration remains an important context"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Tripura": [
+    {
+      "title": "Reang / Bru Textile Motif Art",
+      "place": "Tripura",
+      "short": "Distinctive woven patterns and colours used in traditional dress among Indigenous communities.",
+      "description": "Distinctive woven patterns and colours used in traditional dress among Indigenous communities.",
+      "facts": [
+        "Textile patterns carry community identity",
+        "Handweaving remains important for traditional garments",
+        "Motifs and colours vary by community",
+        "Ceremonial clothing often has richer decoration"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bamboo Pattern Art",
+      "place": "Tripura",
+      "short": "Bamboo weaving used to create patterned baskets, mats and decorative household forms.",
+      "description": "Bamboo weaving used to create patterned baskets, mats and decorative household forms.",
+      "facts": [
+        "Bamboo is widely available",
+        "Weaving creates geometric surface patterns",
+        "Objects combine utility and visual design",
+        "Skills are commonly transmitted through families"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Wood Carving",
+      "place": "Tripura",
+      "short": "Carved wood used for household, decorative and community objects.",
+      "description": "Carved wood used for household, decorative and community objects.",
+      "facts": [
+        "Local wood is shaped with hand tools",
+        "Patterns vary by artisan and object",
+        "Carving is part of Tripura’s material culture",
+        "Decorative and practical objects are both produced"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Tribal Wall Decoration",
+      "place": "Tripura",
+      "short": "Visual decoration using geometric and natural motifs in community and domestic spaces.",
+      "description": "Visual decoration using geometric and natural motifs in community and domestic spaces.",
+      "facts": [
+        "Motifs reflect local environment and cultural identity",
+        "Materials vary by community",
+        "Decoration can be seasonal or ceremonial",
+        "Traditional forms continue alongside contemporary art"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Uttar Pradesh": [
+    {
+      "title": "Banaras Mural Painting",
+      "place": "Varanasi",
+      "short": "Decorative and narrative mural tradition associated with historic buildings and religious spaces in Banaras.",
+      "description": "Decorative and narrative mural tradition associated with historic buildings and religious spaces in Banaras.",
+      "facts": [
+        "Varanasi has a long mural and painting history",
+        "Religious and floral motifs are common",
+        "Painted walls and ceilings are important surfaces",
+        "Modern artists continue to reinterpret the tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Sanjhi Art",
+      "place": "Mathura-Vrindavan",
+      "short": "Intricate paper-cut devotional art centred on Krishna, Radha and sacred Braj imagery.",
+      "description": "Intricate paper-cut devotional art centred on Krishna, Radha and sacred Braj imagery.",
+      "facts": [
+        "Strongly associated with Braj",
+        "Made by cutting fine paper stencils",
+        "Often depicts Krishna’s sacred landscapes",
+        "Used for devotional and decorative display"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Miniature Painting of Lucknow",
+      "place": "Lucknow",
+      "short": "Courtly miniature and portrait painting traditions shaped by Awadhi and later Lucknow patronage.",
+      "description": "Courtly miniature and portrait painting traditions shaped by Awadhi and later Lucknow patronage.",
+      "facts": [
+        "Developed under Awadh court culture",
+        "Portraits, court life and poetry are common themes",
+        "Persian and Indian artistic influences interact",
+        "Fine brushwork is characteristic"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Banarasi Textile Design Art",
+      "place": "Varanasi",
+      "short": "Highly detailed silk textile designs featuring brocade motifs and elaborate borders.",
+      "description": "Highly detailed silk textile designs featuring brocade motifs and elaborate borders.",
+      "facts": [
+        "Associated with Banarasi silk weaving",
+        "Metallic zari is often used",
+        "Floral buti and jaal patterns are characteristic",
+        "Design is built into the weave rather than painted on"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Agra Zardozi Art",
+      "place": "Agra",
+      "short": "Metal-thread embroidery creating raised floral and ornamental designs on textiles.",
+      "description": "Metal-thread embroidery creating raised floral and ornamental designs on textiles.",
+      "facts": [
+        "Agra is a major zardozi centre",
+        "Metallic threads and embellishments are used",
+        "Bridal and ceremonial textiles are common products",
+        "The tradition has Mughal-era historical associations"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Uttarakhand": [
+    {
+      "title": "Aipan Art",
+      "place": "Kumaon",
+      "short": "White ritual floor and wall drawings made over red or ochre backgrounds.",
+      "description": "White ritual floor and wall drawings made over red or ochre backgrounds.",
+      "facts": [
+        "Strongly associated with Kumaon",
+        "Rice paste is traditionally used for white designs",
+        "Motifs include footprints, flowers and geometric forms",
+        "Used during festivals and household ceremonies"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Garhwal Miniature Painting",
+      "place": "Garhwal",
+      "short": "Pahari painting tradition associated with the former Garhwal court.",
+      "description": "Pahari painting tradition associated with the former Garhwal court.",
+      "facts": [
+        "Part of the wider Pahari miniature family",
+        "Religious and courtly themes are common",
+        "Fine line and colour work are characteristic",
+        "Garhwal patronage shaped the local style"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Jadupatya-inspired Scroll Art",
+      "place": "Uttarakhand folk-art contexts",
+      "short": "Narrative scroll and storytelling imagery found in Himalayan folk-art traditions.",
+      "description": "Narrative scroll and storytelling imagery found in Himalayan folk-art traditions.",
+      "facts": [
+        "Pictures can support oral storytelling",
+        "Local landscapes and religious stories are common themes",
+        "Styles vary by community",
+        "The tradition reflects the close relationship between image and narration"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Ringaal Bamboo Art",
+      "place": "Uttarakhand",
+      "short": "Decorative basketry and patterned objects made from ringaal, a Himalayan bamboo.",
+      "description": "Decorative basketry and patterned objects made from ringaal, a Himalayan bamboo.",
+      "facts": [
+        "Ringaal is a local bamboo resource",
+        "Basketry combines utility and geometric pattern",
+        "Products include baskets, mats and containers",
+        "Craft knowledge is passed through artisan communities"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Wood Carving Art",
+      "place": "Uttarakhand",
+      "short": "Decorative carving used on traditional houses, temples, doors and household objects.",
+      "description": "Decorative carving used on traditional houses, temples, doors and household objects.",
+      "facts": [
+        "Kumaoni and Garhwali buildings use carved wood details",
+        "Floral and geometric motifs are common",
+        "Religious buildings often have especially detailed carving",
+        "The craft is adapted to Himalayan timber architecture"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "West Bengal": [
+    {
+      "title": "Bengal Patachitra",
+      "place": "West Midnapore",
+      "short": "Narrative scroll painting tradition in which images and songs together tell stories.",
+      "description": "Narrative scroll painting tradition in which images and songs together tell stories.",
+      "facts": [
+        "Pingla is a major patachitra centre",
+        "Patua artists traditionally combine painting with sung narration",
+        "Stories include mythology, folklore and contemporary social themes",
+        "Cloth and paper surfaces are used"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kalighat Painting",
+      "place": "Kolkata",
+      "short": "Urban folk painting tradition that developed around the Kalighat temple area in the 19th century.",
+      "description": "Urban folk painting tradition that developed around the Kalighat temple area in the 19th century.",
+      "facts": [
+        "Originally sold to pilgrims and visitors",
+        "Bold brush lines and simplified figures are characteristic",
+        "Subjects included mythology and contemporary social life",
+        "The tradition influenced modern Indian art"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Krishnanagar Clay Art",
+      "place": "Krishnanagar, Nadia",
+      "short": "Highly detailed clay modelling of human figures, occupations and social scenes.",
+      "description": "Highly detailed clay modelling of human figures, occupations and social scenes.",
+      "facts": [
+        "Krishnanagar is a major centre",
+        "Figures are hand-modelled and finely finished",
+        "Realistic observation of people is a notable feature",
+        "The tradition includes figurines of everyday life"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Alpana Art",
+      "place": "West Bengal",
+      "short": "Decorative floor and ritual drawing made with rice paste and other traditional materials.",
+      "description": "Decorative floor and ritual drawing made with rice paste and other traditional materials.",
+      "facts": [
+        "White rice paste is a traditional medium",
+        "Used during puja, weddings and festivals",
+        "Floral and geometric motifs are common",
+        "Women have traditionally maintained the practice"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Bengal Scroll Painting",
+      "place": "Bengal",
+      "short": "Scroll-based visual storytelling tradition closely linked with Patua performance and oral narration.",
+      "description": "Scroll-based visual storytelling tradition closely linked with Patua performance and oral narration.",
+      "facts": [
+        "Images are arranged sequentially",
+        "Songs or spoken narration accompany the display",
+        "Themes can be mythological, social or contemporary",
+        "Patua communities preserve the tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Jammu & Kashmir": [
+    {
+      "title": "Basohli Painting",
+      "place": "Jammu region",
+      "short": "Bold early Pahari miniature style known for strong colours, expressive faces and devotional themes.",
+      "description": "Bold early Pahari miniature style known for strong colours, expressive faces and devotional themes.",
+      "facts": [
+        "Associated with Basohli in the Jammu region",
+        "Developed strongly in the 17th–18th centuries",
+        "Krishna and Devi themes are common",
+        "Strong colour fields and distinctive faces are characteristic"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kashmiri Papier-Mache Painting",
+      "place": "Kashmir Valley",
+      "short": "Highly decorative painted surface art on papier-mache objects using floral and ornamental motifs.",
+      "description": "Highly decorative painted surface art on papier-mache objects using floral and ornamental motifs.",
+      "facts": [
+        "Objects are shaped from papier-mache pulp",
+        "Surfaces are primed before detailed painting",
+        "Floral and arabesque designs are common",
+        "Kashmir is internationally known for this craft-art tradition"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kashmiri Carpet Design",
+      "place": "Kashmir Valley",
+      "short": "Intricate floral and garden-inspired designs created through hand-knotting and drawing traditions.",
+      "description": "Intricate floral and garden-inspired designs created through hand-knotting and drawing traditions.",
+      "facts": [
+        "Persianate floral vocabulary is influential",
+        "Designs include boteh, floral sprays and garden layouts",
+        "Fine knotting allows detailed patterns",
+        "Designs are often planned from drawn patterns"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kashmiri Sozni Embroidery",
+      "place": "Kashmir Valley",
+      "short": "Fine needle embroidery used to create delicate floral and paisley patterns on shawls and textiles.",
+      "description": "Fine needle embroidery used to create delicate floral and paisley patterns on shawls and textiles.",
+      "facts": [
+        "Uses very fine thread and small stitches",
+        "Paisley and floral motifs are common",
+        "Often worked on woollen or fine shawl fabrics",
+        "Requires highly skilled handwork"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Kashmiri Wood Carving",
+      "place": "Kashmir Valley",
+      "short": "Intricate carving used on walnut wood furniture, panels, doors and architectural objects.",
+      "description": "Intricate carving used on walnut wood furniture, panels, doors and architectural objects.",
+      "facts": [
+        "Walnut wood is especially associated with Kashmir carving",
+        "Floral and arabesque patterns are common",
+        "Carving ranges from shallow relief to deeper work",
+        "Furniture and architectural panels are major applications"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ],
+  "Ladakh": [
+    {
+      "title": "Ladakhi Thangka Painting",
+      "place": "Ladakh monasteries",
+      "short": "Buddhist devotional painting following established Himalayan iconographic rules.",
+      "description": "Buddhist devotional painting following established Himalayan iconographic rules.",
+      "facts": [
+        "Used for teaching, meditation and ritual",
+        "Precise proportions are important",
+        "Monastic artists preserve the tradition",
+        "Visual vocabulary is shared with wider Tibetan Buddhist art"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Monastery Mural Art",
+      "place": "Ladakh",
+      "short": "Sacred murals decorating monastery halls, temples and ritual spaces with Buddhist narratives and symbols.",
+      "description": "Sacred murals decorating monastery halls, temples and ritual spaces with Buddhist narratives and symbols.",
+      "facts": [
+        "Found in historic monasteries",
+        "Themes include deities, protectors and narrative cycles",
+        "Murals are part of the architecture",
+        "Traditional pigments and careful line work are important"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Wooden Decorative Art",
+      "place": "Ladakh",
+      "short": "Carved and painted wooden details used in monasteries, homes, furniture and religious objects.",
+      "description": "Carved and painted wooden details used in monasteries, homes, furniture and religious objects.",
+      "facts": [
+        "Wood is used for doors, pillars and furniture",
+        "Geometric and floral motifs are common",
+        "Buddhist symbols may appear in monastery work",
+        "Craft reflects adaptation to local materials"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    },
+    {
+      "title": "Ladakhi Textile Motif Art",
+      "place": "Ladakh",
+      "short": "Decorative woven patterns used in woollen clothing, rugs and traditional household textiles.",
+      "description": "Decorative woven patterns used in woollen clothing, rugs and traditional household textiles.",
+      "facts": [
+        "Wool is important in the high-altitude environment",
+        "Geometric motifs are common",
+        "Textile design is tied to practical cold-weather clothing",
+        "Patterns vary by community and object"
+      ],
+      "source": "Government of India handicrafts records / Ministry of Culture / established art documentation"
+    }
+  ]
+};
+
+const STATE_CRAFTS = {
+  'Andhra Pradesh': [
+    { title: 'Kalamkari', place: 'Srikalahasti & Machilipatnam', short: 'Hand-painted and block-printed cotton textiles using natural-dye traditions and narrative motifs.', description: 'Hand-painted and block-printed cotton textiles using natural-dye traditions and narrative motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kondapalli Toys', place: 'Kondapalli, NTR district', short: 'Lightweight painted wooden toys carved from locally used soft wood, traditionally made in family workshops.', description: 'Lightweight painted wooden toys carved from locally used soft wood, traditionally made in family workshops.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Uppada Jamdani', place: 'Uppada, Kakinada district', short: 'Fine handwoven sarees known for Jamdani-style supplementary motifs worked into the fabric.', description: 'Fine handwoven sarees known for Jamdani-style supplementary motifs worked into the fabric.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Budithi Bell & Brass Craft', place: 'Budithi, Srikakulam district', short: 'Handmade brass and bell-metal vessels and decorative objects shaped by traditional metalworking.', description: 'Handmade brass and bell-metal vessels and decorative objects shaped by traditional metalworking.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Etikoppaka Lacquer Craft', place: 'Etikoppaka, Anakapalle district', short: 'Wooden toys and objects turned on a lathe and finished with coloured lacquer made from natural dyes.', description: 'Wooden toys and objects turned on a lathe and finished with coloured lacquer made from natural dyes.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bobbili Veena', place: 'Bobbili, Vizianagaram district', short: 'Traditional string instruments crafted from wood by specialist makers in the Bobbili tradition.', description: 'Traditional string instruments crafted from wood by specialist makers in the Bobbili tradition.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Leather Puppetry', place: 'Andhra Pradesh', short: 'Translucent leather shadow puppets used in traditional storytelling and performances.', description: 'Translucent leather shadow puppets used in traditional storytelling and performances.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Nirmal-style painting & wood craft', place: 'Nirmal, Adilabad region', short: 'Decorative painted wooden objects and furniture associated with the Nirmal craft tradition.', description: 'Decorative painted wooden objects and furniture associated with the Nirmal craft tradition.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Arunachal Pradesh': [
+    { title: 'Apatani Weaving', place: 'Lower Subansiri', short: 'Distinctive handwoven textiles associated with Apatani communities and local dress traditions.', description: 'Distinctive handwoven textiles associated with Apatani communities and local dress traditions.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Monpa Carpet Weaving', place: 'Tawang & West Kameng', short: 'Woollen carpets with geometric and Buddhist-inspired designs made in Monpa communities.', description: 'Woollen carpets with geometric and Buddhist-inspired designs made in Monpa communities.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cane and Bamboo Craft', place: 'Arunachal Pradesh', short: 'Baskets, containers, mats and utility objects made from locally available cane and bamboo.', description: 'Baskets, containers, mats and utility objects made from locally available cane and bamboo.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Arunachal Pradesh', short: 'Carved wood is used for household objects, ritual items and architectural decoration.', description: 'Carved wood is used for household objects, ritual items and architectural decoration.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Monpa Handloom', place: 'Tawang', short: 'Wool and other fibres are woven into traditional clothing and household textiles.', description: 'Wool and other fibres are woven into traditional clothing and household textiles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Buddhist Thangka Painting', place: 'Tawang region', short: 'Religious paintings made according to Himalayan Buddhist iconographic conventions.', description: 'Religious paintings made according to Himalayan Buddhist iconographic conventions.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Traditional Cane Baskets', place: 'Arunachal Pradesh', short: 'Handwoven carrying baskets and containers adapted to mountain and agricultural life.', description: 'Handwoven carrying baskets and containers adapted to mountain and agricultural life.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Traditional Textile Weaving', place: 'Arunachal Pradesh', short: 'Community-specific woven skirts, shawls and wraps preserve local motifs and identity.', description: 'Community-specific woven skirts, shawls and wraps preserve local motifs and identity.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Assam': [
+    { title: 'Muga Silk', place: 'Assam', short: 'Naturally golden silk produced from the muga silkworm and woven into durable textiles.', description: 'Naturally golden silk produced from the muga silkworm and woven into durable textiles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Eri Silk', place: 'Assam', short: 'Warm, soft silk traditionally spun and woven for shawls, stoles and clothing.', description: 'Warm, soft silk traditionally spun and woven for shawls, stoles and clothing.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Pat Silk', place: 'Assam', short: 'Fine white or cream mulberry silk used for traditional Assamese garments.', description: 'Fine white or cream mulberry silk used for traditional Assamese garments.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Sarthebari Bell Metal', place: 'Sarthebari, Barpeta', short: 'Bell-metal utensils and ritual objects made by traditional casting and finishing methods.', description: 'Bell-metal utensils and ritual objects made by traditional casting and finishing methods.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Asharikandi Terracotta', place: 'Dhubri district', short: 'Terracotta toys, figurines and vessels shaped and fired by artisan families.', description: 'Terracotta toys, figurines and vessels shaped and fired by artisan families.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Jaapi Craft', place: 'Assam', short: 'Traditional conical headgear made mainly from bamboo and tokou leaves, also produced as decorative craft.', description: 'Traditional conical headgear made mainly from bamboo and tokou leaves, also produced as decorative craft.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Majuli Mask-making', place: 'Majuli', short: 'Large theatrical masks made from bamboo, cloth, clay and natural materials for traditional performance.', description: 'Large theatrical masks made from bamboo, cloth, clay and natural materials for traditional performance.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cane and Bamboo Craft', place: 'Assam', short: 'Baskets, furniture, mats and household objects made from cane and bamboo.', description: 'Baskets, furniture, mats and household objects made from cane and bamboo.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Bihar': [
+    { title: 'Madhubani / Mithila Painting', place: 'Madhubani & Mithila region', short: 'Painting tradition using strong outlines, filled patterns and symbolic subjects from mythology and daily life.', description: 'Painting tradition using strong outlines, filled patterns and symbolic subjects from mythology and daily life.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Sujuni Embroidery', place: 'Bihar', short: 'Running-stitch embroidery used to decorate quilts and textiles with narrative and social themes.', description: 'Running-stitch embroidery used to decorate quilts and textiles with narrative and social themes.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Sikki Grass Craft', place: 'North Bihar', short: 'Fine grass is dyed and coiled into baskets, boxes, toys and decorative objects.', description: 'Fine grass is dyed and coiled into baskets, boxes, toys and decorative objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Tikuli Painting', place: 'Patna', short: 'Decorative painting tradition traditionally associated with lacquered circular surfaces and detailed motifs.', description: 'Decorative painting tradition traditionally associated with lacquered circular surfaces and detailed motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bhagalpur Silk', place: 'Bhagalpur', short: 'Handwoven silk textiles, especially tussar-based fabrics, associated with Bhagalpur weaving.', description: 'Handwoven silk textiles, especially tussar-based fabrics, associated with Bhagalpur weaving.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kashida Embroidery', place: 'Bihar', short: 'Hand embroidery used on garments and textiles in several local craft traditions.', description: 'Hand embroidery used on garments and textiles in several local craft traditions.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Lac Bangle Craft', place: 'Bihar', short: 'Lac is shaped and coloured into bangles and small decorative objects by specialist artisans.', description: 'Lac is shaped and coloured into bangles and small decorative objects by specialist artisans.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo and Cane Craft', place: 'Bihar', short: 'Utility baskets, mats and household articles made from locally available plant fibres.', description: 'Utility baskets, mats and household articles made from locally available plant fibres.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Chhattisgarh': [
+    { title: 'Bastar Dhokra', place: 'Bastar', short: 'Lost-wax metal casting used to create figurines, ritual objects and decorative forms.', description: 'Lost-wax metal casting used to create figurines, ritual objects and decorative forms.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bastar Iron Craft', place: 'Bastar', short: 'Hand-forged iron craft producing ritual, household and decorative objects with distinctive surface textures.', description: 'Hand-forged iron craft producing ritual, household and decorative objects with distinctive surface textures.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bastar Wood Craft', place: 'Bastar', short: 'Carved wooden figures, masks and household objects reflecting local cultural motifs.', description: 'Carved wooden figures, masks and household objects reflecting local cultural motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bastar Terracotta', place: 'Bastar', short: 'Hand-shaped and fired clay figures, vessels and decorative objects.', description: 'Hand-shaped and fired clay figures, vessels and decorative objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kosa Silk Weaving', place: 'Champa & surrounding region', short: 'Tussar silk weaving tradition producing saris, fabrics and other textiles.', description: 'Tussar silk weaving tradition producing saris, fabrics and other textiles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo Craft', place: 'Chhattisgarh', short: 'Baskets, agricultural tools and household objects woven from bamboo.', description: 'Baskets, agricultural tools and household objects woven from bamboo.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bell Metal Craft', place: 'Chhattisgarh', short: 'Traditional metal vessels and decorative objects made from bell metal and related alloys.', description: 'Traditional metal vessels and decorative objects made from bell metal and related alloys.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Tribal Bead & Jewellery Craft', place: 'Bastar region', short: 'Handmade ornaments using beads, metal and locally available materials as part of traditional dress.', description: 'Handmade ornaments using beads, metal and locally available materials as part of traditional dress.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Goa': [
+    { title: 'Coconut Craft', place: 'Goa', short: 'Decorative and utility objects made from coconut shells, fibre and other parts of the coconut palm.', description: 'Decorative and utility objects made from coconut shells, fibre and other parts of the coconut palm.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cane and Bamboo Craft', place: 'Goa', short: 'Baskets, furniture and household articles made by weaving cane and bamboo.', description: 'Baskets, furniture and household articles made by weaving cane and bamboo.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Azulejo Tile Craft', place: 'Goa', short: 'Decorative ceramic tile work associated with Indo-Portuguese architectural and artistic traditions.', description: 'Decorative ceramic tile work associated with Indo-Portuguese architectural and artistic traditions.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Shell Craft', place: 'Goa', short: 'Decorative objects and jewellery made from marine shells, especially in coastal craft markets.', description: 'Decorative objects and jewellery made from marine shells, especially in coastal craft markets.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Goa', short: 'Carved wooden furniture and decorative work influenced by local and Indo-Portuguese design traditions.', description: 'Carved wooden furniture and decorative work influenced by local and Indo-Portuguese design traditions.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Crochet & Lace Work', place: 'Goa', short: 'Handmade lace and crochet used in garments, household textiles and decorative pieces.', description: 'Handmade lace and crochet used in garments, household textiles and decorative pieces.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Traditional Pottery', place: 'Goa', short: 'Clay vessels and household pottery made using local earthenware traditions.', description: 'Clay vessels and household pottery made using local earthenware traditions.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Brass & Metal Craft', place: 'Goa', short: 'Small ritual and household objects made by traditional metalworking techniques.', description: 'Small ritual and household objects made by traditional metalworking techniques.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Gujarat': [
+    { title: 'Patola Weaving', place: 'Patan', short: 'Complex double-ikat silk weaving in which yarns are resist-dyed before weaving.', description: 'Complex double-ikat silk weaving in which yarns are resist-dyed before weaving.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kutch Embroidery', place: 'Kutch', short: 'Rich hand embroidery using regional stitches, mirrors and geometric or floral motifs.', description: 'Rich hand embroidery using regional stitches, mirrors and geometric or floral motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Ajrakh Block Printing', place: 'Kutch', short: 'Resist and block-print textile tradition using repeated carved blocks and layered dyeing.', description: 'Resist and block-print textile tradition using repeated carved blocks and layered dyeing.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Rogan Art', place: 'Kutch', short: 'Textile painting made by manipulating thickened castor-oil-based colour into fine motifs.', description: 'Textile painting made by manipulating thickened castor-oil-based colour into fine motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Mata ni Pachedi', place: 'Ahmedabad region', short: 'Ritual textile paintings centred on the goddess and used in shrine traditions.', description: 'Ritual textile paintings centred on the goddess and used in shrine traditions.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Tangaliya Weaving', place: 'Surendranagar region', short: 'Textiles decorated with small raised-dot patterns created during weaving.', description: 'Textiles decorated with small raised-dot patterns created during weaving.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bandhani Tie-Dye', place: 'Gujarat', short: 'Fine tie-and-dye textile work producing dotted patterns through tightly tied sections.', description: 'Fine tie-and-dye textile work producing dotted patterns through tightly tied sections.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Mashru Weaving', place: 'Gujarat', short: 'Traditional textile combining a silk-like surface with a cotton component, historically linked to local weaving communities.', description: 'Traditional textile combining a silk-like surface with a cotton component, historically linked to local weaving communities.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Gujarat', short: 'Decorative architectural and household carving, especially associated with historic urban woodwork.', description: 'Decorative architectural and household carving, especially associated with historic urban woodwork.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Beadwork', place: 'Kutch', short: 'Colourful bead embroidery and ornaments used in garments, bags and decorative objects.', description: 'Colourful bead embroidery and ornaments used in garments, bags and decorative objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Haryana': [
+    { title: 'Phulkari Embroidery', place: 'Haryana & wider Punjab-Haryana region', short: 'Floral embroidery worked with coloured thread on cloth, shared across the region.', description: 'Floral embroidery worked with coloured thread on cloth, shared across the region.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Panipat Handloom', place: 'Panipat', short: 'Woven cotton, woollen and home-textile products made in the historic textile centre.', description: 'Woven cotton, woollen and home-textile products made in the historic textile centre.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Mudha / Moonj Craft', place: 'Haryana', short: 'Handwoven stools, baskets and utility articles made from natural fibres.', description: 'Handwoven stools, baskets and utility articles made from natural fibres.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Pottery Craft', place: 'Haryana', short: 'Traditional earthenware shaped and fired for household and decorative use.', description: 'Traditional earthenware shaped and fired for household and decorative use.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Craft', place: 'Haryana', short: 'Carved wooden household and decorative objects made by local artisans.', description: 'Carved wooden household and decorative objects made by local artisans.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Durrie Weaving', place: 'Haryana', short: 'Flat-woven floor coverings made with cotton and woollen yarns.', description: 'Flat-woven floor coverings made with cotton and woollen yarns.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Basketry', place: 'Haryana', short: 'Baskets and storage articles woven from grasses, reeds and other plant fibres.', description: 'Baskets and storage articles woven from grasses, reeds and other plant fibres.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Lac Craft', place: 'Haryana', short: 'Lac is shaped and decorated into bangles and small traditional objects.', description: 'Lac is shaped and decorated into bangles and small traditional objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Himachal Pradesh': [
+    { title: 'Kullu Shawl Weaving', place: 'Kullu', short: 'Woollen shawls known for colourful geometric borders and traditional patterns.', description: 'Woollen shawls known for colourful geometric borders and traditional patterns.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kinnauri Shawl', place: 'Kinnaur', short: 'Fine woollen shawls with distinctive patterned borders and regional motifs.', description: 'Fine woollen shawls with distinctive patterned borders and regional motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Chamba Rumal', place: 'Chamba', short: 'Embroidered textile traditionally using fine double-sided needlework to depict narrative scenes.', description: 'Embroidered textile traditionally using fine double-sided needlework to depict narrative scenes.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Himachali Cap Weaving', place: 'Himachal Pradesh', short: 'Traditional woollen headgear produced in regional textile traditions.', description: 'Traditional woollen headgear produced in regional textile traditions.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Pattu Weaving', place: 'Himachal Pradesh', short: 'Handwoven woollen cloth used in traditional clothing and household textiles.', description: 'Handwoven woollen cloth used in traditional clothing and household textiles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Himachal Pradesh', short: 'Decorative carving used in temples, homes, furniture and household objects.', description: 'Decorative carving used in temples, homes, furniture and household objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Metal Craft', place: 'Himachal Pradesh', short: 'Traditional brass and copper objects used for household and ritual purposes.', description: 'Traditional brass and copper objects used for household and ritual purposes.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo & Ringal Craft', place: 'Himachal Pradesh', short: 'Baskets and utility objects woven from bamboo and ringal, a Himalayan cane.', description: 'Baskets and utility objects woven from bamboo and ringal, a Himalayan cane.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Jharkhand': [
+    { title: 'Dokra Metal Craft', place: 'Jharkhand', short: 'Lost-wax metal casting used for figurines, jewellery and ritual objects.', description: 'Lost-wax metal casting used for figurines, jewellery and ritual objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Sohrai Painting', place: 'Hazaribagh region', short: 'Wall-painting tradition using natural earth colours and animal, plant and geometric motifs.', description: 'Wall-painting tradition using natural earth colours and animal, plant and geometric motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Khovar Painting', place: 'Hazaribagh region', short: 'Traditional wall art associated with marriage rituals and stylised natural imagery.', description: 'Traditional wall art associated with marriage rituals and stylised natural imagery.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Tussar Silk Weaving', place: 'Jharkhand', short: 'Handwoven tussar silk textiles produced from locally important silkworm traditions.', description: 'Handwoven tussar silk textiles produced from locally important silkworm traditions.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo Craft', place: 'Jharkhand', short: 'Baskets, mats and household articles woven from bamboo.', description: 'Baskets, mats and household articles woven from bamboo.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Lac Craft', place: 'Jharkhand', short: 'Lac is processed into bangles and decorative objects by traditional artisans.', description: 'Lac is processed into bangles and decorative objects by traditional artisans.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Jharkhand', short: 'Carved wooden objects and ritual forms reflecting regional and tribal design traditions.', description: 'Carved wooden objects and ritual forms reflecting regional and tribal design traditions.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Tribal Jewellery Craft', place: 'Jharkhand', short: 'Handmade metal, bead and natural-material ornaments used in traditional dress.', description: 'Handmade metal, bead and natural-material ornaments used in traditional dress.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Karnataka': [
+    { title: 'Mysore Silk', place: 'Mysuru', short: 'Fine silk weaving known for smooth fabric, zari borders and long-established Mysuru production.', description: 'Fine silk weaving known for smooth fabric, zari borders and long-established Mysuru production.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Mysore Rosewood Inlay', place: 'Mysuru', short: 'Decorative furniture and objects using intricate inlay in rosewood and other materials.', description: 'Decorative furniture and objects using intricate inlay in rosewood and other materials.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Channapatna Toys', place: 'Channapatna', short: 'Lacquered wooden toys turned from soft wood and brightly finished with traditional techniques.', description: 'Lacquered wooden toys turned from soft wood and brightly finished with traditional techniques.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bidriware', place: 'Bidar', short: 'Metal craft using a darkened alloy body with fine silver inlay.', description: 'Metal craft using a darkened alloy body with fine silver inlay.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kasuti Embroidery', place: 'North Karnataka', short: 'Hand embroidery known for geometric motifs and counted-thread techniques.', description: 'Hand embroidery known for geometric motifs and counted-thread techniques.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Ilkal Saree Weaving', place: 'Ilkal', short: 'Handwoven cotton/silk sarees recognised for distinctive borders and pallu construction.', description: 'Handwoven cotton/silk sarees recognised for distinctive borders and pallu construction.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kinhal Toys', place: 'Koppal district', short: 'Painted wooden toys and figures traditionally made by artisans of Kinhal.', description: 'Painted wooden toys and figures traditionally made by artisans of Kinhal.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Mysore Ganjifa', place: 'Mysuru', short: 'Hand-painted playing cards using traditional miniature painting styles and themes.', description: 'Hand-painted playing cards using traditional miniature painting styles and themes.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Kerala': [
+    { title: 'Coir Craft', place: 'Kerala', short: 'Coconut fibre is spun and woven into mats, ropes, floor coverings and utility products.', description: 'Coconut fibre is spun and woven into mats, ropes, floor coverings and utility products.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Aranmula Kannadi', place: 'Aranmula', short: 'Hand-polished metal mirrors made from a traditional alloy and associated with the Aranmula craft lineage.', description: 'Hand-polished metal mirrors made from a traditional alloy and associated with the Aranmula craft lineage.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Screw Pine Weaving', place: 'Kerala', short: 'Screw-pine leaves are processed and woven into mats, bags and household articles.', description: 'Screw-pine leaves are processed and woven into mats, bags and household articles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bell Metal Craft', place: 'Kerala', short: 'Traditional cast-metal vessels and ritual objects made by specialist metalworkers.', description: 'Traditional cast-metal vessels and ritual objects made by specialist metalworkers.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Nettur Petti', place: 'Kerala', short: 'Decorative wooden chests with pitched-roof forms and detailed metal ornamentation.', description: 'Decorative wooden chests with pitched-roof forms and detailed metal ornamentation.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Kerala', short: 'Carved wood is widely used in temple architecture, household objects and traditional furniture.', description: 'Carved wood is widely used in temple architecture, household objects and traditional furniture.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kasavu Handloom', place: 'Kerala', short: 'Handwoven cream textiles with the characteristic gold-toned kasavu border.', description: 'Handwoven cream textiles with the characteristic gold-toned kasavu border.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kuthampully Weaving', place: 'Kuthampully, Thrissur', short: 'Traditional handloom sarees and garments, including fine cotton and kasavu textiles.', description: 'Traditional handloom sarees and garments, including fine cotton and kasavu textiles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Madhya Pradesh': [
+    { title: 'Chanderi Weaving', place: 'Chanderi', short: 'Fine lightweight handwoven textiles known for delicate texture and zari borders.', description: 'Fine lightweight handwoven textiles known for delicate texture and zari borders.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Maheshwari Weaving', place: 'Maheshwar', short: 'Handwoven sarees and fabrics recognised for reversible borders and elegant geometric designs.', description: 'Handwoven sarees and fabrics recognised for reversible borders and elegant geometric designs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bagh Printing', place: 'Bagh, Dhar district', short: 'Hand block printing on fabric using repeated carved blocks and traditional dyeing processes.', description: 'Hand block printing on fabric using repeated carved blocks and traditional dyeing processes.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Gond Art', place: 'Madhya Pradesh', short: 'Narrative visual tradition using rhythmic lines, dots and nature-inspired forms.', description: 'Narrative visual tradition using rhythmic lines, dots and nature-inspired forms.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bell Metal Craft of Datia & Tikamgarh', place: 'Datia and Tikamgarh', short: 'Bell-metal objects made by traditional metalworking methods.', description: 'Bell-metal objects made by traditional metalworking methods.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo Craft', place: 'Madhya Pradesh', short: 'Baskets, furniture and utility articles made from bamboo and other natural fibres.', description: 'Baskets, furniture and utility articles made from bamboo and other natural fibres.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Terracotta Craft', place: 'Madhya Pradesh', short: 'Hand-shaped and fired clay figures, vessels and decorative pieces.', description: 'Hand-shaped and fired clay figures, vessels and decorative pieces.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Madhya Pradesh', short: 'Carved wooden objects and architectural elements made by regional artisan communities.', description: 'Carved wooden objects and architectural elements made by regional artisan communities.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Maharashtra': [
+    { title: 'Paithani Weaving', place: 'Paithan & Yeola', short: 'Silk sarees with elaborate zari borders and distinctive peacock or floral motifs.', description: 'Silk sarees with elaborate zari borders and distinctive peacock or floral motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kolhapuri Chappal', place: 'Kolhapur', short: 'Handcrafted leather sandals known for stitched construction and traditional designs.', description: 'Handcrafted leather sandals known for stitched construction and traditional designs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Sawantwadi Lacquer Craft', place: 'Sawantwadi', short: 'Turned and lacquer-finished wooden toys and decorative objects.', description: 'Turned and lacquer-finished wooden toys and decorative objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Himroo Weaving', place: 'Aurangabad region', short: 'Decorative handwoven textiles historically associated with Aurangabad.', description: 'Decorative handwoven textiles historically associated with Aurangabad.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Solapur Chaddar', place: 'Solapur', short: 'Woven cotton bedcovers known for their distinctive designs and durable construction.', description: 'Woven cotton bedcovers known for their distinctive designs and durable construction.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Warli Painting', place: 'Palghar region', short: 'Geometric visual storytelling tradition associated with Warli communities.', description: 'Geometric visual storytelling tradition associated with Warli communities.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bidri & Metal Craft', place: 'Maharashtra', short: 'Decorative metal objects made using traditional inlay and casting skills in specialist centres.', description: 'Decorative metal objects made using traditional inlay and casting skills in specialist centres.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Coconut & Cane Craft', place: 'Konkan', short: 'Baskets, mats and household objects made from plant fibres in coastal communities.', description: 'Baskets, mats and household objects made from plant fibres in coastal communities.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Manipur': [
+    { title: 'Moirang Phee', place: 'Manipur', short: 'Traditional handwoven textile known for its distinctive striped and patterned appearance.', description: 'Traditional handwoven textile known for its distinctive striped and patterned appearance.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wangkhei Phee', place: 'Imphal region', short: 'Fine handloom textile traditionally woven by specialist women weavers.', description: 'Fine handloom textile traditionally woven by specialist women weavers.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Longpi Pottery', place: 'Longpi, Ukhrul', short: 'Black pottery made from a special clay-and-stone mixture and shaped without a potter’s wheel.', description: 'Black pottery made from a special clay-and-stone mixture and shaped without a potter’s wheel.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kauna Reed Craft', place: 'Manipur', short: 'Water-reed craft used to make mats, baskets, bags and furniture.', description: 'Water-reed craft used to make mats, baskets, bags and furniture.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo Craft', place: 'Manipur', short: 'Bamboo is woven into baskets, household objects and traditional equipment.', description: 'Bamboo is woven into baskets, household objects and traditional equipment.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cane Craft', place: 'Manipur', short: 'Cane furniture, baskets and utility products made through traditional weaving.', description: 'Cane furniture, baskets and utility products made through traditional weaving.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Shaphee Lanphee', place: 'Manipur', short: 'Traditional handwoven textile associated with local dress and ceremonial use.', description: 'Traditional handwoven textile associated with local dress and ceremonial use.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Tribal Textile Weaving', place: 'Manipur hills', short: 'Community-specific shawls and textiles preserve local motifs, identity and weaving skills.', description: 'Community-specific shawls and textiles preserve local motifs, identity and weaving skills.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Meghalaya': [
+    { title: 'Ryndia / Eri Silk', place: 'Meghalaya', short: 'Handspun and handwoven eri silk textile traditionally associated with Khasi and other communities.', description: 'Handspun and handwoven eri silk textile traditionally associated with Khasi and other communities.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Khasi Cane & Bamboo Craft', place: 'Meghalaya', short: 'Baskets, mats, furniture and containers made from cane and bamboo.', description: 'Baskets, mats, furniture and containers made from cane and bamboo.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Lyrnai Pottery', place: 'Jaintia Hills', short: 'Traditional pottery made by hand using local clay without relying on a conventional wheel.', description: 'Traditional pottery made by hand using local clay without relying on a conventional wheel.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Dakmanda Weaving', place: 'Garo Hills', short: 'Traditional handloom textile associated with Garo communities.', description: 'Traditional handloom textile associated with Garo communities.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo Baskets', place: 'Meghalaya', short: 'Strong woven baskets used for carrying agricultural and household goods.', description: 'Strong woven baskets used for carrying agricultural and household goods.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Meghalaya', short: 'Carved wood used for decorative objects, household items and community spaces.', description: 'Carved wood used for decorative objects, household items and community spaces.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cane Furniture', place: 'Meghalaya', short: 'Handmade chairs, tables and other furniture woven from cane.', description: 'Handmade chairs, tables and other furniture woven from cane.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Handloom Shawls', place: 'Meghalaya', short: 'Locally woven shawls and wraps featuring community-specific patterns.', description: 'Locally woven shawls and wraps featuring community-specific patterns.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Mizoram': [
+    { title: 'Puan Weaving', place: 'Mizoram', short: 'Handwoven traditional textiles used in Mizo dress, with distinctive stripes and motifs.', description: 'Handwoven traditional textiles used in Mizo dress, with distinctive stripes and motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Mizo Shawl Weaving', place: 'Mizoram', short: 'Traditional shawls and wraps woven on backstrap and other local looms.', description: 'Traditional shawls and wraps woven on backstrap and other local looms.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo Craft', place: 'Mizoram', short: 'Bamboo is made into baskets, mats, containers and household products.', description: 'Bamboo is made into baskets, mats, containers and household products.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cane Craft', place: 'Mizoram', short: 'Cane weaving produces baskets, furniture and utility objects.', description: 'Cane weaving produces baskets, furniture and utility objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Mizo Handloom', place: 'Mizoram', short: 'Handloom weaving preserves traditional patterns used in garments and ceremonial textiles.', description: 'Handloom weaving preserves traditional patterns used in garments and ceremonial textiles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Mizoram', short: 'Woodworking and carving are used for decorative and functional objects.', description: 'Woodworking and carving are used for decorative and functional objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo Hat Craft', place: 'Mizoram', short: 'Traditional headgear and decorative forms made from woven bamboo.', description: 'Traditional headgear and decorative forms made from woven bamboo.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Traditional Basketry', place: 'Mizoram', short: 'Woven carrying and storage baskets adapted to local agricultural life.', description: 'Woven carrying and storage baskets adapted to local agricultural life.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Nagaland': [
+    { title: 'Naga Shawl Weaving', place: 'Nagaland', short: 'Handwoven shawls whose colours and motifs can communicate community identity and status.', description: 'Handwoven shawls whose colours and motifs can communicate community identity and status.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Naga Textile Weaving', place: 'Nagaland', short: 'Traditional backstrap-loom textiles used for shawls, wraps and ceremonial clothing.', description: 'Traditional backstrap-loom textiles used for shawls, wraps and ceremonial clothing.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo Craft', place: 'Nagaland', short: 'Bamboo is woven into baskets, mats, containers and household objects.', description: 'Bamboo is woven into baskets, mats, containers and household objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cane Craft', place: 'Nagaland', short: 'Cane is used for baskets, furniture and practical household articles.', description: 'Cane is used for baskets, furniture and practical household articles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Nagaland', short: 'Carved wood is used in traditional architecture, household objects and ceremonial forms.', description: 'Carved wood is used in traditional architecture, household objects and ceremonial forms.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Beadwork', place: 'Nagaland', short: 'Colourful bead ornaments form an important part of traditional dress and adornment.', description: 'Colourful bead ornaments form an important part of traditional dress and adornment.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Naga Spear & Tool Craft', place: 'Nagaland', short: 'Traditional ironworking produced tools and implements used in community life.', description: 'Traditional ironworking produced tools and implements used in community life.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Tribal Basketry', place: 'Nagaland', short: 'Handwoven baskets are used for carrying, storage and agricultural work.', description: 'Handwoven baskets are used for carrying, storage and agricultural work.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Odisha': [
+    { title: 'Pattachitra', place: 'Raghurajpur, Puri district', short: 'Narrative cloth painting tradition using controlled lines, decorative borders and mythological themes.', description: 'Narrative cloth painting tradition using controlled lines, decorative borders and mythological themes.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Pipili Appliqué', place: 'Pipili, Puri district', short: 'Bright fabric appliqué used for canopies, umbrellas, bags and decorative objects.', description: 'Bright fabric appliqué used for canopies, umbrellas, bags and decorative objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cuttack Silver Filigree', place: 'Cuttack', short: 'Fine silver wire is twisted and soldered into intricate jewellery and decorative forms.', description: 'Fine silver wire is twisted and soldered into intricate jewellery and decorative forms.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Sambalpuri Bandha', place: 'Sambalpur region', short: 'Ikat tie-dye weaving in which yarns are resist-dyed before being woven into patterned textiles.', description: 'Ikat tie-dye weaving in which yarns are resist-dyed before being woven into patterned textiles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Dhokra Metal Craft', place: 'Odisha', short: 'Lost-wax metal casting used for figurines, ritual objects and decorative pieces.', description: 'Lost-wax metal casting used for figurines, ritual objects and decorative pieces.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Stone Carving', place: 'Odisha', short: 'Carved stone is used for sculpture, temple decoration and traditional architectural work.', description: 'Carved stone is used for sculpture, temple decoration and traditional architectural work.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Palm Leaf Engraving', place: 'Odisha', short: 'Illustrations and writing are incised onto prepared palm leaves and blackened for visibility.', description: 'Illustrations and writing are incised onto prepared palm leaves and blackened for visibility.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Terracotta Craft', place: 'Odisha', short: 'Hand-shaped and fired clay toys, vessels and decorative forms are made in several districts.', description: 'Hand-shaped and fired clay toys, vessels and decorative forms are made in several districts.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Punjab': [
+    { title: 'Phulkari Embroidery', place: 'Punjab', short: 'Floral embroidery traditionally worked on cloth using coloured silk thread.', description: 'Floral embroidery traditionally worked on cloth using coloured silk thread.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Punjabi Jutti', place: 'Punjab', short: 'Handcrafted embroidered leather footwear with regional decorative styles.', description: 'Handcrafted embroidered leather footwear with regional decorative styles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Durrie Weaving', place: 'Punjab', short: 'Flat-woven floor coverings made with cotton or woollen yarns.', description: 'Flat-woven floor coverings made with cotton or woollen yarns.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Punjab', short: 'Decorative carved wood used in furniture, architectural elements and household objects.', description: 'Decorative carved wood used in furniture, architectural elements and household objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Brass & Copper Craft', place: 'Punjab', short: 'Traditional metal vessels and decorative pieces made by skilled metalworkers.', description: 'Traditional metal vessels and decorative pieces made by skilled metalworkers.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Panja Durrie Weaving', place: 'Punjab', short: 'Handwoven durries using a traditional panja-style weaving technique.', description: 'Handwoven durries using a traditional panja-style weaving technique.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Basketry', place: 'Punjab', short: 'Woven baskets and utility objects made from reeds and other natural fibres.', description: 'Woven baskets and utility objects made from reeds and other natural fibres.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Textile Embroidery', place: 'Punjab', short: 'Regional hand embroidery used on garments, household textiles and ceremonial pieces.', description: 'Regional hand embroidery used on garments, household textiles and ceremonial pieces.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Rajasthan': [
+    { title: 'Blue Pottery of Jaipur', place: 'Jaipur', short: 'Glazed decorative pottery with a distinctive quartz-based body and blue-and-white designs.', description: 'Glazed decorative pottery with a distinctive quartz-based body and blue-and-white designs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bagru Hand Block Printing', place: 'Bagru, Jaipur district', short: 'Block printing using carved wooden blocks, resist methods and natural or synthetic dyes.', description: 'Block printing using carved wooden blocks, resist methods and natural or synthetic dyes.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Sanganeri Hand Block Printing', place: 'Sanganer, Jaipur', short: 'Fine floral and figurative block printing traditionally associated with Sanganer.', description: 'Fine floral and figurative block printing traditionally associated with Sanganer.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bandhani Tie-Dye', place: 'Rajasthan', short: 'Resist tie-and-dye textile tradition creating dotted and patterned surfaces.', description: 'Resist tie-and-dye textile tradition creating dotted and patterned surfaces.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Thewa Art', place: 'Pratapgarh', short: 'Gold sheets are fused onto coloured glass to create intricate jewellery and decorative panels.', description: 'Gold sheets are fused onto coloured glass to create intricate jewellery and decorative panels.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Molela Terracotta', place: 'Molela, Rajsamand', short: 'Terracotta plaques and figures traditionally associated with shrine and folk-religious use.', description: 'Terracotta plaques and figures traditionally associated with shrine and folk-religious use.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kathputli Craft', place: 'Rajasthan', short: 'Wooden puppet figures with painted faces and textile costumes used in traditional storytelling.', description: 'Wooden puppet figures with painted faces and textile costumes used in traditional storytelling.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Marble Handicraft', place: 'Rajasthan', short: 'Carved marble objects and decorative work produced by specialist stone artisans.', description: 'Carved marble objects and decorative work produced by specialist stone artisans.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kundan & Meenakari', place: 'Jaipur', short: 'Jewellery traditions using gemstone setting and colourful enamel decoration.', description: 'Jewellery traditions using gemstone setting and colourful enamel decoration.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Lac Bangle Craft', place: 'Rajasthan', short: 'Lac is shaped, coloured and decorated into bangles and ornaments.', description: 'Lac is shaped, coloured and decorated into bangles and ornaments.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Mojari / Jutti Craft', place: 'Rajasthan', short: 'Handcrafted leather footwear often decorated with embroidery and traditional motifs.', description: 'Handcrafted leather footwear often decorated with embroidery and traditional motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Dabu Block Printing', place: 'Rajasthan', short: 'Mud-resist block printing tradition associated with Bagru and surrounding craft communities.', description: 'Mud-resist block printing tradition associated with Bagru and surrounding craft communities.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kota Doria Weaving', place: 'Kota', short: 'Lightweight handwoven fabric recognised for its characteristic square-check texture.', description: 'Lightweight handwoven fabric recognised for its characteristic square-check texture.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Phad Painting', place: 'Bhilwara & Shahpura region', short: 'Long narrative painted cloths traditionally used to tell stories of folk deities.', description: 'Long narrative painted cloths traditionally used to tell stories of folk deities.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Leather Craft', place: 'Rajasthan', short: 'Traditional leatherwork includes bags, saddles, footwear and decorative articles.', description: 'Traditional leatherwork includes bags, saddles, footwear and decorative articles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Sikkim': [
+    { title: 'Sikkim Carpet Weaving', place: 'Sikkim', short: 'Handwoven carpets featuring geometric and Buddhist-inspired motifs.', description: 'Handwoven carpets featuring geometric and Buddhist-inspired motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Lepcha Weaving', place: 'Sikkim', short: 'Traditional Lepcha textiles woven with distinctive colours and patterns.', description: 'Traditional Lepcha textiles woven with distinctive colours and patterns.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Thangka Painting', place: 'Sikkim monasteries', short: 'Buddhist religious paintings made with prescribed iconography and fine detail.', description: 'Buddhist religious paintings made with prescribed iconography and fine detail.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Sikkim', short: 'Carved wood is used for furniture, decorative panels and Buddhist artistic forms.', description: 'Carved wood is used for furniture, decorative panels and Buddhist artistic forms.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo Craft', place: 'Sikkim', short: 'Bamboo is woven into baskets, containers and household articles.', description: 'Bamboo is woven into baskets, containers and household articles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cane Craft', place: 'Sikkim', short: 'Cane is used for furniture, baskets and utility objects.', description: 'Cane is used for furniture, baskets and utility objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Handmade Paper', place: 'Sikkim', short: 'Traditional-style handmade paper is produced from plant fibres and used for crafts and stationery.', description: 'Traditional-style handmade paper is produced from plant fibres and used for crafts and stationery.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wool Weaving', place: 'Sikkim', short: 'Woollen textiles and wraps are woven for mountain climate and traditional dress.', description: 'Woollen textiles and wraps are woven for mountain climate and traditional dress.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Tamil Nadu': [
+    { title: 'Kanchipuram Silk Weaving', place: 'Kanchipuram', short: 'Silk sarees known for contrasting borders, zari work and traditional woven motifs.', description: 'Silk sarees known for contrasting borders, zari work and traditional woven motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Tanjore / Thanjavur Art', place: 'Thanjavur', short: 'Decorative paintings with rich colour, relief work and gold-toned surfaces.', description: 'Decorative paintings with rich colour, relief work and gold-toned surfaces.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Swamimalai Bronze Casting', place: 'Swamimalai, Thanjavur district', short: 'Traditional lost-wax bronze casting for Hindu religious images and sculptures.', description: 'Traditional lost-wax bronze casting for Hindu religious images and sculptures.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Thanjavur Dancing Dolls', place: 'Thanjavur', short: 'Weighted dolls designed to bob and sway, traditionally made as decorative toys.', description: 'Weighted dolls designed to bob and sway, traditionally made as decorative toys.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kalamkari of Tamil Nadu', place: 'Srikalahasti region', short: 'Hand-drawn and block-printed textile tradition using narrative and floral motifs.', description: 'Hand-drawn and block-printed textile tradition using narrative and floral motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Chettinad Wood Carving', place: 'Chettinad', short: 'Detailed wood carving used in traditional houses, furniture and architectural decoration.', description: 'Detailed wood carving used in traditional houses, furniture and architectural decoration.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Pattamadai Mat Weaving', place: 'Pattamadai, Tirunelveli', short: 'Fine korai-grass mats woven with intricate patterns and sometimes names or motifs.', description: 'Fine korai-grass mats woven with intricate patterns and sometimes names or motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kumbakonam Brass & Bell Metal', place: 'Kumbakonam region', short: 'Traditional metal vessels and ritual objects made by specialist artisans.', description: 'Traditional metal vessels and ritual objects made by specialist artisans.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Nachiarkoil Kuthuvilakku', place: 'Nachiarkoil', short: 'Decorative brass oil lamps made through traditional metalworking techniques.', description: 'Decorative brass oil lamps made through traditional metalworking techniques.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Temple Jewellery', place: 'Tamil Nadu', short: 'Traditional jewellery made for classical dancers and ceremonial use, often using gold-coloured metal and stones.', description: 'Traditional jewellery made for classical dancers and ceremonial use, often using gold-coloured metal and stones.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Telangana': [
+    { title: 'Pochampally Ikat', place: 'Pochampally, Yadadri Bhuvanagiri', short: 'Resist-dyed yarns create precise geometric patterns in handwoven textiles.', description: 'Resist-dyed yarns create precise geometric patterns in handwoven textiles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bidri Craft', place: 'Hyderabad / Bidar tradition', short: 'Dark metal objects decorated with fine silver inlay; the craft is historically practised in the Deccan.', description: 'Dark metal objects decorated with fine silver inlay; the craft is historically practised in the Deccan.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Pembarthi Metal Craft', place: 'Pembarthi, Jangaon district', short: 'Hand-hammered brass sheet craft used for decorative and architectural objects.', description: 'Hand-hammered brass sheet craft used for decorative and architectural objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cheriyal Painting', place: 'Cheriyal, Siddipet district', short: 'Narrative scroll painting tradition using bold colours and folk storytelling imagery.', description: 'Narrative scroll painting tradition using bold colours and folk storytelling imagery.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Nirmal Paintings', place: 'Nirmal', short: 'Decorative painting tradition on wood and other surfaces, often using stylised natural motifs.', description: 'Decorative painting tradition on wood and other surfaces, often using stylised natural motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Nirmal Furniture', place: 'Nirmal', short: 'Painted and inlaid wooden furniture associated with the Nirmal craft tradition.', description: 'Painted and inlaid wooden furniture associated with the Nirmal craft tradition.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Dhokra Craft', place: 'Telangana', short: 'Lost-wax metal casting used for folk figures, animals and decorative objects.', description: 'Lost-wax metal casting used for folk figures, animals and decorative objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kalamkari of Pedana', place: 'Pedana tradition', short: 'Hand block printing and dyeing of cotton textiles in the wider Andhra-Telangana craft region.', description: 'Hand block printing and dyeing of cotton textiles in the wider Andhra-Telangana craft region.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Tripura': [
+    { title: 'Bamboo Craft', place: 'Tripura', short: 'Bamboo is woven into baskets, mats, furniture and household utility products.', description: 'Bamboo is woven into baskets, mats, furniture and household utility products.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cane Craft', place: 'Tripura', short: 'Cane is used for baskets, furniture and decorative household objects.', description: 'Cane is used for baskets, furniture and decorative household objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Risa Weaving', place: 'Tripura', short: 'Traditional handwoven textile used as a distinctive part of Tripuri dress and identity.', description: 'Traditional handwoven textile used as a distinctive part of Tripuri dress and identity.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Rignai Weaving', place: 'Tripura', short: 'Handwoven lower garment textile produced in traditional Tripuri patterns.', description: 'Handwoven lower garment textile produced in traditional Tripuri patterns.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Rikutu Weaving', place: 'Tripura', short: 'Traditional handloom textile used in Tripuri clothing traditions.', description: 'Traditional handloom textile used in Tripuri clothing traditions.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo Mat Weaving', place: 'Tripura', short: 'Fine woven bamboo mats used for floors, walls and household purposes.', description: 'Fine woven bamboo mats used for floors, walls and household purposes.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Tripura', short: 'Carved wood is used for household, decorative and traditional objects.', description: 'Carved wood is used for household, decorative and traditional objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Handloom Shawls', place: 'Tripura', short: 'Woven shawls and wraps preserve local motifs and textile skills.', description: 'Woven shawls and wraps preserve local motifs and textile skills.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Uttar Pradesh': [
+    { title: 'Banarasi Brocade & Saree', place: 'Varanasi', short: 'Silk weaving tradition famous for zari brocades, intricate motifs and rich borders.', description: 'Silk weaving tradition famous for zari brocades, intricate motifs and rich borders.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Lucknow Chikankari', place: 'Lucknow', short: 'Delicate white and coloured thread embroidery worked on garments and textiles.', description: 'Delicate white and coloured thread embroidery worked on garments and textiles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Moradabad Brassware', place: 'Moradabad', short: 'Brass objects and decorative ware produced by specialist metalworkers.', description: 'Brass objects and decorative ware produced by specialist metalworkers.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bhadohi Carpet Weaving', place: 'Bhadohi', short: 'Hand-knotted and handwoven carpets produced in a major carpet-making region.', description: 'Hand-knotted and handwoven carpets produced in a major carpet-making region.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Khurja Pottery', place: 'Khurja, Bulandshahr', short: 'Glazed pottery known for colourful decoration and a long-established ceramic industry.', description: 'Glazed pottery known for colourful decoration and a long-established ceramic industry.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Nizamabad Black Pottery', place: 'Azamgarh region', short: 'Black pottery with polished surfaces and incised or silver-like decoration.', description: 'Black pottery with polished surfaces and incised or silver-like decoration.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Gorakhpur Terracotta', place: 'Gorakhpur', short: 'Hand-shaped fired clay figures and decorative objects, especially animal forms.', description: 'Hand-shaped fired clay figures and decorative objects, especially animal forms.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Chunar Glaze Pottery', place: 'Chunar, Mirzapur', short: 'Glazed pottery tradition associated with the historic ceramic centre of Chunar.', description: 'Glazed pottery tradition associated with the historic ceramic centre of Chunar.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Saharanpur Wood Carving', place: 'Saharanpur', short: 'Intricate carved wooden furniture, panels and decorative objects.', description: 'Intricate carved wooden furniture, panels and decorative objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Agra Marble Inlay', place: 'Agra', short: 'Stone inlay craft inspired by the pietra dura tradition, using coloured stones in marble.', description: 'Stone inlay craft inspired by the pietra dura tradition, using coloured stones in marble.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Uttarakhand': [
+    { title: 'Aipan Art', place: 'Kumaon', short: 'Ritual floor and wall designs drawn with rice paste on red ochre backgrounds.', description: 'Ritual floor and wall designs drawn with rice paste on red ochre backgrounds.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Ringal Bamboo Craft', place: 'Uttarakhand Himalaya', short: 'Fine Himalayan bamboo craft used for baskets, containers and household articles.', description: 'Fine Himalayan bamboo craft used for baskets, containers and household articles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Woollen Weaving', place: 'Uttarakhand', short: 'Handwoven woollen shawls, blankets and garments adapted to mountain life.', description: 'Handwoven woollen shawls, blankets and garments adapted to mountain life.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Pichora Textile', place: 'Kumaon', short: 'Traditional women’s ceremonial textile decorated with auspicious red and yellow motifs.', description: 'Traditional women’s ceremonial textile decorated with auspicious red and yellow motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Rangwali Pichora', place: 'Kumaon', short: 'Printed or hand-decorated ceremonial cloth associated with Kumaoni weddings and festivals.', description: 'Printed or hand-decorated ceremonial cloth associated with Kumaoni weddings and festivals.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Uttarakhand', short: 'Carved wood is used in traditional houses, temples and household objects.', description: 'Carved wood is used in traditional houses, temples and household objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Copperware', place: 'Almora region', short: 'Traditional copper vessels and ritual objects made by specialist metalworkers.', description: 'Traditional copper vessels and ritual objects made by specialist metalworkers.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Cane Basketry', place: 'Uttarakhand', short: 'Woven cane and bamboo baskets used for carrying and storing agricultural goods.', description: 'Woven cane and bamboo baskets used for carrying and storing agricultural goods.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'West Bengal': [
+    { title: 'Kantha Embroidery', place: 'Bengal', short: 'Layered cloth decorated with running stitches and motifs from nature, daily life and storytelling.', description: 'Layered cloth decorated with running stitches and motifs from nature, daily life and storytelling.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Dokra Metal Craft', place: 'Bankura, Bikna & other centres', short: 'Lost-wax metal casting used for figurines, animals, lamps and decorative objects.', description: 'Lost-wax metal casting used for figurines, animals, lamps and decorative objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bankura Panchmura Terracotta', place: 'Bankura', short: 'Fired clay figures and pottery, especially the distinctive Bankura horse form.', description: 'Fired clay figures and pottery, especially the distinctive Bankura horse form.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Santiniketan Leather Craft', place: 'Santiniketan', short: 'Handcrafted leather bags, wallets and accessories associated with the Santiniketan craft tradition.', description: 'Handcrafted leather bags, wallets and accessories associated with the Santiniketan craft tradition.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Baluchari Saree Weaving', place: 'Bishnupur, Bankura', short: 'Silk sarees with woven narrative panels and elaborate motifs in the pallu and borders.', description: 'Silk sarees with woven narrative panels and elaborate motifs in the pallu and borders.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Tant Handloom', place: 'West Bengal', short: 'Lightweight handwoven cotton sarees produced in several weaving centres of Bengal.', description: 'Lightweight handwoven cotton sarees produced in several weaving centres of Bengal.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Jute Craft', place: 'West Bengal', short: 'Jute fibre is turned into bags, baskets, mats, home décor and utility products.', description: 'Jute fibre is turned into bags, baskets, mats, home décor and utility products.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Krishnanagar Clay Dolls', place: 'Krishnanagar, Nadia', short: 'Highly detailed clay figures known for realistic modelling and painted surfaces.', description: 'Highly detailed clay figures known for realistic modelling and painted surfaces.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bengal Pattachitra', place: 'Pingla, Paschim Medinipur', short: 'Painted scrolls combining visual storytelling with the sung narratives of Patua artists.', description: 'Painted scrolls combining visual storytelling with the sung narratives of Patua artists.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Sholapith Craft', place: 'West Bengal', short: 'Lightweight pith from the shola plant is shaped into decorative, ritual and ceremonial objects.', description: 'Lightweight pith from the shola plant is shaped into decorative, ritual and ceremonial objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo & Cane Craft', place: 'West Bengal', short: 'Bamboo and cane are woven into baskets, furniture, mats and household objects.', description: 'Bamboo and cane are woven into baskets, furniture, mats and household objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Conch Shell Craft', place: 'Bengal', short: 'Conch shells are carved and polished into bangles, ritual objects and decorative pieces.', description: 'Conch shells are carved and polished into bangles, ritual objects and decorative pieces.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Wood Carving', place: 'Bankura & Bengal', short: 'Carved wooden objects, toys and decorative pieces made by regional artisan communities.', description: 'Carved wooden objects, toys and decorative pieces made by regional artisan communities.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Madur Mat Weaving', place: 'Medinipur', short: 'Fine mats woven from madur reed, ranging from everyday floor mats to decorative varieties.', description: 'Fine mats woven from madur reed, ranging from everyday floor mats to decorative varieties.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Batik Craft', place: 'Santiniketan & Bengal', short: 'Wax-resist dyeing technique used on textiles to create patterned and multicoloured surfaces.', description: 'Wax-resist dyeing technique used on textiles to create patterned and multicoloured surfaces.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Jammu and Kashmir': [
+    { title: 'Kashmir Pashmina', place: 'Kashmir', short: 'Fine woollen shawls woven from pashmina fibre and often decorated with embroidery.', description: 'Fine woollen shawls woven from pashmina fibre and often decorated with embroidery.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kashmir Sozani Embroidery', place: 'Kashmir', short: 'Fine needle embroidery traditionally used to decorate shawls and other textiles.', description: 'Fine needle embroidery traditionally used to decorate shawls and other textiles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kashmir Paper Mâché', place: 'Kashmir', short: 'Decorative objects formed from paper pulp and finished with painted floral and other motifs.', description: 'Decorative objects formed from paper pulp and finished with painted floral and other motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Walnut Wood Carving', place: 'Kashmir', short: 'Intricate carving in locally grown walnut wood for furniture and decorative objects.', description: 'Intricate carving in locally grown walnut wood for furniture and decorative objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kani Shawl Weaving', place: 'Kashmir', short: 'Handwoven shawls made with small wooden spindles to create complex patterns.', description: 'Handwoven shawls made with small wooden spindles to create complex patterns.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Khatamband Woodwork', place: 'Kashmir', short: 'Geometric ceiling panels assembled from small fitted wooden pieces without nails.', description: 'Geometric ceiling panels assembled from small fitted wooden pieces without nails.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Gabba & Namda Craft', place: 'Kashmir', short: 'Woollen floor coverings made through embroidery, felting and traditional surface decoration.', description: 'Woollen floor coverings made through embroidery, felting and traditional surface decoration.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Kashmir Carpet Weaving', place: 'Kashmir', short: 'Hand-knotted carpets with intricate floral and Persian-influenced designs.', description: 'Hand-knotted carpets with intricate floral and Persian-influenced designs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+  'Ladakh': [
+    { title: 'Ladakhi Wool Weaving', place: 'Ladakh', short: 'Wool from local pastoral traditions is spun and woven into warm clothing and household textiles.', description: 'Wool from local pastoral traditions is spun and woven into warm clothing and household textiles.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Ladakhi Carpet Weaving', place: 'Ladakh', short: 'Woollen carpets woven with geometric and Himalayan Buddhist-inspired motifs.', description: 'Woollen carpets woven with geometric and Himalayan Buddhist-inspired motifs.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Thangka Painting', place: 'Ladakh monasteries', short: 'Buddhist religious paintings made according to established Himalayan iconographic rules.', description: 'Buddhist religious paintings made according to established Himalayan iconographic rules.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Ladakhi Wood Carving', place: 'Ladakh', short: 'Carved wood is used in monastery decoration, furniture and traditional household objects.', description: 'Carved wood is used in monastery decoration, furniture and traditional household objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Bamboo & Willow Craft', place: 'Ladakh', short: 'Willow and other available plant materials are woven into baskets and practical objects.', description: 'Willow and other available plant materials are woven into baskets and practical objects.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Traditional Felt Craft', place: 'Ladakh', short: 'Felted wool is made into warm mats, footwear and other products suited to the high-altitude climate.', description: 'Felted wool is made into warm mats, footwear and other products suited to the high-altitude climate.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Woollen Textile Craft', place: 'Ladakh', short: 'Handspun and handwoven wool is used for shawls, wraps and everyday clothing.', description: 'Handspun and handwoven wool is used for shawls, wraps and everyday clothing.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+    { title: 'Metal & Ritual Craft', place: 'Ladakh', short: 'Metalworkers produce ritual vessels, lamps and decorative objects used in Himalayan Buddhist settings.', description: 'Metalworkers produce ritual vessels, lamps and decorative objects used in Himalayan Buddhist settings.', facts: ['Traditional craft of the region', 'Skills are passed through artisan and weaving communities', 'Materials and techniques reflect local resources and culture', 'The form continues in contemporary craft production'], medium: 'Traditional handcraft', theme: 'Material culture, skilled making and community heritage', source: 'Government of India handicrafts records / GI Registry / established craft documentation', verified: true },
+  ],
+};
+
+for (const [stateName, arts] of Object.entries(STATE_ARTS)) {
+  STATE_HIGHLIGHTS[stateName] ||= {};
+  STATE_HIGHLIGHTS[stateName].art = arts.map((item, index) => ({
+    id: `${stateName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-art-${index + 1}`,
+    title: item.title, short: item.short, image: null, place: item.place, period: 'Living art tradition',
+    medium: 'Traditional visual art', theme: 'Visual culture, storytelling and skilled practice',
+    description: item.description, facts: item.facts, gallery: [], source: item.source, verified: true, isArtHeritage: true
+  }));
+}
+
+for (const [stateName, crafts] of Object.entries(STATE_CRAFTS)) {
+  STATE_HIGHLIGHTS[stateName] ||= {};
+  STATE_HIGHLIGHTS[stateName].craft = crafts.map((item, index) => ({
+    id: `${stateName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-craft-${index + 1}`,
+    title: item.title, short: item.short, image: null, place: item.place, period: 'Living craft tradition',
+    medium: item.medium, theme: item.theme, description: item.description, facts: item.facts, gallery: [],
+    source: item.source, verified: true, isCraftHeritage: true
+  }));
+}
+
 for (const [stateName, places] of Object.entries(HISTORICAL_HERITAGE_PLACES)) {
   STATE_HIGHLIGHTS[stateName] ||= {};
   STATE_HIGHLIGHTS[stateName].history = places.map((item, index) => ({
@@ -2788,16 +5236,11351 @@ for (const [stateName, places] of Object.entries(HISTORICAL_HERITAGE_PLACES)) {
   }));
 }
 
+
+const STATE_ARCHITECTURE = {
+  "Himachal Pradesh": [
+    {
+      "id": "himachal-pradesh-architecture-1",
+      "title": "Kangra Fort",
+      "short": "Large hill fort with a long history and temples within the complex.",
+      "image": null,
+      "imageQuery": "Kangra Fort Kangra Himachal Pradesh India",
+      "place": "Kangra",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large hill fort with a long history and temples within the complex.",
+      "facts": [
+        "Ancient hill fort",
+        "Associated with the Katoch rulers",
+        "Located at the confluence of the Manjhi and Banganga rivers",
+        "Contains historic temples and fortifications"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-2",
+      "title": "Masroor Rock-Cut Temples",
+      "short": "Monolithic rock-cut temple group carved from sandstone.",
+      "image": null,
+      "imageQuery": "Masroor Rock-Cut Temples Kangra district Himachal Pradesh India",
+      "place": "Kangra district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monolithic rock-cut temple group carved from sandstone.",
+      "facts": [
+        "8th-century temple tradition",
+        "Rock-cut monolithic architecture",
+        "Dedicated mainly to Hindu deities",
+        "Located in the Kangra valley"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-3",
+      "title": "Key Monastery",
+      "short": "Major Tibetan Buddhist monastery perched high above the Spiti River.",
+      "image": null,
+      "imageQuery": "Key Monastery Spiti Himachal Pradesh India",
+      "place": "Spiti",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Tibetan Buddhist monastery perched high above the Spiti River.",
+      "facts": [
+        "Important Gelug monastery",
+        "Located in Spiti Valley",
+        "Historic monastic centre",
+        "Distinctive hilltop Himalayan architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-4",
+      "title": "Tabo Monastery",
+      "short": "Ancient Buddhist monastic complex famous for its wall paintings and sculpture.",
+      "image": null,
+      "imageQuery": "Tabo Monastery Spiti Himachal Pradesh India",
+      "place": "Spiti",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ancient Buddhist monastic complex famous for its wall paintings and sculpture.",
+      "facts": [
+        "Founded in 996 CE",
+        "Important Himalayan Buddhist site",
+        "Known for murals and stucco sculpture",
+        "Part of the Spiti cultural landscape"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-5",
+      "title": "Viceregal Lodge",
+      "short": "Colonial-era building that served as the summer residence of the Viceroy of India.",
+      "image": null,
+      "imageQuery": "Viceregal Lodge Shimla Himachal Pradesh India",
+      "place": "Shimla",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Colonial-era building that served as the summer residence of the Viceroy of India.",
+      "facts": [
+        "Built in the 19th century",
+        "Designed in a Scottish Baronial style",
+        "Located on Observatory Hill",
+        "Later became the Indian Institute of Advanced Study"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-6",
+      "title": "Christ Church, Shimla",
+      "short": "Landmark neo-Gothic church on the Ridge.",
+      "image": null,
+      "imageQuery": "Christ Church, Shimla Shimla Himachal Pradesh India",
+      "place": "Shimla",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Landmark neo-Gothic church on the Ridge.",
+      "facts": [
+        "Built in the 19th century",
+        "Neo-Gothic architecture",
+        "Located on Shimla Ridge",
+        "One of Shimla’s best-known colonial landmarks"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-7",
+      "title": "Naggar Castle",
+      "short": "Historic stone-and-timber castle combining Himalayan and later architectural influences.",
+      "image": null,
+      "imageQuery": "Naggar Castle Naggar, Kullu Himachal Pradesh India",
+      "place": "Naggar, Kullu",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic stone-and-timber castle combining Himalayan and later architectural influences.",
+      "facts": [
+        "Historic castle in Kullu",
+        "Stone-and-timber construction",
+        "Associated with Kullu rulers",
+        "Now functions as a heritage property"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-8",
+      "title": "Baijnath Temple",
+      "short": "Historic stone temple dedicated to Shiva and one of the region’s major sacred monuments.",
+      "image": null,
+      "imageQuery": "Baijnath Temple Kangra district Himachal Pradesh India",
+      "place": "Kangra district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic stone temple dedicated to Shiva and one of the region’s major sacred monuments.",
+      "facts": [
+        "Built in the early 13th century",
+        "Dedicated to Shiva",
+        "Nagari/early North Indian temple form",
+        "Located in the Kangra region"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Karnataka": [
+    {
+      "id": "karnataka-architecture-1",
+      "title": "Hampi",
+      "short": "Ruins of the Vijayanagara capital with temples, markets, waterworks and royal structures.",
+      "image": null,
+      "imageQuery": "Hampi Vijayanagara district Karnataka India",
+      "place": "Vijayanagara district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ruins of the Vijayanagara capital with temples, markets, waterworks and royal structures.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Capital of the Vijayanagara Empire",
+        "Large archaeological landscape",
+        "Includes Virupaksha and Vittala temple complexes"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-2",
+      "title": "Pattadakal",
+      "short": "Temple complex showing an important synthesis of northern and southern Indian architectural forms.",
+      "image": null,
+      "imageQuery": "Pattadakal Bagalkot district Karnataka India",
+      "place": "Bagalkot district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Temple complex showing an important synthesis of northern and southern Indian architectural forms.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Major Chalukyan temple centre",
+        "Built mainly in the 7th–8th centuries",
+        "Includes Virupaksha and Mallikarjuna temples"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-3",
+      "title": "Aihole",
+      "short": "Early Chalukyan temple landscape often called a laboratory of Indian temple architecture.",
+      "image": null,
+      "imageQuery": "Aihole Bagalkot district Karnataka India",
+      "place": "Bagalkot district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Early Chalukyan temple landscape often called a laboratory of Indian temple architecture.",
+      "facts": [
+        "Early Chalukyan centre",
+        "Large group of temples and monuments",
+        "Includes Durga and Lad Khan temples",
+        "Important to the history of Deccan architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-4",
+      "title": "Badami Cave Temples",
+      "short": "Rock-cut cave temples with Hindu and Jain sculpture overlooking Agastya Lake.",
+      "image": null,
+      "imageQuery": "Badami Cave Temples Bagalkot district Karnataka India",
+      "place": "Bagalkot district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Rock-cut cave temples with Hindu and Jain sculpture overlooking Agastya Lake.",
+      "facts": [
+        "Early Chalukyan rock-cut architecture",
+        "Four principal cave temples",
+        "Contains Hindu and Jain imagery",
+        "Carved into sandstone cliffs"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-5",
+      "title": "Belur Chennakeshava Temple",
+      "short": "Hoysala temple celebrated for intricate soapstone sculpture.",
+      "image": null,
+      "imageQuery": "Belur Chennakeshava Temple Hassan district Karnataka India",
+      "place": "Hassan district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Hoysala temple celebrated for intricate soapstone sculpture.",
+      "facts": [
+        "Hoysala-period architecture",
+        "Dedicated to Vishnu as Chennakeshava",
+        "Known for detailed soapstone carving",
+        "Part of the Sacred Ensembles of the Hoysalas"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-6",
+      "title": "Halebidu Hoysaleswara Temple",
+      "short": "Monumental Hoysala temple complex with dense sculptural decoration.",
+      "image": null,
+      "imageQuery": "Halebidu Hoysaleswara Temple Hassan district Karnataka India",
+      "place": "Hassan district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monumental Hoysala temple complex with dense sculptural decoration.",
+      "facts": [
+        "Hoysala-period temple",
+        "Dedicated to Shiva",
+        "Famous for exterior sculpture",
+        "Part of the Sacred Ensembles of the Hoysalas"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-7",
+      "title": "Mysore Palace",
+      "short": "Grand palace combining Indo-Saracenic, Hindu, Rajput and European architectural influences.",
+      "image": null,
+      "imageQuery": "Mysore Palace Mysuru Karnataka India",
+      "place": "Mysuru",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Grand palace combining Indo-Saracenic, Hindu, Rajput and European architectural influences.",
+      "facts": [
+        "Built in its present form in the early 20th century",
+        "Former Wadiyar royal residence",
+        "Indo-Saracenic architectural character",
+        "Major landmark of Mysuru"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-8",
+      "title": "Gol Gumbaz",
+      "short": "Monumental 17th-century mausoleum famous for its enormous dome.",
+      "image": null,
+      "imageQuery": "Gol Gumbaz Vijayapura Karnataka India",
+      "place": "Vijayapura",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monumental 17th-century mausoleum famous for its enormous dome.",
+      "facts": [
+        "Built for Muhammad Adil Shah",
+        "17th-century Deccan architecture",
+        "Huge masonry dome",
+        "Famous for its whispering gallery"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "West Bengal": [
+    {
+      "id": "west-bengal-architecture-1",
+      "title": "Howrah Bridge",
+      "short": "Iconic cantilever truss bridge across the Hooghly River and a major symbol of Kolkata.",
+      "image": null,
+      "imageQuery": "Howrah Bridge Kolkata–Howrah West Bengal India",
+      "place": "Kolkata–Howrah",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Iconic cantilever truss bridge across the Hooghly River and a major symbol of Kolkata.",
+      "facts": [
+        "Opened to traffic in 1943",
+        "Major steel cantilever bridge",
+        "Connects Kolkata and Howrah",
+        "Officially renamed Rabindra Setu"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-2",
+      "title": "Biswa Bangla Gate",
+      "short": "Contemporary observation and dining structure shaped as a large circular gateway.",
+      "image": null,
+      "imageQuery": "Biswa Bangla Gate Rajarhat, Kolkata West Bengal India",
+      "place": "Rajarhat, Kolkata",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Contemporary observation and dining structure shaped as a large circular gateway.",
+      "facts": [
+        "Modern landmark of Kolkata",
+        "Located in New Town",
+        "Observation deck and public attraction",
+        "Represents contemporary civic architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-3",
+      "title": "Victoria Memorial",
+      "short": "Monumental marble museum built in memory of Queen Victoria.",
+      "image": null,
+      "imageQuery": "Victoria Memorial Kolkata West Bengal India",
+      "place": "Kolkata",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monumental marble museum built in memory of Queen Victoria.",
+      "facts": [
+        "Opened in 1921",
+        "Built mainly of Makrana marble",
+        "Indo-Saracenic architectural character",
+        "Major museum and cultural landmark"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-4",
+      "title": "Writers’ Building",
+      "short": "Historic colonial administrative building that became a symbol of Bengal’s political history.",
+      "image": null,
+      "imageQuery": "Writers’ Building Kolkata West Bengal India",
+      "place": "Kolkata",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic colonial administrative building that became a symbol of Bengal’s political history.",
+      "facts": [
+        "Origin dates to the late 18th century",
+        "Associated with the East India Company and Bengal administration",
+        "Major colonial-era landmark",
+        "Located in B.B.D. Bagh"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-5",
+      "title": "Cooch Behar Palace",
+      "short": "Grand 19th-century palace inspired by European classical architecture.",
+      "image": null,
+      "imageQuery": "Cooch Behar Palace Cooch Behar West Bengal India",
+      "place": "Cooch Behar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Grand 19th-century palace inspired by European classical architecture.",
+      "facts": [
+        "Built in the late 19th century",
+        "Associated with the Cooch Behar royal family",
+        "Italian Renaissance-inspired exterior",
+        "Major heritage landmark of North Bengal"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-6",
+      "title": "Hazarduari Palace",
+      "short": "19th-century palace with a thousand-door name and neoclassical architecture.",
+      "image": null,
+      "imageQuery": "Hazarduari Palace Murshidabad West Bengal India",
+      "place": "Murshidabad",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "19th-century palace with a thousand-door name and neoclassical architecture.",
+      "facts": [
+        "Built in the 19th century",
+        "Associated with Nawab Nazim Humayun Jah",
+        "Neoclassical architectural style",
+        "Now houses a museum"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-7",
+      "title": "Bishnupur Temples",
+      "short": "Malla-period brick and laterite temples known for terracotta reliefs and distinctive roof forms.",
+      "image": null,
+      "imageQuery": "Bishnupur Temples Bishnupur, Bankura West Bengal India",
+      "place": "Bishnupur, Bankura",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Malla-period brick and laterite temples known for terracotta reliefs and distinctive roof forms.",
+      "facts": [
+        "Major Malla-era temple landscape",
+        "Includes Eka-Ratna and Pancha-Ratna forms",
+        "Terracotta reliefs depict narrative scenes",
+        "Bishnupur is on India’s UNESCO Tentative List"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-8",
+      "title": "Metcalfe Hall",
+      "short": "Neoclassical public building associated with the colonial-era intellectual and library culture of Calcutta.",
+      "image": null,
+      "imageQuery": "Metcalfe Hall Kolkata West Bengal India",
+      "place": "Kolkata",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Neoclassical public building associated with the colonial-era intellectual and library culture of Calcutta.",
+      "facts": [
+        "Built in the 1840s",
+        "Neoclassical architecture",
+        "Historic civic building",
+        "Located near the Hooghly riverfront"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Andhra Pradesh": [
+    {
+      "id": "andhra-pradesh-architecture-1",
+      "title": "Amaravati Mahachaitya",
+      "short": "Ancient Buddhist stupa site known for carved limestone reliefs.",
+      "image": null,
+      "imageQuery": "Amaravati Mahachaitya Amaravati Andhra Pradesh India",
+      "place": "Amaravati",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ancient Buddhist stupa site known for carved limestone reliefs.",
+      "facts": [
+        "Major Buddhist archaeological site",
+        "Ancient stupa and sculptural remains",
+        "Associated with the Satavahana-period Buddhist tradition",
+        "Amaravati sculptures are important to Indian art history"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-architecture-2",
+      "title": "Lepakshi Veerabhadra Temple",
+      "short": "Vijayanagara-period temple celebrated for sculpture, murals and its hanging-pillar tradition.",
+      "image": null,
+      "imageQuery": "Lepakshi Veerabhadra Temple Lepakshi, Sri Sathya Sai district Andhra Pradesh India",
+      "place": "Lepakshi, Sri Sathya Sai district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Vijayanagara-period temple celebrated for sculpture, murals and its hanging-pillar tradition.",
+      "facts": [
+        "Vijayanagara-period temple",
+        "Dedicated to Veerabhadra",
+        "Known for painted ceilings and stone sculpture",
+        "The complex includes the famous monolithic Nandi"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-architecture-3",
+      "title": "Undavalli Caves",
+      "short": "Rock-cut cave complex with a monumental reclining Vishnu image.",
+      "image": null,
+      "imageQuery": "Undavalli Caves Undavalli, near Vijayawada Andhra Pradesh India",
+      "place": "Undavalli, near Vijayawada",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Rock-cut cave complex with a monumental reclining Vishnu image.",
+      "facts": [
+        "Rock-cut cave architecture",
+        "Multi-storeyed excavated complex",
+        "Contains a large reclining Vishnu sculpture",
+        "Developed in the early medieval period"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-architecture-4",
+      "title": "Chandragiri Fort and Raja Mahal",
+      "short": "Historic hill fort and palace complex associated with the later Vijayanagara period.",
+      "image": null,
+      "imageQuery": "Chandragiri Fort and Raja Mahal Chandragiri, Tirupati district Andhra Pradesh India",
+      "place": "Chandragiri, Tirupati district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic hill fort and palace complex associated with the later Vijayanagara period.",
+      "facts": [
+        "Historic hill fort",
+        "Raja Mahal is a major surviving palace",
+        "Associated with Vijayanagara history",
+        "Later became important to the Nayaka-era political landscape"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-architecture-5",
+      "title": "Srikalahasti Temple",
+      "short": "Major Shaiva temple known for its Dravidian architecture and long pilgrimage history.",
+      "image": null,
+      "imageQuery": "Srikalahasti Temple Srikalahasti Andhra Pradesh India",
+      "place": "Srikalahasti",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Shaiva temple known for its Dravidian architecture and long pilgrimage history.",
+      "facts": [
+        "Major Shaiva pilgrimage centre",
+        "Associated with Vayu as one of the Pancha Bhoota temples",
+        "Large gopurams and mandapas",
+        "Historic temple complex developed over several periods"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-architecture-6",
+      "title": "Simhachalam Temple",
+      "short": "Historic hill temple dedicated to Varaha Narasimha with richly carved architecture.",
+      "image": null,
+      "imageQuery": "Simhachalam Temple Visakhapatnam Andhra Pradesh India",
+      "place": "Visakhapatnam",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic hill temple dedicated to Varaha Narasimha with richly carved architecture.",
+      "facts": [
+        "Major Vaishnava pilgrimage site",
+        "Dedicated to Varaha Narasimha",
+        "Historic stone temple architecture",
+        "Located on Simhachalam hill"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-architecture-7",
+      "title": "Bobbili Fort",
+      "short": "Historic fort-palace associated with the Bobbili royal family.",
+      "image": null,
+      "imageQuery": "Bobbili Fort Bobbili, Vizianagaram district Andhra Pradesh India",
+      "place": "Bobbili, Vizianagaram district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic fort-palace associated with the Bobbili royal family.",
+      "facts": [
+        "Associated with Bobbili rulers",
+        "Known for the 1757 Battle of Bobbili history",
+        "Fort-palace complex in the town",
+        "Part of Andhra Pradesh regional history"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-architecture-8",
+      "title": "Araku Tribal Museum & traditional architecture",
+      "short": "A cultural complex presenting the material culture and building traditions of tribal communities of the Eastern Ghats.",
+      "image": null,
+      "imageQuery": "Araku Tribal Museum & traditional architecture Araku Valley Andhra Pradesh India",
+      "place": "Araku Valley",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "A cultural complex presenting the material culture and building traditions of tribal communities of the Eastern Ghats.",
+      "facts": [
+        "Located in Araku Valley",
+        "Presents regional tribal material culture",
+        "Uses local architectural references",
+        "Connects built heritage with living traditions"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Arunachal Pradesh": [
+    {
+      "id": "arunachal-pradesh-architecture-1",
+      "title": "Tawang Monastery",
+      "short": "One of the largest Buddhist monasteries in India and a major centre of the Gelug tradition.",
+      "image": null,
+      "imageQuery": "Tawang Monastery Tawang Arunachal Pradesh India",
+      "place": "Tawang",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "One of the largest Buddhist monasteries in India and a major centre of the Gelug tradition.",
+      "facts": [
+        "Founded in the 17th century",
+        "Major Himalayan Buddhist monastery",
+        "Associated with the Gelug school",
+        "Contains important murals, manuscripts and ritual objects"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-architecture-2",
+      "title": "Bomdila Monastery",
+      "short": "Himalayan Buddhist monastery complex overlooking the surrounding mountain landscape.",
+      "image": null,
+      "imageQuery": "Bomdila Monastery Bomdila, West Kameng Arunachal Pradesh India",
+      "place": "Bomdila, West Kameng",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Himalayan Buddhist monastery complex overlooking the surrounding mountain landscape.",
+      "facts": [
+        "Important Buddhist institution",
+        "Located in West Kameng",
+        "Known for prayer halls and monastic life",
+        "Part of the region’s Tibetan Buddhist heritage"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-architecture-3",
+      "title": "Urgelling Monastery",
+      "short": "Historic Buddhist monastery traditionally associated with the birthplace of the Sixth Dalai Lama.",
+      "image": null,
+      "imageQuery": "Urgelling Monastery Tawang district Arunachal Pradesh India",
+      "place": "Tawang district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Buddhist monastery traditionally associated with the birthplace of the Sixth Dalai Lama.",
+      "facts": [
+        "Located near Tawang",
+        "Associated with Tsangyang Gyatso",
+        "Historic Buddhist pilgrimage site",
+        "Preserves Himalayan monastic architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-architecture-4",
+      "title": "Dirang Dzong",
+      "short": "Historic fortified settlement reflecting traditional administrative and defensive architecture.",
+      "image": null,
+      "imageQuery": "Dirang Dzong Dirang Arunachal Pradesh India",
+      "place": "Dirang",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic fortified settlement reflecting traditional administrative and defensive architecture.",
+      "facts": [
+        "Fortified settlement",
+        "Located in the Dirang valley",
+        "Traditional Himalayan building forms",
+        "Linked with the Monpa cultural landscape"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-architecture-5",
+      "title": "Itafort",
+      "short": "Historic fortification built mainly with bricks, traditionally associated with the medieval period.",
+      "image": null,
+      "imageQuery": "Itafort Itanagar Arunachal Pradesh India",
+      "place": "Itanagar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic fortification built mainly with bricks, traditionally associated with the medieval period.",
+      "facts": [
+        "Historic brick fortification",
+        "Located in present-day Itanagar",
+        "Traditional accounts associate it with the Chutiya period",
+        "Important regional archaeological landmark"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-architecture-6",
+      "title": "Malinithan Temple Ruins",
+      "short": "Archaeological temple remains with stone sculptures and medieval religious art.",
+      "image": null,
+      "imageQuery": "Malinithan Temple Ruins Likabali, Lower Siang Arunachal Pradesh India",
+      "place": "Likabali, Lower Siang",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Archaeological temple remains with stone sculptures and medieval religious art.",
+      "facts": [
+        "Archaeological site",
+        "Contains carved stone sculptures",
+        "Associated with medieval temple traditions",
+        "Located in the Siang region"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-architecture-7",
+      "title": "Gorsam Chorten",
+      "short": "Large stupa-shaped Buddhist monument inspired by Himalayan sacred architecture.",
+      "image": null,
+      "imageQuery": "Gorsam Chorten Zemithang, Tawang Arunachal Pradesh India",
+      "place": "Zemithang, Tawang",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large stupa-shaped Buddhist monument inspired by Himalayan sacred architecture.",
+      "facts": [
+        "Major Buddhist monument",
+        "Located in Zemithang",
+        "Built in a Himalayan Buddhist style",
+        "Important local pilgrimage site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-architecture-8",
+      "title": "Golden Pagoda",
+      "short": "Contemporary Buddhist temple complex influenced by Theravada architecture.",
+      "image": null,
+      "imageQuery": "Golden Pagoda Namsai Arunachal Pradesh India",
+      "place": "Namsai",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Contemporary Buddhist temple complex influenced by Theravada architecture.",
+      "facts": [
+        "Located in Namsai",
+        "Buddhist religious complex",
+        "Theravada architectural influence",
+        "Major contemporary cultural landmark"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Assam": [
+    {
+      "id": "assam-architecture-1",
+      "title": "Rang Ghar",
+      "short": "Two-storeyed Ahom royal sports pavilion and one of Assam’s best-known monuments.",
+      "image": null,
+      "imageQuery": "Rang Ghar Sivasagar Assam India",
+      "place": "Sivasagar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Two-storeyed Ahom royal sports pavilion and one of Assam’s best-known monuments.",
+      "facts": [
+        "Built during Ahom rule",
+        "Associated with royal viewing of games and festivities",
+        "Distinctive Ahom architecture",
+        "Located near Sivasagar"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "assam-architecture-2",
+      "title": "Talatal Ghar",
+      "short": "Large Ahom royal complex with multiple levels and underground passages.",
+      "image": null,
+      "imageQuery": "Talatal Ghar Sivasagar Assam India",
+      "place": "Sivasagar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large Ahom royal complex with multiple levels and underground passages.",
+      "facts": [
+        "Ahom royal architecture",
+        "Multi-level structure",
+        "Associated with the Sivasagar royal complex",
+        "Known for underground passages"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "assam-architecture-3",
+      "title": "Kareng Ghar",
+      "short": "Major Ahom royal palace complex representing court architecture of the period.",
+      "image": null,
+      "imageQuery": "Kareng Ghar Garhgaon, Sivasagar Assam India",
+      "place": "Garhgaon, Sivasagar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Ahom royal palace complex representing court architecture of the period.",
+      "facts": [
+        "Ahom royal palace",
+        "Located at Garhgaon",
+        "Built and rebuilt during Ahom rule",
+        "Important monument of Assam’s political history"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "assam-architecture-4",
+      "title": "Sivasagar Sivadol",
+      "short": "Historic Shaiva temple beside the Borpukhuri tank, with a tall shikhara.",
+      "image": null,
+      "imageQuery": "Sivasagar Sivadol Sivasagar Assam India",
+      "place": "Sivasagar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Shaiva temple beside the Borpukhuri tank, with a tall shikhara.",
+      "facts": [
+        "Built in the 18th century",
+        "Dedicated to Shiva",
+        "Part of the Sivasagar temple group",
+        "Major example of Ahom-period religious architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "assam-architecture-5",
+      "title": "Kamakhya Temple",
+      "short": "Major Shakta pilgrimage temple on Nilachal Hill with a distinctive regional architectural form.",
+      "image": null,
+      "imageQuery": "Kamakhya Temple Guwahati Assam India",
+      "place": "Guwahati",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Shakta pilgrimage temple on Nilachal Hill with a distinctive regional architectural form.",
+      "facts": [
+        "Major Shakta pilgrimage centre",
+        "Located on Nilachal Hill",
+        "Associated with the annual Ambubachi Mela",
+        "Temple architecture blends regional and later influences"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "assam-architecture-6",
+      "title": "Umananda Temple",
+      "short": "Historic Shiva temple on an island in the Brahmaputra.",
+      "image": null,
+      "imageQuery": "Umananda Temple Peacock Island, Guwahati Assam India",
+      "place": "Peacock Island, Guwahati",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Shiva temple on an island in the Brahmaputra.",
+      "facts": [
+        "Dedicated to Shiva",
+        "Located on Umananda Island",
+        "Historic pilgrimage site",
+        "Small-scale stone temple architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "assam-architecture-7",
+      "title": "Navagraha Temple",
+      "short": "Historic temple on Chitrachal Hill associated with the nine planetary deities.",
+      "image": null,
+      "imageQuery": "Navagraha Temple Guwahati Assam India",
+      "place": "Guwahati",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic temple on Chitrachal Hill associated with the nine planetary deities.",
+      "facts": [
+        "Located on Chitrachal Hill",
+        "Dedicated to the Navagrahas",
+        "Long-standing pilgrimage site",
+        "Important historic temple of Guwahati"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "assam-architecture-8",
+      "title": "Madan Kamdev",
+      "short": "Archaeological temple ruins and sculptural remains often compared with the sculptural richness of Khajuraho.",
+      "image": null,
+      "imageQuery": "Madan Kamdev Kamrup district Assam India",
+      "place": "Kamrup district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Archaeological temple ruins and sculptural remains often compared with the sculptural richness of Khajuraho.",
+      "facts": [
+        "Archaeological site",
+        "Medieval temple remains",
+        "Known for stone sculpture",
+        "Located near Baihata Chariali"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Bihar": [
+    {
+      "id": "bihar-architecture-1",
+      "title": "Mahabodhi Temple",
+      "short": "Historic Buddhist temple marking the traditional site of the Buddha’s enlightenment.",
+      "image": null,
+      "imageQuery": "Mahabodhi Temple Bodh Gaya Bihar India",
+      "place": "Bodh Gaya",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Buddhist temple marking the traditional site of the Buddha’s enlightenment.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Major Buddhist pilgrimage centre",
+        "Associated with the Buddha’s enlightenment",
+        "Present architectural form reflects long historical development"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "bihar-architecture-2",
+      "title": "Nalanda Mahavihara",
+      "short": "Archaeological remains of an ancient Buddhist monastic and learning centre.",
+      "image": null,
+      "imageQuery": "Nalanda Mahavihara Nalanda Bihar India",
+      "place": "Nalanda",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Archaeological remains of an ancient Buddhist monastic and learning centre.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Major ancient centre of Buddhist learning",
+        "Includes monasteries, temples and stupas",
+        "Flourished for many centuries"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "bihar-architecture-3",
+      "title": "Sher Shah Suri Tomb",
+      "short": "Monumental 16th-century mausoleum set within a large water tank.",
+      "image": null,
+      "imageQuery": "Sher Shah Suri Tomb Sasaram Bihar India",
+      "place": "Sasaram",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monumental 16th-century mausoleum set within a large water tank.",
+      "facts": [
+        "Built for Sher Shah Suri",
+        "16th-century Sur architecture",
+        "Located in Sasaram",
+        "Mausoleum stands within a tank"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "bihar-architecture-4",
+      "title": "Golghar",
+      "short": "Large domed grain store built in the late 18th century.",
+      "image": null,
+      "imageQuery": "Golghar Patna Bihar India",
+      "place": "Patna",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large domed grain store built in the late 18th century.",
+      "facts": [
+        "Built in 1786",
+        "Commissioned after a famine in the region",
+        "Large brick dome",
+        "Historic landmark of Patna"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "bihar-architecture-5",
+      "title": "Agam Kuan",
+      "short": "Ancient well site traditionally associated with the Mauryan period and later religious traditions.",
+      "image": null,
+      "imageQuery": "Agam Kuan Patna Bihar India",
+      "place": "Patna",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ancient well site traditionally associated with the Mauryan period and later religious traditions.",
+      "facts": [
+        "Ancient water structure",
+        "Located in Patna",
+        "Traditionally linked with Ashokan-era history",
+        "Continued religious significance"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "bihar-architecture-6",
+      "title": "Kesaria Stupa",
+      "short": "Massive ancient Buddhist stupa and major archaeological landmark.",
+      "image": null,
+      "imageQuery": "Kesaria Stupa East Champaran Bihar India",
+      "place": "East Champaran",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Massive ancient Buddhist stupa and major archaeological landmark.",
+      "facts": [
+        "Ancient Buddhist stupa",
+        "Located in East Champaran",
+        "One of the largest Buddhist stupas in India",
+        "Associated with the Buddhist archaeological landscape of Bihar"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "bihar-architecture-7",
+      "title": "Vikramshila Mahavihara",
+      "short": "Archaeological remains of an important Pala-period Buddhist university-monastery.",
+      "image": null,
+      "imageQuery": "Vikramshila Mahavihara Bhagalpur district Bihar India",
+      "place": "Bhagalpur district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Archaeological remains of an important Pala-period Buddhist university-monastery.",
+      "facts": [
+        "Founded under the Pala dynasty",
+        "Major Buddhist learning centre",
+        "Large monastery plan with a central shrine",
+        "Important archaeological site of eastern India"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "bihar-architecture-8",
+      "title": "Rajgir Cyclopean Wall",
+      "short": "Ancient stone defensive wall enclosing the historic Rajgir landscape.",
+      "image": null,
+      "imageQuery": "Rajgir Cyclopean Wall Rajgir Bihar India",
+      "place": "Rajgir",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ancient stone defensive wall enclosing the historic Rajgir landscape.",
+      "facts": [
+        "Ancient fortification",
+        "Built with large undressed stones",
+        "Associated with ancient Rajagriha",
+        "Extends across the surrounding hills"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Chhattisgarh": [
+    {
+      "id": "chhattisgarh-architecture-1",
+      "title": "Bhoramdeo Temple Complex",
+      "short": "Medieval temple group known for finely carved stone sculpture.",
+      "image": null,
+      "imageQuery": "Bhoramdeo Temple Complex Kabirdham Chhattisgarh India",
+      "place": "Kabirdham",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Medieval temple group known for finely carved stone sculpture.",
+      "facts": [
+        "Medieval temple complex",
+        "Main temples date to the 11th–13th centuries",
+        "Rich Shaiva and figurative sculpture",
+        "Often compared with Khajuraho for its sculptural richness"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "chhattisgarh-architecture-2",
+      "title": "Sirpur Archaeological Site",
+      "short": "Large archaeological landscape with Buddhist, Hindu and Jain remains.",
+      "image": null,
+      "imageQuery": "Sirpur Archaeological Site Mahasamund Chhattisgarh India",
+      "place": "Mahasamund",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large archaeological landscape with Buddhist, Hindu and Jain remains.",
+      "facts": [
+        "Major early-medieval archaeological site",
+        "Includes temples and monasteries",
+        "Brick architecture is prominent",
+        "Shows religious diversity of the historic settlement"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "chhattisgarh-architecture-3",
+      "title": "Lakshmana Temple, Sirpur",
+      "short": "Brick temple dedicated to Vishnu, notable for its carved doorway and surviving structure.",
+      "image": null,
+      "imageQuery": "Lakshmana Temple, Sirpur Sirpur Chhattisgarh India",
+      "place": "Sirpur",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Brick temple dedicated to Vishnu, notable for its carved doorway and surviving structure.",
+      "facts": [
+        "5th–7th century temple tradition",
+        "Brick construction",
+        "Vaishnava association",
+        "Important example of early temple architecture in central India"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "chhattisgarh-architecture-4",
+      "title": "Danteshwari Temple",
+      "short": "Major Shakti pilgrimage temple and historic cultural centre of Bastar.",
+      "image": null,
+      "imageQuery": "Danteshwari Temple Dantewada Chhattisgarh India",
+      "place": "Dantewada",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Shakti pilgrimage temple and historic cultural centre of Bastar.",
+      "facts": [
+        "Dedicated to Goddess Danteshwari",
+        "Major pilgrimage site in Bastar",
+        "Associated with the former Bastar kingdom",
+        "Temple complex continues as a living sacred site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "chhattisgarh-architecture-5",
+      "title": "Ratanpur Mahamaya Temple",
+      "short": "Historic Shakti temple associated with the old capital of the Kalachuri rulers.",
+      "image": null,
+      "imageQuery": "Ratanpur Mahamaya Temple Ratanpur Chhattisgarh India",
+      "place": "Ratanpur",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Shakti temple associated with the old capital of the Kalachuri rulers.",
+      "facts": [
+        "Major Shakti shrine",
+        "Ratanpur was a historic regional capital",
+        "Associated with Kalachuri history",
+        "Living pilgrimage centre"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "chhattisgarh-architecture-6",
+      "title": "Rajim Temples",
+      "short": "Historic temple group at the confluence of the Mahanadi and its tributaries.",
+      "image": null,
+      "imageQuery": "Rajim Temples Rajim Chhattisgarh India",
+      "place": "Rajim",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic temple group at the confluence of the Mahanadi and its tributaries.",
+      "facts": [
+        "Important pilgrimage landscape",
+        "Rajiv Lochan Temple is a major monument",
+        "Historic Vaishnava architecture",
+        "Located at a river confluence"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "chhattisgarh-architecture-7",
+      "title": "Malhar Archaeological Site",
+      "short": "Ancient settlement with temple remains and sculptures from several historical periods.",
+      "image": null,
+      "imageQuery": "Malhar Archaeological Site Bilaspur district Chhattisgarh India",
+      "place": "Bilaspur district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ancient settlement with temple remains and sculptures from several historical periods.",
+      "facts": [
+        "Ancient archaeological site",
+        "Contains temple and sculptural remains",
+        "Shows multiple phases of settlement",
+        "Important to central Indian archaeology"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "chhattisgarh-architecture-8",
+      "title": "Devrani-Jethani Temples",
+      "short": "Early-medieval temple remains known for distinctive sculptural work.",
+      "image": null,
+      "imageQuery": "Devrani-Jethani Temples Tala, Bilaspur district Chhattisgarh India",
+      "place": "Tala, Bilaspur district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Early-medieval temple remains known for distinctive sculptural work.",
+      "facts": [
+        "Located at Tala",
+        "Early-medieval temple architecture",
+        "Known for sculptural figures",
+        "Major archaeological landmark of Chhattisgarh"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Goa": [
+    {
+      "id": "goa-architecture-1",
+      "title": "Basilica of Bom Jesus",
+      "short": "Baroque church famous for the tomb of St Francis Xavier.",
+      "image": null,
+      "imageQuery": "Basilica of Bom Jesus Old Goa Goa India",
+      "place": "Old Goa",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Baroque church famous for the tomb of St Francis Xavier.",
+      "facts": [
+        "UNESCO World Heritage component",
+        "Completed in the early 17th century",
+        "Baroque architecture",
+        "Contains the tomb of St Francis Xavier"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "goa-architecture-2",
+      "title": "Se Cathedral",
+      "short": "Monumental cathedral forming part of the historic Churches and Convents of Goa.",
+      "image": null,
+      "imageQuery": "Se Cathedral Old Goa Goa India",
+      "place": "Old Goa",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monumental cathedral forming part of the historic Churches and Convents of Goa.",
+      "facts": [
+        "UNESCO World Heritage component",
+        "Portuguese colonial-era architecture",
+        "Dedicated to St Catherine of Alexandria",
+        "One of the largest churches in Old Goa"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "goa-architecture-3",
+      "title": "Church of St Francis of Assisi",
+      "short": "Historic church with Portuguese-Manueline and later architectural features.",
+      "image": null,
+      "imageQuery": "Church of St Francis of Assisi Old Goa Goa India",
+      "place": "Old Goa",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic church with Portuguese-Manueline and later architectural features.",
+      "facts": [
+        "UNESCO World Heritage component",
+        "Built in the 16th century",
+        "Located in Old Goa",
+        "Known for its church and convent complex"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "goa-architecture-4",
+      "title": "Church of Our Lady of the Rosary",
+      "short": "Early Portuguese-era church associated with the first phase of Old Goa’s monumental architecture.",
+      "image": null,
+      "imageQuery": "Church of Our Lady of the Rosary Old Goa Goa India",
+      "place": "Old Goa",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Early Portuguese-era church associated with the first phase of Old Goa’s monumental architecture.",
+      "facts": [
+        "16th-century church",
+        "Portuguese colonial architecture",
+        "Located on Monte Santo",
+        "Part of Old Goa’s historic church landscape"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "goa-architecture-5",
+      "title": "Reis Magos Fort",
+      "short": "Historic fort overlooking the Mandovi River, built in the Portuguese period.",
+      "image": null,
+      "imageQuery": "Reis Magos Fort Bardez Goa India",
+      "place": "Bardez",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic fort overlooking the Mandovi River, built in the Portuguese period.",
+      "facts": [
+        "Built in the 16th century",
+        "Located near the Mandovi estuary",
+        "Portuguese military architecture",
+        "Restored and open as a heritage site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "goa-architecture-6",
+      "title": "Aguada Fort",
+      "short": "Large coastal fortification built by the Portuguese to defend the approaches to Old Goa.",
+      "image": null,
+      "imageQuery": "Aguada Fort Sinquerim Goa India",
+      "place": "Sinquerim",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large coastal fortification built by the Portuguese to defend the approaches to Old Goa.",
+      "facts": [
+        "Built in the early 17th century",
+        "Portuguese military architecture",
+        "Associated with a lighthouse and freshwater spring",
+        "Overlooks the Arabian Sea"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "goa-architecture-7",
+      "title": "Chapora Fort",
+      "short": "Laterite fortification overlooking the Chapora River and coast.",
+      "image": null,
+      "imageQuery": "Chapora Fort Chapora Goa India",
+      "place": "Chapora",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Laterite fortification overlooking the Chapora River and coast.",
+      "facts": [
+        "Portuguese-period fortification",
+        "Built on a hilltop",
+        "Laterite construction",
+        "Commands the river mouth and coast"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "goa-architecture-8",
+      "title": "Fontainhas Heritage Quarter",
+      "short": "Historic Latin Quarter known for colourful Portuguese-influenced houses and streets.",
+      "image": null,
+      "imageQuery": "Fontainhas Heritage Quarter Panaji Goa India",
+      "place": "Panaji",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Latin Quarter known for colourful Portuguese-influenced houses and streets.",
+      "facts": [
+        "Historic urban quarter",
+        "Portuguese-influenced domestic architecture",
+        "Located in Panaji",
+        "Known for narrow streets and colourful façades"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Gujarat": [
+    {
+      "id": "gujarat-architecture-1",
+      "title": "Rani-ki-Vav",
+      "short": "Monumental stepwell richly carved with sculptures and architectural details.",
+      "image": null,
+      "imageQuery": "Rani-ki-Vav Patan Gujarat India",
+      "place": "Patan",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monumental stepwell richly carved with sculptures and architectural details.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Built in the 11th century",
+        "Commissioned by Queen Udayamati",
+        "Stepwell architecture combines water engineering and sculpture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "gujarat-architecture-2",
+      "title": "Historic City of Ahmedabad",
+      "short": "Walled historic city with Sultanate monuments, pol houses, gates and diverse religious architecture.",
+      "image": null,
+      "imageQuery": "Historic City of Ahmedabad Ahmedabad Gujarat India",
+      "place": "Ahmedabad",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Walled historic city with Sultanate monuments, pol houses, gates and diverse religious architecture.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Founded in 1411",
+        "Known for pol houses and historic gates",
+        "Shows a distinctive blend of architectural traditions"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "gujarat-architecture-3",
+      "title": "Adalaj Stepwell",
+      "short": "Five-storeyed stepwell with carved galleries and a richly decorated interior.",
+      "image": null,
+      "imageQuery": "Adalaj Stepwell Adalaj, Gandhinagar Gujarat India",
+      "place": "Adalaj, Gandhinagar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Five-storeyed stepwell with carved galleries and a richly decorated interior.",
+      "facts": [
+        "Built in the 15th century",
+        "Commissioned by Rudabai",
+        "Combines water architecture with sculpture",
+        "Located near Ahmedabad"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "gujarat-architecture-4",
+      "title": "Modhera Sun Temple",
+      "short": "11th-century temple complex dedicated to the Sun with a stepped tank.",
+      "image": null,
+      "imageQuery": "Modhera Sun Temple Modhera, Mehsana Gujarat India",
+      "place": "Modhera, Mehsana",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "11th-century temple complex dedicated to the Sun with a stepped tank.",
+      "facts": [
+        "Built under the Solanki dynasty",
+        "Dedicated to the Sun",
+        "Famous for the Surya Kund",
+        "Known for detailed stone carving"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "gujarat-architecture-5",
+      "title": "Champaner-Pavagadh Archaeological Park",
+      "short": "Historic landscape containing fortifications, mosques, temples and water structures.",
+      "image": null,
+      "imageQuery": "Champaner-Pavagadh Archaeological Park Panchmahal Gujarat India",
+      "place": "Panchmahal",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic landscape containing fortifications, mosques, temples and water structures.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Contains remains from several periods",
+        "Includes Champaner fortifications and monuments",
+        "Pavagadh is an important pilgrimage hill"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "gujarat-architecture-6",
+      "title": "Sidi Saiyyed Mosque",
+      "short": "16th-century mosque famous for its finely carved stone window screens.",
+      "image": null,
+      "imageQuery": "Sidi Saiyyed Mosque Ahmedabad Gujarat India",
+      "place": "Ahmedabad",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "16th-century mosque famous for its finely carved stone window screens.",
+      "facts": [
+        "Built in the 16th century",
+        "Known for the iconic Tree of Life jali",
+        "Part of historic Ahmedabad",
+        "Indo-Islamic architectural craftsmanship"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "gujarat-architecture-7",
+      "title": "Dholavira",
+      "short": "Harappan urban archaeological site with planned streets, reservoirs and stone architecture.",
+      "image": null,
+      "imageQuery": "Dholavira Kutch Gujarat India",
+      "place": "Kutch",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Harappan urban archaeological site with planned streets, reservoirs and stone architecture.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Bronze Age Harappan city",
+        "Known for sophisticated water management",
+        "Located on Khadir Bet in the Rann of Kutch"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "gujarat-architecture-8",
+      "title": "Lakhpat Fort",
+      "short": "Historic fortified settlement near the Arabian Sea with walls, gates and religious buildings.",
+      "image": null,
+      "imageQuery": "Lakhpat Fort Kutch Gujarat India",
+      "place": "Kutch",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic fortified settlement near the Arabian Sea with walls, gates and religious buildings.",
+      "facts": [
+        "Historic fortified town",
+        "Walls date mainly to the 18th century",
+        "Near the Kutch coast",
+        "Contains temples, mosques and a gurdwara"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Haryana": [
+    {
+      "id": "haryana-architecture-1",
+      "title": "Rakhigarhi Archaeological Site",
+      "short": "One of the largest known Harappan sites, with extensive settlement remains.",
+      "image": null,
+      "imageQuery": "Rakhigarhi Archaeological Site Hisar district Haryana India",
+      "place": "Hisar district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "One of the largest known Harappan sites, with extensive settlement remains.",
+      "facts": [
+        "Harappan archaeological site",
+        "Bronze Age urban settlement",
+        "Located in Hisar district",
+        "Important to the study of the Indus Civilization"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "haryana-architecture-2",
+      "title": "Sheikh Chilli Tomb Complex",
+      "short": "Mughal-period tomb and madrasa complex with sandstone architecture.",
+      "image": null,
+      "imageQuery": "Sheikh Chilli Tomb Complex Thanesar, Kurukshetra Haryana India",
+      "place": "Thanesar, Kurukshetra",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Mughal-period tomb and madrasa complex with sandstone architecture.",
+      "facts": [
+        "Mughal-period monument",
+        "Located in Thanesar",
+        "Includes a tomb and madrasa",
+        "Known for its domed architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "haryana-architecture-3",
+      "title": "Firoz Shah Palace Complex",
+      "short": "14th-century fortified palace complex associated with Firoz Shah Tughlaq.",
+      "image": null,
+      "imageQuery": "Firoz Shah Palace Complex Hisar Haryana India",
+      "place": "Hisar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "14th-century fortified palace complex associated with Firoz Shah Tughlaq.",
+      "facts": [
+        "14th-century monument",
+        "Associated with Firoz Shah Tughlaq",
+        "Contains palace and fortification remains",
+        "Major historic landmark of Hisar"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "haryana-architecture-4",
+      "title": "Pinjore Gardens",
+      "short": "Mughal-style terraced garden laid out in the Shivalik foothills.",
+      "image": null,
+      "imageQuery": "Pinjore Gardens Panchkula Haryana India",
+      "place": "Panchkula",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Mughal-style terraced garden laid out in the Shivalik foothills.",
+      "facts": [
+        "Historic terraced garden",
+        "Mughal-Persian garden influence",
+        "Located in Pinjore",
+        "Known for water channels and pavilions"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "haryana-architecture-6",
+      "title": "Tomb of Bu Ali Shah Qalandar",
+      "short": "Historic Sufi shrine associated with the Chishti-Qalandari tradition.",
+      "image": null,
+      "imageQuery": "Tomb of Bu Ali Shah Qalandar Panipat Haryana India",
+      "place": "Panipat",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Sufi shrine associated with the Chishti-Qalandari tradition.",
+      "facts": [
+        "Historic Sufi shrine",
+        "Located in Panipat",
+        "Long-standing pilgrimage site",
+        "Part of the city’s medieval religious landscape"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "haryana-architecture-7",
+      "title": "Kabuli Bagh Mosque",
+      "short": "Early Mughal mosque associated with Babur’s victory at Panipat.",
+      "image": null,
+      "imageQuery": "Kabuli Bagh Mosque Panipat Haryana India",
+      "place": "Panipat",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Early Mughal mosque associated with Babur’s victory at Panipat.",
+      "facts": [
+        "Early Mughal monument",
+        "Associated with Babur",
+        "Built after the First Battle of Panipat",
+        "Important historic mosque of Panipat"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-2",
+      "title": "Masroor Rock-Cut Temples",
+      "short": "Monolithic rock-cut temple group carved from sandstone.",
+      "image": null,
+      "imageQuery": "Masroor Rock-Cut Temples Kangra district Himachal Pradesh India",
+      "place": "Kangra district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monolithic rock-cut temple group carved from sandstone.",
+      "facts": [
+        "8th-century temple tradition",
+        "Rock-cut monolithic architecture",
+        "Dedicated mainly to Hindu deities",
+        "Located in the Kangra valley"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-3",
+      "title": "Key Monastery",
+      "short": "Major Tibetan Buddhist monastery perched high above the Spiti River.",
+      "image": null,
+      "imageQuery": "Key Monastery Spiti Himachal Pradesh India",
+      "place": "Spiti",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Tibetan Buddhist monastery perched high above the Spiti River.",
+      "facts": [
+        "Important Gelug monastery",
+        "Located in Spiti Valley",
+        "Historic monastic centre",
+        "Distinctive hilltop Himalayan architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-4",
+      "title": "Tabo Monastery",
+      "short": "Ancient Buddhist monastic complex famous for its wall paintings and sculpture.",
+      "image": null,
+      "imageQuery": "Tabo Monastery Spiti Himachal Pradesh India",
+      "place": "Spiti",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ancient Buddhist monastic complex famous for its wall paintings and sculpture.",
+      "facts": [
+        "Founded in 996 CE",
+        "Important Himalayan Buddhist site",
+        "Known for murals and stucco sculpture",
+        "Part of the Spiti cultural landscape"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-5",
+      "title": "Viceregal Lodge",
+      "short": "Colonial-era building that served as the summer residence of the Viceroy of India.",
+      "image": null,
+      "imageQuery": "Viceregal Lodge Shimla Himachal Pradesh India",
+      "place": "Shimla",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Colonial-era building that served as the summer residence of the Viceroy of India.",
+      "facts": [
+        "Built in the 19th century",
+        "Designed in a Scottish Baronial style",
+        "Located on Observatory Hill",
+        "Later became the Indian Institute of Advanced Study"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-6",
+      "title": "Christ Church, Shimla",
+      "short": "Landmark neo-Gothic church on the Ridge.",
+      "image": null,
+      "imageQuery": "Christ Church, Shimla Shimla Himachal Pradesh India",
+      "place": "Shimla",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Landmark neo-Gothic church on the Ridge.",
+      "facts": [
+        "Built in the 19th century",
+        "Neo-Gothic architecture",
+        "Located on Shimla Ridge",
+        "One of Shimla’s best-known colonial landmarks"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-7",
+      "title": "Naggar Castle",
+      "short": "Historic stone-and-timber castle combining Himalayan and later architectural influences.",
+      "image": null,
+      "imageQuery": "Naggar Castle Naggar, Kullu Himachal Pradesh India",
+      "place": "Naggar, Kullu",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic stone-and-timber castle combining Himalayan and later architectural influences.",
+      "facts": [
+        "Historic castle in Kullu",
+        "Stone-and-timber construction",
+        "Associated with Kullu rulers",
+        "Now functions as a heritage property"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-architecture-8",
+      "title": "Baijnath Temple",
+      "short": "Historic stone temple dedicated to Shiva and one of the region’s major sacred monuments.",
+      "image": null,
+      "imageQuery": "Baijnath Temple Kangra district Himachal Pradesh India",
+      "place": "Kangra district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic stone temple dedicated to Shiva and one of the region’s major sacred monuments.",
+      "facts": [
+        "Built in the early 13th century",
+        "Dedicated to Shiva",
+        "Nagari/early North Indian temple form",
+        "Located in the Kangra region"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Jharkhand": [
+    {
+      "id": "jharkhand-architecture-1",
+      "title": "Maluti Temples",
+      "short": "Historic group of terracotta temples known for carved façades.",
+      "image": null,
+      "imageQuery": "Maluti Temples Dumka district Jharkhand India",
+      "place": "Dumka district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic group of terracotta temples known for carved façades.",
+      "facts": [
+        "Historic temple village",
+        "Many temples date to the 18th–19th centuries",
+        "Rich terracotta ornament",
+        "Located near Shikaripara"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "jharkhand-architecture-2",
+      "title": "Jagannath Temple, Ranchi",
+      "short": "Historic hilltop temple inspired by the Jagannath tradition of Odisha.",
+      "image": null,
+      "imageQuery": "Jagannath Temple, Ranchi Ranchi Jharkhand India",
+      "place": "Ranchi",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic hilltop temple inspired by the Jagannath tradition of Odisha.",
+      "facts": [
+        "Located on a hill in Ranchi",
+        "Associated with Jagannath worship",
+        "Historic temple complex",
+        "Major local pilgrimage site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "jharkhand-architecture-3",
+      "title": "Palamu Forts",
+      "short": "Twin hill forts associated with the Chero rulers in the Palamu region.",
+      "image": null,
+      "imageQuery": "Palamu Forts Latehar district Jharkhand India",
+      "place": "Latehar district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Twin hill forts associated with the Chero rulers in the Palamu region.",
+      "facts": [
+        "Historic fort complex",
+        "Associated with Chero rulers",
+        "Located in forested hill country",
+        "Important regional medieval heritage"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "jharkhand-architecture-4",
+      "title": "Navratangarh",
+      "short": "Ruins of a former Nagvanshi capital with fortification and palace remains.",
+      "image": null,
+      "imageQuery": "Navratangarh Gumla district Jharkhand India",
+      "place": "Gumla district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ruins of a former Nagvanshi capital with fortification and palace remains.",
+      "facts": [
+        "Historic Nagvanshi capital",
+        "Medieval and early-modern remains",
+        "Fortified settlement",
+        "Important regional archaeological site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "jharkhand-architecture-5",
+      "title": "Jagannathpur Fort",
+      "short": "Historic fortified settlement associated with the Singh dynasty of Porahat.",
+      "image": null,
+      "imageQuery": "Jagannathpur Fort West Singhbhum Jharkhand India",
+      "place": "West Singhbhum",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic fortified settlement associated with the Singh dynasty of Porahat.",
+      "facts": [
+        "Regional fortification",
+        "Associated with local ruling traditions",
+        "Located in Singhbhum",
+        "Part of Jharkhand’s princely-era heritage"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "jharkhand-architecture-6",
+      "title": "Sun Temple, Bundu",
+      "short": "Modern temple complex with a distinctive chariot-shaped structure and large Surya image.",
+      "image": null,
+      "imageQuery": "Sun Temple, Bundu Ranchi district Jharkhand India",
+      "place": "Ranchi district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Modern temple complex with a distinctive chariot-shaped structure and large Surya image.",
+      "facts": [
+        "Dedicated to the Sun",
+        "Chariot-shaped architectural form",
+        "Major pilgrimage landmark",
+        "Located near Bundu"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "jharkhand-architecture-7",
+      "title": "Itkhori Temple Complex",
+      "short": "Historic religious site with Hindu, Buddhist and Jain associations.",
+      "image": null,
+      "imageQuery": "Itkhori Temple Complex Chatra district Jharkhand India",
+      "place": "Chatra district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic religious site with Hindu, Buddhist and Jain associations.",
+      "facts": [
+        "Multi-religious heritage site",
+        "Archaeological sculptures and remains",
+        "Located in Chatra district",
+        "Shows the region’s layered religious history"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-2",
+      "title": "Pattadakal",
+      "short": "Temple complex showing an important synthesis of northern and southern Indian architectural forms.",
+      "image": null,
+      "imageQuery": "Pattadakal Bagalkot district Karnataka India",
+      "place": "Bagalkot district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Temple complex showing an important synthesis of northern and southern Indian architectural forms.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Major Chalukyan temple centre",
+        "Built mainly in the 7th–8th centuries",
+        "Includes Virupaksha and Mallikarjuna temples"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-3",
+      "title": "Aihole",
+      "short": "Early Chalukyan temple landscape often called a laboratory of Indian temple architecture.",
+      "image": null,
+      "imageQuery": "Aihole Bagalkot district Karnataka India",
+      "place": "Bagalkot district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Early Chalukyan temple landscape often called a laboratory of Indian temple architecture.",
+      "facts": [
+        "Early Chalukyan centre",
+        "Large group of temples and monuments",
+        "Includes Durga and Lad Khan temples",
+        "Important to the history of Deccan architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-4",
+      "title": "Badami Cave Temples",
+      "short": "Rock-cut cave temples with Hindu and Jain sculpture overlooking Agastya Lake.",
+      "image": null,
+      "imageQuery": "Badami Cave Temples Bagalkot district Karnataka India",
+      "place": "Bagalkot district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Rock-cut cave temples with Hindu and Jain sculpture overlooking Agastya Lake.",
+      "facts": [
+        "Early Chalukyan rock-cut architecture",
+        "Four principal cave temples",
+        "Contains Hindu and Jain imagery",
+        "Carved into sandstone cliffs"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-5",
+      "title": "Belur Chennakeshava Temple",
+      "short": "Hoysala temple celebrated for intricate soapstone sculpture.",
+      "image": null,
+      "imageQuery": "Belur Chennakeshava Temple Hassan district Karnataka India",
+      "place": "Hassan district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Hoysala temple celebrated for intricate soapstone sculpture.",
+      "facts": [
+        "Hoysala-period architecture",
+        "Dedicated to Vishnu as Chennakeshava",
+        "Known for detailed soapstone carving",
+        "Part of the Sacred Ensembles of the Hoysalas"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-6",
+      "title": "Halebidu Hoysaleswara Temple",
+      "short": "Monumental Hoysala temple complex with dense sculptural decoration.",
+      "image": null,
+      "imageQuery": "Halebidu Hoysaleswara Temple Hassan district Karnataka India",
+      "place": "Hassan district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monumental Hoysala temple complex with dense sculptural decoration.",
+      "facts": [
+        "Hoysala-period temple",
+        "Dedicated to Shiva",
+        "Famous for exterior sculpture",
+        "Part of the Sacred Ensembles of the Hoysalas"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-7",
+      "title": "Mysore Palace",
+      "short": "Grand palace combining Indo-Saracenic, Hindu, Rajput and European architectural influences.",
+      "image": null,
+      "imageQuery": "Mysore Palace Mysuru Karnataka India",
+      "place": "Mysuru",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Grand palace combining Indo-Saracenic, Hindu, Rajput and European architectural influences.",
+      "facts": [
+        "Built in its present form in the early 20th century",
+        "Former Wadiyar royal residence",
+        "Indo-Saracenic architectural character",
+        "Major landmark of Mysuru"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "karnataka-architecture-8",
+      "title": "Gol Gumbaz",
+      "short": "Monumental 17th-century mausoleum famous for its enormous dome.",
+      "image": null,
+      "imageQuery": "Gol Gumbaz Vijayapura Karnataka India",
+      "place": "Vijayapura",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monumental 17th-century mausoleum famous for its enormous dome.",
+      "facts": [
+        "Built for Muhammad Adil Shah",
+        "17th-century Deccan architecture",
+        "Huge masonry dome",
+        "Famous for its whispering gallery"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Kerala": [
+    {
+      "id": "kerala-architecture-1",
+      "title": "Padmanabhapuram Palace",
+      "short": "Historic palace complex renowned for timber architecture, murals and craftsmanship.",
+      "image": null,
+      "imageQuery": "Padmanabhapuram Palace Thuckalay, near Kerala border Kerala India",
+      "place": "Thuckalay, near Kerala border",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic palace complex renowned for timber architecture, murals and craftsmanship.",
+      "facts": [
+        "Former Travancore royal palace",
+        "Mostly timber-and-laterite construction",
+        "Known for murals and carved woodwork",
+        "Managed as a protected heritage monument"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "kerala-architecture-2",
+      "title": "Mattancherry Palace",
+      "short": "16th-century palace complex famous for its Kerala murals.",
+      "image": null,
+      "imageQuery": "Mattancherry Palace Kochi Kerala India",
+      "place": "Kochi",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "16th-century palace complex famous for its Kerala murals.",
+      "facts": [
+        "Portuguese-built and later associated with the Kochi royal family",
+        "Known as the Dutch Palace",
+        "Contains important mural paintings",
+        "Historic Indo-European palace architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "kerala-architecture-3",
+      "title": "Bekal Fort",
+      "short": "Large laterite coastal fort overlooking the Arabian Sea.",
+      "image": null,
+      "imageQuery": "Bekal Fort Kasaragod Kerala India",
+      "place": "Kasaragod",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large laterite coastal fort overlooking the Arabian Sea.",
+      "facts": [
+        "Major coastal fort",
+        "Laterite construction",
+        "Expanded under the Ikkeri Nayakas",
+        "Overlooks the Arabian Sea"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "kerala-architecture-4",
+      "title": "Hill Palace",
+      "short": "Former royal residence of the Kochi royal family and now a major museum complex.",
+      "image": null,
+      "imageQuery": "Hill Palace Tripunithura Kerala India",
+      "place": "Tripunithura",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Former royal residence of the Kochi royal family and now a major museum complex.",
+      "facts": [
+        "Former Kochi royal residence",
+        "Large palace complex",
+        "Now a heritage museum",
+        "Contains royal collections and archaeological objects"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "kerala-architecture-5",
+      "title": "Sree Padmanabhaswamy Temple",
+      "short": "Historic Vaishnava temple with a distinctive Kerala-Dravidian architectural form.",
+      "image": null,
+      "imageQuery": "Sree Padmanabhaswamy Temple Thiruvananthapuram Kerala India",
+      "place": "Thiruvananthapuram",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Vaishnava temple with a distinctive Kerala-Dravidian architectural form.",
+      "facts": [
+        "Major Vaishnava pilgrimage centre",
+        "Dedicated to Vishnu",
+        "Temple combines Kerala and Dravidian features",
+        "Historic centre of Travancore religious life"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "kerala-architecture-6",
+      "title": "Vadakkunnathan Temple",
+      "short": "Historic Shiva temple at the centre of Thrissur’s cultural landscape.",
+      "image": null,
+      "imageQuery": "Vadakkunnathan Temple Thrissur Kerala India",
+      "place": "Thrissur",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Shiva temple at the centre of Thrissur’s cultural landscape.",
+      "facts": [
+        "Major Shaiva temple",
+        "Traditional Kerala temple architecture",
+        "Central to Thrissur Pooram celebrations",
+        "Historic temple murals and woodwork"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "kerala-architecture-7",
+      "title": "Krishnapuram Palace",
+      "short": "Historic palace known for Kerala-style architecture and a large mural of Gajendra Moksham.",
+      "image": null,
+      "imageQuery": "Krishnapuram Palace Kayamkulam Kerala India",
+      "place": "Kayamkulam",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic palace known for Kerala-style architecture and a large mural of Gajendra Moksham.",
+      "facts": [
+        "Travancore-era palace",
+        "Kerala architectural style",
+        "Famous for Gajendra Moksham mural",
+        "Now a heritage museum"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "kerala-architecture-8",
+      "title": "Muziris Heritage Sites",
+      "short": "Archaeological and historic landscape linked with Kerala’s ancient maritime trade.",
+      "image": null,
+      "imageQuery": "Muziris Heritage Sites Kodungallur region Kerala India",
+      "place": "Kodungallur region",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Archaeological and historic landscape linked with Kerala’s ancient maritime trade.",
+      "facts": [
+        "Historic port-region landscape",
+        "Connected with ancient Indian Ocean trade",
+        "Includes several archaeological and historic sites",
+        "Important to Kerala’s maritime history"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Madhya Pradesh": [
+    {
+      "id": "madhya-pradesh-architecture-1",
+      "title": "Khajuraho Group of Monuments",
+      "short": "Chandela-period temples famous for detailed sculpture and architecture.",
+      "image": null,
+      "imageQuery": "Khajuraho Group of Monuments Chhatarpur district Madhya Pradesh India",
+      "place": "Chhatarpur district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Chandela-period temples famous for detailed sculpture and architecture.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Built mainly in the 10th–11th centuries",
+        "Includes Hindu and Jain temples",
+        "Known for richly carved sandstone surfaces"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-architecture-2",
+      "title": "Sanchi Stupa Complex",
+      "short": "Major Buddhist monument landscape centred on the Great Stupa.",
+      "image": null,
+      "imageQuery": "Sanchi Stupa Complex Raisen district Madhya Pradesh India",
+      "place": "Raisen district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Buddhist monument landscape centred on the Great Stupa.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Major Buddhist site",
+        "Great Stupa dates to the Mauryan period with later additions",
+        "Toranas carry narrative reliefs"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-architecture-3",
+      "title": "Bhimbetka Rock Shelters",
+      "short": "Rock shelters preserving some of the earliest known prehistoric paintings in India.",
+      "image": null,
+      "imageQuery": "Bhimbetka Rock Shelters Raisen district Madhya Pradesh India",
+      "place": "Raisen district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Rock shelters preserving some of the earliest known prehistoric paintings in India.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Prehistoric rock art",
+        "Long sequence of human occupation",
+        "Located in the Vindhyan landscape"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-architecture-4",
+      "title": "Gwalior Fort",
+      "short": "Hill fort complex containing palaces, temples and defensive architecture.",
+      "image": null,
+      "imageQuery": "Gwalior Fort Gwalior Madhya Pradesh India",
+      "place": "Gwalior",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Hill fort complex containing palaces, temples and defensive architecture.",
+      "facts": [
+        "Historic hill fort",
+        "Major Tomar and later Mughal-era monument",
+        "Includes Man Mandir Palace",
+        "Known for monumental fort walls"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-architecture-5",
+      "title": "Mandu",
+      "short": "Historic fortified city with Afghan-style palaces, mosques, tombs and water structures.",
+      "image": null,
+      "imageQuery": "Mandu Dhar district Madhya Pradesh India",
+      "place": "Dhar district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic fortified city with Afghan-style palaces, mosques, tombs and water structures.",
+      "facts": [
+        "Medieval fortified city",
+        "Associated with the Malwa Sultanate",
+        "Includes Jahaz Mahal and Hoshang Shah’s Tomb",
+        "Known for Indo-Islamic architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-architecture-6",
+      "title": "Orchha Fort Complex",
+      "short": "Rajput-era palace and temple complex on the Betwa River.",
+      "image": null,
+      "imageQuery": "Orchha Fort Complex Niwari district Madhya Pradesh India",
+      "place": "Niwari district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Rajput-era palace and temple complex on the Betwa River.",
+      "facts": [
+        "Founded by the Bundela rulers",
+        "Includes Jahangir Mahal and Raj Mahal",
+        "Rajput-Mughal architectural synthesis",
+        "Historic capital of the Bundela kingdom"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-architecture-7",
+      "title": "Ujjain Mahakaleshwar Temple",
+      "short": "Major Shaiva pilgrimage centre and one of the twelve Jyotirlinga shrines.",
+      "image": null,
+      "imageQuery": "Ujjain Mahakaleshwar Temple Ujjain Madhya Pradesh India",
+      "place": "Ujjain",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Shaiva pilgrimage centre and one of the twelve Jyotirlinga shrines.",
+      "facts": [
+        "Major Shaiva pilgrimage site",
+        "One of the twelve Jyotirlingas",
+        "Historic sacred landscape of Ujjain",
+        "Temple complex has undergone many phases of rebuilding"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-architecture-8",
+      "title": "Bhojeshwar Temple",
+      "short": "Unfinished 11th-century Shiva temple with a monumental linga and massive architectural members.",
+      "image": null,
+      "imageQuery": "Bhojeshwar Temple Bhojpur, Raisen district Madhya Pradesh India",
+      "place": "Bhojpur, Raisen district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Unfinished 11th-century Shiva temple with a monumental linga and massive architectural members.",
+      "facts": [
+        "Associated with King Bhoja",
+        "11th-century temple",
+        "Monumental stone construction",
+        "Known for its unfinished architectural elements"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Maharashtra": [
+    {
+      "id": "maharashtra-architecture-1",
+      "title": "Ajanta Caves",
+      "short": "Rock-cut Buddhist monuments famous for murals and sculpture.",
+      "image": null,
+      "imageQuery": "Ajanta Caves Aurangabad district Maharashtra India",
+      "place": "Aurangabad district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Rock-cut Buddhist monuments famous for murals and sculpture.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Developed over several centuries",
+        "Buddhist monastic and devotional spaces",
+        "Famous for surviving paintings"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "maharashtra-architecture-2",
+      "title": "Ellora Caves",
+      "short": "Large rock-cut complex containing Buddhist, Hindu and Jain monuments.",
+      "image": null,
+      "imageQuery": "Ellora Caves Verul, Aurangabad district Maharashtra India",
+      "place": "Verul, Aurangabad district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large rock-cut complex containing Buddhist, Hindu and Jain monuments.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "34 major caves",
+        "Includes the monolithic Kailasa temple",
+        "Shows religious diversity in Deccan rock-cut architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "maharashtra-architecture-3",
+      "title": "Elephanta Caves",
+      "short": "Rock-cut cave complex dominated by monumental Shaiva sculpture.",
+      "image": null,
+      "imageQuery": "Elephanta Caves Mumbai Harbour Maharashtra India",
+      "place": "Mumbai Harbour",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Rock-cut cave complex dominated by monumental Shaiva sculpture.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Rock-cut cave architecture",
+        "Famous for the Trimurti sculpture",
+        "Located on Elephanta Island"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "maharashtra-architecture-4",
+      "title": "Chhatrapati Shivaji Maharaj Terminus",
+      "short": "Grand Victorian Gothic railway terminus blending European and Indian architectural elements.",
+      "image": null,
+      "imageQuery": "Chhatrapati Shivaji Maharaj Terminus Mumbai Maharashtra India",
+      "place": "Mumbai",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Grand Victorian Gothic railway terminus blending European and Indian architectural elements.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Completed in the 19th century",
+        "Victorian Gothic Revival architecture",
+        "Still functions as a major railway station"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "maharashtra-architecture-5",
+      "title": "Gateway of India",
+      "short": "Monumental waterfront arch built in the early 20th century.",
+      "image": null,
+      "imageQuery": "Gateway of India Mumbai Maharashtra India",
+      "place": "Mumbai",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monumental waterfront arch built in the early 20th century.",
+      "facts": [
+        "Completed in 1924",
+        "Indo-Saracenic design",
+        "Built to commemorate the 1911 royal visit",
+        "Major landmark of Mumbai harbour"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "maharashtra-architecture-6",
+      "title": "Raigad Fort",
+      "short": "Mountain fort and former capital of Chhatrapati Shivaji Maharaj’s kingdom.",
+      "image": null,
+      "imageQuery": "Raigad Fort Raigad district Maharashtra India",
+      "place": "Raigad district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Mountain fort and former capital of Chhatrapati Shivaji Maharaj’s kingdom.",
+      "facts": [
+        "Major Maratha fort",
+        "Capital of the Maratha kingdom under Shivaji",
+        "Hilltop defensive architecture",
+        "Reached by a historic ascent and ropeway today"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "maharashtra-architecture-7",
+      "title": "Daulatabad Fort",
+      "short": "Massive hill fort with layered defences and a dramatic rock-cut core.",
+      "image": null,
+      "imageQuery": "Daulatabad Fort Aurangabad district Maharashtra India",
+      "place": "Aurangabad district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Massive hill fort with layered defences and a dramatic rock-cut core.",
+      "facts": [
+        "Historic Deccan fort",
+        "Known as Devagiri in earlier periods",
+        "Strong multi-layered defences",
+        "Associated with the Yadava and later Sultanate periods"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "maharashtra-architecture-8",
+      "title": "Shaniwar Wada",
+      "short": "18th-century fortified palace complex associated with the Peshwas.",
+      "image": null,
+      "imageQuery": "Shaniwar Wada Pune Maharashtra India",
+      "place": "Pune",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "18th-century fortified palace complex associated with the Peshwas.",
+      "facts": [
+        "Built in 1732",
+        "Major Peshwa-era monument",
+        "Fortified palace architecture",
+        "Important to Maratha political history"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Manipur": [
+    {
+      "id": "manipur-architecture-1",
+      "title": "Kangla Fort",
+      "short": "Historic seat of Manipur’s rulers and an important cultural landscape.",
+      "image": null,
+      "imageQuery": "Kangla Fort Imphal Manipur India",
+      "place": "Imphal",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic seat of Manipur’s rulers and an important cultural landscape.",
+      "facts": [
+        "Former royal seat",
+        "Central to Manipuri history",
+        "Contains palace and temple remains",
+        "Major heritage landmark of Imphal"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "manipur-architecture-2",
+      "title": "Shri Govindajee Temple",
+      "short": "Historic Vaishnava temple and major centre of Manipuri religious life.",
+      "image": null,
+      "imageQuery": "Shri Govindajee Temple Imphal Manipur India",
+      "place": "Imphal",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Vaishnava temple and major centre of Manipuri religious life.",
+      "facts": [
+        "Major Vaishnava shrine",
+        "Associated with the royal tradition",
+        "Traditional temple architecture",
+        "Important to Ras Lila and Manipuri culture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "manipur-architecture-3",
+      "title": "Andro Heritage Village",
+      "short": "Living cultural complex preserving traditional Meitei material and architectural traditions.",
+      "image": null,
+      "imageQuery": "Andro Heritage Village Andro Manipur India",
+      "place": "Andro",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Living cultural complex preserving traditional Meitei material and architectural traditions.",
+      "facts": [
+        "Living cultural heritage centre",
+        "Preserves traditional house forms and objects",
+        "Connected with Meitei community traditions",
+        "Located near Imphal"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "manipur-architecture-4",
+      "title": "Khongjom War Memorial",
+      "short": "Memorial landscape commemorating the Anglo-Manipur War of 1891.",
+      "image": null,
+      "imageQuery": "Khongjom War Memorial Thoubal district Manipur India",
+      "place": "Thoubal district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Memorial landscape commemorating the Anglo-Manipur War of 1891.",
+      "facts": [
+        "Associated with the 1891 war",
+        "Major historical memorial",
+        "Located at Khongjom",
+        "Part of Manipur’s modern history"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "manipur-architecture-5",
+      "title": "Ibudhou Pakhang Laiseng",
+      "short": "Sacred landscape associated with indigenous Meitei religious traditions.",
+      "image": null,
+      "imageQuery": "Ibudhou Pakhang Laiseng Imphal region Manipur India",
+      "place": "Imphal region",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Sacred landscape associated with indigenous Meitei religious traditions.",
+      "facts": [
+        "Part of Sanamahi tradition",
+        "Indigenous religious heritage",
+        "Living sacred landscape",
+        "Connected with Meitei ritual practice"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "manipur-architecture-6",
+      "title": "Thangjing Temple Landscape",
+      "short": "Sacred hill landscape associated with indigenous Manipuri traditions.",
+      "image": null,
+      "imageQuery": "Thangjing Temple Landscape Bishnupur district Manipur India",
+      "place": "Bishnupur district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Sacred hill landscape associated with indigenous Manipuri traditions.",
+      "facts": [
+        "Indigenous sacred landscape",
+        "Associated with traditional Meitei religion",
+        "Hill-based ritual heritage",
+        "Part of Manipur’s cultural geography"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Meghalaya": [
+    {
+      "id": "meghalaya-architecture-1",
+      "title": "Nartiang Durga Temple",
+      "short": "Historic Hindu temple within the Jaintia cultural landscape.",
+      "image": null,
+      "imageQuery": "Nartiang Durga Temple West Jaintia Hills Meghalaya India",
+      "place": "West Jaintia Hills",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Hindu temple within the Jaintia cultural landscape.",
+      "facts": [
+        "Major Shakta shrine",
+        "Located in Nartiang",
+        "Associated with Jaintia-era history",
+        "Living pilgrimage site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "meghalaya-architecture-2",
+      "title": "Nartiang Monoliths",
+      "short": "Large upright stones forming a notable megalithic cultural landscape.",
+      "image": null,
+      "imageQuery": "Nartiang Monoliths West Jaintia Hills Meghalaya India",
+      "place": "West Jaintia Hills",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large upright stones forming a notable megalithic cultural landscape.",
+      "facts": [
+        "Megalithic heritage",
+        "Associated with Jaintia traditions",
+        "Includes large monoliths",
+        "Important cultural landmark of Meghalaya"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "meghalaya-architecture-3",
+      "title": "Living Root Bridges",
+      "short": "Community-grown bridges formed from living aerial roots of rubber fig trees.",
+      "image": null,
+      "imageQuery": "Living Root Bridges Khasi and Jaintia Hills Meghalaya India",
+      "place": "Khasi and Jaintia Hills",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Community-grown bridges formed from living aerial roots of rubber fig trees.",
+      "facts": [
+        "Traditional bio-engineering practice",
+        "Created by Khasi and Jaintia communities",
+        "Can take years to mature",
+        "Part of a living landscape tradition"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "meghalaya-architecture-4",
+      "title": "Nokrek cultural landscape",
+      "short": "Mountain landscape associated with Garo community traditions and sacred natural sites.",
+      "image": null,
+      "imageQuery": "Nokrek cultural landscape Garo Hills Meghalaya India",
+      "place": "Garo Hills",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Mountain landscape associated with Garo community traditions and sacred natural sites.",
+      "facts": [
+        "Garo cultural landscape",
+        "Rich forest ecosystem",
+        "Includes sacred and customary places",
+        "Connects nature and living heritage"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "meghalaya-architecture-5",
+      "title": "Mawphlang Sacred Grove",
+      "short": "Protected forest landscape maintained through Khasi customary traditions.",
+      "image": null,
+      "imageQuery": "Mawphlang Sacred Grove East Khasi Hills Meghalaya India",
+      "place": "East Khasi Hills",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Protected forest landscape maintained through Khasi customary traditions.",
+      "facts": [
+        "Sacred natural landscape",
+        "Protected through community custom",
+        "Important Khasi cultural site",
+        "Known for rich biodiversity"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "meghalaya-architecture-6",
+      "title": "Nartiang Monoliths",
+      "short": "Megalithic stone landscape associated with Jaintia traditions.",
+      "image": null,
+      "imageQuery": "Nartiang Monoliths West Jaintia Hills Meghalaya India",
+      "place": "West Jaintia Hills",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Megalithic stone landscape associated with Jaintia traditions.",
+      "facts": [
+        "Megalithic heritage",
+        "Large upright stones",
+        "Associated with Jaintia cultural history",
+        "Important cultural landmark"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "meghalaya-architecture-7",
+      "title": "Nartiang Durga Temple",
+      "short": "Historic Hindu temple in the Jaintia cultural landscape.",
+      "image": null,
+      "imageQuery": "Nartiang Durga Temple West Jaintia Hills Meghalaya India",
+      "place": "West Jaintia Hills",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Hindu temple in the Jaintia cultural landscape.",
+      "facts": [
+        "Historic Shakta shrine",
+        "Located in Nartiang",
+        "Associated with Jaintia rulers",
+        "Living pilgrimage site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "meghalaya-architecture-8",
+      "title": "Living Root Bridge heritage",
+      "short": "Community-grown bridges formed from living aerial roots of rubber fig trees.",
+      "image": null,
+      "imageQuery": "Living Root Bridge heritage Khasi and Jaintia Hills Meghalaya India",
+      "place": "Khasi and Jaintia Hills",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Community-grown bridges formed from living aerial roots of rubber fig trees.",
+      "facts": [
+        "Traditional bio-engineering",
+        "Created by Khasi and Jaintia communities",
+        "Can take years to mature",
+        "Living cultural landscape"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "meghalaya-architecture-9",
+      "title": "Mawphlang Sacred Grove",
+      "short": "Sacred forest protected through Khasi customary practice.",
+      "image": null,
+      "imageQuery": "Mawphlang Sacred Grove East Khasi Hills Meghalaya India",
+      "place": "East Khasi Hills",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Sacred forest protected through Khasi customary practice.",
+      "facts": [
+        "Community-protected sacred landscape",
+        "Khasi customary heritage",
+        "High biodiversity",
+        "Living cultural tradition"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Mizoram": [
+    {
+      "id": "mizoram-architecture-1",
+      "title": "Solomon’s Temple",
+      "short": "Contemporary sacred complex known for its large white church architecture.",
+      "image": null,
+      "imageQuery": "Solomon’s Temple Aizawl Mizoram India",
+      "place": "Aizawl",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Contemporary sacred complex known for its large white church architecture.",
+      "facts": [
+        "Located in Aizawl",
+        "Modern religious architecture",
+        "Major local landmark",
+        "Built in a prominent hilltop setting"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "mizoram-architecture-2",
+      "title": "Mizoram State Museum",
+      "short": "Cultural museum presenting material culture, textiles and historical objects of Mizoram.",
+      "image": null,
+      "imageQuery": "Mizoram State Museum Aizawl Mizoram India",
+      "place": "Aizawl",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Cultural museum presenting material culture, textiles and historical objects of Mizoram.",
+      "facts": [
+        "Major cultural institution",
+        "Documents Mizo material culture",
+        "Includes textiles and traditional objects",
+        "Located in Aizawl"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "mizoram-architecture-4",
+      "title": "Mizoram traditional house forms",
+      "short": "Bamboo-and-timber house traditions adapted to hill terrain and community life.",
+      "image": null,
+      "imageQuery": "Mizoram traditional house forms Mizoram Mizoram India",
+      "place": "Mizoram",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Bamboo-and-timber house traditions adapted to hill terrain and community life.",
+      "facts": [
+        "Uses locally available materials",
+        "Adapted to hilly terrain",
+        "Reflects Mizo domestic life",
+        "Traditional forms remain important to cultural memory"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Nagaland": [
+    {
+      "id": "nagaland-architecture-1",
+      "title": "Kachari Ruins",
+      "short": "Ancient brick and stone remains associated with the medieval Kachari kingdom.",
+      "image": null,
+      "imageQuery": "Kachari Ruins Dimapur Nagaland India",
+      "place": "Dimapur",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ancient brick and stone remains associated with the medieval Kachari kingdom.",
+      "facts": [
+        "Medieval archaeological site",
+        "Located in Dimapur",
+        "Known for distinctive monolithic pillars",
+        "Associated with the Kachari kingdom"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "nagaland-architecture-2",
+      "title": "Kohima War Cemetery",
+      "short": "Memorial cemetery commemorating the Allied soldiers who died in the 1944 Battle of Kohima.",
+      "image": null,
+      "imageQuery": "Kohima War Cemetery Kohima Nagaland India",
+      "place": "Kohima",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Memorial cemetery commemorating the Allied soldiers who died in the 1944 Battle of Kohima.",
+      "facts": [
+        "World War II memorial",
+        "Associated with the Battle of Kohima",
+        "Maintained by the Commonwealth War Graves Commission",
+        "Major historical landmark of Nagaland"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "nagaland-architecture-3",
+      "title": "Morung traditional architecture",
+      "short": "Traditional youth-dormitory buildings that served as centres of community learning and social life.",
+      "image": null,
+      "imageQuery": "Morung traditional architecture Nagaland Nagaland India",
+      "place": "Nagaland",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Traditional youth-dormitory buildings that served as centres of community learning and social life.",
+      "facts": [
+        "Community institution",
+        "Traditional architectural form",
+        "Varied by Naga community",
+        "Connected with education, craft and oral history"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "nagaland-architecture-4",
+      "title": "Nagaland State Museum",
+      "short": "Museum complex presenting Naga material culture, textiles and traditional objects.",
+      "image": null,
+      "imageQuery": "Nagaland State Museum Kisama/Kohima region Nagaland India",
+      "place": "Kisama/Kohima region",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Museum complex presenting Naga material culture, textiles and traditional objects.",
+      "facts": [
+        "Cultural museum",
+        "Documents Naga communities",
+        "Includes textiles and material culture",
+        "Supports heritage interpretation"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "nagaland-architecture-5",
+      "title": "Kisama Heritage Village",
+      "short": "Heritage village representing the traditional architectural forms of Naga communities.",
+      "image": null,
+      "imageQuery": "Kisama Heritage Village Kohima district Nagaland India",
+      "place": "Kohima district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Heritage village representing the traditional architectural forms of Naga communities.",
+      "facts": [
+        "Displays community-specific house forms",
+        "Hosts the Hornbill Festival",
+        "Built as a cultural interpretation site",
+        "Located near Kohima"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Odisha": [
+    {
+      "id": "odisha-architecture-1",
+      "title": "Konark Sun Temple",
+      "short": "13th-century temple conceived as a monumental chariot of the Sun god.",
+      "image": null,
+      "imageQuery": "Konark Sun Temple Konark Odisha India",
+      "place": "Konark",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "13th-century temple conceived as a monumental chariot of the Sun god.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Built under Narasimhadeva I",
+        "Known for its chariot form and stone wheels",
+        "Richly carved Kalinga architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "odisha-architecture-2",
+      "title": "Jagannath Temple",
+      "short": "Major Vaishnava temple and the centre of the Jagannath tradition.",
+      "image": null,
+      "imageQuery": "Jagannath Temple Puri Odisha India",
+      "place": "Puri",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Vaishnava temple and the centre of the Jagannath tradition.",
+      "facts": [
+        "Major pilgrimage centre",
+        "Associated with Jagannath worship",
+        "Kalinga temple architecture",
+        "Central to the annual Rath Yatra"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "odisha-architecture-3",
+      "title": "Lingaraj Temple",
+      "short": "Major medieval Shaiva temple and a landmark of Kalinga architecture.",
+      "image": null,
+      "imageQuery": "Lingaraj Temple Bhubaneswar Odisha India",
+      "place": "Bhubaneswar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major medieval Shaiva temple and a landmark of Kalinga architecture.",
+      "facts": [
+        "11th-century temple tradition",
+        "Dedicated to Shiva",
+        "Large temple complex",
+        "Major monument of Bhubaneswar"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "odisha-architecture-4",
+      "title": "Udayagiri and Khandagiri Caves",
+      "short": "Rock-cut caves associated with the ancient Jain tradition and the Kalinga kings.",
+      "image": null,
+      "imageQuery": "Udayagiri and Khandagiri Caves Bhubaneswar Odisha India",
+      "place": "Bhubaneswar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Rock-cut caves associated with the ancient Jain tradition and the Kalinga kings.",
+      "facts": [
+        "Ancient rock-cut caves",
+        "Associated with Jain ascetic traditions",
+        "Dating mainly to the 1st century BCE and later",
+        "Important archaeological site near Bhubaneswar"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "odisha-architecture-5",
+      "title": "Rajarani Temple",
+      "short": "Elegant 11th-century temple known for its sculptural decoration.",
+      "image": null,
+      "imageQuery": "Rajarani Temple Bhubaneswar Odisha India",
+      "place": "Bhubaneswar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Elegant 11th-century temple known for its sculptural decoration.",
+      "facts": [
+        "11th-century architecture",
+        "Known for red-yellow sandstone",
+        "Rich sculptural decoration",
+        "Major temple of Bhubaneswar"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "odisha-architecture-6",
+      "title": "Mukteshwar Temple",
+      "short": "Small but highly ornate temple often regarded as a jewel of Odishan architecture.",
+      "image": null,
+      "imageQuery": "Mukteshwar Temple Bhubaneswar Odisha India",
+      "place": "Bhubaneswar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Small but highly ornate temple often regarded as a jewel of Odishan architecture.",
+      "facts": [
+        "10th-century temple",
+        "Kalinga architectural style",
+        "Famous for its torana",
+        "Richly carved stone surfaces"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "odisha-architecture-7",
+      "title": "Barabati Fort",
+      "short": "Medieval fortification overlooking the Mahanadi and Kathajodi rivers.",
+      "image": null,
+      "imageQuery": "Barabati Fort Cuttack Odisha India",
+      "place": "Cuttack",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Medieval fortification overlooking the Mahanadi and Kathajodi rivers.",
+      "facts": [
+        "Historic fort",
+        "Associated with the Gajapati period",
+        "Earth-and-stone defensive remains",
+        "Important landmark of Cuttack"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "odisha-architecture-8",
+      "title": "Raghurajpur Heritage Crafts Village",
+      "short": "Living village landscape where traditional houses and craft practice form a cultural ensemble.",
+      "image": null,
+      "imageQuery": "Raghurajpur Heritage Crafts Village Puri district Odisha India",
+      "place": "Puri district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Living village landscape where traditional houses and craft practice form a cultural ensemble.",
+      "facts": [
+        "Known for Pattachitra artists",
+        "Living craft community",
+        "Traditional village setting",
+        "Strong link between architecture and craft"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Punjab": [
+    {
+      "id": "punjab-architecture-1",
+      "title": "Golden Temple",
+      "short": "Harmandir Sahib is a major Sikh sacred complex with a distinctive blend of architectural traditions.",
+      "image": null,
+      "imageQuery": "Golden Temple Amritsar Punjab India",
+      "place": "Amritsar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Harmandir Sahib is a major Sikh sacred complex with a distinctive blend of architectural traditions.",
+      "facts": [
+        "Major Sikh pilgrimage centre",
+        "Located in Amritsar",
+        "Sarovar surrounds the sanctum",
+        "Known for its gilded upper structure"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "punjab-architecture-2",
+      "title": "Jallianwala Bagh Memorial",
+      "short": "Memorial landscape commemorating the 1919 massacre.",
+      "image": null,
+      "imageQuery": "Jallianwala Bagh Memorial Amritsar Punjab India",
+      "place": "Amritsar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Memorial landscape commemorating the 1919 massacre.",
+      "facts": [
+        "Associated with the 1919 massacre",
+        "Major modern historical memorial",
+        "Located near the Golden Temple",
+        "Preserves a significant national memory site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "punjab-architecture-3",
+      "title": "Qila Mubarak",
+      "short": "Historic fort-palace complex associated with the Patiala royal house.",
+      "image": null,
+      "imageQuery": "Qila Mubarak Patiala Punjab India",
+      "place": "Patiala",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic fort-palace complex associated with the Patiala royal house.",
+      "facts": [
+        "Historic Sikh-period palace-fort",
+        "Associated with Patiala rulers",
+        "Includes palace buildings and courtyards",
+        "Major heritage landmark of Patiala"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "punjab-architecture-4",
+      "title": "Sheesh Mahal",
+      "short": "Palace known for mirror work, painted decoration and royal interiors.",
+      "image": null,
+      "imageQuery": "Sheesh Mahal Patiala Punjab India",
+      "place": "Patiala",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Palace known for mirror work, painted decoration and royal interiors.",
+      "facts": [
+        "Built under Patiala rulers",
+        "Famous for mirror decoration",
+        "Contains painted and ornamental interiors",
+        "Part of Patiala’s palace complex"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "punjab-architecture-5",
+      "title": "Gobindgarh Fort",
+      "short": "Historic fort that played an important role in the military history of the Sikh kingdom.",
+      "image": null,
+      "imageQuery": "Gobindgarh Fort Amritsar Punjab India",
+      "place": "Amritsar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic fort that played an important role in the military history of the Sikh kingdom.",
+      "facts": [
+        "Historic fortification",
+        "Associated with Maharaja Ranjit Singh",
+        "Later used under British rule",
+        "Now a heritage interpretation site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "punjab-architecture-6",
+      "title": "Anandpur Sahib heritage complex",
+      "short": "Sacred town associated with Sikh history and major gurdwaras.",
+      "image": null,
+      "imageQuery": "Anandpur Sahib heritage complex Rupnagar district Punjab India",
+      "place": "Rupnagar district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Sacred town associated with Sikh history and major gurdwaras.",
+      "facts": [
+        "Major Sikh pilgrimage centre",
+        "Associated with Guru Tegh Bahadur and Guru Gobind Singh",
+        "Includes Takht Sri Kesgarh Sahib",
+        "Historic townscape and religious architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "punjab-architecture-7",
+      "title": "Durgiana Temple",
+      "short": "Historic Hindu temple complex with a design influenced by the Golden Temple’s sarovar setting.",
+      "image": null,
+      "imageQuery": "Durgiana Temple Amritsar Punjab India",
+      "place": "Amritsar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Hindu temple complex with a design influenced by the Golden Temple’s sarovar setting.",
+      "facts": [
+        "Major Hindu pilgrimage site",
+        "Located in Amritsar",
+        "Temple stands within a sacred tank",
+        "Modern historic architecture of the city"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "punjab-architecture-8",
+      "title": "Moorish Mosque",
+      "short": "Early 20th-century mosque inspired by Moorish architectural forms.",
+      "image": null,
+      "imageQuery": "Moorish Mosque Kapurthala Punjab India",
+      "place": "Kapurthala",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Early 20th-century mosque inspired by Moorish architectural forms.",
+      "facts": [
+        "Built in the early 20th century",
+        "Located in Kapurthala",
+        "Moorish architectural influence",
+        "Major architectural landmark of the city"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Rajasthan": [
+    {
+      "id": "rajasthan-architecture-1",
+      "title": "Amer Fort",
+      "short": "Hill fort and palace complex blending Rajput and Mughal architectural elements.",
+      "image": null,
+      "imageQuery": "Amer Fort Jaipur district Rajasthan India",
+      "place": "Jaipur district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Hill fort and palace complex blending Rajput and Mughal architectural elements.",
+      "facts": [
+        "Part of the UNESCO Hill Forts of Rajasthan",
+        "Major Rajput fort",
+        "Known for courtyards and mirror work",
+        "Built mainly from sandstone and marble"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "rajasthan-architecture-2",
+      "title": "Chittorgarh Fort",
+      "short": "Vast hill fort associated with the Mewar kingdom.",
+      "image": null,
+      "imageQuery": "Chittorgarh Fort Chittorgarh Rajasthan India",
+      "place": "Chittorgarh",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Vast hill fort associated with the Mewar kingdom.",
+      "facts": [
+        "UNESCO Hill Fort of Rajasthan",
+        "Major Rajput fortification",
+        "Contains palaces, towers and temples",
+        "Historic capital of Mewar"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "rajasthan-architecture-3",
+      "title": "Jaisalmer Fort",
+      "short": "Living fortified city rising above the Thar Desert.",
+      "image": null,
+      "imageQuery": "Jaisalmer Fort Jaisalmer Rajasthan India",
+      "place": "Jaisalmer",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Living fortified city rising above the Thar Desert.",
+      "facts": [
+        "UNESCO Hill Fort of Rajasthan",
+        "Built in the 12th century",
+        "Golden sandstone architecture",
+        "Still contains homes, temples and shops"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "rajasthan-architecture-4",
+      "title": "Mehrangarh Fort",
+      "short": "Massive hill fort overlooking the Blue City.",
+      "image": null,
+      "imageQuery": "Mehrangarh Fort Jodhpur Rajasthan India",
+      "place": "Jodhpur",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Massive hill fort overlooking the Blue City.",
+      "facts": [
+        "Founded in the 15th century",
+        "Associated with the Rathore rulers",
+        "Known for monumental walls and palaces",
+        "Houses a major museum collection"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "rajasthan-architecture-5",
+      "title": "City Palace, Udaipur",
+      "short": "Large palace complex overlooking Lake Pichola, developed by the Mewar rulers.",
+      "image": null,
+      "imageQuery": "City Palace, Udaipur Udaipur Rajasthan India",
+      "place": "Udaipur",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large palace complex overlooking Lake Pichola, developed by the Mewar rulers.",
+      "facts": [
+        "Developed over several centuries",
+        "Mewar royal complex",
+        "Mixes Rajput and Mughal influences",
+        "Major landmark of Udaipur"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "rajasthan-architecture-6",
+      "title": "Hawa Mahal",
+      "short": "Five-storeyed façade built in 1799 with hundreds of small openings.",
+      "image": null,
+      "imageQuery": "Hawa Mahal Jaipur Rajasthan India",
+      "place": "Jaipur",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Five-storeyed façade built in 1799 with hundreds of small openings.",
+      "facts": [
+        "Built in 1799",
+        "Commissioned by Sawai Pratap Singh",
+        "Part of Jaipur’s historic urban fabric",
+        "Designed to allow air circulation and screened viewing"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "rajasthan-architecture-7",
+      "title": "Jantar Mantar, Jaipur",
+      "short": "18th-century astronomical observatory with monumental masonry instruments.",
+      "image": null,
+      "imageQuery": "Jantar Mantar, Jaipur Jaipur Rajasthan India",
+      "place": "Jaipur",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "18th-century astronomical observatory with monumental masonry instruments.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Built under Sawai Jai Singh II",
+        "Contains large astronomical instruments",
+        "Part of Jaipur’s planned historic city"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "rajasthan-architecture-8",
+      "title": "Kumbhalgarh Fort",
+      "short": "Mountain fort famous for its long defensive wall and Mewar history.",
+      "image": null,
+      "imageQuery": "Kumbhalgarh Fort Rajsamand district Rajasthan India",
+      "place": "Rajsamand district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Mountain fort famous for its long defensive wall and Mewar history.",
+      "facts": [
+        "UNESCO Hill Fort of Rajasthan",
+        "Built mainly in the 15th century",
+        "Associated with Rana Kumbha",
+        "Known for its extensive fort walls"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Sikkim": [
+    {
+      "id": "sikkim-architecture-1",
+      "title": "Rumtek Monastery",
+      "short": "Major Tibetan Buddhist monastery complex overlooking the Rangit valley.",
+      "image": null,
+      "imageQuery": "Rumtek Monastery East Sikkim Sikkim India",
+      "place": "East Sikkim",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Tibetan Buddhist monastery complex overlooking the Rangit valley.",
+      "facts": [
+        "Important Kagyu Buddhist centre",
+        "Located near Gangtok",
+        "Modern complex inspired by Tsurphu monastery",
+        "Major pilgrimage and cultural landmark"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "sikkim-architecture-2",
+      "title": "Pemayangtse Monastery",
+      "short": "Historic Nyingma monastery and one of Sikkim’s oldest important monasteries.",
+      "image": null,
+      "imageQuery": "Pemayangtse Monastery West Sikkim Sikkim India",
+      "place": "West Sikkim",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Nyingma monastery and one of Sikkim’s oldest important monasteries.",
+      "facts": [
+        "Nyingma Buddhist tradition",
+        "Founded in the 17th century",
+        "Important monastery of West Sikkim",
+        "Known for its sacred sculptures and paintings"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "sikkim-architecture-3",
+      "title": "Rabdentse Ruins",
+      "short": "Archaeological remains of the former capital of the Kingdom of Sikkim.",
+      "image": null,
+      "imageQuery": "Rabdentse Ruins West Sikkim Sikkim India",
+      "place": "West Sikkim",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Archaeological remains of the former capital of the Kingdom of Sikkim.",
+      "facts": [
+        "Former Sikkimese capital",
+        "Ruins date mainly from the 17th–18th centuries",
+        "Includes palace and religious remains",
+        "Important archaeological site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "sikkim-architecture-4",
+      "title": "Dubdi Monastery",
+      "short": "Historic monastery associated with the founding period of the Sikkim kingdom.",
+      "image": null,
+      "imageQuery": "Dubdi Monastery Yuksom Sikkim India",
+      "place": "Yuksom",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic monastery associated with the founding period of the Sikkim kingdom.",
+      "facts": [
+        "Founded in the 17th century",
+        "Associated with Yuksom history",
+        "One of Sikkim’s oldest monasteries",
+        "Traditional Himalayan Buddhist architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "sikkim-architecture-5",
+      "title": "Namgyal Institute of Tibetology",
+      "short": "Museum and research institution in a distinctive Himalayan Buddhist architectural style.",
+      "image": null,
+      "imageQuery": "Namgyal Institute of Tibetology Gangtok Sikkim India",
+      "place": "Gangtok",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Museum and research institution in a distinctive Himalayan Buddhist architectural style.",
+      "facts": [
+        "Founded in the 1950s",
+        "Houses Buddhist manuscripts and art",
+        "Located in Gangtok",
+        "Important cultural institution"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Tamil Nadu": [
+    {
+      "id": "tamil-nadu-architecture-1",
+      "title": "Brihadisvara Temple",
+      "short": "Monumental Chola temple dedicated to Shiva.",
+      "image": null,
+      "imageQuery": "Brihadisvara Temple Thanjavur Tamil Nadu India",
+      "place": "Thanjavur",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monumental Chola temple dedicated to Shiva.",
+      "facts": [
+        "UNESCO Great Living Chola Temple",
+        "Completed in the early 11th century",
+        "Known for its towering vimana",
+        "Major achievement of Chola architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "tamil-nadu-architecture-2",
+      "title": "Shore Temple",
+      "short": "Pallava-period structural temple facing the Bay of Bengal.",
+      "image": null,
+      "imageQuery": "Shore Temple Mamallapuram Tamil Nadu India",
+      "place": "Mamallapuram",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Pallava-period structural temple facing the Bay of Bengal.",
+      "facts": [
+        "UNESCO component of the Group of Monuments at Mahabalipuram",
+        "Built in the Pallava period",
+        "Stone temple facing the sea",
+        "Dedicated to Shiva and associated deities"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "tamil-nadu-architecture-3",
+      "title": "Group of Monuments at Mahabalipuram",
+      "short": "Pallava rock-cut and structural monuments including rathas, caves and shore temples.",
+      "image": null,
+      "imageQuery": "Group of Monuments at Mahabalipuram Mamallapuram Tamil Nadu India",
+      "place": "Mamallapuram",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Pallava rock-cut and structural monuments including rathas, caves and shore temples.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Developed under Pallava rulers",
+        "Includes rock-cut caves and monoliths",
+        "Important centre of early South Indian architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "tamil-nadu-architecture-4",
+      "title": "Meenakshi Amman Temple",
+      "short": "Large temple complex with monumental gopurams and richly decorated halls.",
+      "image": null,
+      "imageQuery": "Meenakshi Amman Temple Madurai Tamil Nadu India",
+      "place": "Madurai",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large temple complex with monumental gopurams and richly decorated halls.",
+      "facts": [
+        "Major pilgrimage centre",
+        "Historic Dravidian temple complex",
+        "Known for its towering gopurams",
+        "Continuously developed over many centuries"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "tamil-nadu-architecture-5",
+      "title": "Ramanathaswamy Temple",
+      "short": "Major Shaiva pilgrimage temple famous for its long pillared corridors.",
+      "image": null,
+      "imageQuery": "Ramanathaswamy Temple Rameswaram Tamil Nadu India",
+      "place": "Rameswaram",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Shaiva pilgrimage temple famous for its long pillared corridors.",
+      "facts": [
+        "Major pilgrimage centre",
+        "One of the Char Dham sites",
+        "Dedicated to Shiva",
+        "Known for its extensive corridors and mandapas"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "tamil-nadu-architecture-6",
+      "title": "Gangaikonda Cholapuram Temple",
+      "short": "Chola temple built as part of the imperial capital established by Rajendra I.",
+      "image": null,
+      "imageQuery": "Gangaikonda Cholapuram Temple Ariyalur district Tamil Nadu India",
+      "place": "Ariyalur district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Chola temple built as part of the imperial capital established by Rajendra I.",
+      "facts": [
+        "UNESCO Great Living Chola Temple",
+        "Built in the 11th century",
+        "Dedicated to Shiva",
+        "Known for its sculptural refinement"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "tamil-nadu-architecture-7",
+      "title": "Airavatesvara Temple",
+      "short": "Chola temple renowned for detailed stone carving and miniature architectural forms.",
+      "image": null,
+      "imageQuery": "Airavatesvara Temple Darasuram Tamil Nadu India",
+      "place": "Darasuram",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Chola temple renowned for detailed stone carving and miniature architectural forms.",
+      "facts": [
+        "UNESCO Great Living Chola Temple",
+        "Built in the 12th century",
+        "Associated with Rajaraja II",
+        "Known for ornate stone sculpture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "tamil-nadu-architecture-8",
+      "title": "Chettinad Mansions",
+      "short": "Large merchant houses combining Tamil, South Asian and overseas architectural influences.",
+      "image": null,
+      "imageQuery": "Chettinad Mansions Sivaganga and Pudukkottai region Tamil Nadu India",
+      "place": "Sivaganga and Pudukkottai region",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large merchant houses combining Tamil, South Asian and overseas architectural influences.",
+      "facts": [
+        "Associated with Nattukottai Chettiars",
+        "Known for courtyards and ornate interiors",
+        "Use imported and local materials",
+        "Distinctive regional domestic architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Telangana": [
+    {
+      "id": "telangana-architecture-1",
+      "title": "Ramappa Temple",
+      "short": "Kakatiya temple known for detailed sculpture and lightweight architectural techniques.",
+      "image": null,
+      "imageQuery": "Ramappa Temple Palampet, Mulugu district Telangana India",
+      "place": "Palampet, Mulugu district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Kakatiya temple known for detailed sculpture and lightweight architectural techniques.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Built in the 13th century",
+        "Dedicated to Shiva",
+        "Known for sculptural decoration and engineering"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "telangana-architecture-2",
+      "title": "Charminar",
+      "short": "Four-minaret monument and symbol of Hyderabad’s historic core.",
+      "image": null,
+      "imageQuery": "Charminar Hyderabad Telangana India",
+      "place": "Hyderabad",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Four-minaret monument and symbol of Hyderabad’s historic core.",
+      "facts": [
+        "Built in 1591",
+        "Associated with Muhammad Quli Qutb Shah",
+        "Four monumental arches and minarets",
+        "Central landmark of the old city"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "telangana-architecture-3",
+      "title": "Golconda Fort",
+      "short": "Massive hill fort and former capital of the Qutb Shahi dynasty.",
+      "image": null,
+      "imageQuery": "Golconda Fort Hyderabad Telangana India",
+      "place": "Hyderabad",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Massive hill fort and former capital of the Qutb Shahi dynasty.",
+      "facts": [
+        "Qutb Shahi-era fort",
+        "Known for acoustic and defensive features",
+        "Includes palaces, gates and mosques",
+        "Major historic landmark of Hyderabad"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "telangana-architecture-4",
+      "title": "Qutb Shahi Tombs",
+      "short": "Garden tomb complex of the Qutb Shahi rulers with distinctive domed architecture.",
+      "image": null,
+      "imageQuery": "Qutb Shahi Tombs Hyderabad Telangana India",
+      "place": "Hyderabad",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Garden tomb complex of the Qutb Shahi rulers with distinctive domed architecture.",
+      "facts": [
+        "Royal necropolis",
+        "Qutb Shahi architecture",
+        "Contains tombs of rulers and nobles",
+        "Located near Golconda"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "telangana-architecture-5",
+      "title": "Thousand Pillar Temple",
+      "short": "Kakatiya temple complex known for ornate pillars and star-like planning.",
+      "image": null,
+      "imageQuery": "Thousand Pillar Temple Hanamkonda Telangana India",
+      "place": "Hanamkonda",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Kakatiya temple complex known for ornate pillars and star-like planning.",
+      "facts": [
+        "Kakatiya-era temple",
+        "Dedicated to Shiva, Vishnu and Surya traditions",
+        "Known for carved pillars",
+        "Historic landmark of Hanamkonda"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "telangana-architecture-6",
+      "title": "Bhongir Fort",
+      "short": "Hilltop fort with massive rock-cut defensive features.",
+      "image": null,
+      "imageQuery": "Bhongir Fort Yadadri Bhuvanagiri Telangana India",
+      "place": "Yadadri Bhuvanagiri",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Hilltop fort with massive rock-cut defensive features.",
+      "facts": [
+        "Historic hill fort",
+        "Associated with Western Chalukyan and later periods",
+        "Built on a monolithic hill",
+        "Major landmark of Telangana"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "telangana-architecture-7",
+      "title": "Warangal Fort",
+      "short": "Fortified Kakatiya capital with monumental gateways and defensive walls.",
+      "image": null,
+      "imageQuery": "Warangal Fort Warangal Telangana India",
+      "place": "Warangal",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Fortified Kakatiya capital with monumental gateways and defensive walls.",
+      "facts": [
+        "Kakatiya capital landscape",
+        "Known for the four Kakatiya toranas",
+        "Historic fortification",
+        "Major archaeological site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "telangana-architecture-8",
+      "title": "Paigah Tombs",
+      "short": "Ornate funerary complex combining Islamic and local decorative traditions.",
+      "image": null,
+      "imageQuery": "Paigah Tombs Hyderabad Telangana India",
+      "place": "Hyderabad",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ornate funerary complex combining Islamic and local decorative traditions.",
+      "facts": [
+        "19th-century tomb complex",
+        "Associated with Paigah nobles",
+        "Known for stucco and carved stonework",
+        "Important architectural landmark of Hyderabad"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Tripura": [
+    {
+      "id": "tripura-architecture-1",
+      "title": "Ujjayanta Palace",
+      "short": "Former royal palace and major landmark of Tripura’s capital.",
+      "image": null,
+      "imageQuery": "Ujjayanta Palace Agartala Tripura India",
+      "place": "Agartala",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Former royal palace and major landmark of Tripura’s capital.",
+      "facts": [
+        "Built in the early 20th century",
+        "Former Manikya royal residence",
+        "European and Indo-Saracenic influences",
+        "Now houses the Tripura State Museum"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "tripura-architecture-2",
+      "title": "Neermahal Palace",
+      "short": "Lake palace built for the Manikya royal family in the middle of Rudrasagar Lake.",
+      "image": null,
+      "imageQuery": "Neermahal Palace Melaghar Tripura India",
+      "place": "Melaghar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Lake palace built for the Manikya royal family in the middle of Rudrasagar Lake.",
+      "facts": [
+        "Built in the 1930s",
+        "Former royal summer residence",
+        "Located in Rudrasagar Lake",
+        "Combines Mughal and local architectural influences"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "tripura-architecture-3",
+      "title": "Unakoti Rock-Cut Sculptures",
+      "short": "Massive rock-cut Shaiva images and reliefs in a forested pilgrimage landscape.",
+      "image": null,
+      "imageQuery": "Unakoti Rock-Cut Sculptures Unakoti Tripura India",
+      "place": "Unakoti",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Massive rock-cut Shaiva images and reliefs in a forested pilgrimage landscape.",
+      "facts": [
+        "Ancient rock-cut sculptures",
+        "Major Shaiva pilgrimage site",
+        "Known for colossal stone faces and reliefs",
+        "Located in northern Tripura"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "tripura-architecture-4",
+      "title": "Pilak Archaeological Site",
+      "short": "Archaeological landscape with Buddhist and Hindu sculptures and temple remains.",
+      "image": null,
+      "imageQuery": "Pilak Archaeological Site South Tripura Tripura India",
+      "place": "South Tripura",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Archaeological landscape with Buddhist and Hindu sculptures and temple remains.",
+      "facts": [
+        "Archaeological site",
+        "Dates mainly to early medieval centuries",
+        "Shows Hindu-Buddhist artistic traditions",
+        "Important to Tripura’s early history"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "tripura-architecture-5",
+      "title": "Chabimura Rock Carvings",
+      "short": "Rock-cut images of deities along the Gomati River gorge.",
+      "image": null,
+      "imageQuery": "Chabimura Rock Carvings Gomati district Tripura India",
+      "place": "Gomati district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Rock-cut images of deities along the Gomati River gorge.",
+      "facts": [
+        "Rock-cut religious art",
+        "Located along the Gomati River",
+        "Major pilgrimage and archaeological site",
+        "Known for large cliff sculptures"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Uttar Pradesh": [
+    {
+      "id": "uttar-pradesh-architecture-1",
+      "title": "Taj Mahal",
+      "short": "Mughal marble mausoleum commissioned by Shah Jahan.",
+      "image": null,
+      "imageQuery": "Taj Mahal Agra Uttar Pradesh India",
+      "place": "Agra",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Mughal marble mausoleum commissioned by Shah Jahan.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Completed in the 17th century",
+        "Built mainly of white marble",
+        "Famous for its symmetrical garden composition"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-architecture-2",
+      "title": "Agra Fort",
+      "short": "Massive Mughal fort complex with palaces, audience halls and defensive walls.",
+      "image": null,
+      "imageQuery": "Agra Fort Agra Uttar Pradesh India",
+      "place": "Agra",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Massive Mughal fort complex with palaces, audience halls and defensive walls.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Major Mughal imperial fort",
+        "Built mainly of red sandstone with later marble additions",
+        "Associated with Akbar and later Mughal rulers"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-architecture-3",
+      "title": "Fatehpur Sikri",
+      "short": "Planned Mughal city with palaces, mosques and courtyards.",
+      "image": null,
+      "imageQuery": "Fatehpur Sikri Agra district Uttar Pradesh India",
+      "place": "Agra district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Planned Mughal city with palaces, mosques and courtyards.",
+      "facts": [
+        "UNESCO World Heritage Site",
+        "Built under Akbar",
+        "Known for red sandstone architecture",
+        "Served as an imperial capital for a period"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-architecture-4",
+      "title": "Bara Imambara",
+      "short": "18th-century complex famous for its vast vaulted hall and Bhool Bhulaiya.",
+      "image": null,
+      "imageQuery": "Bara Imambara Lucknow Uttar Pradesh India",
+      "place": "Lucknow",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "18th-century complex famous for its vast vaulted hall and Bhool Bhulaiya.",
+      "facts": [
+        "Built under Asaf-ud-Daula",
+        "Major Awadhi monument",
+        "Large vaulted assembly hall",
+        "Important landmark of Lucknow"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-architecture-5",
+      "title": "Sarnath Archaeological Site",
+      "short": "Major Buddhist heritage landscape associated with the Buddha’s first sermon.",
+      "image": null,
+      "imageQuery": "Sarnath Archaeological Site Varanasi district Uttar Pradesh India",
+      "place": "Varanasi district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Buddhist heritage landscape associated with the Buddha’s first sermon.",
+      "facts": [
+        "Major Buddhist pilgrimage site",
+        "Associated with the first sermon",
+        "Contains Dhamek Stupa and monastic remains",
+        "Important archaeological landscape"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-architecture-6",
+      "title": "Jhansi Fort",
+      "short": "Hill fort associated with the history of the 1857 uprising and Rani Lakshmibai.",
+      "image": null,
+      "imageQuery": "Jhansi Fort Jhansi Uttar Pradesh India",
+      "place": "Jhansi",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Hill fort associated with the history of the 1857 uprising and Rani Lakshmibai.",
+      "facts": [
+        "Historic Bundela fort",
+        "Major 19th-century political landmark",
+        "Associated with Rani Lakshmibai",
+        "Fort occupies a rocky hill"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-architecture-7",
+      "title": "Chunar Fort",
+      "short": "Ancient hill fort overlooking the Ganga and important through many historical periods.",
+      "image": null,
+      "imageQuery": "Chunar Fort Mirzapur district Uttar Pradesh India",
+      "place": "Mirzapur district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ancient hill fort overlooking the Ganga and important through many historical periods.",
+      "facts": [
+        "Long history of occupation",
+        "Hill fort above the Ganga",
+        "Associated with Sher Shah Suri and later rulers",
+        "Important strategic site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-architecture-8",
+      "title": "Akbar’s Tomb",
+      "short": "Mughal mausoleum complex built for Emperor Akbar.",
+      "image": null,
+      "imageQuery": "Akbar’s Tomb Sikandra, Agra Uttar Pradesh India",
+      "place": "Sikandra, Agra",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Mughal mausoleum complex built for Emperor Akbar.",
+      "facts": [
+        "Mughal-era monument",
+        "Built in the early 17th century",
+        "Large garden-tomb complex",
+        "Combines sandstone and marble"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Uttarakhand": [
+    {
+      "id": "uttarakhand-architecture-1",
+      "title": "Kedarnath Temple",
+      "short": "Historic Himalayan Shiva temple and major pilgrimage centre.",
+      "image": null,
+      "imageQuery": "Kedarnath Temple Rudraprayag district Uttarakhand India",
+      "place": "Rudraprayag district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Himalayan Shiva temple and major pilgrimage centre.",
+      "facts": [
+        "One of the twelve Jyotirlingas",
+        "Major Char Dham pilgrimage site",
+        "Stone temple in a high-altitude setting",
+        "Traditional Himalayan temple architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttarakhand-architecture-2",
+      "title": "Badrinath Temple",
+      "short": "Major Vaishnava pilgrimage temple in the Himalayas.",
+      "image": null,
+      "imageQuery": "Badrinath Temple Chamoli district Uttarakhand India",
+      "place": "Chamoli district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Vaishnava pilgrimage temple in the Himalayas.",
+      "facts": [
+        "One of the Char Dham sites",
+        "Dedicated to Vishnu as Badrinarayan",
+        "Located in the Alaknanda valley",
+        "Long-standing pilgrimage tradition"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttarakhand-architecture-3",
+      "title": "Jageshwar Temples",
+      "short": "Group of ancient stone temples set in a deodar forest.",
+      "image": null,
+      "imageQuery": "Jageshwar Temples Almora district Uttarakhand India",
+      "place": "Almora district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Group of ancient stone temples set in a deodar forest.",
+      "facts": [
+        "Major Shaiva temple group",
+        "Many temples date from the early medieval period",
+        "Stone architecture",
+        "Part of the Jageshwar sacred landscape"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttarakhand-architecture-4",
+      "title": "Baijnath Temples",
+      "short": "Medieval stone temple group on the banks of the Gomti River.",
+      "image": null,
+      "imageQuery": "Baijnath Temples Bageshwar district Uttarakhand India",
+      "place": "Bageshwar district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Medieval stone temple group on the banks of the Gomti River.",
+      "facts": [
+        "Built mainly in the 12th–13th centuries",
+        "Dedicated largely to Shiva and other Hindu deities",
+        "Katyuri-period architecture",
+        "Historic temple group"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttarakhand-architecture-5",
+      "title": "Katarmal Sun Temple",
+      "short": "Ancient hilltop Sun temple complex with stone architecture.",
+      "image": null,
+      "imageQuery": "Katarmal Sun Temple Almora district Uttarakhand India",
+      "place": "Almora district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ancient hilltop Sun temple complex with stone architecture.",
+      "facts": [
+        "Medieval Sun temple",
+        "Associated with the Katyuri period",
+        "Located on a hill above the Kosi valley",
+        "Known for stone carving"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "uttarakhand-architecture-6",
+      "title": "Pithoragarh Fort",
+      "short": "Historic hill fort remains associated with the Chand rulers.",
+      "image": null,
+      "imageQuery": "Pithoragarh Fort Pithoragarh Uttarakhand India",
+      "place": "Pithoragarh",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic hill fort remains associated with the Chand rulers.",
+      "facts": [
+        "Regional hill fort",
+        "Associated with Chand dynasty history",
+        "Located in Pithoragarh town",
+        "Important local historical landmark"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-2",
+      "title": "Biswa Bangla Gate",
+      "short": "Contemporary observation and dining structure shaped as a large circular gateway.",
+      "image": null,
+      "imageQuery": "Biswa Bangla Gate Rajarhat, Kolkata West Bengal India",
+      "place": "Rajarhat, Kolkata",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Contemporary observation and dining structure shaped as a large circular gateway.",
+      "facts": [
+        "Modern landmark of Kolkata",
+        "Located in New Town",
+        "Observation deck and public attraction",
+        "Represents contemporary civic architecture"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-3",
+      "title": "Victoria Memorial",
+      "short": "Monumental marble museum built in memory of Queen Victoria.",
+      "image": null,
+      "imageQuery": "Victoria Memorial Kolkata West Bengal India",
+      "place": "Kolkata",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Monumental marble museum built in memory of Queen Victoria.",
+      "facts": [
+        "Opened in 1921",
+        "Built mainly of Makrana marble",
+        "Indo-Saracenic architectural character",
+        "Major museum and cultural landmark"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-4",
+      "title": "Writers’ Building",
+      "short": "Historic colonial administrative building that became a symbol of Bengal’s political history.",
+      "image": null,
+      "imageQuery": "Writers’ Building Kolkata West Bengal India",
+      "place": "Kolkata",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic colonial administrative building that became a symbol of Bengal’s political history.",
+      "facts": [
+        "Origin dates to the late 18th century",
+        "Associated with the East India Company and Bengal administration",
+        "Major colonial-era landmark",
+        "Located in B.B.D. Bagh"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-5",
+      "title": "Cooch Behar Palace",
+      "short": "Grand 19th-century palace inspired by European classical architecture.",
+      "image": null,
+      "imageQuery": "Cooch Behar Palace Cooch Behar West Bengal India",
+      "place": "Cooch Behar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Grand 19th-century palace inspired by European classical architecture.",
+      "facts": [
+        "Built in the late 19th century",
+        "Associated with the Cooch Behar royal family",
+        "Italian Renaissance-inspired exterior",
+        "Major heritage landmark of North Bengal"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-6",
+      "title": "Hazarduari Palace",
+      "short": "19th-century palace with a thousand-door name and neoclassical architecture.",
+      "image": null,
+      "imageQuery": "Hazarduari Palace Murshidabad West Bengal India",
+      "place": "Murshidabad",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "19th-century palace with a thousand-door name and neoclassical architecture.",
+      "facts": [
+        "Built in the 19th century",
+        "Associated with Nawab Nazim Humayun Jah",
+        "Neoclassical architectural style",
+        "Now houses a museum"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-7",
+      "title": "Bishnupur Temples",
+      "short": "Malla-period brick and laterite temples known for terracotta reliefs and distinctive roof forms.",
+      "image": null,
+      "imageQuery": "Bishnupur Temples Bishnupur, Bankura West Bengal India",
+      "place": "Bishnupur, Bankura",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Malla-period brick and laterite temples known for terracotta reliefs and distinctive roof forms.",
+      "facts": [
+        "Major Malla-era temple landscape",
+        "Includes Eka-Ratna and Pancha-Ratna forms",
+        "Terracotta reliefs depict narrative scenes",
+        "Bishnupur is on India’s UNESCO Tentative List"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "west-bengal-architecture-8",
+      "title": "Metcalfe Hall",
+      "short": "Neoclassical public building associated with the colonial-era intellectual and library culture of Calcutta.",
+      "image": null,
+      "imageQuery": "Metcalfe Hall Kolkata West Bengal India",
+      "place": "Kolkata",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Neoclassical public building associated with the colonial-era intellectual and library culture of Calcutta.",
+      "facts": [
+        "Built in the 1840s",
+        "Neoclassical architecture",
+        "Historic civic building",
+        "Located near the Hooghly riverfront"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Jammu and Kashmir": [
+    {
+      "id": "jammu-and-kashmir-architecture-1",
+      "title": "Mubarak Mandi Palace",
+      "short": "Historic palace complex associated with the Dogra rulers.",
+      "image": null,
+      "imageQuery": "Mubarak Mandi Palace Jammu Jammu and Kashmir India",
+      "place": "Jammu",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic palace complex associated with the Dogra rulers.",
+      "facts": [
+        "Former Dogra royal residence",
+        "Large multi-building palace complex",
+        "Combines European and traditional influences",
+        "Major heritage landmark of Jammu"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-architecture-2",
+      "title": "Amar Mahal Palace",
+      "short": "19th-century palace built in a French-inspired style for the Dogra royal family.",
+      "image": null,
+      "imageQuery": "Amar Mahal Palace Jammu Jammu and Kashmir India",
+      "place": "Jammu",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "19th-century palace built in a French-inspired style for the Dogra royal family.",
+      "facts": [
+        "19th-century palace",
+        "French architectural influence",
+        "Former royal residence",
+        "Now houses a museum and cultural collections"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-architecture-3",
+      "title": "Mughal Gardens of Kashmir",
+      "short": "Terraced gardens shaped by Mughal landscape planning and Himalayan watercourses.",
+      "image": null,
+      "imageQuery": "Mughal Gardens of Kashmir Kashmir Valley Jammu and Kashmir India",
+      "place": "Kashmir Valley",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Terraced gardens shaped by Mughal landscape planning and Himalayan watercourses.",
+      "facts": [
+        "Shalimar and Nishat are major examples",
+        "Mughal garden planning",
+        "Terraced along the Dal Lake landscape",
+        "Use channels, cascades and pavilions"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-architecture-4",
+      "title": "Pari Mahal",
+      "short": "Seven-terraced historic garden and palace above Dal Lake.",
+      "image": null,
+      "imageQuery": "Pari Mahal Srinagar Jammu and Kashmir India",
+      "place": "Srinagar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Seven-terraced historic garden and palace above Dal Lake.",
+      "facts": [
+        "Built in the 17th century",
+        "Associated with Dara Shikoh",
+        "Terraced garden architecture",
+        "Overlooks Srinagar and Dal Lake"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-architecture-5",
+      "title": "Jamia Masjid, Srinagar",
+      "short": "Historic congregational mosque with a distinctive timber-and-brick architectural form.",
+      "image": null,
+      "imageQuery": "Jamia Masjid, Srinagar Srinagar Jammu and Kashmir India",
+      "place": "Srinagar",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic congregational mosque with a distinctive timber-and-brick architectural form.",
+      "facts": [
+        "Founded in the 14th century",
+        "Major mosque of Srinagar",
+        "Known for its timber colonnades",
+        "Influenced by Kashmiri and Central Asian traditions"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-architecture-6",
+      "title": "Martand Sun Temple",
+      "short": "Ruined 8th-century Sun temple complex associated with the Karkota dynasty.",
+      "image": null,
+      "imageQuery": "Martand Sun Temple Anantnag district Jammu and Kashmir India",
+      "place": "Anantnag district",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Ruined 8th-century Sun temple complex associated with the Karkota dynasty.",
+      "facts": [
+        "8th-century temple",
+        "Associated with King Lalitaditya",
+        "Kashmiri temple architecture",
+        "Major archaeological site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ],
+  "Ladakh": [
+    {
+      "id": "ladakh-architecture-1",
+      "title": "Leh Palace",
+      "short": "Nine-storey palace overlooking Leh, built in the Namgyal period.",
+      "image": null,
+      "imageQuery": "Leh Palace Leh Ladakh India",
+      "place": "Leh",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Nine-storey palace overlooking Leh, built in the Namgyal period.",
+      "facts": [
+        "17th-century palace",
+        "Associated with the Namgyal dynasty",
+        "Tibetan architectural influence",
+        "Overlooks the old city of Leh"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "ladakh-architecture-2",
+      "title": "Thiksey Monastery",
+      "short": "Large Gelug Buddhist monastery built on a hill above the Indus valley.",
+      "image": null,
+      "imageQuery": "Thiksey Monastery Thiksey Ladakh India",
+      "place": "Thiksey",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Large Gelug Buddhist monastery built on a hill above the Indus valley.",
+      "facts": [
+        "Important Gelug monastery",
+        "Hilltop monastic complex",
+        "Known for its large Maitreya statue",
+        "Major cultural landmark of Ladakh"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "ladakh-architecture-3",
+      "title": "Alchi Monastery Complex",
+      "short": "Historic Buddhist complex famous for early murals and Kashmiri-influenced art.",
+      "image": null,
+      "imageQuery": "Alchi Monastery Complex Alchi Ladakh India",
+      "place": "Alchi",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Buddhist complex famous for early murals and Kashmiri-influenced art.",
+      "facts": [
+        "Historic Buddhist complex",
+        "Known for 11th–12th century murals",
+        "Strong Kashmiri artistic influence",
+        "Major heritage site of Ladakh"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "ladakh-architecture-4",
+      "title": "Hemis Monastery",
+      "short": "Major Drukpa Buddhist monastery and centre of Ladakhi religious life.",
+      "image": null,
+      "imageQuery": "Hemis Monastery Hemis Ladakh India",
+      "place": "Hemis",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Major Drukpa Buddhist monastery and centre of Ladakhi religious life.",
+      "facts": [
+        "Important Drukpa monastery",
+        "Associated with Hemis Festival",
+        "Historic monastic complex",
+        "Known for murals, thangkas and ritual objects"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "ladakh-architecture-5",
+      "title": "Shey Palace",
+      "short": "Historic palace and monastery complex overlooking the Indus valley.",
+      "image": null,
+      "imageQuery": "Shey Palace Shey Ladakh India",
+      "place": "Shey",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic palace and monastery complex overlooking the Indus valley.",
+      "facts": [
+        "Former Ladakhi royal residence",
+        "Associated with the Namgyal dynasty",
+        "Contains a large Buddha image",
+        "Located near Leh"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    },
+    {
+      "id": "ladakh-architecture-6",
+      "title": "Diskit Monastery",
+      "short": "Historic Gelug monastery known for its hilltop location and large Maitreya statue.",
+      "image": null,
+      "imageQuery": "Diskit Monastery Nubra Valley Ladakh India",
+      "place": "Nubra Valley",
+      "period": "Historic / architectural heritage",
+      "medium": "Architecture, monument or historic built environment",
+      "theme": "Architecture, place and cultural memory",
+      "description": "Historic Gelug monastery known for its hilltop location and large Maitreya statue.",
+      "facts": [
+        "Oldest major monastery in Nubra",
+        "Gelug tradition",
+        "Large Maitreya statue overlooks the valley",
+        "Major pilgrimage site"
+      ],
+      "gallery": [],
+      "source": "ASI / UNESCO / state tourism and established heritage records",
+      "verified": true,
+      "isArchitectureHeritage": true
+    }
+  ]
+};
+const STATE_FESTIVALS = {
+  "Andhra Pradesh": [
+    {
+      "id": "andhra-pradesh-festival-1",
+      "title": "Ugadi",
+      "short": "Ugadi is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ugadi Andhra Pradesh India festival",
+      "place": "Andhra Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ugadi is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Andhra Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-festival-2",
+      "title": "Sankranti",
+      "short": "Sankranti is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Sankranti Andhra Pradesh India festival",
+      "place": "Andhra Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Sankranti is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Andhra Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-festival-3",
+      "title": "Tirupati Brahmotsavam",
+      "short": "Tirupati Brahmotsavam is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Tirupati Brahmotsavam Andhra Pradesh India festival",
+      "place": "Andhra Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tirupati Brahmotsavam is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Andhra Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-festival-4",
+      "title": "Dasara at Vijayawada",
+      "short": "Dasara at Vijayawada is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Dasara at Vijayawada Andhra Pradesh India festival",
+      "place": "Andhra Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Dasara at Vijayawada is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Andhra Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-festival-5",
+      "title": "Ratha Saptami",
+      "short": "Ratha Saptami is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ratha Saptami Andhra Pradesh India festival",
+      "place": "Andhra Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ratha Saptami is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Andhra Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-festival-6",
+      "title": "Maha Shivaratri",
+      "short": "Maha Shivaratri is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Maha Shivaratri Andhra Pradesh India festival",
+      "place": "Andhra Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Maha Shivaratri is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Andhra Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-festival-7",
+      "title": "Vinayaka Chavithi",
+      "short": "Vinayaka Chavithi is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Vinayaka Chavithi Andhra Pradesh India festival",
+      "place": "Andhra Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Vinayaka Chavithi is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Andhra Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "andhra-pradesh-festival-8",
+      "title": "Krishna Pushkaram",
+      "short": "Krishna Pushkaram is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Krishna Pushkaram Andhra Pradesh India festival",
+      "place": "Andhra Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Krishna Pushkaram is a documented cultural celebration associated with Andhra Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Andhra Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Arunachal Pradesh": [
+    {
+      "id": "arunachal-pradesh-festival-1",
+      "title": "Losar",
+      "short": "Tibetan Buddhist New Year celebrated by Himalayan Buddhist communities.",
+      "image": null,
+      "imageQuery": "Losar Arunachal Pradesh India festival",
+      "place": "Arunachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tibetan Buddhist New Year celebrated by Himalayan Buddhist communities.",
+      "facts": [
+        "Associated with cultural life in Arunachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-festival-2",
+      "title": "Solung",
+      "short": "Solung is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Solung Arunachal Pradesh India festival",
+      "place": "Arunachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Solung is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Arunachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-festival-3",
+      "title": "Si-Donyi",
+      "short": "Si-Donyi is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Si-Donyi Arunachal Pradesh India festival",
+      "place": "Arunachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Si-Donyi is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Arunachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-festival-4",
+      "title": "Nyokum",
+      "short": "Nyokum is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Nyokum Arunachal Pradesh India festival",
+      "place": "Arunachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Nyokum is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Arunachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-festival-5",
+      "title": "Mopin",
+      "short": "Mopin is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Mopin Arunachal Pradesh India festival",
+      "place": "Arunachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Mopin is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Arunachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-festival-6",
+      "title": "Dree Festival",
+      "short": "Dree Festival is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Dree Festival Arunachal Pradesh India festival",
+      "place": "Arunachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Dree Festival is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Arunachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-festival-7",
+      "title": "Boori Boot Yullo",
+      "short": "Boori Boot Yullo is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Boori Boot Yullo Arunachal Pradesh India festival",
+      "place": "Arunachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Boori Boot Yullo is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Arunachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "arunachal-pradesh-festival-8",
+      "title": "Torgya Festival",
+      "short": "Torgya Festival is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Torgya Festival Arunachal Pradesh India festival",
+      "place": "Arunachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Torgya Festival is a documented cultural celebration associated with Arunachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Arunachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Assam": [
+    {
+      "id": "assam-festival-1",
+      "title": "Rongali/Bohag Bihu",
+      "short": "Rongali/Bohag Bihu is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Rongali/Bohag Bihu Assam India festival",
+      "place": "Assam",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Rongali/Bohag Bihu is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Assam",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "assam-festival-2",
+      "title": "Bhogali/Magh Bihu",
+      "short": "Bhogali/Magh Bihu is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Bhogali/Magh Bihu Assam India festival",
+      "place": "Assam",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Bhogali/Magh Bihu is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Assam",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "assam-festival-3",
+      "title": "Kongali/Kati Bihu",
+      "short": "Kongali/Kati Bihu is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Kongali/Kati Bihu Assam India festival",
+      "place": "Assam",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kongali/Kati Bihu is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Assam",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "assam-festival-4",
+      "title": "Ambubachi Mela",
+      "short": "Ambubachi Mela is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ambubachi Mela Assam India festival",
+      "place": "Assam",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ambubachi Mela is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Assam",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "assam-festival-5",
+      "title": "Ali-Aye-Ligang",
+      "short": "Ali-Aye-Ligang is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ali-Aye-Ligang Assam India festival",
+      "place": "Assam",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ali-Aye-Ligang is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Assam",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "assam-festival-6",
+      "title": "Me-Dam-Me-Phi",
+      "short": "Me-Dam-Me-Phi is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Me-Dam-Me-Phi Assam India festival",
+      "place": "Assam",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Me-Dam-Me-Phi is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Assam",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "assam-festival-7",
+      "title": "Jonbeel Mela",
+      "short": "Jonbeel Mela is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Jonbeel Mela Assam India festival",
+      "place": "Assam",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Jonbeel Mela is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Assam",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "assam-festival-8",
+      "title": "Baishagu",
+      "short": "Baishagu is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Baishagu Assam India festival",
+      "place": "Assam",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Baishagu is a documented cultural celebration associated with Assam, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Assam",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Bihar": [
+    {
+      "id": "bihar-festival-1",
+      "title": "Chhath Puja",
+      "short": "Sun-worship festival centred on disciplined fasting and offerings made at water bodies.",
+      "image": null,
+      "imageQuery": "Chhath Puja Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Sun-worship festival centred on disciplined fasting and offerings made at water bodies.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-2",
+      "title": "Jivitputrika (Jitiya)",
+      "short": "Fasting and prayer observance traditionally associated with the wellbeing of children.",
+      "image": null,
+      "imageQuery": "Jivitputrika (Jitiya) Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Fasting and prayer observance traditionally associated with the wellbeing of children.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-3",
+      "title": "Sonepur Mela / Harihar Kshetra Mela",
+      "short": "Large fair at the confluence of the Ganga and Gandak, historically known for pilgrimage and animal trading.",
+      "image": null,
+      "imageQuery": "Sonepur Mela / Harihar Kshetra Mela Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Large fair at the confluence of the Ganga and Gandak, historically known for pilgrimage and animal trading.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-4",
+      "title": "Pitrapaksha Mela",
+      "short": "Annual pilgrimage period in Gaya associated with offerings for ancestors.",
+      "image": null,
+      "imageQuery": "Pitrapaksha Mela Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Annual pilgrimage period in Gaya associated with offerings for ancestors.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-5",
+      "title": "Makar Sankranti",
+      "short": "Makar Sankranti is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Makar Sankranti Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Makar Sankranti is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-6",
+      "title": "Holi",
+      "short": "Holi is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Holi Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Holi is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-7",
+      "title": "Diwali",
+      "short": "Diwali is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Diwali Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Diwali is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-8",
+      "title": "Durga Puja",
+      "short": "West Bengal’s major annual festival combining ritual, idol-making, temporary pandals, music and neighbourhood participation.",
+      "image": null,
+      "imageQuery": "Durga Puja Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "West Bengal’s major annual festival combining ritual, idol-making, temporary pandals, music and neighbourhood participation.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-9",
+      "title": "Saraswati Puja",
+      "short": "Saraswati Puja is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Saraswati Puja Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Saraswati Puja is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-10",
+      "title": "Ram Navami",
+      "short": "Ram Navami is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ram Navami Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ram Navami is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-11",
+      "title": "Janmashtami",
+      "short": "Janmashtami is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Janmashtami Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Janmashtami is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-12",
+      "title": "Mahashivratri",
+      "short": "Mahashivratri is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Mahashivratri Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Mahashivratri is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-13",
+      "title": "Buddha Purnima",
+      "short": "Buddha Purnima is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Buddha Purnima Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Buddha Purnima is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-14",
+      "title": "Rajgir Mahotsav",
+      "short": "State cultural festival in Rajgir featuring music, dance and regional cultural programmes.",
+      "image": null,
+      "imageQuery": "Rajgir Mahotsav Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "State cultural festival in Rajgir featuring music, dance and regional cultural programmes.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-15",
+      "title": "Chaiti Chhath",
+      "short": "Chaiti Chhath is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Chaiti Chhath Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Chaiti Chhath is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-16",
+      "title": "Karma Puja",
+      "short": "Karma Puja is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Karma Puja Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Karma Puja is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-17",
+      "title": "Anant Chaturdashi",
+      "short": "Anant Chaturdashi is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Anant Chaturdashi Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Anant Chaturdashi is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-18",
+      "title": "Nag Panchami",
+      "short": "Nag Panchami is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Nag Panchami Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Nag Panchami is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-19",
+      "title": "Teej / Hartalika Teej",
+      "short": "Teej / Hartalika Teej is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Teej / Hartalika Teej Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Teej / Hartalika Teej is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-20",
+      "title": "Dhanteras",
+      "short": "Dhanteras is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Dhanteras Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Dhanteras is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-21",
+      "title": "Govardhan Puja",
+      "short": "Govardhan Puja is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Govardhan Puja Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Govardhan Puja is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-22",
+      "title": "Bhai Dooj",
+      "short": "Bhai Dooj is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Bhai Dooj Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Bhai Dooj is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-23",
+      "title": "Vishwakarma Puja",
+      "short": "Vishwakarma Puja is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Vishwakarma Puja Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Vishwakarma Puja is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-24",
+      "title": "Satyanarayan Puja Traditions",
+      "short": "Satyanarayan Puja Traditions is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Satyanarayan Puja Traditions Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Satyanarayan Puja Traditions is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-25",
+      "title": "Kartik Purnima Celebrations",
+      "short": "Kartik Purnima Celebrations is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Kartik Purnima Celebrations Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kartik Purnima Celebrations is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-26",
+      "title": "Basant Panchami Celebrations",
+      "short": "Basant Panchami Celebrations is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Basant Panchami Celebrations Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Basant Panchami Celebrations is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "bihar-festival-27",
+      "title": "Akshaya Tritiya Traditions",
+      "short": "Akshaya Tritiya Traditions is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Akshaya Tritiya Traditions Bihar India festival",
+      "place": "Bihar",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Akshaya Tritiya Traditions is a documented cultural celebration associated with Bihar, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Bihar",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Chhattisgarh": [
+    {
+      "id": "chhattisgarh-festival-1",
+      "title": "Bastar Dussehra",
+      "short": "Long-running Bastar festival with distinctive local rituals and community participation.",
+      "image": null,
+      "imageQuery": "Bastar Dussehra Chhattisgarh India festival",
+      "place": "Chhattisgarh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Long-running Bastar festival with distinctive local rituals and community participation.",
+      "facts": [
+        "Associated with cultural life in Chhattisgarh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "chhattisgarh-festival-2",
+      "title": "Hareli",
+      "short": "Hareli is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Hareli Chhattisgarh India festival",
+      "place": "Chhattisgarh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Hareli is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Chhattisgarh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "chhattisgarh-festival-3",
+      "title": "Teeja",
+      "short": "Teeja is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Teeja Chhattisgarh India festival",
+      "place": "Chhattisgarh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Teeja is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Chhattisgarh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "chhattisgarh-festival-4",
+      "title": "Pola",
+      "short": "Pola is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Pola Chhattisgarh India festival",
+      "place": "Chhattisgarh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Pola is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Chhattisgarh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "chhattisgarh-festival-5",
+      "title": "Madai Festival",
+      "short": "Madai Festival is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Madai Festival Chhattisgarh India festival",
+      "place": "Chhattisgarh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Madai Festival is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Chhattisgarh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "chhattisgarh-festival-6",
+      "title": "Goncha Festival",
+      "short": "Goncha Festival is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Goncha Festival Chhattisgarh India festival",
+      "place": "Chhattisgarh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Goncha Festival is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Chhattisgarh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "chhattisgarh-festival-7",
+      "title": "Cherchera",
+      "short": "Cherchera is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Cherchera Chhattisgarh India festival",
+      "place": "Chhattisgarh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Cherchera is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Chhattisgarh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "chhattisgarh-festival-8",
+      "title": "Navakhai",
+      "short": "Navakhai is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Navakhai Chhattisgarh India festival",
+      "place": "Chhattisgarh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Navakhai is a documented cultural celebration associated with Chhattisgarh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Chhattisgarh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Goa": [
+    {
+      "id": "goa-festival-1",
+      "title": "Goa Carnival",
+      "short": "Goa Carnival is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Goa Carnival Goa India festival",
+      "place": "Goa",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Goa Carnival is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Goa",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "goa-festival-2",
+      "title": "Shigmo",
+      "short": "Shigmo is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Shigmo Goa India festival",
+      "place": "Goa",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Shigmo is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Goa",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "goa-festival-3",
+      "title": "São João",
+      "short": "São João is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "São João Goa India festival",
+      "place": "Goa",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "São João is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Goa",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "goa-festival-4",
+      "title": "Feast of St Francis Xavier",
+      "short": "Feast of St Francis Xavier is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Feast of St Francis Xavier Goa India festival",
+      "place": "Goa",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Feast of St Francis Xavier is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Goa",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "goa-festival-5",
+      "title": "Ganesh Chaturthi (Chavath)",
+      "short": "Ganesh Chaturthi (Chavath) is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ganesh Chaturthi (Chavath) Goa India festival",
+      "place": "Goa",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ganesh Chaturthi (Chavath) is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Goa",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "goa-festival-6",
+      "title": "Diwali",
+      "short": "Diwali is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Diwali Goa India festival",
+      "place": "Goa",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Diwali is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Goa",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "goa-festival-7",
+      "title": "Christmas",
+      "short": "Christmas is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Christmas Goa India festival",
+      "place": "Goa",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Christmas is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Goa",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "goa-festival-8",
+      "title": "Easter",
+      "short": "Easter is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Easter Goa India festival",
+      "place": "Goa",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Easter is a documented cultural celebration associated with Goa, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Goa",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Gujarat": [
+    {
+      "id": "gujarat-festival-1",
+      "title": "Navratri",
+      "short": "Nine-night Hindu festival especially prominent in Gujarat for Garba and Dandiya Raas.",
+      "image": null,
+      "imageQuery": "Navratri Gujarat India festival",
+      "place": "Gujarat",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Nine-night Hindu festival especially prominent in Gujarat for Garba and Dandiya Raas.",
+      "facts": [
+        "Associated with cultural life in Gujarat",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "gujarat-festival-2",
+      "title": "Uttarayan",
+      "short": "Kite-flying festival associated strongly with Gujarat and the winter transition.",
+      "image": null,
+      "imageQuery": "Uttarayan Gujarat India festival",
+      "place": "Gujarat",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kite-flying festival associated strongly with Gujarat and the winter transition.",
+      "facts": [
+        "Associated with cultural life in Gujarat",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "gujarat-festival-3",
+      "title": "Janmashtami at Dwarka",
+      "short": "Janmashtami at Dwarka is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Janmashtami at Dwarka Gujarat India festival",
+      "place": "Gujarat",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Janmashtami at Dwarka is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Gujarat",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "gujarat-festival-4",
+      "title": "Rann Utsav",
+      "short": "Rann Utsav is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Rann Utsav Gujarat India festival",
+      "place": "Gujarat",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Rann Utsav is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Gujarat",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "gujarat-festival-5",
+      "title": "Modhera Dance Festival",
+      "short": "Modhera Dance Festival is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Modhera Dance Festival Gujarat India festival",
+      "place": "Gujarat",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Modhera Dance Festival is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Gujarat",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "gujarat-festival-6",
+      "title": "Tarnetar Fair",
+      "short": "Tarnetar Fair is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Tarnetar Fair Gujarat India festival",
+      "place": "Gujarat",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tarnetar Fair is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Gujarat",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "gujarat-festival-7",
+      "title": "Bhavnath Mahashivratri Mela",
+      "short": "Bhavnath Mahashivratri Mela is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Bhavnath Mahashivratri Mela Gujarat India festival",
+      "place": "Gujarat",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Bhavnath Mahashivratri Mela is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Gujarat",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "gujarat-festival-8",
+      "title": "Shamlaji Mela",
+      "short": "Shamlaji Mela is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Shamlaji Mela Gujarat India festival",
+      "place": "Gujarat",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Shamlaji Mela is a documented cultural celebration associated with Gujarat, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Gujarat",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Haryana": [
+    {
+      "id": "haryana-festival-1",
+      "title": "Surajkund International Crafts Mela",
+      "short": "Surajkund International Crafts Mela is a documented cultural celebration associated with Haryana, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Surajkund International Crafts Mela Haryana India festival",
+      "place": "Haryana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Surajkund International Crafts Mela is a documented cultural celebration associated with Haryana, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Haryana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "haryana-festival-2",
+      "title": "Teej",
+      "short": "Monsoon festival associated with women, swings, songs and worship of Parvati.",
+      "image": null,
+      "imageQuery": "Teej Haryana India festival",
+      "place": "Haryana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Monsoon festival associated with women, swings, songs and worship of Parvati.",
+      "facts": [
+        "Associated with cultural life in Haryana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "haryana-festival-3",
+      "title": "Baisakhi",
+      "short": "Spring harvest festival and major Sikh religious observance associated with Khalsa history.",
+      "image": null,
+      "imageQuery": "Baisakhi Haryana India festival",
+      "place": "Haryana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Spring harvest festival and major Sikh religious observance associated with Khalsa history.",
+      "facts": [
+        "Associated with cultural life in Haryana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "haryana-festival-4",
+      "title": "Lohri",
+      "short": "Winter festival marked by bonfires, songs and community gatherings in Punjab.",
+      "image": null,
+      "imageQuery": "Lohri Haryana India festival",
+      "place": "Haryana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Winter festival marked by bonfires, songs and community gatherings in Punjab.",
+      "facts": [
+        "Associated with cultural life in Haryana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "haryana-festival-5",
+      "title": "Holi",
+      "short": "Holi is a documented cultural celebration associated with Haryana, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Holi Haryana India festival",
+      "place": "Haryana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Holi is a documented cultural celebration associated with Haryana, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Haryana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "haryana-festival-6",
+      "title": "Janmashtami",
+      "short": "Janmashtami is a documented cultural celebration associated with Haryana, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Janmashtami Haryana India festival",
+      "place": "Haryana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Janmashtami is a documented cultural celebration associated with Haryana, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Haryana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "haryana-festival-7",
+      "title": "Gugga Naumi",
+      "short": "Gugga Naumi is a documented cultural celebration associated with Haryana, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Gugga Naumi Haryana India festival",
+      "place": "Haryana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Gugga Naumi is a documented cultural celebration associated with Haryana, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Haryana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "haryana-festival-8",
+      "title": "Mango Mela",
+      "short": "Mango Mela is a documented cultural celebration associated with Haryana, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Mango Mela Haryana India festival",
+      "place": "Haryana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Mango Mela is a documented cultural celebration associated with Haryana, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Haryana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Himachal Pradesh": [
+    {
+      "id": "himachal-pradesh-festival-1",
+      "title": "Kullu Dussehra",
+      "short": "Himachal festival in which village deities gather in Kullu and processions form the central celebration.",
+      "image": null,
+      "imageQuery": "Kullu Dussehra Himachal Pradesh India festival",
+      "place": "Himachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Himachal festival in which village deities gather in Kullu and processions form the central celebration.",
+      "facts": [
+        "Associated with cultural life in Himachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-festival-2",
+      "title": "Minjar Fair",
+      "short": "Minjar Fair is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Minjar Fair Himachal Pradesh India festival",
+      "place": "Himachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Minjar Fair is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Himachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-festival-3",
+      "title": "Lavi Fair",
+      "short": "Lavi Fair is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Lavi Fair Himachal Pradesh India festival",
+      "place": "Himachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Lavi Fair is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Himachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-festival-4",
+      "title": "Losar",
+      "short": "Tibetan Buddhist New Year celebrated by Himalayan Buddhist communities.",
+      "image": null,
+      "imageQuery": "Losar Himachal Pradesh India festival",
+      "place": "Himachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tibetan Buddhist New Year celebrated by Himalayan Buddhist communities.",
+      "facts": [
+        "Associated with cultural life in Himachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-festival-5",
+      "title": "Phulaich",
+      "short": "Phulaich is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Phulaich Himachal Pradesh India festival",
+      "place": "Himachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Phulaich is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Himachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-festival-6",
+      "title": "Holi of Sujanpur",
+      "short": "Holi of Sujanpur is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Holi of Sujanpur Himachal Pradesh India festival",
+      "place": "Himachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Holi of Sujanpur is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Himachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-festival-7",
+      "title": "Shivratri Mandi",
+      "short": "Shivratri Mandi is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Shivratri Mandi Himachal Pradesh India festival",
+      "place": "Himachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Shivratri Mandi is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Himachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "himachal-pradesh-festival-8",
+      "title": "Summer Festival Shimla",
+      "short": "Summer Festival Shimla is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Summer Festival Shimla Himachal Pradesh India festival",
+      "place": "Himachal Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Summer Festival Shimla is a documented cultural celebration associated with Himachal Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Himachal Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Jharkhand": [
+    {
+      "id": "jharkhand-festival-1",
+      "title": "Sarhul",
+      "short": "Spring festival among several Jharkhand communities honouring nature and the sal tree.",
+      "image": null,
+      "imageQuery": "Sarhul Jharkhand India festival",
+      "place": "Jharkhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Spring festival among several Jharkhand communities honouring nature and the sal tree.",
+      "facts": [
+        "Associated with cultural life in Jharkhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jharkhand-festival-2",
+      "title": "Karam Puja",
+      "short": "Community festival centred on the Karam tree, songs, dance and agricultural wellbeing.",
+      "image": null,
+      "imageQuery": "Karam Puja Jharkhand India festival",
+      "place": "Jharkhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Community festival centred on the Karam tree, songs, dance and agricultural wellbeing.",
+      "facts": [
+        "Associated with cultural life in Jharkhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jharkhand-festival-3",
+      "title": "Tusu Parab",
+      "short": "Tusu Parab is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Tusu Parab Jharkhand India festival",
+      "place": "Jharkhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tusu Parab is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jharkhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jharkhand-festival-4",
+      "title": "Sohrai",
+      "short": "Sohrai is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Sohrai Jharkhand India festival",
+      "place": "Jharkhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Sohrai is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jharkhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jharkhand-festival-5",
+      "title": "Mage Parab",
+      "short": "Mage Parab is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Mage Parab Jharkhand India festival",
+      "place": "Jharkhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Mage Parab is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jharkhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jharkhand-festival-6",
+      "title": "Jani Shikar",
+      "short": "Jani Shikar is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Jani Shikar Jharkhand India festival",
+      "place": "Jharkhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Jani Shikar is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jharkhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jharkhand-festival-7",
+      "title": "Baha Parab",
+      "short": "Baha Parab is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Baha Parab Jharkhand India festival",
+      "place": "Jharkhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Baha Parab is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jharkhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jharkhand-festival-8",
+      "title": "Karma Festival",
+      "short": "Karma Festival is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Karma Festival Jharkhand India festival",
+      "place": "Jharkhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Karma Festival is a documented cultural celebration associated with Jharkhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jharkhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Karnataka": [
+    {
+      "id": "karnataka-festival-1",
+      "title": "Mysuru Dasara",
+      "short": "Major royal-city festival centred on processions, cultural performances and the worship of Chamundeshwari.",
+      "image": null,
+      "imageQuery": "Mysuru Dasara Karnataka India festival",
+      "place": "Karnataka",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Major royal-city festival centred on processions, cultural performances and the worship of Chamundeshwari.",
+      "facts": [
+        "Associated with cultural life in Karnataka",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "karnataka-festival-2",
+      "title": "Ugadi",
+      "short": "Ugadi is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ugadi Karnataka India festival",
+      "place": "Karnataka",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ugadi is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Karnataka",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "karnataka-festival-3",
+      "title": "Hampi Utsav",
+      "short": "Hampi Utsav is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Hampi Utsav Karnataka India festival",
+      "place": "Karnataka",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Hampi Utsav is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Karnataka",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "karnataka-festival-4",
+      "title": "Karaga Festival",
+      "short": "Karaga Festival is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Karaga Festival Karnataka India festival",
+      "place": "Karnataka",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Karaga Festival is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Karnataka",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "karnataka-festival-5",
+      "title": "Vairamudi Festival",
+      "short": "Vairamudi Festival is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Vairamudi Festival Karnataka India festival",
+      "place": "Karnataka",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Vairamudi Festival is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Karnataka",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "karnataka-festival-6",
+      "title": "Pattadakal Dance Festival",
+      "short": "Pattadakal Dance Festival is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Pattadakal Dance Festival Karnataka India festival",
+      "place": "Karnataka",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Pattadakal Dance Festival is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Karnataka",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "karnataka-festival-7",
+      "title": "Kambala season celebrations",
+      "short": "Kambala season celebrations is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Kambala season celebrations Karnataka India festival",
+      "place": "Karnataka",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kambala season celebrations is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Karnataka",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "karnataka-festival-8",
+      "title": "Ganesha Chaturthi",
+      "short": "Ganesha Chaturthi is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ganesha Chaturthi Karnataka India festival",
+      "place": "Karnataka",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ganesha Chaturthi is a documented cultural celebration associated with Karnataka, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Karnataka",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Kerala": [
+    {
+      "id": "kerala-festival-1",
+      "title": "Onam",
+      "short": "Kerala harvest-season festival known for pookalam, Sadya and community celebrations.",
+      "image": null,
+      "imageQuery": "Onam Kerala India festival",
+      "place": "Kerala",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kerala harvest-season festival known for pookalam, Sadya and community celebrations.",
+      "facts": [
+        "Associated with cultural life in Kerala",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "kerala-festival-2",
+      "title": "Vishu",
+      "short": "Kerala seasonal festival associated with the Vishukkani, offerings and new-year observances.",
+      "image": null,
+      "imageQuery": "Vishu Kerala India festival",
+      "place": "Kerala",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kerala seasonal festival associated with the Vishukkani, offerings and new-year observances.",
+      "facts": [
+        "Associated with cultural life in Kerala",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "kerala-festival-3",
+      "title": "Thrissur Pooram",
+      "short": "Major temple festival known for processions, percussion ensembles and decorated elephants.",
+      "image": null,
+      "imageQuery": "Thrissur Pooram Kerala India festival",
+      "place": "Kerala",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Major temple festival known for processions, percussion ensembles and decorated elephants.",
+      "facts": [
+        "Associated with cultural life in Kerala",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "kerala-festival-4",
+      "title": "Attukal Pongala",
+      "short": "Attukal Pongala is a documented cultural celebration associated with Kerala, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Attukal Pongala Kerala India festival",
+      "place": "Kerala",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Attukal Pongala is a documented cultural celebration associated with Kerala, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Kerala",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "kerala-festival-5",
+      "title": "Vallam Kali",
+      "short": "Vallam Kali is a documented cultural celebration associated with Kerala, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Vallam Kali Kerala India festival",
+      "place": "Kerala",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Vallam Kali is a documented cultural celebration associated with Kerala, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Kerala",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "kerala-festival-6",
+      "title": "Theyyam season",
+      "short": "Theyyam season is a documented cultural celebration associated with Kerala, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Theyyam season Kerala India festival",
+      "place": "Kerala",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Theyyam season is a documented cultural celebration associated with Kerala, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Kerala",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "kerala-festival-7",
+      "title": "Makaravilakku",
+      "short": "Makaravilakku is a documented cultural celebration associated with Kerala, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Makaravilakku Kerala India festival",
+      "place": "Kerala",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Makaravilakku is a documented cultural celebration associated with Kerala, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Kerala",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "kerala-festival-8",
+      "title": "Christmas in Kerala",
+      "short": "Christmas in Kerala is a documented cultural celebration associated with Kerala, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Christmas in Kerala Kerala India festival",
+      "place": "Kerala",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Christmas in Kerala is a documented cultural celebration associated with Kerala, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Kerala",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Madhya Pradesh": [
+    {
+      "id": "madhya-pradesh-festival-1",
+      "title": "Khajuraho Dance Festival",
+      "short": "Khajuraho Dance Festival is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Khajuraho Dance Festival Madhya Pradesh India festival",
+      "place": "Madhya Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Khajuraho Dance Festival is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Madhya Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-festival-2",
+      "title": "Tansen Samaroh",
+      "short": "Tansen Samaroh is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Tansen Samaroh Madhya Pradesh India festival",
+      "place": "Madhya Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tansen Samaroh is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Madhya Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-festival-3",
+      "title": "Lokrang Festival",
+      "short": "Lokrang Festival is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Lokrang Festival Madhya Pradesh India festival",
+      "place": "Madhya Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Lokrang Festival is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Madhya Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-festival-4",
+      "title": "Bhagoria",
+      "short": "Bhagoria is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Bhagoria Madhya Pradesh India festival",
+      "place": "Madhya Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Bhagoria is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Madhya Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-festival-5",
+      "title": "Malwa Utsav",
+      "short": "Malwa Utsav is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Malwa Utsav Madhya Pradesh India festival",
+      "place": "Madhya Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Malwa Utsav is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Madhya Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-festival-6",
+      "title": "Navratri",
+      "short": "Nine-night Hindu festival especially prominent in Gujarat for Garba and Dandiya Raas.",
+      "image": null,
+      "imageQuery": "Navratri Madhya Pradesh India festival",
+      "place": "Madhya Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Nine-night Hindu festival especially prominent in Gujarat for Garba and Dandiya Raas.",
+      "facts": [
+        "Associated with cultural life in Madhya Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-festival-7",
+      "title": "Diwali",
+      "short": "Diwali is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Diwali Madhya Pradesh India festival",
+      "place": "Madhya Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Diwali is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Madhya Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "madhya-pradesh-festival-8",
+      "title": "Holi",
+      "short": "Holi is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Holi Madhya Pradesh India festival",
+      "place": "Madhya Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Holi is a documented cultural celebration associated with Madhya Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Madhya Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Maharashtra": [
+    {
+      "id": "maharashtra-festival-1",
+      "title": "Ganesh Chaturthi",
+      "short": "Festival centred on the installation, worship and ceremonial immersion of Ganesha images.",
+      "image": null,
+      "imageQuery": "Ganesh Chaturthi Maharashtra India festival",
+      "place": "Maharashtra",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Festival centred on the installation, worship and ceremonial immersion of Ganesha images.",
+      "facts": [
+        "Associated with cultural life in Maharashtra",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "maharashtra-festival-2",
+      "title": "Gudi Padwa",
+      "short": "Maharashtrian New Year festival marked by the raising of the gudi and household rituals.",
+      "image": null,
+      "imageQuery": "Gudi Padwa Maharashtra India festival",
+      "place": "Maharashtra",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Maharashtrian New Year festival marked by the raising of the gudi and household rituals.",
+      "facts": [
+        "Associated with cultural life in Maharashtra",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "maharashtra-festival-3",
+      "title": "Dahi Handi",
+      "short": "Dahi Handi is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Dahi Handi Maharashtra India festival",
+      "place": "Maharashtra",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Dahi Handi is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Maharashtra",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "maharashtra-festival-4",
+      "title": "Pandharpur Ashadhi Ekadashi Wari",
+      "short": "Pandharpur Ashadhi Ekadashi Wari is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Pandharpur Ashadhi Ekadashi Wari Maharashtra India festival",
+      "place": "Maharashtra",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Pandharpur Ashadhi Ekadashi Wari is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Maharashtra",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "maharashtra-festival-5",
+      "title": "Ellora-Ajanta Festival",
+      "short": "Ellora-Ajanta Festival is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ellora-Ajanta Festival Maharashtra India festival",
+      "place": "Maharashtra",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ellora-Ajanta Festival is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Maharashtra",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "maharashtra-festival-6",
+      "title": "Pola",
+      "short": "Pola is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Pola Maharashtra India festival",
+      "place": "Maharashtra",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Pola is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Maharashtra",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "maharashtra-festival-7",
+      "title": "Narali Purnima",
+      "short": "Narali Purnima is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Narali Purnima Maharashtra India festival",
+      "place": "Maharashtra",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Narali Purnima is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Maharashtra",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "maharashtra-festival-8",
+      "title": "Makar Sankranti",
+      "short": "Makar Sankranti is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Makar Sankranti Maharashtra India festival",
+      "place": "Maharashtra",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Makar Sankranti is a documented cultural celebration associated with Maharashtra, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Maharashtra",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Manipur": [
+    {
+      "id": "manipur-festival-1",
+      "title": "Yaoshang",
+      "short": "Yaoshang is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Yaoshang Manipur India festival",
+      "place": "Manipur",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Yaoshang is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Manipur",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "manipur-festival-2",
+      "title": "Lai Haraoba",
+      "short": "Lai Haraoba is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Lai Haraoba Manipur India festival",
+      "place": "Manipur",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Lai Haraoba is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Manipur",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "manipur-festival-3",
+      "title": "Ningol Chakouba",
+      "short": "Ningol Chakouba is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ningol Chakouba Manipur India festival",
+      "place": "Manipur",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ningol Chakouba is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Manipur",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "manipur-festival-4",
+      "title": "Cheiraoba",
+      "short": "Cheiraoba is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Cheiraoba Manipur India festival",
+      "place": "Manipur",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Cheiraoba is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Manipur",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "manipur-festival-5",
+      "title": "Kang Chingba",
+      "short": "Kang Chingba is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Kang Chingba Manipur India festival",
+      "place": "Manipur",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kang Chingba is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Manipur",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "manipur-festival-6",
+      "title": "Kut Festival",
+      "short": "Kut Festival is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Kut Festival Manipur India festival",
+      "place": "Manipur",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kut Festival is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Manipur",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "manipur-festival-7",
+      "title": "Heikru Hidongba",
+      "short": "Heikru Hidongba is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Heikru Hidongba Manipur India festival",
+      "place": "Manipur",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Heikru Hidongba is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Manipur",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "manipur-festival-8",
+      "title": "Ningol Chakouba celebrations",
+      "short": "Ningol Chakouba celebrations is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ningol Chakouba celebrations Manipur India festival",
+      "place": "Manipur",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ningol Chakouba celebrations is a documented cultural celebration associated with Manipur, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Manipur",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Meghalaya": [
+    {
+      "id": "meghalaya-festival-1",
+      "title": "Wangala",
+      "short": "Wangala is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Wangala Meghalaya India festival",
+      "place": "Meghalaya",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Wangala is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Meghalaya",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "meghalaya-festival-2",
+      "title": "Nongkrem Dance Festival",
+      "short": "Nongkrem Dance Festival is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Nongkrem Dance Festival Meghalaya India festival",
+      "place": "Meghalaya",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Nongkrem Dance Festival is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Meghalaya",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "meghalaya-festival-3",
+      "title": "Shad Suk Mynsiem",
+      "short": "Shad Suk Mynsiem is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Shad Suk Mynsiem Meghalaya India festival",
+      "place": "Meghalaya",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Shad Suk Mynsiem is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Meghalaya",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "meghalaya-festival-4",
+      "title": "Behdienkhlam",
+      "short": "Behdienkhlam is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Behdienkhlam Meghalaya India festival",
+      "place": "Meghalaya",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Behdienkhlam is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Meghalaya",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "meghalaya-festival-5",
+      "title": "Autumn Festival Shillong",
+      "short": "Autumn Festival Shillong is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Autumn Festival Shillong Meghalaya India festival",
+      "place": "Meghalaya",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Autumn Festival Shillong is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Meghalaya",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "meghalaya-festival-6",
+      "title": "Cherry Blossom Festival",
+      "short": "Cherry Blossom Festival is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Cherry Blossom Festival Meghalaya India festival",
+      "place": "Meghalaya",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Cherry Blossom Festival is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Meghalaya",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "meghalaya-festival-7",
+      "title": "Laho Dance Festival",
+      "short": "Laho Dance Festival is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Laho Dance Festival Meghalaya India festival",
+      "place": "Meghalaya",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Laho Dance Festival is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Meghalaya",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "meghalaya-festival-8",
+      "title": "Christmas",
+      "short": "Christmas is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Christmas Meghalaya India festival",
+      "place": "Meghalaya",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Christmas is a documented cultural celebration associated with Meghalaya, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Meghalaya",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Mizoram": [
+    {
+      "id": "mizoram-festival-1",
+      "title": "Chapchar Kut",
+      "short": "Chapchar Kut is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Chapchar Kut Mizoram India festival",
+      "place": "Mizoram",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Chapchar Kut is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Mizoram",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "mizoram-festival-2",
+      "title": "Mim Kut",
+      "short": "Mim Kut is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Mim Kut Mizoram India festival",
+      "place": "Mizoram",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Mim Kut is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Mizoram",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "mizoram-festival-3",
+      "title": "Pawl Kut",
+      "short": "Pawl Kut is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Pawl Kut Mizoram India festival",
+      "place": "Mizoram",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Pawl Kut is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Mizoram",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "mizoram-festival-4",
+      "title": "Thalfavang Kut",
+      "short": "Thalfavang Kut is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Thalfavang Kut Mizoram India festival",
+      "place": "Mizoram",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Thalfavang Kut is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Mizoram",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "mizoram-festival-5",
+      "title": "Christmas",
+      "short": "Christmas is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Christmas Mizoram India festival",
+      "place": "Mizoram",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Christmas is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Mizoram",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "mizoram-festival-6",
+      "title": "New Year celebrations",
+      "short": "New Year celebrations is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "New Year celebrations Mizoram India festival",
+      "place": "Mizoram",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "New Year celebrations is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Mizoram",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "mizoram-festival-7",
+      "title": "Cheraw cultural festival",
+      "short": "Cheraw cultural festival is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Cheraw cultural festival Mizoram India festival",
+      "place": "Mizoram",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Cheraw cultural festival is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Mizoram",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "mizoram-festival-8",
+      "title": "Anthuriam Festival",
+      "short": "Anthuriam Festival is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Anthuriam Festival Mizoram India festival",
+      "place": "Mizoram",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Anthuriam Festival is a documented cultural celebration associated with Mizoram, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Mizoram",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Nagaland": [
+    {
+      "id": "nagaland-festival-1",
+      "title": "Hornbill Festival",
+      "short": "Nagaland state festival presenting Naga cultural performances, crafts, food and music.",
+      "image": null,
+      "imageQuery": "Hornbill Festival Nagaland India festival",
+      "place": "Nagaland",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Nagaland state festival presenting Naga cultural performances, crafts, food and music.",
+      "facts": [
+        "Associated with cultural life in Nagaland",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "nagaland-festival-2",
+      "title": "Moatsu",
+      "short": "Moatsu is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Moatsu Nagaland India festival",
+      "place": "Nagaland",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Moatsu is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Nagaland",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "nagaland-festival-3",
+      "title": "Sekrenyi",
+      "short": "Sekrenyi is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Sekrenyi Nagaland India festival",
+      "place": "Nagaland",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Sekrenyi is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Nagaland",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "nagaland-festival-4",
+      "title": "Aoling Monyu",
+      "short": "Aoling Monyu is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Aoling Monyu Nagaland India festival",
+      "place": "Nagaland",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Aoling Monyu is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Nagaland",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "nagaland-festival-5",
+      "title": "Tuluni",
+      "short": "Tuluni is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Tuluni Nagaland India festival",
+      "place": "Nagaland",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tuluni is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Nagaland",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "nagaland-festival-6",
+      "title": "Tokhu Emong",
+      "short": "Tokhu Emong is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Tokhu Emong Nagaland India festival",
+      "place": "Nagaland",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tokhu Emong is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Nagaland",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "nagaland-festival-7",
+      "title": "Yemshe",
+      "short": "Yemshe is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Yemshe Nagaland India festival",
+      "place": "Nagaland",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Yemshe is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Nagaland",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "nagaland-festival-8",
+      "title": "Bushu Dree",
+      "short": "Bushu Dree is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Bushu Dree Nagaland India festival",
+      "place": "Nagaland",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Bushu Dree is a documented cultural celebration associated with Nagaland, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Nagaland",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Odisha": [
+    {
+      "id": "odisha-festival-1",
+      "title": "Rath Yatra",
+      "short": "Jagannath chariot festival in Puri involving ceremonial processions and large public participation.",
+      "image": null,
+      "imageQuery": "Rath Yatra Odisha India festival",
+      "place": "Odisha",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Jagannath chariot festival in Puri involving ceremonial processions and large public participation.",
+      "facts": [
+        "Associated with cultural life in Odisha",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "odisha-festival-2",
+      "title": "Durga Puja",
+      "short": "West Bengal’s major annual festival combining ritual, idol-making, temporary pandals, music and neighbourhood participation.",
+      "image": null,
+      "imageQuery": "Durga Puja Odisha India festival",
+      "place": "Odisha",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "West Bengal’s major annual festival combining ritual, idol-making, temporary pandals, music and neighbourhood participation.",
+      "facts": [
+        "Associated with cultural life in Odisha",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "odisha-festival-3",
+      "title": "Nuakhai",
+      "short": "Harvest festival in Odisha centred on the first consumption of new rice.",
+      "image": null,
+      "imageQuery": "Nuakhai Odisha India festival",
+      "place": "Odisha",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Harvest festival in Odisha centred on the first consumption of new rice.",
+      "facts": [
+        "Associated with cultural life in Odisha",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "odisha-festival-4",
+      "title": "Raja Parba",
+      "short": "Odisha festival associated with the earth, monsoon and womanhood.",
+      "image": null,
+      "imageQuery": "Raja Parba Odisha India festival",
+      "place": "Odisha",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Odisha festival associated with the earth, monsoon and womanhood.",
+      "facts": [
+        "Associated with cultural life in Odisha",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "odisha-festival-5",
+      "title": "Kumar Purnima",
+      "short": "Kumar Purnima is a documented cultural celebration associated with Odisha, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Kumar Purnima Odisha India festival",
+      "place": "Odisha",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kumar Purnima is a documented cultural celebration associated with Odisha, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Odisha",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "odisha-festival-6",
+      "title": "Boita Bandana",
+      "short": "Boita Bandana is a documented cultural celebration associated with Odisha, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Boita Bandana Odisha India festival",
+      "place": "Odisha",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Boita Bandana is a documented cultural celebration associated with Odisha, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Odisha",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "odisha-festival-7",
+      "title": "Konark Dance Festival",
+      "short": "Konark Dance Festival is a documented cultural celebration associated with Odisha, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Konark Dance Festival Odisha India festival",
+      "place": "Odisha",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Konark Dance Festival is a documented cultural celebration associated with Odisha, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Odisha",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "odisha-festival-8",
+      "title": "Chandan Yatra",
+      "short": "Chandan Yatra is a documented cultural celebration associated with Odisha, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Chandan Yatra Odisha India festival",
+      "place": "Odisha",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Chandan Yatra is a documented cultural celebration associated with Odisha, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Odisha",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Punjab": [
+    {
+      "id": "punjab-festival-1",
+      "title": "Lohri",
+      "short": "Winter festival marked by bonfires, songs and community gatherings in Punjab.",
+      "image": null,
+      "imageQuery": "Lohri Punjab India festival",
+      "place": "Punjab",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Winter festival marked by bonfires, songs and community gatherings in Punjab.",
+      "facts": [
+        "Associated with cultural life in Punjab",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "punjab-festival-2",
+      "title": "Baisakhi",
+      "short": "Spring harvest festival and major Sikh religious observance associated with Khalsa history.",
+      "image": null,
+      "imageQuery": "Baisakhi Punjab India festival",
+      "place": "Punjab",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Spring harvest festival and major Sikh religious observance associated with Khalsa history.",
+      "facts": [
+        "Associated with cultural life in Punjab",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "punjab-festival-3",
+      "title": "Hola Mohalla",
+      "short": "Hola Mohalla is a documented cultural celebration associated with Punjab, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Hola Mohalla Punjab India festival",
+      "place": "Punjab",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Hola Mohalla is a documented cultural celebration associated with Punjab, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Punjab",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "punjab-festival-4",
+      "title": "Guru Nanak Gurpurab",
+      "short": "Guru Nanak Gurpurab is a documented cultural celebration associated with Punjab, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Guru Nanak Gurpurab Punjab India festival",
+      "place": "Punjab",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Guru Nanak Gurpurab is a documented cultural celebration associated with Punjab, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Punjab",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "punjab-festival-5",
+      "title": "Maghi Mela",
+      "short": "Maghi Mela is a documented cultural celebration associated with Punjab, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Maghi Mela Punjab India festival",
+      "place": "Punjab",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Maghi Mela is a documented cultural celebration associated with Punjab, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Punjab",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "punjab-festival-6",
+      "title": "Basant Festival",
+      "short": "Basant Festival is a documented cultural celebration associated with Punjab, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Basant Festival Punjab India festival",
+      "place": "Punjab",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Basant Festival is a documented cultural celebration associated with Punjab, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Punjab",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "punjab-festival-7",
+      "title": "Teej",
+      "short": "Monsoon festival associated with women, swings, songs and worship of Parvati.",
+      "image": null,
+      "imageQuery": "Teej Punjab India festival",
+      "place": "Punjab",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Monsoon festival associated with women, swings, songs and worship of Parvati.",
+      "facts": [
+        "Associated with cultural life in Punjab",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "punjab-festival-8",
+      "title": "Diwali/Bandi Chhor Divas",
+      "short": "Diwali/Bandi Chhor Divas is a documented cultural celebration associated with Punjab, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Diwali/Bandi Chhor Divas Punjab India festival",
+      "place": "Punjab",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Diwali/Bandi Chhor Divas is a documented cultural celebration associated with Punjab, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Punjab",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Rajasthan": [
+    {
+      "id": "rajasthan-festival-1",
+      "title": "Gangaur",
+      "short": "Rajasthan festival honouring Gauri and marked by household rituals and processions.",
+      "image": null,
+      "imageQuery": "Gangaur Rajasthan India festival",
+      "place": "Rajasthan",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Rajasthan festival honouring Gauri and marked by household rituals and processions.",
+      "facts": [
+        "Associated with cultural life in Rajasthan",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "rajasthan-festival-2",
+      "title": "Teej",
+      "short": "Monsoon festival associated with women, swings, songs and worship of Parvati.",
+      "image": null,
+      "imageQuery": "Teej Rajasthan India festival",
+      "place": "Rajasthan",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Monsoon festival associated with women, swings, songs and worship of Parvati.",
+      "facts": [
+        "Associated with cultural life in Rajasthan",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "rajasthan-festival-3",
+      "title": "Pushkar Camel Fair",
+      "short": "Pushkar Camel Fair is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Pushkar Camel Fair Rajasthan India festival",
+      "place": "Rajasthan",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Pushkar Camel Fair is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Rajasthan",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "rajasthan-festival-4",
+      "title": "Desert Festival Jaisalmer",
+      "short": "Desert Festival Jaisalmer is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Desert Festival Jaisalmer Rajasthan India festival",
+      "place": "Rajasthan",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Desert Festival Jaisalmer is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Rajasthan",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "rajasthan-festival-5",
+      "title": "Mewar Festival",
+      "short": "Mewar Festival is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Mewar Festival Rajasthan India festival",
+      "place": "Rajasthan",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Mewar Festival is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Rajasthan",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "rajasthan-festival-6",
+      "title": "Marwar Festival",
+      "short": "Marwar Festival is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Marwar Festival Rajasthan India festival",
+      "place": "Rajasthan",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Marwar Festival is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Rajasthan",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "rajasthan-festival-7",
+      "title": "Kota Adventure Festival",
+      "short": "Kota Adventure Festival is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Kota Adventure Festival Rajasthan India festival",
+      "place": "Rajasthan",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kota Adventure Festival is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Rajasthan",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "rajasthan-festival-8",
+      "title": "Brij Holi",
+      "short": "Brij Holi is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Brij Holi Rajasthan India festival",
+      "place": "Rajasthan",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Brij Holi is a documented cultural celebration associated with Rajasthan, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Rajasthan",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Sikkim": [
+    {
+      "id": "sikkim-festival-1",
+      "title": "Losar",
+      "short": "Tibetan Buddhist New Year celebrated by Himalayan Buddhist communities.",
+      "image": null,
+      "imageQuery": "Losar Sikkim India festival",
+      "place": "Sikkim",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tibetan Buddhist New Year celebrated by Himalayan Buddhist communities.",
+      "facts": [
+        "Associated with cultural life in Sikkim",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "sikkim-festival-2",
+      "title": "Losoong/Namsoong",
+      "short": "Losoong/Namsoong is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Losoong/Namsoong Sikkim India festival",
+      "place": "Sikkim",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Losoong/Namsoong is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Sikkim",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "sikkim-festival-3",
+      "title": "Saga Dawa",
+      "short": "Saga Dawa is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Saga Dawa Sikkim India festival",
+      "place": "Sikkim",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Saga Dawa is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Sikkim",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "sikkim-festival-4",
+      "title": "Pang Lhabsol",
+      "short": "Pang Lhabsol is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Pang Lhabsol Sikkim India festival",
+      "place": "Sikkim",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Pang Lhabsol is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Sikkim",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "sikkim-festival-5",
+      "title": "Bumchu",
+      "short": "Bumchu is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Bumchu Sikkim India festival",
+      "place": "Sikkim",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Bumchu is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Sikkim",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "sikkim-festival-6",
+      "title": "Tendong Lho Rum Faat",
+      "short": "Tendong Lho Rum Faat is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Tendong Lho Rum Faat Sikkim India festival",
+      "place": "Sikkim",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tendong Lho Rum Faat is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Sikkim",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "sikkim-festival-7",
+      "title": "Dasain",
+      "short": "Dasain is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Dasain Sikkim India festival",
+      "place": "Sikkim",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Dasain is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Sikkim",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "sikkim-festival-8",
+      "title": "Tihar",
+      "short": "Tihar is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Tihar Sikkim India festival",
+      "place": "Sikkim",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tihar is a documented cultural celebration associated with Sikkim, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Sikkim",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Tamil Nadu": [
+    {
+      "id": "tamil-nadu-festival-1",
+      "title": "Pongal",
+      "short": "Tamil harvest festival celebrated over several days with new rice, family rituals and thanksgiving.",
+      "image": null,
+      "imageQuery": "Pongal Tamil Nadu India festival",
+      "place": "Tamil Nadu",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tamil harvest festival celebrated over several days with new rice, family rituals and thanksgiving.",
+      "facts": [
+        "Associated with cultural life in Tamil Nadu",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tamil-nadu-festival-2",
+      "title": "Jallikattu season",
+      "short": "Jallikattu season is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Jallikattu season Tamil Nadu India festival",
+      "place": "Tamil Nadu",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Jallikattu season is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tamil Nadu",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tamil-nadu-festival-3",
+      "title": "Tamil New Year (Puthandu)",
+      "short": "Tamil New Year (Puthandu) is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Tamil New Year (Puthandu) Tamil Nadu India festival",
+      "place": "Tamil Nadu",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tamil New Year (Puthandu) is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tamil Nadu",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tamil-nadu-festival-4",
+      "title": "Thaipusam",
+      "short": "Thaipusam is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Thaipusam Tamil Nadu India festival",
+      "place": "Tamil Nadu",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Thaipusam is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tamil Nadu",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tamil-nadu-festival-5",
+      "title": "Chithirai Festival",
+      "short": "Chithirai Festival is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Chithirai Festival Tamil Nadu India festival",
+      "place": "Tamil Nadu",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Chithirai Festival is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tamil Nadu",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tamil-nadu-festival-6",
+      "title": "Karthigai Deepam",
+      "short": "Karthigai Deepam is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Karthigai Deepam Tamil Nadu India festival",
+      "place": "Tamil Nadu",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Karthigai Deepam is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tamil Nadu",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tamil-nadu-festival-7",
+      "title": "Natyanjali Festival",
+      "short": "Natyanjali Festival is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Natyanjali Festival Tamil Nadu India festival",
+      "place": "Tamil Nadu",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Natyanjali Festival is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tamil Nadu",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tamil-nadu-festival-8",
+      "title": "Navaratri Golu",
+      "short": "Navaratri Golu is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Navaratri Golu Tamil Nadu India festival",
+      "place": "Tamil Nadu",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Navaratri Golu is a documented cultural celebration associated with Tamil Nadu, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tamil Nadu",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Telangana": [
+    {
+      "id": "telangana-festival-1",
+      "title": "Bathukamma",
+      "short": "Telangana floral festival centred on elaborately arranged flower stacks and community singing.",
+      "image": null,
+      "imageQuery": "Bathukamma Telangana India festival",
+      "place": "Telangana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Telangana floral festival centred on elaborately arranged flower stacks and community singing.",
+      "facts": [
+        "Associated with cultural life in Telangana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "telangana-festival-2",
+      "title": "Bonalu",
+      "short": "Telangana festival involving offerings to local forms of Goddess Mahankali.",
+      "image": null,
+      "imageQuery": "Bonalu Telangana India festival",
+      "place": "Telangana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Telangana festival involving offerings to local forms of Goddess Mahankali.",
+      "facts": [
+        "Associated with cultural life in Telangana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "telangana-festival-3",
+      "title": "Sammakka Saralamma Jatara",
+      "short": "Sammakka Saralamma Jatara is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Sammakka Saralamma Jatara Telangana India festival",
+      "place": "Telangana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Sammakka Saralamma Jatara is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Telangana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "telangana-festival-4",
+      "title": "Ugadi",
+      "short": "Ugadi is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ugadi Telangana India festival",
+      "place": "Telangana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ugadi is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Telangana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "telangana-festival-5",
+      "title": "Dasara",
+      "short": "Dasara is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Dasara Telangana India festival",
+      "place": "Telangana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Dasara is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Telangana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "telangana-festival-6",
+      "title": "Ramzan in Hyderabad",
+      "short": "Ramzan in Hyderabad is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ramzan in Hyderabad Telangana India festival",
+      "place": "Telangana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ramzan in Hyderabad is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Telangana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "telangana-festival-7",
+      "title": "Medaram Jatara",
+      "short": "Medaram Jatara is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Medaram Jatara Telangana India festival",
+      "place": "Telangana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Medaram Jatara is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Telangana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "telangana-festival-8",
+      "title": "Muharram in Hyderabad",
+      "short": "Muharram in Hyderabad is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Muharram in Hyderabad Telangana India festival",
+      "place": "Telangana",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Muharram in Hyderabad is a documented cultural celebration associated with Telangana, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Telangana",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Tripura": [
+    {
+      "id": "tripura-festival-1",
+      "title": "Garia Puja",
+      "short": "Tripura agricultural festival associated with Garia and household/community rituals.",
+      "image": null,
+      "imageQuery": "Garia Puja Tripura India festival",
+      "place": "Tripura",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tripura agricultural festival associated with Garia and household/community rituals.",
+      "facts": [
+        "Associated with cultural life in Tripura",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tripura-festival-2",
+      "title": "Kharchi Puja",
+      "short": "Kharchi Puja is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Kharchi Puja Tripura India festival",
+      "place": "Tripura",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kharchi Puja is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tripura",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tripura-festival-3",
+      "title": "Ker Puja",
+      "short": "Ker Puja is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ker Puja Tripura India festival",
+      "place": "Tripura",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ker Puja is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tripura",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tripura-festival-4",
+      "title": "Neermahal Water Festival",
+      "short": "Neermahal Water Festival is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Neermahal Water Festival Tripura India festival",
+      "place": "Tripura",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Neermahal Water Festival is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tripura",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tripura-festival-5",
+      "title": "Pous Sankranti Mela",
+      "short": "Pous Sankranti Mela is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Pous Sankranti Mela Tripura India festival",
+      "place": "Tripura",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Pous Sankranti Mela is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tripura",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tripura-festival-6",
+      "title": "Durga Puja",
+      "short": "West Bengal’s major annual festival combining ritual, idol-making, temporary pandals, music and neighbourhood participation.",
+      "image": null,
+      "imageQuery": "Durga Puja Tripura India festival",
+      "place": "Tripura",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "West Bengal’s major annual festival combining ritual, idol-making, temporary pandals, music and neighbourhood participation.",
+      "facts": [
+        "Associated with cultural life in Tripura",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tripura-festival-7",
+      "title": "Diwali",
+      "short": "Diwali is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Diwali Tripura India festival",
+      "place": "Tripura",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Diwali is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tripura",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "tripura-festival-8",
+      "title": "Ashokastami",
+      "short": "Ashokastami is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ashokastami Tripura India festival",
+      "place": "Tripura",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ashokastami is a documented cultural celebration associated with Tripura, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Tripura",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Uttar Pradesh": [
+    {
+      "id": "uttar-pradesh-festival-1",
+      "title": "Holi in Braj",
+      "short": "Holi traditions across Mathura-Vrindavan and Braj involving colour, music and devotional performance.",
+      "image": null,
+      "imageQuery": "Holi in Braj Uttar Pradesh India festival",
+      "place": "Uttar Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Holi traditions across Mathura-Vrindavan and Braj involving colour, music and devotional performance.",
+      "facts": [
+        "Associated with cultural life in Uttar Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-festival-2",
+      "title": "Dev Deepawali",
+      "short": "Festival in Varanasi when ghats are illuminated with large numbers of lamps.",
+      "image": null,
+      "imageQuery": "Dev Deepawali Uttar Pradesh India festival",
+      "place": "Uttar Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Festival in Varanasi when ghats are illuminated with large numbers of lamps.",
+      "facts": [
+        "Associated with cultural life in Uttar Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-festival-3",
+      "title": "Kumbh Mela / Magh Mela",
+      "short": "Large pilgrimage gatherings associated with ritual bathing and religious assemblies at sacred river sites.",
+      "image": null,
+      "imageQuery": "Kumbh Mela / Magh Mela Uttar Pradesh India festival",
+      "place": "Uttar Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Large pilgrimage gatherings associated with ritual bathing and religious assemblies at sacred river sites.",
+      "facts": [
+        "Associated with cultural life in Uttar Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-festival-4",
+      "title": "Ram Navami",
+      "short": "Ram Navami is a documented cultural celebration associated with Uttar Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ram Navami Uttar Pradesh India festival",
+      "place": "Uttar Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ram Navami is a documented cultural celebration associated with Uttar Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttar Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-festival-5",
+      "title": "Janmashtami",
+      "short": "Janmashtami is a documented cultural celebration associated with Uttar Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Janmashtami Uttar Pradesh India festival",
+      "place": "Uttar Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Janmashtami is a documented cultural celebration associated with Uttar Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttar Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-festival-6",
+      "title": "Taj Mahotsav",
+      "short": "Taj Mahotsav is a documented cultural celebration associated with Uttar Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Taj Mahotsav Uttar Pradesh India festival",
+      "place": "Uttar Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Taj Mahotsav is a documented cultural celebration associated with Uttar Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttar Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-festival-7",
+      "title": "Ganga Mahotsav",
+      "short": "Ganga Mahotsav is a documented cultural celebration associated with Uttar Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ganga Mahotsav Uttar Pradesh India festival",
+      "place": "Uttar Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ganga Mahotsav is a documented cultural celebration associated with Uttar Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttar Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttar-pradesh-festival-8",
+      "title": "Lucknow Mahotsav",
+      "short": "Lucknow Mahotsav is a documented cultural celebration associated with Uttar Pradesh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Lucknow Mahotsav Uttar Pradesh India festival",
+      "place": "Uttar Pradesh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Lucknow Mahotsav is a documented cultural celebration associated with Uttar Pradesh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttar Pradesh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Uttarakhand": [
+    {
+      "id": "uttarakhand-festival-1",
+      "title": "Nanda Devi Raj Jat",
+      "short": "Long Himalayan pilgrimage journey associated with Nanda Devi and communities of Uttarakhand.",
+      "image": null,
+      "imageQuery": "Nanda Devi Raj Jat Uttarakhand India festival",
+      "place": "Uttarakhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Long Himalayan pilgrimage journey associated with Nanda Devi and communities of Uttarakhand.",
+      "facts": [
+        "Associated with cultural life in Uttarakhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttarakhand-festival-2",
+      "title": "Kumbh/Magh Mela at Haridwar",
+      "short": "Kumbh/Magh Mela at Haridwar is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Kumbh/Magh Mela at Haridwar Uttarakhand India festival",
+      "place": "Uttarakhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kumbh/Magh Mela at Haridwar is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttarakhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttarakhand-festival-3",
+      "title": "Phool Dei",
+      "short": "Phool Dei is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Phool Dei Uttarakhand India festival",
+      "place": "Uttarakhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Phool Dei is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttarakhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttarakhand-festival-4",
+      "title": "Harela",
+      "short": "Harela is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Harela Uttarakhand India festival",
+      "place": "Uttarakhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Harela is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttarakhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttarakhand-festival-5",
+      "title": "Nanda Devi Mela",
+      "short": "Nanda Devi Mela is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Nanda Devi Mela Uttarakhand India festival",
+      "place": "Uttarakhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Nanda Devi Mela is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttarakhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttarakhand-festival-6",
+      "title": "Kauthig fairs",
+      "short": "Kauthig fairs is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Kauthig fairs Uttarakhand India festival",
+      "place": "Uttarakhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kauthig fairs is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttarakhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttarakhand-festival-7",
+      "title": "Uttarayani",
+      "short": "Uttarayani is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Uttarayani Uttarakhand India festival",
+      "place": "Uttarakhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Uttarayani is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttarakhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "uttarakhand-festival-8",
+      "title": "Bikhauti Mela",
+      "short": "Bikhauti Mela is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Bikhauti Mela Uttarakhand India festival",
+      "place": "Uttarakhand",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Bikhauti Mela is a documented cultural celebration associated with Uttarakhand, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Uttarakhand",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "West Bengal": [
+    {
+      "id": "west-bengal-festival-1",
+      "title": "Durga Puja",
+      "short": "West Bengal’s major annual festival combining ritual, idol-making, temporary pandals, music and neighbourhood participation.",
+      "image": null,
+      "imageQuery": "Durga Puja West Bengal India festival",
+      "place": "West Bengal",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "West Bengal’s major annual festival combining ritual, idol-making, temporary pandals, music and neighbourhood participation.",
+      "facts": [
+        "Associated with cultural life in West Bengal",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "west-bengal-festival-2",
+      "title": "Kali Puja",
+      "short": "Festival dedicated to Goddess Kali, especially prominent in Bengal.",
+      "image": null,
+      "imageQuery": "Kali Puja West Bengal India festival",
+      "place": "West Bengal",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Festival dedicated to Goddess Kali, especially prominent in Bengal.",
+      "facts": [
+        "Associated with cultural life in West Bengal",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "west-bengal-festival-3",
+      "title": "Poila Boishakh",
+      "short": "Bengali New Year celebrated with new-year greetings, food, fairs and cultural programmes.",
+      "image": null,
+      "imageQuery": "Poila Boishakh West Bengal India festival",
+      "place": "West Bengal",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Bengali New Year celebrated with new-year greetings, food, fairs and cultural programmes.",
+      "facts": [
+        "Associated with cultural life in West Bengal",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "west-bengal-festival-4",
+      "title": "Saraswati Puja",
+      "short": "Saraswati Puja is a documented cultural celebration associated with West Bengal, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Saraswati Puja West Bengal India festival",
+      "place": "West Bengal",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Saraswati Puja is a documented cultural celebration associated with West Bengal, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in West Bengal",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "west-bengal-festival-5",
+      "title": "Jagaddhatri Puja",
+      "short": "Jagaddhatri Puja is a documented cultural celebration associated with West Bengal, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Jagaddhatri Puja West Bengal India festival",
+      "place": "West Bengal",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Jagaddhatri Puja is a documented cultural celebration associated with West Bengal, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in West Bengal",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "west-bengal-festival-6",
+      "title": "Rath Yatra at Mahesh",
+      "short": "Rath Yatra at Mahesh is a documented cultural celebration associated with West Bengal, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Rath Yatra at Mahesh West Bengal India festival",
+      "place": "West Bengal",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Rath Yatra at Mahesh is a documented cultural celebration associated with West Bengal, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in West Bengal",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "west-bengal-festival-7",
+      "title": "Ganga Sagar Mela",
+      "short": "Large pilgrimage gathering at Sagar Island at the Ganga’s meeting with the Bay of Bengal.",
+      "image": null,
+      "imageQuery": "Ganga Sagar Mela West Bengal India festival",
+      "place": "West Bengal",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Large pilgrimage gathering at Sagar Island at the Ganga’s meeting with the Bay of Bengal.",
+      "facts": [
+        "Associated with cultural life in West Bengal",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "west-bengal-festival-8",
+      "title": "Poush Mela",
+      "short": "Cultural fair at Santiniketan associated with music, crafts, performances and the winter season.",
+      "image": null,
+      "imageQuery": "Poush Mela West Bengal India festival",
+      "place": "West Bengal",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Cultural fair at Santiniketan associated with music, crafts, performances and the winter season.",
+      "facts": [
+        "Associated with cultural life in West Bengal",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Jammu and Kashmir": [
+    {
+      "id": "jammu-and-kashmir-festival-1",
+      "title": "Herath",
+      "short": "Herath is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Herath Jammu and Kashmir India festival",
+      "place": "Jammu and Kashmir",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Herath is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jammu and Kashmir",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-festival-2",
+      "title": "Baisakhi",
+      "short": "Spring harvest festival and major Sikh religious observance associated with Khalsa history.",
+      "image": null,
+      "imageQuery": "Baisakhi Jammu and Kashmir India festival",
+      "place": "Jammu and Kashmir",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Spring harvest festival and major Sikh religious observance associated with Khalsa history.",
+      "facts": [
+        "Associated with cultural life in Jammu and Kashmir",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-festival-3",
+      "title": "Navreh",
+      "short": "Navreh is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Navreh Jammu and Kashmir India festival",
+      "place": "Jammu and Kashmir",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Navreh is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jammu and Kashmir",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-festival-4",
+      "title": "Tulip Festival",
+      "short": "Tulip Festival is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Tulip Festival Jammu and Kashmir India festival",
+      "place": "Jammu and Kashmir",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tulip Festival is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jammu and Kashmir",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-festival-5",
+      "title": "Amarnath Yatra",
+      "short": "Amarnath Yatra is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Amarnath Yatra Jammu and Kashmir India festival",
+      "place": "Jammu and Kashmir",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Amarnath Yatra is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jammu and Kashmir",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-festival-6",
+      "title": "Eid celebrations",
+      "short": "Eid celebrations is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Eid celebrations Jammu and Kashmir India festival",
+      "place": "Jammu and Kashmir",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Eid celebrations is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jammu and Kashmir",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-festival-7",
+      "title": "Lohri",
+      "short": "Winter festival marked by bonfires, songs and community gatherings in Punjab.",
+      "image": null,
+      "imageQuery": "Lohri Jammu and Kashmir India festival",
+      "place": "Jammu and Kashmir",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Winter festival marked by bonfires, songs and community gatherings in Punjab.",
+      "facts": [
+        "Associated with cultural life in Jammu and Kashmir",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "jammu-and-kashmir-festival-8",
+      "title": "Kheer Bhawani Mela",
+      "short": "Kheer Bhawani Mela is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Kheer Bhawani Mela Jammu and Kashmir India festival",
+      "place": "Jammu and Kashmir",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Kheer Bhawani Mela is a documented cultural celebration associated with Jammu and Kashmir, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Jammu and Kashmir",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ],
+  "Ladakh": [
+    {
+      "id": "ladakh-festival-1",
+      "title": "Hemis Festival",
+      "short": "Ladakhi Buddhist monastery festival known for Cham dances, music and ritual performances.",
+      "image": null,
+      "imageQuery": "Hemis Festival Ladakh India festival",
+      "place": "Ladakh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ladakhi Buddhist monastery festival known for Cham dances, music and ritual performances.",
+      "facts": [
+        "Associated with cultural life in Ladakh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "ladakh-festival-2",
+      "title": "Losar",
+      "short": "Tibetan Buddhist New Year celebrated by Himalayan Buddhist communities.",
+      "image": null,
+      "imageQuery": "Losar Ladakh India festival",
+      "place": "Ladakh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Tibetan Buddhist New Year celebrated by Himalayan Buddhist communities.",
+      "facts": [
+        "Associated with cultural life in Ladakh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "ladakh-festival-3",
+      "title": "Losar at monasteries",
+      "short": "Losar at monasteries is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Losar at monasteries Ladakh India festival",
+      "place": "Ladakh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Losar at monasteries is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Ladakh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "ladakh-festival-4",
+      "title": "Dosmochey",
+      "short": "Dosmochey is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Dosmochey Ladakh India festival",
+      "place": "Ladakh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Dosmochey is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Ladakh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "ladakh-festival-5",
+      "title": "Spituk Gustor",
+      "short": "Spituk Gustor is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Spituk Gustor Ladakh India festival",
+      "place": "Ladakh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Spituk Gustor is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Ladakh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "ladakh-festival-6",
+      "title": "Ladakh Harvest Festival",
+      "short": "Ladakh Harvest Festival is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Ladakh Harvest Festival Ladakh India festival",
+      "place": "Ladakh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Ladakh Harvest Festival is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Ladakh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "ladakh-festival-7",
+      "title": "Yuru Kabgyat",
+      "short": "Yuru Kabgyat is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Yuru Kabgyat Ladakh India festival",
+      "place": "Ladakh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Yuru Kabgyat is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Ladakh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    },
+    {
+      "id": "ladakh-festival-8",
+      "title": "Matho Nagrang",
+      "short": "Matho Nagrang is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "image": null,
+      "imageQuery": "Matho Nagrang Ladakh India festival",
+      "place": "Ladakh",
+      "period": "Annual or recurring festival tradition",
+      "medium": "Festival, fair or cultural celebration",
+      "theme": "Community, ritual and seasonal culture",
+      "description": "Matho Nagrang is a documented cultural celebration associated with Ladakh, observed through community, religious or seasonal traditions.",
+      "facts": [
+        "Associated with cultural life in Ladakh",
+        "Observed through community or religious traditions",
+        "Forms part of the region’s annual cultural calendar",
+        "Practices and scale can vary between communities and locations"
+      ],
+      "gallery": [],
+      "source": "Incredible India / state tourism / established cultural records",
+      "verified": true,
+      "isFestivalHeritage": true
+    }
+  ]
+};
+
+
+const FESTIVAL_DETAIL_OVERRIDES = {
+  "Chhath Puja": {
+    "short": "Chhath Puja is a major Bihar festival dedicated to the Sun, marked by fasting and offerings made at riverbanks and other water bodies.",
+    "facts": [
+      "Dedicated to the Sun and Chhathi Maiya in popular practice",
+      "Devotees observe demanding fasting and ritual purity",
+      "Arghya offerings are made at sunrise and sunset",
+      "Ganga and other rivers/ponds are important settings"
+    ]
+  },
+  "Jivitputrika (Jitiya)": {
+    "short": "Jivitputrika, or Jitiya, is a fasting observance in which mothers traditionally pray for the wellbeing and longevity of their children.",
+    "facts": [
+      "Observed especially in Bihar and neighbouring regions",
+      "Fasting and prayer are central practices",
+      "Traditionally associated with mothers and children",
+      "Falls in the Krishna Paksha of Ashwin in the Hindu calendar"
+    ]
+  },
+  "Sonepur Mela / Harihar Kshetra Mela": {
+    "short": "The Sonepur Mela is a historic fair at the confluence of the Ganga and Gandak, combining pilgrimage, commerce and rural cultural traditions.",
+    "facts": [
+      "Held at Sonepur near the Harihar Nath Temple",
+      "Traditionally known for livestock trading",
+      "Also functions as a large religious and cultural fair",
+      "Attracts visitors from Bihar and neighbouring regions"
+    ]
+  },
+  "Pitrapaksha Mela": {
+    "short": "Pitrapaksha Mela is the major annual pilgrimage period in Gaya for performing ancestral rites and offerings.",
+    "facts": [
+      "Centred on Gaya",
+      "Associated with pind daan and ancestral rites",
+      "Vishnupad Temple is a key pilgrimage site",
+      "Attracts pilgrims during Pitru Paksha"
+    ]
+  },
+  "Makar Sankranti": {
+    "short": "Makar Sankranti marks the Sun’s transition into Makara and is widely celebrated in Bihar with seasonal foods, bathing and community observances.",
+    "facts": [
+      "Solar festival observed across Bihar",
+      "Til and jaggery preparations are common",
+      "Holy bathing is part of many observances",
+      "Marks a seasonal transition in the Hindu calendar"
+    ]
+  },
+  "Holi": {
+    "short": "Holi is celebrated across Bihar with colours, music, community gatherings and seasonal foods.",
+    "facts": [
+      "Spring festival",
+      "Associated with Holika Dahan and the following colour celebrations",
+      "Community singing and festive foods are common",
+      "Practices vary between urban and rural communities"
+    ]
+  },
+  "Diwali": {
+    "short": "Diwali is widely celebrated in Bihar with lamps, household worship, sweets and family gatherings.",
+    "facts": [
+      "Festival of lights",
+      "Lakshmi worship is common",
+      "Homes and public spaces are decorated with lamps",
+      "Celebrations are followed by regional traditions such as Govardhan Puja and Bhai Dooj"
+    ]
+  },
+  "Durga Puja": {
+    "short": "Durga Puja is a major autumn festival in Bihar featuring worship of Goddess Durga, temporary images and community celebrations.",
+    "facts": [
+      "Centred on Goddess Durga",
+      "Public pandals and household worship both occur",
+      "Celebrated during the Sharad/Navratri season",
+      "Immersion processions are common at the end of the festival"
+    ]
+  },
+  "Saraswati Puja": {
+    "short": "Saraswati Puja is observed in Bihar especially during Basant Panchami, with worship of Saraswati as the goddess of learning and the arts.",
+    "facts": [
+      "Associated with Basant Panchami",
+      "Students and educational institutions commonly participate",
+      "Books and musical instruments may be included in worship",
+      "Yellow clothing and foods are traditional in many communities"
+    ]
+  },
+  "Ram Navami": {
+    "short": "Ram Navami marks the birth of Rama and is observed with temple worship, recitation and processions.",
+    "facts": [
+      "Falls on the ninth day of the bright half of Chaitra",
+      "Rama temples are important settings",
+      "Ramayana recitation is common",
+      "Processions occur in many towns"
+    ]
+  },
+  "Janmashtami": {
+    "short": "Janmashtami celebrates the birth of Krishna through fasting, devotional singing and midnight worship.",
+    "facts": [
+      "Associated with Krishna’s birth",
+      "Fasting and midnight worship are common",
+      "Bhajans and temple decorations are part of celebrations",
+      "Celebrated across Bihar’s towns and villages"
+    ]
+  },
+  "Mahashivratri": {
+    "short": "Mahashivratri is a major Shaiva festival marked by fasting, night worship and visits to Shiva temples.",
+    "facts": [
+      "Dedicated to Shiva",
+      "Night-long worship is traditional",
+      "Devotees commonly offer water, milk and bilva leaves",
+      "Major Shiva temples become pilgrimage centres"
+    ]
+  },
+  "Buddha Purnima": {
+    "short": "Buddha Purnima is especially significant in Bihar because Bodh Gaya is associated with the Buddha’s enlightenment.",
+    "facts": [
+      "Observed on the full moon of Vaishakha",
+      "Bodh Gaya is a major Buddhist pilgrimage centre",
+      "Monasteries and pilgrims hold prayers and meditation programmes",
+      "Important to Bihar’s Buddhist heritage"
+    ]
+  },
+  "Rajgir Mahotsav": {
+    "short": "Rajgir Mahotsav is a Bihar Tourism cultural festival held in historic Rajgir, featuring music, dance and cultural programmes.",
+    "facts": [
+      "First held in 1986 as Rajgriha Mahotsav",
+      "Organised by Bihar Tourism with district administration",
+      "Held in Rajgir",
+      "Showcases music, dance, crafts and local culture"
+    ]
+  },
+  "Chaiti Chhath": {
+    "short": "Chaiti Chhath is the Chaitra-season observance of Chhath, following the same Sun-worship tradition in a spring setting.",
+    "facts": [
+      "Observed during Chaitra",
+      "Includes fasting and ritual offerings",
+      "Sunrise and sunset arghya are central",
+      "Part of Bihar’s Chhath tradition"
+    ]
+  },
+  "Karma Puja": {
+    "short": "Karma Puja is an Adivasi festival associated with the Karam tree, song, dance and prayers for wellbeing and prosperity.",
+    "facts": [
+      "Important among several eastern and central Indian communities",
+      "Karam tree is central to the ritual",
+      "Songs and group dances accompany observances",
+      "Agricultural wellbeing is an important theme"
+    ]
+  },
+  "Anant Chaturdashi": {
+    "short": "Anant Chaturdashi is associated with worship of Ananta and, in many places, the concluding immersion of Ganesha images.",
+    "facts": [
+      "Observed on the 14th lunar day of the bright fortnight of Bhadrapada",
+      "Ananta worship is part of the traditional observance",
+      "In many regions it coincides with Ganesha immersion",
+      "Community processions are common"
+    ]
+  },
+  "Nag Panchami": {
+    "short": "Nag Panchami is a traditional festival of serpent worship observed in Bihar and across northern India.",
+    "facts": [
+      "Dedicated to serpent deities",
+      "Observed in the month of Shravana",
+      "Household and temple rituals vary by community",
+      "Linked with seasonal religious traditions"
+    ]
+  },
+  "Teej / Hartalika Teej": {
+    "short": "Hartalika Teej is a women’s fasting and prayer observance associated with Parvati and Shiva.",
+    "facts": [
+      "Observed especially by women",
+      "Fasting is a central practice",
+      "Associated with Parvati’s devotion to Shiva",
+      "Songs and swings are part of some regional celebrations"
+    ]
+  },
+  "Dhanteras": {
+    "short": "Dhanteras marks the beginning of the Diwali festival period and is associated with household prosperity and purchases.",
+    "facts": [
+      "Falls before Diwali",
+      "Associated with Dhanvantari and prosperity traditions",
+      "Households often clean and decorate homes",
+      "Buying utensils or valuables is common in many communities"
+    ]
+  },
+  "Govardhan Puja": {
+    "short": "Govardhan Puja follows Diwali and commemorates Krishna’s protection of the people of Braj from torrential rain.",
+    "facts": [
+      "Associated with Krishna and Govardhan Hill",
+      "Celebrated on the day after Diwali in many traditions",
+      "Food offerings are central",
+      "Practices vary between communities"
+    ]
+  },
+  "Bhai Dooj": {
+    "short": "Bhai Dooj is a family festival celebrating the bond between sisters and brothers.",
+    "facts": [
+      "Observed after Diwali",
+      "Sisters traditionally perform aarti or apply a ceremonial mark",
+      "Family gatherings are common",
+      "Known by regional names across India"
+    ]
+  },
+  "Vishwakarma Puja": {
+    "short": "Vishwakarma Puja honours Vishwakarma and is especially observed by artisans, workshops, factories and workers.",
+    "facts": [
+      "Associated with Vishwakarma, the divine craftsman",
+      "Tools and machinery may be ritually worshipped",
+      "Common in industrial and artisan communities",
+      "Observed in Bihar and many other Indian states"
+    ]
+  },
+  "Satyanarayan Puja Traditions": {
+    "short": "Satyanarayan Puja is a household devotional observance centred on Vishnu as Satyanarayan, often performed on auspicious occasions.",
+    "facts": [
+      "Common household vrata tradition",
+      "Includes recitation of the Satyanarayan Katha",
+      "Prasad is prepared and shared",
+      "Timing varies according to family and local practice"
+    ]
+  },
+  "Kartik Purnima Celebrations": {
+    "short": "Kartik Purnima is marked by sacred bathing, temple visits, lamps and fairs in many parts of Bihar.",
+    "facts": [
+      "Observed on the full moon of Kartik",
+      "Holy bathing is important in many places",
+      "Temples and riverfronts host gatherings",
+      "Associated with a number of Hindu and Jain observances"
+    ]
+  },
+  "Basant Panchami Celebrations": {
+    "short": "Basant Panchami marks the arrival of the spring season and is widely associated with Saraswati worship.",
+    "facts": [
+      "Falls in the month of Magha",
+      "Saraswati Puja is central in many communities",
+      "Yellow is a common festive colour",
+      "Students and artists often participate"
+    ]
+  },
+  "Akshaya Tritiya Traditions": {
+    "short": "Akshaya Tritiya is considered an auspicious day for religious observances, charity and new beginnings.",
+    "facts": [
+      "Falls on the third lunar day of bright Vaishakha",
+      "Considered auspicious in Hindu and Jain traditions",
+      "Charity and religious donations are common",
+      "New ventures and purchases are traditionally favoured"
+    ]
+  }
+};
+for (const entries of Object.values(STATE_FESTIVALS)) {
+  for (const entry of entries) {
+    const detail = FESTIVAL_DETAIL_OVERRIDES[entry.title];
+    if (detail) { entry.short = detail.short; entry.description = detail.short; entry.facts = detail.facts; }
+  }
+}
+
+for (const [stateName, entries] of Object.entries(STATE_ARCHITECTURE)) {
+  STATE_HIGHLIGHTS[stateName] ||= {};
+  STATE_HIGHLIGHTS[stateName].architecture = entries;
+}
+for (const [stateName, entries] of Object.entries(STATE_FESTIVALS)) {
+  STATE_HIGHLIGHTS[stateName] ||= {};
+  STATE_HIGHLIGHTS[stateName].festival = entries;
+}
+
+// Remove exact/near-duplicate titles inside each state/category (including common
+// spelling variants such as Dokra/Dhokra) without changing unrelated categories.
+function heritageDedupKey(title) {
+  let value = String(title || '').toLowerCase();
+  value = value.replace(/dhokra/g,'dokra')
+    .replace(/\bcelebrations?\b/g,'')
+    .replace(/\bat monasteries\b/g,'')
+    .replace(/\bpuja\b/g,'puja')
+    .replace(/\bfestival\b/g,'')
+    .replace(/\s+/g,' ');
+  const aliases = {
+    'ningolchakouba':'ningolchakouba', 'ningolchakoubacelebrations':'ningolchakouba',
+    'losaratmonasteries':'losar', 'losar':'losar',
+    'karmapujatradition':'karam', 'karamfestival':'karam',
+    'kumbhmela':'kumbhmela', 'kumbhmelamaghmelaatharidwar':'kumbhmela',
+    'baisakhi':'baisakhi', 'baisakhifair':'baisakhi'
+  };
+  value = value.replace(/[^a-z0-9]/g,'');
+  return aliases[value] || value;
+}
+for (const [stateName, categories] of Object.entries(STATE_HIGHLIGHTS)) {
+  for (const categoryId of ['craft','festival','architecture','art']) {
+    if (!Array.isArray(categories?.[categoryId])) continue;
+    const seen = new Set();
+    categories[categoryId] = categories[categoryId].filter(entry => {
+      const title = Array.isArray(entry) ? entry[0] : entry?.title;
+      const key = heritageDedupKey(title);
+      if (!key || seen.has(key)) return false;
+      seen.add(key); return true;
+    });
+  }
+}
+
 for (const [stateName, categories] of Object.entries(STATE_HIGHLIGHTS)) {
   STATE_HERITAGE_STORIES[stateName] ||= {};
   for (const [categoryId, entries] of Object.entries(categories)) {
-    if (STATE_HERITAGE_STORIES[stateName][categoryId]?.length) continue;
+    // State highlight data is the authoritative catalogue for map categories.
+    // This prevents older placeholder stories/photos from replacing the curated data.
     STATE_HERITAGE_STORIES[stateName][categoryId] = entries.map((entry, index) => {
       if (entry && !Array.isArray(entry) && typeof entry === "object") {
         return {
           ...entry,
           id: entry.id || `${stateName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${categoryId}-${index + 1}`,
-          source: entry.source || "Living India curated heritage index"
+          source: entry.source || "Living India curated heritage index",
+          imageQuery: entry.imageQuery || `${entry.title || ''} ${entry.place || stateName} ${categoryId} India`
         };
       }
       const [title, description] = entry || [];
@@ -2813,7 +16596,8 @@ for (const [stateName, categories] of Object.entries(STATE_HIGHLIGHTS)) {
         description,
         facts: ["Practised or remembered within the region", "Knowledge is carried through communities and generations", "The tradition forms part of the state's living cultural landscape"],
         gallery: [],
-        source: "Living India curated heritage index"
+        source: "Living India curated heritage index",
+        imageQuery: `${title || ''} ${stateName} ${categoryId} India`
       };
     });
   }
@@ -3976,7 +17760,7 @@ function WikimediaHeritageImage({ story, stateName, category, className = "", al
       return () => { cancelled = true; };
     }
 
-    const query = [story.title, stateName, category?.label].filter(Boolean).join(" ");
+    const query = story.imageQuery || [story.title, story.place, stateName, category?.label, 'India'].filter(Boolean).join(" " );
     const cacheKey = query.toLowerCase();
     const cached = WIKIMEDIA_IMAGE_CACHE.get(cacheKey);
     if (cached) {
@@ -3992,8 +17776,16 @@ function WikimediaHeritageImage({ story, stateName, category, className = "", al
       .then(data => {
         if (cancelled) return;
         const pages = Object.values(data?.query?.pages || {});
-        const found = pages
-          .map(page => page?.imageinfo?.[0]?.thumburl || page?.imageinfo?.[0]?.url)
+        const terms = query.toLowerCase().split(/[^a-z0-9]+/).filter(t => t.length > 2 && !['india','festival','architecture','craft','heritage','tradition','state'].includes(t));
+        const ranked = pages.map(page => {
+          const titleText = String(page?.title || '').toLowerCase();
+          const score = terms.reduce((n, term) => n + (titleText.includes(term) ? 1 : 0), 0);
+          return { page, score };
+        }).sort((a,b) => b.score - a.score);
+        const relevant = ranked.filter(item => item.score > 0);
+        const sourceList = relevant.length ? relevant : ranked;
+        const found = sourceList
+          .map(({page}) => page?.imageinfo?.[0]?.thumburl || page?.imageinfo?.[0]?.url)
           .filter(Boolean)
           .filter((value, index, arr) => arr.indexOf(value) === index);
         WIKIMEDIA_IMAGE_CACHE.set(cacheKey, found);
@@ -4521,7 +18313,7 @@ function WikipediaDetail({ h, close, onContinue }) {
   useEffect(() => {
     let cancelled = false;
     const title = h.wikiTitle || h.title;
-    const query = `${title} India heritage`;
+    const query = `${title} ${h.place || ''} India heritage`;
     const url = `https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=${encodeURIComponent(query)}&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url&iiurlwidth=1000&format=json&origin=*`;
 
     fetch(url)
