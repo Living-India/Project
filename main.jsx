@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { onAuthStateChanged } from "firebase/auth";
 import {
   doc, getDoc, setDoc, serverTimestamp,
-  collection, onSnapshot, addDoc, updateDoc, arrayUnion, arrayRemove
+  collection, onSnapshot, addDoc, updateDoc, arrayUnion, arrayRemove, where, query
 } from "firebase/firestore";
 import { ref as storageRef, uploadBytes, getDownloadURL } from "firebase/storage";
 import { auth, db, storage } from "./firebase-client";
@@ -801,6 +801,13 @@ function App() {
           </button>
 
           <button
+            className={page === "hidden-gems" ? "active" : ""}
+            onClick={() => nav("hidden-gems")}
+          >
+            <Icon>✦</Icon>Hidden Gems
+          </button>
+
+          <button
             onClick={() => setModal("contribute")}
           >
             <Icon>✎</Icon>Contribute
@@ -1239,6 +1246,13 @@ function App() {
             posts={posts}
             authUser={authUser}
             onShare={() => setModal("contribute")}
+            notify={notify}
+          />
+        )}
+
+        {page === "hidden-gems" && (
+          <HiddenGemsPage
+            authUser={authUser}
             notify={notify}
           />
         )}
@@ -1804,6 +1818,40 @@ const INDIA_STATES = [
   "Delhi","Jammu & Kashmir","Ladakh"
 ];
 
+const STATE_DISTRICTS = {
+  "Andhra Pradesh":["Alluri Sitharama Raju","Anakapalli","Anantapur","Annamayya","Bapatla","Chittoor","East Godavari","Eluru","Guntur","Kakinada","Konaseema","Krishna","Kurnool","Nandyal","NTR","Palnadu","Parvathipuram Manyam","Prakasam","Sri Potti Sriramulu Nellore","Sri Sathya Sai","Srikakulam","Tirupati","Visakhapatnam","Vizianagaram","West Godavari","YSR Kadapa"],
+  "Arunachal Pradesh":["Anjaw","Bichom","Changlang","Dibang Valley","East Kameng","East Siang","Kamle","Keyi Panyor","Kra Daadi","Kurung Kumey","Lepa Rada","Lohit","Longding","Lower Dibang Valley","Lower Siang","Lower Subansiri","Namsai","Pakke Kessang","Papum Pare","Shi Yomi","Siang","Tawang","Tirap","Upper Siang","Upper Subansiri","West Kameng","West Siang"],
+  "Assam":["Baksa","Bajali","Barpeta","Biswanath","Bongaigaon","Cachar","Charaideo","Chirang","Darrang","Dhemaji","Dhubri","Dibrugarh","Dima Hasao","Goalpara","Golaghat","Hailakandi","Hojai","Jorhat","Kamrup","Kamrup Metropolitan","Karbi Anglong","Kokrajhar","Lakhimpur","Majuli","Morigaon","Nagaon","Nalbari","Sivasagar","Sonitpur","South Salmara-Mankachar","Tamulpur","Tinsukia","Udalguri","West Karbi Anglong"],
+  "Bihar":["Araria","Arwal","Aurangabad","Banka","Begusarai","Bhagalpur","Bhojpur","Buxar","Darbhanga","East Champaran","Gaya","Gopalganj","Jamui","Jehanabad","Kaimur","Katihar","Khagaria","Kishanganj","Lakhisarai","Madhepura","Madhubani","Munger","Muzaffarpur","Nalanda","Nawada","Patna","Purnia","Rohtas","Saharsa","Samastipur","Saran","Sheikhpura","Sheohar","Sitamarhi","Siwan","Supaul","Vaishali","West Champaran"],
+  "Chhattisgarh":["Balod","Baloda Bazar","Balrampur-Ramanujganj","Bastar","Bemetara","Bijapur","Bilaspur","Dantewada","Dhamtari","Durg","Gariaband","Gaurela-Pendra-Marwahi","Janjgir-Champa","Jashpur","Kabirdham","Kanker","Khairagarh-Chhuikhadan-Gandai","Kondagaon","Korba","Korea","Mahasamund","Manendragarh-Chirmiri-Bharatpur","Mohla-Manpur-Ambagarh Chowki","Mungeli","Narayanpur","Raigarh","Rajnandgaon","Sakti","Sarangarh-Bilaigarh","Sukma","Surajpur","Surguja"],
+  "Goa":["North Goa","South Goa"],
+  "Gujarat":["Ahmedabad","Amreli","Anand","Aravalli","Banaskantha","Bharuch","Bhavnagar","Botad","Chhota Udaipur","Dahod","Dang","Devbhoomi Dwarka","Gandhinagar","Gir Somnath","Jamnagar","Junagadh","Kheda","Kutch","Mahisagar","Mehsana","Morbi","Narmada","Navsari","Panchmahal","Patan","Porbandar","Rajkot","Sabarkantha","Surat","Surendranagar","Tapi","Vadodara","Valsad"],
+  "Haryana":["Ambala","Bhiwani","Charkhi Dadri","Faridabad","Fatehabad","Gurugram","Hisar","Jhajjar","Jind","Kaithal","Karnal","Kurukshetra","Mahendragarh","Nuh","Palwal","Panchkula","Panipat","Rewari","Rohtak","Sirsa","Sonipat","Yamunanagar"],
+  "Himachal Pradesh":["Bilaspur","Chamba","Hamirpur","Kangra","Kinnaur","Kullu","Lahaul and Spiti","Mandi","Shimla","Sirmaur","Solan","Una"],
+  "Jharkhand":["Bokaro","Chatra","Deoghar","Dhanbad","Dumka","East Singhbhum","Garhwa","Giridih","Godda","Gumla","Hazaribagh","Jamtara","Khunti","Koderma","Latehar","Lohardaga","Pakur","Palamu","Ramgarh","Ranchi","Sahibganj","Seraikela Kharsawan","Simdega","West Singhbhum"],
+  "Karnataka":["Bagalkot","Ballari","Belagavi","Bengaluru Rural","Bengaluru Urban","Bidar","Chamarajanagar","Chikkaballapur","Chikkamagaluru","Chitradurga","Dakshina Kannada","Davanagere","Dharwad","Gadag","Hassan","Haveri","Kalaburagi","Kodagu","Kolar","Koppal","Mandya","Mysuru","Raichur","Ramanagara","Shivamogga","Tumakuru","Udupi","Uttara Kannada","Vijayapura","Yadgir"],
+  "Kerala":["Alappuzha","Ernakulam","Idukki","Kannur","Kasaragod","Kollam","Kottayam","Kozhikode","Malappuram","Palakkad","Pathanamthitta","Thiruvananthapuram","Thrissur","Wayanad"],
+  "Madhya Pradesh":["Agar Malwa","Alirajpur","Anuppur","Ashoknagar","Balaghat","Barwani","Betul","Bhind","Bhopal","Burhanpur","Chhatarpur","Chhindwara","Damoh","Datia","Dewas","Dhar","Dindori","Guna","Gwalior","Harda","Indore","Jabalpur","Jhabua","Katni","Khandwa","Khargone","Maihar","Mandla","Mandsaur","Mauganj","Morena","Narmadapuram","Narsinghpur","Neemuch","Niwas","Panna","Raisen","Rajgarh","Ratlam","Rewa","Sagar","Satna","Sehore","Seoni","Shahdol","Shajapur","Sheopur","Shivpuri","Sidhi","Singrauli","Tikamgarh","Ujjain","Umaria","Vidisha"],
+  "Maharashtra":["Ahmednagar","Akola","Amravati","Aurangabad","Beed","Bhandara","Buldhana","Chandrapur","Dhule","Gadchiroli","Gondia","Hingoli","Jalgaon","Jalna","Kolhapur","Latur","Mumbai City","Mumbai Suburban","Nagpur","Nanded","Nandurbar","Nashik","Osmanabad","Palghar","Parbhani","Pune","Raigad","Ratnagiri","Sangli","Satara","Sindhudurg","Solapur","Thane","Wardha","Washim","Yavatmal"],
+  "Manipur":["Bishnupur","Chandel","Churachandpur","Imphal East","Imphal West","Jiribam","Kakching","Kamjong","Kangpokpi","Noney","Pherzawl","Senapati","Tamenglong","Tengnoupal","Thoubal","Ukhrul"],
+  "Meghalaya":["East Garo Hills","East Jaintia Hills","East Khasi Hills","Eastern West Khasi Hills","North Garo Hills","Ri-Bhoi","South Garo Hills","South West Garo Hills","South West Khasi Hills","West Garo Hills","West Jaintia Hills","West Khasi Hills"],
+  "Mizoram":["Aizawl","Champhai","Hnahthial","Khawzawl","Kolasib","Lawngtlai","Lunglei","Mamit","Saitual","Serchhip","Siaha"],
+  "Nagaland":["Chumoukedima","Dimapur","Kiphire","Kohima","Longleng","Meluri","Mokokchung","Mon","Niuland","Noklak","Peren","Phek","Shamator","Tseminyu","Tuensang","Wokha","Zunheboto"],
+  "Odisha":["Angul","Balangir","Balasore","Bargarh","Bhadrak","Boudh","Cuttack","Deogarh","Dhenkanal","Gajapati","Ganjam","Jagatsinghpur","Jajpur","Jharsuguda","Kalahandi","Kandhamal","Kendrapara","Keonjhar","Khordha","Koraput","Malkangiri","Mayurbhanj","Nabarangpur","Nayagarh","Nuapada","Puri","Rayagada","Sambalpur","Subarnapur","Sundargarh"],
+  "Punjab":["Amritsar","Barnala","Bathinda","Faridkot","Fatehgarh Sahib","Fazilka","Ferozepur","Gurdaspur","Hoshiarpur","Jalandhar","Kapurthala","Ludhiana","Malerkotla","Mansa","Moga","Muktsar","Pathankot","Patiala","Rupnagar","Sahibzada Ajit Singh Nagar","Sangrur","Shahid Bhagat Singh Nagar","Tarn Taran"],
+  "Rajasthan":["Ajmer","Alwar","Anupgarh","Balotra","Banswara","Baran","Barmer","Beawar","Bharatpur","Bhilwara","Bikaner","Bundi","Chittorgarh","Churu","Dausa","Deeg","Dholpur","Didwana-Kuchamana","Dudu","Dungarpur","Ganganagar","Gangapur City","Hanumangarh","Jaipur","Jaipur Rural","Jaisalmer","Jalore","Jhalawar","Jhunjhunu","Jodhpur","Jodhpur Rural","Karauli","Kekri","Khairthal-Tijara","Kota","Kotputli-Behror","Nagaur","Neem Ka Thana","Pali","Phalodi","Pratapgarh","Rajsamand","Salumbar","Sawai Madhopur","Shahpura","Sikar","Sirohi","Tonk","Udaipur"],
+  "Sikkim":["Gangtok","Gyalshing","Mangan","Namchi","Pakyong","Soreng"],
+  "Tamil Nadu":["Ariyalur","Chengalpattu","Chennai","Coimbatore","Cuddalore","Dharmapuri","Dindigul","Erode","Kallakurichi","Kancheepuram","Karur","Krishnagiri","Madurai","Mayiladuthurai","Nagapattinam","Namakkal","Nilgiris","Perambalur","Pudukkottai","Ramanathapuram","Ranipet","Salem","Sivaganga","Tenkasi","Thanjavur","Theni","Thoothukudi","Tiruchirappalli","Tirunelveli","Tirupathur","Tiruppur","Tiruvallur","Tiruvannamalai","Tiruvarur","Vellore","Viluppuram","Virudhunagar"],
+  "Telangana":["Adilabad","Bhadradri Kothagudem","Hanamkonda","Hyderabad","Jagtial","Jangaon","Jayashankar Bhupalpally","Jogulamba Gadwal","Kamareddy","Karimnagar","Khammam","Komaram Bheem Asifabad","Mahabubabad","Mahabubnagar","Mancherial","Medak","Medchal-Malkajgiri","Mulugu","Nagarkurnool","Nalgonda","Narayanpet","Nirmal","Nizamabad","Peddapalli","Rajanna Sircilla","Rangareddy","Sangareddy","Siddipet","Suryapet","Vikarabad","Wanaparthy","Warangal","Yadadri Bhuvanagiri"],
+  "Tripura":["Dhalai","Gomati","Khowai","North Tripura","Sepahijala","South Tripura","Unakoti","West Tripura"],
+  "Uttar Pradesh":["Agra","Aligarh","Ambedkar Nagar","Amethi","Amroha","Auraiya","Ayodhya","Azamgarh","Baghpat","Bahraich","Ballia","Balrampur","Banda","Barabanki","Bareilly","Bhadohi","Bijnor","Budaun","Bulandshahr","Chandauli","Chitrakoot","Deoria","Etah","Etawah","Farrukhabad","Fatehpur","Firozabad","Gautam Buddha Nagar","Ghaziabad","Ghazipur","Gonda","Gorakhpur","Hamirpur","Hapur","Hardoi","Hathras","Jalaun","Jaunpur","Jhansi","Kannauj","Kanpur Dehat","Kanpur Nagar","Kasganj","Kaushambi","Kushinagar","Lakhimpur Kheri","Lalitpur","Lucknow","Maharajganj","Mahoba","Mainpuri","Mathura","Mau","Meerut","Mirzapur","Moradabad","Muzaffarnagar","Pilibhit","Pratapgarh","Prayagraj","Raebareli","Rampur","Saharanpur","Sambhal","Sant Kabir Nagar","Shahjahanpur","Shamli","Shrawasti","Siddharthnagar","Sitapur","Sonbhadra","Sultanpur","Unnao","Varanasi"],
+  "Uttarakhand":["Almora","Bageshwar","Chamoli","Champawat","Dehradun","Haridwar","Nainital","Pauri Garhwal","Pithoragarh","Rudraprayag","Tehri Garhwal","Udham Singh Nagar","Uttarkashi"],
+  "West Bengal":["Alipurduar","Bankura","Birbhum","Cooch Behar","Dakshin Dinajpur","Darjeeling","Hooghly","Howrah","Jalpaiguri","Jhargram","Kalimpong","Kolkata","Maldah","Murshidabad","Nadia","North 24 Parganas","Paschim Bardhaman","Paschim Medinipur","Purba Bardhaman","Purba Medinipur","Purulia","South 24 Parganas","Uttar Dinajpur"],
+  "Delhi":["Central Delhi","East Delhi","New Delhi","North Delhi","North East Delhi","North West Delhi","Shahdara","South Delhi","South East Delhi","South West Delhi","West Delhi"],
+  "Jammu & Kashmir":["Anantnag","Bandipora","Baramulla","Budgam","Doda","Ganderbal","Jammu","Kathua","Kishtwar","Kulgam","Kupwara","Poonch","Pulwama","Rajouri","Ramban","Reasi","Samba","Shopian","Srinagar","Udhampur"],
+  "Ladakh":["Leh","Kargil"]
+};
+
 async function compressCommunityImage(file) {
   try {
     const url = URL.createObjectURL(file);
@@ -1840,6 +1888,122 @@ function getCommunityHeritage(post) {
 
 function getCommunityPostImage(post) {
   return post?.image || getCommunityHeritage(post)?.image || null;
+}
+
+
+const HIDDEN_GEMS_SAMPLE = [
+  { id:"hg-1", name:"Rupam Murmu", role:"Chhau Dancer", place:"Purulia, West Bengal", category:"Dancer", story:"A young performer keeping Purulia Chhau alive through village stages and community festivals.", initials:"RM", tag:"Living Tradition" },
+  { id:"hg-2", name:"Mitali Karmakar", role:"Dokra Artisan", place:"Bikna, Bankura", category:"Craftsperson", story:"Creates hand-cast Dokra pieces using traditional lost-wax techniques learned within her artisan community.", initials:"MK", tag:"Craft Keeper" },
+  { id:"hg-3", name:"Sourav Baul", role:"Baul Singer", place:"Birbhum, West Bengal", category:"Singer", story:"Performs Baul songs at local akhras and community gatherings, carrying an oral musical tradition forward.", initials:"SB", tag:"Folk Voice" },
+  { id:"hg-4", name:"Anita Das", role:"Kantha Artist", place:"Nadia, West Bengal", category:"Artist", story:"Turns layers of old cloth and patient hand-stitching into contemporary pieces rooted in Bengali textile tradition.", initials:"AD", tag:"Heritage Maker" }
+];
+
+function HiddenGemsPage({ authUser, notify }) {
+  const [filter, setFilter] = useState("All");
+  const [nominationOpen, setNominationOpen] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [approved, setApproved] = useState([]);
+  const [form, setForm] = useState({name:"",category:"Singer",state:"",district:"",story:"",photo:null});
+  const categories = ["All", "Singer", "Dancer", "Artist", "Craftsperson", "Performer"];
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(
+      query(collection(db, "hiddenGemNominations"), where("status", "==", "approved")),
+      snapshot => setApproved(snapshot.docs.map(d => ({id:d.id,...d.data()})).sort((a,b) => (b.approvedAt?.toMillis?.()||0)-(a.approvedAt?.toMillis?.()||0))),
+      error => console.error("[Hidden Gems] Load failed", error)
+    );
+    return () => unsubscribe();
+  }, []);
+
+  const visible = [...approved, ...HIDDEN_GEMS_SAMPLE];
+  const filtered = filter === "All" ? visible : visible.filter(item => item.category === filter);
+  const districts = form.state ? (STATE_DISTRICTS[form.state] || []) : [];
+
+  const updateForm = (key, value) => setForm(prev => ({...prev, [key]:value}));
+
+  const submitNomination = async e => {
+    e.preventDefault();
+    if (!authUser) { notify("Please sign in before sending a nomination."); return; }
+    if (!form.state || !form.district) { notify("Please select both state and district."); return; }
+    setSubmitting(true);
+    try {
+      const nominationRef = await addDoc(collection(db, "hiddenGemNominations"), {
+        name: form.name.trim(), category: form.category, state: form.state, district: form.district,
+        story: form.story.trim(), photoUrl: "", status: "pending", nominatedBy: authUser.uid,
+        nominatorEmail: authUser.email || "", createdAt: serverTimestamp()
+      });
+
+      if (form.photo) {
+        if (!form.photo.type.startsWith("image/")) throw new Error("Please choose an image file.");
+        if (form.photo.size > 8 * 1024 * 1024) throw new Error("Please keep the photo under 8 MB.");
+        const safeName = form.photo.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+        const path = `hiddenGemPhotos/${nominationRef.id}/${Date.now()}-${safeName}`;
+        const uploaded = await uploadBytes(storageRef(storage, path), form.photo, {contentType: form.photo.type});
+        const photoUrl = await getDownloadURL(uploaded.ref);
+        await updateDoc(nominationRef, {photoUrl});
+      }
+
+      setForm({name:"",category:"Singer",state:"",district:"",story:"",photo:null});
+      setNominationOpen(false);
+      notify("Nomination sent to the review team ✓");
+    } catch (error) {
+      console.error("[Hidden Gems] Nomination failed", error);
+      notify(error?.message || "Could not send the nomination. Please try again.");
+    } finally { setSubmitting(false); }
+  };
+
+  return (
+    <div className="hidden-gems-page page-wrap">
+      <section className="hidden-gems-hero">
+        <div className="hidden-gems-hero-copy">
+          <div className="eyebrow">LOCAL VOICES · LIVING CULTURE</div>
+          <h1>Discover India's <i>Hidden Gems</i></h1>
+          <p>Meet the local artists, singers, dancers, artisans and culture keepers whose work keeps India's traditions alive.</p>
+          <div className="hidden-gems-actions">
+            <button className="hidden-gems-primary" onClick={() => setNominationOpen(true)}>✦ Nominate a Local Talent</button>
+            <span className="hidden-gems-note">Every nomination is reviewed by our admin team before it appears publicly.</span>
+          </div>
+        </div>
+        <div className="hidden-gems-hero-art" aria-hidden="true">
+          <div className="hg-orbit hg-orbit-one"></div><div className="hg-orbit hg-orbit-two"></div><div className="hg-sun">✺</div>
+          <div className="hg-figure hg-figure-one">♬</div><div className="hg-figure hg-figure-two">✧</div><div className="hg-figure hg-figure-three">◈</div>
+        </div>
+      </section>
+
+      <section className="hidden-gems-intro">
+        <div><div className="eyebrow">PEOPLE BEHIND THE TRADITIONS</div><h2>Not every cultural hero is famous.</h2><p>Some are waiting to be discovered.</p></div>
+        <div className="hidden-gems-stats"><div><strong>{String(visible.length).padStart(2,"0")}</strong><span>Featured voices</span></div><div><strong>01</strong><span>Community goal</span></div><div><strong>100%</strong><span>Reviewed profiles</span></div></div>
+      </section>
+
+      <div className="hidden-gems-filters" role="tablist" aria-label="Hidden Gems categories">{categories.map(category => <button key={category} className={filter===category?"active":""} onClick={()=>setFilter(category)}>{category}</button>)}</div>
+      <section className="hidden-gems-grid">
+        {filtered.map(item => <article className="hidden-gem-card" key={item.id}>
+          <div className="hidden-gem-portrait" style={item.photoUrl ? {backgroundImage:`linear-gradient(180deg,rgba(20,45,34,.05),rgba(20,45,34,.5)),url("${item.photoUrl}")`,backgroundSize:"cover",backgroundPosition:"center"} : undefined}>
+            {!item.photoUrl && <span>{item.initials || String(item.name||"").split(/\s+/).map(x=>x[0]).slice(0,2).join("")}</span>}
+            <small>{item.tag || "Community Approved"}</small>
+          </div>
+          <div className="hidden-gem-card-body"><div className="hidden-gem-type">{item.category}</div><h3>{item.name}</h3><strong>{item.role || `${item.category} · Living Tradition`}</strong><p className="hidden-gem-place">⌖ {item.district ? `${item.district}, ${item.state}` : item.place}</p><p>{item.story}</p><button type="button" onClick={()=>notify(`${item.name}'s full profile can be expanded next.`)}>View Story <span>→</span></button></div>
+        </article>)}
+      </section>
+
+      <section className="hidden-gems-nomination-banner"><div><div className="eyebrow">KNOW SOMEONE SPECIAL?</div><h2>Help us find the next Hidden Gem.</h2><p>Nominate a local talent from your community. Our admin team reviews each submission before publishing it.</p></div><button onClick={()=>setNominationOpen(true)}>Nominate Someone →</button></section>
+
+      {nominationOpen && <div className="hg-modal-overlay" onMouseDown={()=>!submitting&&setNominationOpen(false)}><div className="hg-modal" onMouseDown={e=>e.stopPropagation()}>
+        <button className="hg-modal-close" onClick={()=>!submitting&&setNominationOpen(false)} aria-label="Close">×</button>
+        <div className="eyebrow">COMMUNITY NOMINATION</div><h2>Nominate a Hidden Gem</h2>
+        <p className="hg-modal-subtitle">Your submission will be saved securely in Firebase and sent to our admin review queue. It will only appear publicly after approval.</p>
+        <form onSubmit={submitNomination}>
+          <label>Artist / Talent Name<input required value={form.name} onChange={e=>updateForm("name",e.target.value)} placeholder="Enter full name" /></label>
+          <label>Category<select value={form.category} onChange={e=>updateForm("category",e.target.value)}>{categories.slice(1).map(x=><option key={x}>{x}</option>)}</select></label>
+          <div className="hg-form-row"><label>State<select required value={form.state} onChange={e=>setForm(prev=>({...prev,state:e.target.value,district:""}))}><option value="">Select state</option>{INDIA_STATES.map(state=><option key={state} value={state}>{state}</option>)}</select></label><label>District<select required value={form.district} onChange={e=>updateForm("district",e.target.value)} disabled={!form.state}><option value="">{form.state?"Select district":"Select state first"}</option>{districts.map(d=><option key={d} value={d}>{d}</option>)}<option value="Other / Not listed">Other / Not listed</option></select></label></div>
+          <label>What makes them special?<textarea required rows="4" value={form.story} onChange={e=>updateForm("story",e.target.value)} placeholder="Tell us about their art, tradition or contribution..." /></label>
+          <label className="hg-photo-upload"><span>📷 Artist / Craftsperson Photo <small>optional · JPG/PNG/WebP · max 8 MB</small></span><input type="file" accept="image/*" onChange={e=>updateForm("photo",e.target.files?.[0]||null)} /></label>
+          <div className="hg-cloud-note">☁️ Photo and nomination are stored in Firebase — nothing is saved to the website's local files.</div>
+          <button className="hidden-gems-submit" type="submit" disabled={submitting}>{submitting ? "Sending to Review…" : "Send for Review →"}</button>
+        </form>
+      </div></div>}
+    </div>
+  );
 }
 
 function CommunityPage({ posts, authUser, onShare, notify }) {

@@ -47,3 +47,17 @@ The external Wikimedia Commons media are used under the licenses stated on their
 
 - v16 fixes the playlist playback bug: the active clip now uses native autoplay/muted playback and advances only after the actual video ends.
 - Uses moving Wikimedia Commons footage from multiple Indian cultural traditions rather than a photo slideshow.
+
+
+## Hidden Gems — nomination review flow
+
+The Hidden Gems nomination form is cloud-backed. Submissions are written to the Firebase Firestore `hiddenGemNominations` collection with `status: "pending"`. Uploaded artist/craftsperson photos go to Firebase Storage under `hiddenGemPhotos/{nominationId}/...`; they are not stored in the project folder or browser localStorage.
+
+Authorised admins can open `admin.html` and use the **Hidden Gems** tab to review each nomination and **Approve** or **Reject** it. Only approved nominations are queried and displayed publicly on the Hidden Gems page.
+
+Before testing this workflow with Firebase, deploy both security files to the same Firebase project:
+
+- `firestore.rules`
+- `storage.rules`
+
+The two authorised admin emails currently configured in the project are `sadik22319@gmail.com` and `rockysencr7@gmail.com`.
