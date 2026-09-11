@@ -137,6 +137,60 @@ const heritage = [
   }
 ];
 
+
+const EXPLORE_CATEGORIES = [
+  { id:"all", label:"All", icon:"▦" },
+  { id:"monuments", label:"Monuments & Places", icon:"♜" },
+  { id:"artcraft", label:"Art & Craft", icon:"◈" },
+  { id:"music", label:"Music", icon:"♫" },
+  { id:"dance", label:"Dance & Performance", icon:"✦" },
+  { id:"festivals", label:"Festivals", icon:"✺" },
+  { id:"food", label:"Food", icon:"◉" },
+  { id:"traditions", label:"Traditions & Rituals", icon:"⌘" },
+  { id:"languages", label:"Languages & Literature", icon:"अ" },
+  { id:"archaeology", label:"Archaeology", icon:"⌂" },
+  { id:"nature", label:"Natural Heritage", icon:"⌁" }
+];
+
+const commonsImage = file => `https://commons.wikimedia.org/wiki/Special:Redirect/file/${encodeURIComponent(file)}`;
+
+/* Explore is deliberately separate from Community. These are curated heritage
+   entries, not user stories or community posts. */
+const EXPLORE_HERITAGE_ITEMS = [
+  {id:"explore-hampi", category:"monuments", title:"Hampi", place:"Karnataka", type:"Monument & place", period:"14th–16th centuries", year:2025, image:commonsImage("Vitthal mandir hampi.jpg"), desc:"The ruins of the Vijayanagara capital preserve temples, markets, waterworks and a remarkable urban landscape shaped by the Tungabhadra River.", facts:["UNESCO World Heritage Site","Major centre of the Vijayanagara Empire","Vittala Temple is one of its best-known monuments","Landscape combines architecture, boulders and river ecology"]},
+  {id:"explore-konark", category:"monuments", title:"Konark Sun Temple", place:"Odisha", type:"Monument & place", period:"13th century", year:2024, image:commonsImage("KONARK SUN Temple.jpg"), desc:"The 13th-century Sun Temple at Konark is celebrated for its monumental chariot form, stone carving and architectural imagination.", facts:["UNESCO World Heritage Site","Built under Eastern Ganga ruler Narasimhadeva I","Designed as a colossal solar chariot","Known for richly carved stone surfaces"]},
+  {id:"explore-ajanta", category:"monuments", title:"Ajanta Caves", place:"Maharashtra", type:"Monument & place", period:"2nd century BCE–6th century CE", year:2023, image:commonsImage("Ajanta Caves.jpeg"), desc:"Ajanta is a group of Buddhist rock-cut monuments known especially for its surviving paintings, sculptures and monastic spaces.", facts:["UNESCO World Heritage Site","Rock-cut Buddhist caves","Famous for ancient murals and sculpture","Developed over several centuries"]},
+
+  {id:"explore-madhubani", category:"artcraft", title:"Madhubani Painting", place:"Bihar · Mithila", type:"Art & craft", period:"Living tradition", year:2026, image:commonsImage("Madhubani painting, Bihar.jpg"), desc:"Mithila painting uses distinctive outlines, patterned surfaces and symbolic imagery to express mythology, nature and social life.", facts:["Also called Mithila painting","Traditionally associated with the Mithila region","Practised on walls and now also on paper, cloth and canvas","Patterns and motifs are passed across generations"]},
+  {id:"explore-pattachitra", category:"artcraft", title:"Pattachitra", place:"Odisha", type:"Art & craft", period:"Living tradition", year:2025, image:commonsImage("PAINTING PATACHITRA.jpg"), desc:"Pattachitra is a traditional cloth-painting practice of Odisha, known for controlled lines, decorative borders and narrative religious imagery.", facts:["Traditional painting on prepared cloth","Raghurajpur is a major craft village","Chitrakara artists are closely associated with the tradition","Stories often draw on Jagannath and Hindu mythology"]},
+  {id:"explore-blue-pottery", category:"artcraft", title:"Jaipur Blue Pottery", place:"Jaipur, Rajasthan", type:"Art & craft", period:"Living craft tradition", year:2024, image:commonsImage("Blue pottery from Jaipur.jpg"), desc:"Jaipur blue pottery is a distinctive glazed craft known for blue-and-white decoration and a body made without the usual clay base used in pottery.", facts:["Strongly associated with Jaipur","Uses a distinctive quartz-based body","Known for blue decorative motifs","Seen in both functional and decorative objects"]},
+
+  {id:"explore-baul", category:"music", title:"Baul Music", place:"West Bengal & Bangladesh", type:"Music", period:"Living oral tradition", year:2026, image:IMG.baul, desc:"Baul singers carry an oral tradition of music and spiritual-philosophical poetry, performed with simple instruments and a strong emphasis on lived experience.", facts:["Oral tradition of Bengal","Ektara is strongly associated with Baul performance","Songs explore spiritual and philosophical ideas","Recognised on UNESCO's Representative List"]},
+  {id:"explore-sitar", category:"music", title:"Hindustani Classical Music", place:"North & Central India", type:"Music", period:"Long classical tradition", year:2024, image:commonsImage("Sitar (India).jpg"), desc:"Hindustani classical music is a major North Indian art-music tradition organised around melodic frameworks, rhythmic cycles and improvisation.", facts:["Built around raga and tala","Includes vocal and instrumental traditions","Sitar is one of its best-known instruments","Performance values both composition and improvisation"]},
+
+  {id:"explore-kathakali", category:"dance", title:"Kathakali", place:"Kerala", type:"Dance & performance", period:"Classical tradition", year:2025, image:commonsImage("Kathakali.jpg"), desc:"Kathakali is a highly stylised dance-drama tradition of Kerala combining elaborate costume and makeup, gesture, movement, music and percussion.", facts:["Classical dance-drama of Kerala","Known for elaborate makeup and costume","Uses expressive hand gestures and facial movement","Stories often draw from Hindu epics"]},
+  {id:"explore-chhau", category:"dance", title:"Chhau", place:"Eastern India", type:"Dance & performance", period:"Living tradition", year:2026, image:commonsImage("Chhau Dance.png"), desc:"Chhau combines dance, martial movement, music and storytelling. Its traditions include Purulia, Seraikella and Mayurbhanj styles.", facts:["UNESCO Intangible Cultural Heritage","Three major regional styles","May include masks depending on the style","Combines folk, martial and classical influences"]},
+  {id:"explore-yakshagana", category:"dance", title:"Yakshagana", place:"Coastal Karnataka", type:"Dance & performance", period:"Living tradition", year:2024, image:commonsImage("Yakshagana.jpg"), desc:"Yakshagana is a vibrant dance-drama tradition combining dance, music, song, dialogue and elaborate costume, often drawing stories from Indian epics.", facts:["Strongly associated with coastal Karnataka","Combines performance, dialogue and music","Elaborate headgear and costume are characteristic","Stories commonly draw from the Ramayana and Mahabharata"]},
+
+  {id:"explore-durga-puja", category:"festivals", title:"Durga Puja in Kolkata", place:"Kolkata, West Bengal", type:"Festival", period:"Annual festival", year:2026, image:commonsImage("Durgotsab.jpg"), desc:"Kolkata's Durga Puja brings together image-making, temporary architecture, ritual, music, food and neighbourhood participation in a large public celebration.", facts:["UNESCO Intangible Cultural Heritage","Centred on worship of Goddess Durga","Pandal design and idol-making are major creative practices","Celebration reshapes neighbourhood public spaces"]},
+  {id:"explore-kumbh", category:"festivals", title:"Kumbh Mela", place:"India · major pilgrimage sites", type:"Festival & pilgrimage", period:"Cyclical pilgrimage gathering", year:2025, image:commonsImage("KUMBH MELA.jpg"), desc:"Kumbh Mela is a major Hindu pilgrimage gathering associated with ritual bathing, religious learning, processions and large temporary settlements.", facts:["UNESCO Intangible Cultural Heritage","Held at designated pilgrimage centres","Religious communities and ascetics play a major role","Combines pilgrimage, ritual and public gathering"]},
+
+  {id:"explore-bengali-food", category:"food", title:"Bengali Cuisine", place:"West Bengal & Bangladesh", type:"Food culture", period:"Living culinary tradition", year:2026, image:commonsImage("Indian cuisines.jpg"), desc:"Bengali food culture is shaped by rice, fish, vegetables, pulses, seasonal ingredients and a distinctive vocabulary of spices and preparation methods.", facts:["Rice and fish are central in many regional cuisines","Seasonality strongly influences dishes","Mustard and panch phoron are familiar flavour markers","Food traditions vary across communities and districts"]},
+  {id:"explore-sadya", category:"food", title:"Kerala Sadya", place:"Kerala", type:"Food culture", period:"Living culinary tradition", year:2024, image:commonsImage("Indian Cuisine.jpg"), desc:"Sadya is a ceremonial vegetarian feast of Kerala traditionally served on a banana leaf, with many dishes arranged as part of a shared meal.", facts:["Traditionally served on a banana leaf","Commonly associated with festivals and ceremonies","Includes multiple vegetable, lentil and rice preparations","Onam is strongly associated with Sadya"]},
+
+  {id:"explore-vedic", category:"traditions", title:"Vedic Chanting", place:"India", type:"Tradition & ritual", period:"Ancient oral tradition", year:2025, image:commonsImage("Vedic Chanting by Brahmacharins (15885243999).jpg"), desc:"Vedic chanting preserves ancient Sanskrit texts through highly structured oral recitation, with attention to pitch, pronunciation and sequence.", facts:["UNESCO Intangible Cultural Heritage","Knowledge is transmitted orally","Precise recitation patterns help preserve the texts","Training can begin from a young age"]},
+  {id:"explore-yoga", category:"traditions", title:"Yoga", place:"India", type:"Tradition & practice", period:"Ancient and evolving tradition", year:2023, image:commonsImage("Vedic Chanting by Brahmacharins (15885243999).jpg"), desc:"Yoga encompasses physical, mental and spiritual practices that developed through long Indian traditions and have evolved into diverse contemporary forms.", facts:["UNESCO Intangible Cultural Heritage","Has philosophical as well as physical dimensions","Includes practices of breath, concentration and bodily discipline","Modern forms exist alongside older lineages"]},
+
+  {id:"explore-sanskrit", category:"languages", title:"Sanskrit Literary Tradition", place:"India", type:"Language & literature", period:"Ancient literary tradition", year:2022, image:commonsImage("Vedic Chanting by Brahmacharins (15885243999).jpg"), desc:"Sanskrit has a vast literary and intellectual heritage spanning poetry, drama, philosophy, religious texts, grammar and scientific writing.", facts:["Classical language of South Asia","Extensive traditions of poetry and drama","Important language of philosophical and religious literature","Influential in the development of many Indian languages"]},
+  {id:"explore-bengali", category:"languages", title:"Bengali Language & Literature", place:"Bengal", type:"Language & literature", period:"Living literary tradition", year:2021, image:commonsImage("Introduction to the Bengálí language.djvu"), desc:"Bengali is a major Indo-Aryan language with a long literary tradition spanning poetry, songs, novels, theatre, oral culture and modern writing.", facts:["Written in the Bengali-Assamese script tradition","Rich traditions of poetry and song","Spoken widely in eastern South Asia","Modern literature grew through both print and oral traditions"]},
+
+  {id:"explore-harappa", category:"archaeology", title:"Harappan Civilization", place:"Northwestern South Asia", type:"Archaeology", period:"c. 2600–1900 BCE", year:2025, image:commonsImage("Harappan (Indus Valley) Inscribed Seal.jpg"), desc:"The urban centres of the Indus or Harappan Civilization are known for planned settlements, drainage, craft production, seals and long-distance exchange.", facts:["Bronze Age urban civilisation","Known for planned settlements and drainage","Crafts included pottery, beads and metalwork","Indus script remains undeciphered"]},
+  {id:"explore-indus-seals", category:"archaeology", title:"Indus Valley Seals", place:"Indus Civilization sites", type:"Archaeology", period:"3rd–2nd millennium BCE", year:2024, image:commonsImage("IndusValleySeals.JPG"), desc:"Indus seals are small carved objects featuring animals, signs and other motifs, offering evidence about craft, administration, identity and exchange.", facts:["Often made from steatite","Many carry short sequences of signs","Animal motifs are common","Found across several Indus Civilization sites"]},
+
+  {id:"explore-kaziranga", category:"nature", title:"Kaziranga National Park", place:"Assam", type:"Natural heritage", period:"Protected landscape", year:2026, image:commonsImage("Rhinoceros from kaziranga.jpg"), desc:"Kaziranga is a protected floodplain landscape known especially for its population of the greater one-horned rhinoceros and its rich wetland and grassland ecosystems.", facts:["UNESCO World Heritage Site","Important habitat for the greater one-horned rhinoceros","Includes grasslands, wetlands and forests","Located in the Brahmaputra floodplain"]},
+  {id:"explore-sundarbans", category:"nature", title:"Sundarbans", place:"West Bengal", type:"Natural heritage", period:"Mangrove ecosystem", year:2025, image:commonsImage("Mangroves of Sundarbans.jpg"), desc:"The Indian Sundarbans form part of the world's great mangrove landscape, shaped by tidal waterways, mudflats and salt-tolerant forests.", facts:["UNESCO World Heritage Site in India","Major mangrove ecosystem of the Ganges-Brahmaputra delta","Important habitat for the Bengal tiger","Tidal rivers and creeks shape the landscape"]}
+];
+
 const riskItems = [
   ["Baul Music", "Declining number of practitioners", 68, "High"],
   ["Kani Tribal Language", "At risk of extinction", 52, "High"],
@@ -956,6 +1010,12 @@ function App() {
                 </div>
 
                 <div className="map-lines"></div>
+
+                <div className="quote-top">
+                  “Sanskriti na kabhi purani hoti hai,<br />
+                  na kabhi nai — woh hamesha jeevit rehti hai.”
+                  <small>— Anonymous</small>
+                </div>
 
                 <div className="compass">
                   N<br />
@@ -2040,70 +2100,86 @@ function Community({ posts, large, onClick }) {
 }
 
 function Explore({ items, onOpen }) {
+  const [category, setCategory] = useState("all");
+  const [query, setQuery] = useState("");
+  const [sort, setSort] = useState("recent");
+  const [saved, setSaved] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("li-explore-saved") || "[]"); } catch { return []; }
+  });
+
+  const baseItems = EXPLORE_HERITAGE_ITEMS;
+  const filtered = baseItems
+    .filter(h => category === "all" || h.category === category)
+    .filter(h => {
+      const q = query.trim().toLowerCase();
+      if (!q) return true;
+      return [h.title, h.place, h.type, h.desc, ...(h.facts || [])].join(" ").toLowerCase().includes(q);
+    })
+    .sort((a, b) => sort === "name" ? a.title.localeCompare(b.title) : (b.year || 0) - (a.year || 0));
+
+  const toggleSaved = id => {
+    setSaved(current => {
+      const next = current.includes(id) ? current.filter(x => x !== id) : [...current, id];
+      localStorage.setItem("li-explore-saved", JSON.stringify(next));
+      return next;
+    });
+  };
 
   return (
-    <div className="page-wrap">
-
-      <div className="page-title">
-
-        <div className="eyebrow">
-          EXPLORE INDIA
+    <div className="li-explore-library">
+      <section className="li-explore-library-hero">
+        <div className="li-explore-library-copy">
+          <div className="li-library-kicker">EXPLORE INDIA</div>
+          <h1>Discover India’s <em>Living Heritage</em></h1>
+          <p>Explore traditions, art forms, crafts, monuments, festivals, cuisines, knowledge systems and natural heritage — organised by category, not community stories.</p>
         </div>
+        <div className="li-library-hero-art">
+          <img src={commonsImage("Vitthal mandir hampi.jpg")} alt="Hampi heritage" />
+          <div><strong>Many cultures.</strong><br/><i>One living heritage.</i></div>
+        </div>
+      </section>
 
-        <h1>
-          Stories worth <i>discovering</i>
-        </h1>
+      <section className="li-library-controls">
+        <div className="li-library-category-row">
+          {EXPLORE_CATEGORIES.map(c => (
+            <button key={c.id} className={category === c.id ? "active" : ""} onClick={() => { setCategory(c.id); setQuery(""); }}>
+              <span>{c.icon}</span>{c.label}
+            </button>
+          ))}
+        </div>
+        <div className="li-library-tools">
+          <strong>Showing {filtered.length} heritage {filtered.length === 1 ? "item" : "items"}</strong>
+          <label className="li-library-search"><span>⌕</span><input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search in this category..." /></label>
+          <select value={sort} onChange={e => setSort(e.target.value)} aria-label="Sort heritage">
+            <option value="recent">Most Recent</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </div>
+      </section>
 
-        <p>
-          From ancient cities to living crafts, explore the many threads of India's cultural memory.
-        </p>
-
-      </div>
-
-      <div className="filter-row">
-
-        <button className="selected">
-          All
-        </button>
-
-        <button>
-          Art & Craft
-        </button>
-
-        <button>
-          Music
-        </button>
-
-        <button>
-          Dance & Performance
-        </button>
-
-        <button>
-          Food
-        </button>
-
-        <button>
-          Archaeology
-        </button>
-
-      </div>
-
-      <div className="explore-grid">
-
-        {items.map(h => (
-          <HeritageCard
-            key={h.id}
-            h={h}
-            onClick={onOpen}
-          />
+      <section className="li-library-grid">
+        {filtered.map(h => (
+          <article className="li-library-card" key={h.id}>
+            <div className="li-library-card-image">
+              <img src={h.image} alt={h.title} loading="lazy" />
+              <span className="li-library-tag">{EXPLORE_CATEGORIES.find(c => c.id === h.category)?.label}</span>
+              <button className={`li-library-save ${saved.includes(h.id) ? "saved" : ""}`} onClick={() => toggleSaved(h.id)} aria-label={saved.includes(h.id) ? "Remove bookmark" : "Bookmark heritage"}>{saved.includes(h.id) ? "♥" : "♡"}</button>
+            </div>
+            <div className="li-library-card-body">
+              <h2>{h.title}</h2>
+              <div className="li-library-place">⌖ {h.place}</div>
+              <p>{h.desc}</p>
+              <button className="li-library-explore" onClick={() => onOpen({ ...h, sourceType:"explore" })}>Explore <span>→</span></button>
+            </div>
+          </article>
         ))}
+        {!filtered.length && <div className="li-library-empty"><strong>No heritage found here.</strong><span>Try another category or search term.</span></div>}
+      </section>
 
-      </div>
-
+      <div className="li-library-footer-note">CURATED HERITAGE · CATEGORY-BASED DISCOVERY · COMMUNITY STORIES LIVE IN COMMUNITY</div>
     </div>
   );
 }
-
 
 /*
   REAL INDIA STATE MAP
@@ -4101,15 +4177,17 @@ function Detail({ h, close, onContribute, onContinue }) {
 
           <div className="detail-actions">
 
-            <button
-              className="primary"
-              onClick={onContribute}
-            >
-              Add your story ＋
-            </button>
+            {!h.sourceType || h.sourceType !== "explore" ? (
+              <button
+                className="primary"
+                onClick={onContribute}
+              >
+                Add your story ＋
+              </button>
+            ) : null}
 
             <button
-              className="outline"
+              className={h.sourceType === "explore" ? "primary" : "outline"}
               onClick={() => onContinue ? onContinue(h) : close()}
             >
               Continue exploring
